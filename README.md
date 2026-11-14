@@ -1,50 +1,93 @@
 # Empatia Humana — site da clínica
 
-Site de uma página da **Empatia Humana, conceito em estética integrativa**, clínica de estética integrativa e ozonioterapia em Canaã dos Carajás (PA). A responsável técnica é a Dra. Adelaine Barros Montel, biomédica esteta e ozonioterapeuta, CRBM 1437/PA.
+Página de captação da **Empatia Humana, conceito em estética integrativa**, clínica de estética integrativa e ozonioterapia em Canaã dos Carajás (PA). A responsável técnica é a Dra. Adelaine Barros Montel, biomédica esteta e ozonioterapeuta, CRBM 1437/PA.
 
 Publicado pelo GitHub Pages: https://rafamel10.github.io/clinica-empatia-humana/
+
+A página foi feita para receber tráfego pago. O formulário de agendamento fica no topo, e todos os botões da página levam até ele.
 
 ## Estrutura
 
 ```
-index.html              página única (todo o conteúdo)
-css/style.css           estilos, cores e tipografia
-js/main.js              menu do celular
-assets/img/             fotos, logo e ícones
-.nojekyll               publica os arquivos como estão no GitHub Pages
+index.html                    página principal com o formulário
+obrigado.html                 página depois do envio (dispara o evento de Lead)
+politica-de-privacidade.html  política de privacidade (LGPD)
+css/style.css                 estilos, cores e tipografia
+js/config.js                  endereço da planilha e WhatsApp (o único arquivo de configuração)
+js/main.js                    formulário, versões por campanha, menu e eventos
+google-apps-script/Codigo.gs  script que grava os leads na planilha
+assets/img/                   fotos, logo e ícones
+.nojekyll                     publica os arquivos como estão no GitHub Pages
 ```
 
-Não tem etapa de build: o que está no repositório é o que vai ao ar. Qualquer push na `main` publica de novo em cerca de 1 minuto.
+Não tem etapa de build: o que está no repositório é o que vai ao ar. Cada push na `main` publica de novo em cerca de 1 minuto.
 
-## Seções
+## Como o formulário funciona
 
-1. Abertura: título, índice Dor / Varizes / Intestino e retrato da Dra. Adelaine
-2. Tratamentos: ozonioterapia para dor, varizes e vasinhos (PEIM), saúde intestinal e outros serviços da clínica (microagulhamento, peelings, massagem)
-3. Dra. Adelaine: trajetória e registro profissional
-4. Como é o atendimento: as 3 etapas, do WhatsApp ao plano de tratamento
-5. Cursos para profissionais
-6. Relatos de pacientes: links para os destaques do Instagram
-7. Como chegar: endereço, canais e mapa
+1. A pessoa preenche nome, WhatsApp e o que quer tratar.
+2. O site manda os dados para a planilha (se `planilhaUrl` estiver preenchido) e abre o `obrigado.html`.
+3. O obrigado dispara `Lead` no Pixel do Meta e `generate_lead` no Google, se esses códigos estiverem instalados.
+4. No obrigado tem um botão de WhatsApp com a mensagem pronta, com o nome e o tratamento escolhido.
 
-## De onde vieram as informações
+Se a planilha não estiver configurada, o formulário continua funcionando e leva a pessoa ao WhatsApp, mas o lead não fica gravado.
 
-- Perfis do Instagram [@clinicaempatiahumana](https://www.instagram.com/clinicaempatiahumana/) e [@biomedicaadelaine](https://www.instagram.com/biomedicaadelaine/): bio, destaques, posts e fotos
-- Link da bio (bio.site/empatiahumana): WhatsApp, link do Google Maps, formulário da Masterclass e o retrato da Dra. Adelaine
-- Cadastro público do CNPJ 20.199.921/0001-32: razão social e endereço
+Cliques nos links diretos de WhatsApp contam como `Contact` no Pixel.
 
-As fotos foram tiradas dos posts do Instagram (até 640 px) e recortadas para não mostrar os textos das artes.
+## Planilha de leads
+
+1. Crie uma planilha nova no Google Sheets, de preferência na conta da clínica.
+2. Menu **Extensões > Apps Script**. Apague o que estiver lá e cole o conteúdo de `google-apps-script/Codigo.gs`. Salve.
+3. **Implantar > Nova implantação**, tipo **App da Web**. Executar como: **Eu**. Quem pode acessar: **Qualquer pessoa**. Implante e autorize.
+4. Copie o endereço que termina em `/exec` e cole em `planilhaUrl`, no `js/config.js`. Faça commit e push.
+5. Teste: abrir o endereço `/exec` no navegador mostra `{"ok":true,"status":"no ar"}`. Depois envie um pedido pelo site e veja a linha aparecer.
+
+Colunas gravadas: data e hora, nome, WhatsApp, link para abrir a conversa, interesse, as UTMs, se veio de clique de anúncio (fbclid ou gclid), a página e de onde a pessoa veio.
+
+## Pixel, Google e Tintim
+
+Cole o código no `<head>` do `index.html` **e** do `obrigado.html`, no lugar do comentário "Pixel do Meta, tag do Google ou script do Tintim". O site já chama `fbq('track', 'Lead')` e `gtag('event', 'generate_lead')` no obrigado. Para otimizar campanhas, use o evento Lead como conversão.
+
+## Links para os anúncios
+
+Cada campanha pode abrir a página com o título e o tratamento já escolhidos no formulário:
+
+| Campanha | Link |
+|---|---|
+| Vasinhos e varizes | `https://rafamel10.github.io/clinica-empatia-humana/?tratamento=varizes` |
+| Dor (ozonioterapia) | `…/?tratamento=dor` |
+| Gordura localizada | `…/?tratamento=medidas` |
+| Pele e rosto | `…/?tratamento=pele` |
+| Intestino e detox | `…/?tratamento=intestino` |
+| Cursos | `…/?tratamento=cursos` |
+
+Acrescente as UTMs no mesmo link, por exemplo `?tratamento=varizes&utm_source=meta&utm_medium=pago&utm_campaign=varizes-nov`. Elas vão para a planilha e passam para o obrigado.
+
+Os textos de cada versão ficam em `js/main.js`, no bloco `VERSOES`.
+
+## Seções da página
+
+1. Abertura com título, selos de credibilidade, formulário e índice dos tratamentos
+2. "Você se reconhece": as situações que levam a pessoa a procurar a clínica
+3. Tratamentos: vasinhos e varizes em destaque, depois dor, gordura localizada, pele e intestino
+4. Quem vai cuidar de você: credenciais e trajetória da Dra. Adelaine
+5. Como funciona: as 3 etapas, do contato ao plano de tratamento
+6. Dúvidas frequentes
+7. Cursos para profissionais
+8. Chamada final, endereço e mapa
 
 ## Como editar
 
-- **WhatsApp**: o número `559491182268` aparece em todos os links `wa.me` do `index.html`. Para trocar, faça localizar e substituir.
-- **Textos**: estão todos no `index.html`, na ordem em que aparecem na página.
-- **Cores e fontes**: variáveis no topo do `css/style.css` (`--mata`, `--ocre`, `--nevoa`…). As fontes são Newsreader (títulos) e Albert Sans (texto), pelo Google Fonts.
-- **Fotos**: substitua os arquivos em `assets/img/` mantendo os mesmos nomes, ou atualize o `src` e as medidas (`width`/`height`) no HTML.
+- **WhatsApp**: o número aparece nos links `wa.me` do HTML e em `js/config.js`. Para trocar, faça localizar e substituir em todos os arquivos.
+- **Textos**: estão no `index.html`, na ordem em que aparecem na página.
+- **Cores e fontes**: variáveis no topo do `css/style.css` (`--mata`, `--ouro`, `--areia`…). Fontes: Newsreader (títulos) e Albert Sans (texto), pelo Google Fonts.
+- **Fotos**: substitua os arquivos em `assets/img/` mantendo os nomes, ou atualize o `src` e as medidas (`width`/`height`) no HTML.
 
-## Para confirmar com a clínica
+## Para confirmar com a clínica antes de subir os anúncios
 
-- Horário de funcionamento (hoje o site diz "Atendimento com horário marcado")
-- Se o endereço do cadastro do CNPJ (Rua Círio de Nazaré, 558, salas 1 e 2, Centro) é o atual
-- Se o formulário da Masterclass de Ozonioterapia ainda está aceitando inscrições
+- Se a avaliação para procedimentos é mesmo gratuita (está na resposta "A avaliação tem custo?")
+- Se o tratamento de vasinhos parcela em até 10x
+- Se a massagem e a drenagem são feitas também em casa
+- Horário de funcionamento
+- Depoimentos reais de pacientes, com autorização, para colocar na página
 - Fotos originais em alta resolução, principalmente do espaço da clínica
-- Domínio próprio (ex.: empatiahumana.com.br), se quiserem usar um no lugar do endereço do GitHub
+- Domínio próprio (ex.: empatiahumana.com.br), se quiserem usar no lugar do endereço do GitHub

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Empatia Humana | Estética integrativa e ozonioterapia em Canaã dos Carajás</title>
-  <meta name="description" content="Clínica de estética integrativa e ozonioterapia em Canaã dos Carajás (PA). Tratamentos para dor, varizes e saúde intestinal com a biomédica Dra. Adelaine Montel, CRBM 1437/PA.">
+  <meta name="description" content="Tratamento de vasinhos e varizes, ozonioterapia para dor, lipo ozonizada, limpeza de pele e saúde intestinal em Canaã dos Carajás (PA), com a biomédica Dra. Adelaine Montel, CRBM 1437/PA. Agende sua avaliação.">
   <link rel="canonical" href="https://rafamel10.github.io/clinica-empatia-humana/">
   <meta name="theme-color" content="#1f3a2e">
 
@@ -12,7 +12,7 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Empatia Humana">
   <meta property="og:title" content="Empatia Humana | Estética integrativa e ozonioterapia">
-  <meta property="og:description" content="Tratamentos para dor, varizes e saúde intestinal em Canaã dos Carajás, com a biomédica Dra. Adelaine Montel.">
+  <meta property="og:description" content="Vasinhos, dor, gordura localizada, pele e intestino em Canaã dos Carajás, com a biomédica Dra. Adelaine Montel. Agende sua avaliação.">
   <meta property="og:url" content="https://rafamel10.github.io/clinica-empatia-humana/">
   <meta property="og:image" content="https://rafamel10.github.io/clinica-empatia-humana/assets/img/adelaine-retrato.jpg">
   <meta property="og:image:width" content="900">
@@ -31,7 +31,7 @@
     "@context": "https://schema.org",
     "@type": "HealthAndBeautyBusiness",
     "name": "Empatia Humana - Conceito em Estética Integrativa",
-    "description": "Clínica de estética integrativa e ozonioterapia em Canaã dos Carajás (PA): tratamentos para dor, varizes e saúde intestinal.",
+    "description": "Clínica de estética integrativa e ozonioterapia em Canaã dos Carajás (PA): vasinhos e varizes, dor, gordura localizada, pele e saúde intestinal.",
     "url": "https://rafamel10.github.io/clinica-empatia-humana/",
     "image": "https://rafamel10.github.io/clinica-empatia-humana/assets/img/adelaine-retrato.jpg",
     "logo": "https://rafamel10.github.io/clinica-empatia-humana/assets/img/logo-empatia-humana.jpg",
@@ -57,9 +57,11 @@
     }
   }
   </script>
+
+  <!-- Pixel do Meta, tag do Google ou script do Tintim: cole aqui e também no obrigado.html. -->
 </head>
-<body>
-  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<body data-pagina="inicio">
+  <a class="pular" href="#agendar">Pular para o formulário de agendamento</a>
 
   <header class="topo">
     <div class="topo__barra">
@@ -72,11 +74,11 @@
         <ul class="nav__lista" id="nav-lista">
           <li><a href="#tratamentos">Tratamentos</a></li>
           <li><a href="#adelaine">Dra. Adelaine</a></li>
-          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
           <li><a href="#contato">Como chegar</a></li>
         </ul>
       </nav>
-      <a class="botao botao--ocre topo__cta" href="https://wa.me/559491182268?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar avaliação</a>
+      <a class="botao botao--ouro topo__cta" href="#agendar" data-ir-form>Agendar avaliação</a>
     </div>
   </header>
 
@@ -85,153 +87,211 @@
     <section class="hero" id="inicio" aria-labelledby="hero-titulo">
       <div class="hero__grade">
         <div class="hero__abertura">
-          <h1 id="hero-titulo">Estética integrativa e ozonioterapia em Canaã dos Carajás</h1>
-          <p class="hero__sub">Cuidamos da dor, das pernas e do intestino olhando para o corpo inteiro. Todo tratamento começa com uma avaliação individual com a biomédica Adelaine Montel.</p>
+          <h1 id="hero-titulo" data-variavel="titulo">Estética integrativa e ozonioterapia em Canaã dos Carajás</h1>
+          <p class="hero__sub" data-variavel="sub">Tratamentos para vasinhos, dor, gordura localizada, pele e intestino, com avaliação individual feita pela biomédica Dra. Adelaine Montel.</p>
+          <ul class="selos" aria-label="Quem atende">
+            <li>Biomédica esteta, <span class="sem-quebra">CRBM 1437/PA</span></li>
+            <li>Ozonioterapeuta</li>
+            <li>Centro de Canaã dos Carajás</li>
+          </ul>
         </div>
 
-        <figure class="hero__retrato">
-          <div class="retrato">
-            <svg class="retrato__anel" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
-              <circle cx="50" cy="50" r="48.5" pathLength="100"></circle>
-            </svg>
-            <img src="assets/img/adelaine-retrato.jpg" width="900" height="900" alt="Dra. Adelaine Montel sorrindo, de blusa clara, na clínica Empatia Humana">
+        <div class="agendar" id="agendar">
+          <div class="agendar__cabeca">
+            <img src="assets/img/adelaine-retrato.jpg" alt="" width="56" height="56">
+            <div>
+              <h2 class="agendar__titulo">Agende sua avaliação</h2>
+              <p>Deixe seu nome e WhatsApp. A equipe da clínica chama você para marcar o horário.</p>
+            </div>
           </div>
-          <figcaption>
-            <strong>Dra. Adelaine Montel</strong>
-            <span>Biomédica esteta e ozonioterapeuta, <span class="sem-quebra">CRBM 1437/PA</span></span>
-          </figcaption>
-        </figure>
 
-        <ul class="indice" aria-label="Principais tratamentos">
-          <li>
-            <a href="#dor">
-              <span class="indice__palavra">Dor</span>
-              <span class="indice__nota">Ozonioterapia para dores crônicas</span>
-            </a>
-          </li>
-          <li>
-            <a href="#varizes">
-              <span class="indice__palavra">Varizes</span>
-              <span class="indice__nota">Avaliação das pernas e PEIM</span>
-            </a>
-          </li>
-          <li>
-            <a href="#intestino">
-              <span class="indice__palavra">Intestino</span>
-              <span class="indice__nota">Exames, detox e enema de café</span>
-            </a>
-          </li>
+          <form class="form" id="form-agendar" novalidate>
+            <div class="campo">
+              <label for="nome">Seu nome</label>
+              <input id="nome" name="nome" type="text" autocomplete="name" maxlength="80" required aria-describedby="nome-erro">
+              <p class="campo__erro" id="nome-erro" hidden></p>
+            </div>
+            <div class="campo">
+              <label for="whatsapp">WhatsApp com DDD</label>
+              <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(94) 99999-9999" maxlength="20" required aria-describedby="whatsapp-erro">
+              <p class="campo__erro" id="whatsapp-erro" hidden></p>
+            </div>
+            <div class="campo">
+              <label for="interesse">O que você quer tratar?</label>
+              <select id="interesse" name="interesse" required aria-describedby="interesse-erro">
+                <option value="">Escolha uma opção</option>
+                <option value="varizes">Vasinhos e varizes</option>
+                <option value="dor">Dor (ozonioterapia)</option>
+                <option value="medidas">Gordura localizada (lipo ozonizada)</option>
+                <option value="pele">Pele e rosto</option>
+                <option value="intestino">Intestino e detox</option>
+                <option value="cursos">Cursos para profissionais</option>
+                <option value="outro">Ainda não sei, quero orientação</option>
+              </select>
+              <p class="campo__erro" id="interesse-erro" hidden></p>
+            </div>
+            <div class="campo-isca" aria-hidden="true">
+              <label for="site">Deixe este campo vazio</label>
+              <input id="site" name="site" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <button class="botao botao--ouro form__enviar" type="submit">Quero agendar minha avaliação</button>
+            <p class="form__nota">Seus dados são usados só para a clínica falar com você. Veja a <a href="politica-de-privacidade.html">política de privacidade</a>.</p>
+          </form>
+
+          <p class="agendar__alternativa">Prefere chamar direto? <a href="https://wa.me/559491182268?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-whatsapp>Falar no WhatsApp</a></p>
+        </div>
+
+        <ul class="indice" aria-label="O que a clínica trata">
+          <li><a href="#varizes"><span class="indice__palavra">Varizes</span><span class="indice__nota">PEIM e ozônio para vasinhos</span></a></li>
+          <li><a href="#dor"><span class="indice__palavra">Dor</span><span class="indice__nota">Ozonioterapia para dores crônicas</span></a></li>
+          <li><a href="#medidas"><span class="indice__palavra">Medidas</span><span class="indice__nota">Lipo ozonizada, sem cortes</span></a></li>
+          <li><a href="#pele"><span class="indice__palavra">Pele</span><span class="indice__nota">Limpeza de pele e peelings</span></a></li>
+          <li><a href="#intestino"><span class="indice__palavra">Intestino</span><span class="indice__nota">Disbiose Zero e enema de café</span></a></li>
         </ul>
+      </div>
+    </section>
 
-        <div class="hero__acoes">
-          <a class="botao botao--ocre" href="https://wa.me/559491182268?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar avaliação no WhatsApp</a>
-          <p class="hero__endereco">Rua Círio de Nazaré, 558, Centro</p>
+    <section class="secao secao--clara" aria-labelledby="sinais-titulo">
+      <div class="largura sinais">
+        <div class="sinais__cabeca">
+          <h2 id="sinais-titulo">Você se reconhece em alguma destas situações?</h2>
+          <p>Para cada uma delas existe um caminho de cuidado, e ele começa por uma avaliação individual, sem pressa e com explicação de cada etapa.</p>
+        </div>
+        <ul class="sinais__lista">
+          <li><a href="#varizes">Os vasinhos nas pernas fazem você evitar short, saia e vestido.</a></li>
+          <li><a href="#dor">Uma dor na coluna, no joelho ou no ombro acompanha você há meses.</a></li>
+          <li><a href="#medidas">A gordura localizada continua lá, mesmo com dieta e treino.</a></li>
+          <li><a href="#pele">A pele anda com cravos, manchas ou sem viço.</a></li>
+          <li><a href="#intestino">Intestino preso, barriga inchada e cansaço viraram rotina.</a></li>
+        </ul>
+        <div class="sinais__acao">
+          <a class="botao botao--mata" href="#agendar" data-ir-form>Quero agendar minha avaliação</a>
         </div>
       </div>
     </section>
 
-    <section class="secao secao--nevoa" id="tratamentos" aria-labelledby="tratamentos-titulo">
+    <section class="secao secao--areia" id="tratamentos" aria-labelledby="tratamentos-titulo">
       <div class="largura">
         <div class="secao__cabeca">
-          <h2 id="tratamentos-titulo">Três frentes de cuidado</h2>
-          <p>Na estética integrativa, o incômodo que aparece por fora costuma ter relação com o que acontece por dentro. Por isso a avaliação vai além do lugar onde dói ou onde aparece a marca.</p>
+          <h2 id="tratamentos-titulo">Tratamentos</h2>
+          <p>Na estética integrativa, o incômodo que aparece por fora costuma ter relação com o que acontece por dentro. Por isso a avaliação olha para o corpo inteiro, e não só para o lugar onde dói ou aparece a marca.</p>
         </div>
 
-        <article class="tratamento" id="dor" aria-labelledby="dor-titulo">
-          <div class="tratamento__texto">
-            <h3 id="dor-titulo">Ozonioterapia para dor</h3>
-            <p>O ozônio medicinal é usado como terapia complementar no cuidado de dores crônicas na coluna, nos joelhos, nos ombros e em outras articulações. É a especialidade da clínica e o principal tema de estudo da Dra. Adelaine.</p>
-            <ul class="tratamento__lista">
-              <li>Dor crônica e dor articular</li>
-              <li>Protocolo e número de sessões definidos na avaliação</li>
-              <li>Prática complementar autorizada no Brasil pela Lei nº 14.648/2023</li>
-            </ul>
-            <a class="link-acao" href="https://wa.me/559491182268?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20ozonioterapia%20para%20dor." target="_blank" rel="noopener">Perguntar sobre ozonioterapia</a>
-          </div>
-          <div class="tratamento__visual tratamento__visual--o3" aria-hidden="true">
-            <span class="o3">O<sub>3</sub></span>
-          </div>
-        </article>
-
-        <article class="tratamento tratamento--invertido" id="varizes" aria-labelledby="varizes-titulo">
-          <div class="tratamento__texto">
-            <h3 id="varizes-titulo">Varizes e vasinhos</h3>
-            <p>Na avaliação, a Dra. Adelaine examina as pernas, explica o que cada sinal indica e tira as dúvidas sobre o tratamento. Para vasinhos e microvarizes, a clínica faz o PEIM, o Procedimento Estético Injetável para Microvasos.</p>
-            <ul class="tratamento__lista">
-              <li>Avaliação das pernas antes de qualquer indicação</li>
-              <li>PEIM para vasinhos e microvarizes</li>
-              <li>Orientações de cuidado entre as sessões</li>
-            </ul>
-            <a class="link-acao" href="https://wa.me/559491182268?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o%20para%20o%20tratamento%20de%20varizes." target="_blank" rel="noopener">Agendar avaliação para varizes</a>
-          </div>
-          <figure class="tratamento__visual">
+        <article class="destaque" id="varizes" aria-labelledby="varizes-titulo">
+          <figure class="destaque__foto">
             <img src="assets/img/avaliacao-pernas.jpg" width="512" height="380" loading="lazy" alt="Dra. Adelaine Montel examinando as pernas de uma paciente sentada na maca">
           </figure>
+          <div class="destaque__texto">
+            <p class="destaque__rotulo">O tratamento mais procurado da clínica</p>
+            <h3 id="varizes-titulo">Vasinhos e varizes</h3>
+            <p>Na avaliação, a Dra. Adelaine examina as pernas, explica o que cada sinal indica e monta o plano com você. Vasinhos e microvarizes são tratados com o PEIM integrativo e com ozônio para microvasos.</p>
+            <ul class="lista-pontos">
+              <li>Avaliação das pernas antes de qualquer indicação</li>
+              <li>PEIM integrativo e ozônio para microvasos</li>
+              <li>Parcelamento em até 10x</li>
+            </ul>
+            <a class="botao botao--mata" href="#agendar" data-ir-form data-interesse="varizes">Quero avaliar minhas pernas</a>
+          </div>
         </article>
 
-        <article class="tratamento" id="intestino" aria-labelledby="intestino-titulo">
-          <div class="tratamento__texto">
-            <h3 id="intestino-titulo">Saúde intestinal</h3>
-            <p>Na visão integrativa, cuidar do intestino faz parte de cuidar da pele, da disposição e do bem-estar. O acompanhamento começa pela conversa e pelos exames, e segue com os protocolos indicados para você.</p>
-            <ul class="tratamento__lista">
-              <li>Avaliação e interpretação de exames laboratoriais</li>
-              <li>Desafio Detox</li>
-              <li>Sessões de enema de café</li>
+        <div class="tratamentos">
+          <article class="tratamento" id="dor" aria-labelledby="dor-titulo">
+            <h3 id="dor-titulo">Ozonioterapia para dor</h3>
+            <p>O ozônio medicinal é aplicado como terapia complementar em dores crônicas na coluna, nos joelhos, nos ombros e em outras articulações. É a especialidade da Dra. Adelaine, que também ensina a técnica a outros profissionais.</p>
+            <ul class="lista-pontos">
+              <li>Ozônio local e ozonioterapia com ventosa</li>
+              <li>Protocolo e número de sessões definidos na avaliação</li>
+              <li>Prática autorizada no Brasil pela Lei nº 14.648/2023</li>
             </ul>
-            <a class="link-acao" href="https://wa.me/559491182268?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20cuidado%20com%20a%20sa%C3%BAde%20intestinal." target="_blank" rel="noopener">Perguntar sobre saúde intestinal</a>
-          </div>
-          <blockquote class="tratamento__visual citacao">
-            <p>Cuidar do intestino é cuidar da vida.</p>
-            <footer>Dra. Adelaine Montel</footer>
-          </blockquote>
-        </article>
+            <a class="link-acao" href="#agendar" data-ir-form data-interesse="dor">Quero tratar minha dor</a>
+          </article>
+
+          <article class="tratamento" id="medidas" aria-labelledby="medidas-titulo">
+            <h3 id="medidas-titulo">Gordura localizada</h3>
+            <p>A lipo ozonizada trata a gordura localizada com aplicações de ozônio na região que incomoda, sem cortes. As áreas e o número de sessões são definidos na avaliação.</p>
+            <ul class="lista-pontos">
+              <li>Lipo ozonizada</li>
+              <li>Hidrolipoclasia, a lipo sem corte</li>
+              <li>Programa de redução de medidas com acompanhamento</li>
+            </ul>
+            <a class="link-acao" href="#agendar" data-ir-form data-interesse="medidas">Quero tratar gordura localizada</a>
+          </article>
+
+          <article class="tratamento" id="pele" aria-labelledby="pele-titulo">
+            <h3 id="pele-titulo">Pele e rosto</h3>
+            <p>Para quem quer uma pele mais limpa, uniforme e com viço. A limpeza de pele costuma ser o primeiro passo, e o cuidado pode seguir com peelings e procedimentos de renovação.</p>
+            <ul class="lista-pontos">
+              <li>Limpeza de pele profunda</li>
+              <li>Peelings químico, de cristal e ozonizado</li>
+              <li>Microagulhamento, skinbooster e tratamento de melasma</li>
+            </ul>
+            <a class="link-acao" href="#agendar" data-ir-form data-interesse="pele">Quero cuidar da minha pele</a>
+          </article>
+
+          <article class="tratamento" id="intestino" aria-labelledby="intestino-titulo">
+            <h3 id="intestino-titulo">Intestino e detox</h3>
+            <p>Na visão integrativa, cuidar do intestino faz parte de cuidar da pele, da disposição e do bem-estar. O acompanhamento começa pela consulta e pela análise dos seus exames.</p>
+            <ul class="lista-pontos">
+              <li>Programa Disbiose Zero, em 5 ou 10 sessões</li>
+              <li>Enema de café</li>
+              <li>Desafio Detox de 7 dias</li>
+            </ul>
+            <a class="link-acao" href="#agendar" data-ir-form data-interesse="intestino">Quero cuidar do meu intestino</a>
+          </article>
+        </div>
 
         <div class="tambem">
           <h3 class="tambem__titulo">Também na clínica</h3>
-          <dl class="tambem__lista">
-            <div>
-              <dt>Microagulhamento</dt>
-              <dd>Estímulo de colágeno para melhorar textura, manchas e marcas de acne.</dd>
-            </div>
-            <div>
-              <dt>Peelings</dt>
-              <dd>Clareamento, ação anti-idade e renovação da pele.</dd>
-            </div>
-            <div>
-              <dt>Massagem</dt>
-              <dd>Relaxamento e alívio das tensões do dia a dia.</dd>
-            </div>
-          </dl>
-          <a class="link-acao" href="https://wa.me/559491182268?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20tratamentos%20est%C3%A9ticos." target="_blank" rel="noopener">Perguntar sobre tratamentos estéticos</a>
+          <ul class="tambem__lista">
+            <li>Soroterapia e reposição de vitaminas</li>
+            <li>Massagem relaxante e drenagem linfática, também em casa</li>
+            <li>Retirada de acrocórdons e siringomas</li>
+          </ul>
         </div>
+
+        <p class="responsavel">Responsável técnica: Dra. Adelaine Montel, biomédica esteta, <span class="sem-quebra">CRBM 1437/PA</span>.</p>
       </div>
     </section>
 
     <section class="secao secao--clara" id="adelaine" aria-labelledby="adelaine-titulo">
       <div class="largura sobre">
-        <figure class="sobre__foto">
-          <img src="assets/img/adelaine-consultorio.jpg" width="337" height="385" loading="lazy" alt="Dra. Adelaine Montel de jaleco branco no consultório da clínica">
+        <figure class="sobre__retrato">
+          <div class="retrato">
+            <svg class="retrato__anel" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle cx="50" cy="50" r="48.5"></circle>
+            </svg>
+            <img src="assets/img/adelaine-retrato.jpg" width="900" height="900" loading="lazy" alt="Dra. Adelaine Montel sorrindo, de blusa clara, na clínica Empatia Humana">
+          </div>
         </figure>
         <div class="sobre__texto">
-          <h2 id="adelaine-titulo">Dra. Adelaine Montel</h2>
-          <p class="sobre__registro">Biomédica esteta e ozonioterapeuta, <span class="sem-quebra">CRBM 1437/PA</span></p>
+          <h2 id="adelaine-titulo">Quem vai cuidar de você</h2>
+          <p class="sobre__nome">Dra. Adelaine Montel</p>
+          <ul class="credenciais">
+            <li>Biomédica esteta, <span class="sem-quebra">CRBM 1437/PA</span></li>
+            <li>Ozonioterapeuta</li>
+            <li>Formação em Nutrição Ortomolecular</li>
+            <li>Professora de cursos para profissionais da saúde</li>
+          </ul>
           <p>Adelaine Barros Montel começou a carreira na biomedicina. Em 2015, uma vivência mudou a forma como ela enxergava a saúde, e esse caminho a levou à ozonioterapia e à estética integrativa.</p>
-          <p>Hoje ela está à frente da Empatia Humana, onde une estética e saúde para cuidar da pessoa como um todo. Segue estudando sempre: aprendeu de perto com o Dr. Lair Ribeiro, referência em saúde integrativa no Brasil, e leva o que aprende para os atendimentos e para os cursos que ministra.</p>
+          <p>Hoje ela está à frente da Empatia Humana, onde une estética e saúde para cuidar da pessoa como um todo. Segue estudando sempre: aprendeu de perto com o Dr. Lair Ribeiro, referência em saúde integrativa no Brasil, e leva o que aprende para os atendimentos e para as turmas que forma.</p>
           <p>Fé e família estão na base do seu trabalho, e o nome da clínica resume o jeito como ela gosta de atender: com empatia.</p>
-          <a class="link-acao" href="https://www.instagram.com/biomedicaadelaine/" target="_blank" rel="noopener">Seguir @biomedicaadelaine no Instagram</a>
+          <ul class="sobre__links">
+            <li><a class="link-acao" href="https://www.instagram.com/clinicaempatiahumana/" target="_blank" rel="noopener">Ver relatos de pacientes no Instagram da clínica</a></li>
+            <li><a class="link-acao" href="https://www.instagram.com/biomedicaadelaine/" target="_blank" rel="noopener">Ver casos clínicos em @biomedicaadelaine</a></li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="secao secao--nevoa" aria-labelledby="etapas-titulo">
+    <section class="secao secao--areia" aria-labelledby="etapas-titulo">
       <div class="largura atendimento">
         <div class="secao__cabeca">
-          <h2 id="etapas-titulo">Como é o atendimento</h2>
+          <h2 id="etapas-titulo">Como funciona</h2>
         </div>
         <ol class="etapas">
           <li>
-            <h3>Chame no WhatsApp</h3>
-            <p>Conte o que está sentindo e escolha o melhor horário para a avaliação.</p>
+            <h3>Deixe seu contato</h3>
+            <p>Preencha o formulário ou chame no WhatsApp. A equipe responde e marca o melhor horário para você.</p>
           </li>
           <li>
             <h3>Faça a avaliação</h3>
@@ -239,7 +299,7 @@
           </li>
           <li>
             <h3>Siga o seu plano</h3>
-            <p>Você sai com a indicação de tratamento, o número de sessões e as orientações de cuidado.</p>
+            <p>Você sai sabendo qual tratamento é indicado, quantas sessões serão e como se cuidar entre elas.</p>
           </li>
         </ol>
         <figure class="etapas__foto">
@@ -248,71 +308,92 @@
       </div>
     </section>
 
-    <section class="secao secao--mata" id="cursos" aria-labelledby="cursos-titulo">
+    <section class="secao secao--clara" id="duvidas" aria-labelledby="duvidas-titulo">
+      <div class="largura duvidas">
+        <div class="secao__cabeca">
+          <h2 id="duvidas-titulo">Dúvidas frequentes</h2>
+          <p>Não encontrou a sua? <a class="link-acao" href="https://wa.me/559491182268?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener" data-whatsapp>Pergunte no WhatsApp</a></p>
+        </div>
+        <div class="perguntas">
+          <details>
+            <summary>A avaliação tem custo?</summary>
+            <p>A avaliação para procedimentos, como o tratamento de vasinhos, é gratuita. A consulta de estética integrativa, com análise do seu histórico e dos seus exames, tem valor à parte. A equipe confirma tudo pelo WhatsApp antes de marcar.</p>
+          </details>
+          <details>
+            <summary>Quantas sessões vou precisar?</summary>
+            <p>Depende do tratamento, da região e de como o seu corpo responde. O número de sessões é definido na avaliação, e a Dra. Adelaine explica o plano antes de você começar.</p>
+          </details>
+          <details>
+            <summary>A ozonioterapia é regulamentada?</summary>
+            <p>Sim. A Lei nº 14.648/2023 autoriza a ozonioterapia no Brasil como procedimento complementar, feito por profissional de saúde de nível superior com registro no conselho e com equipamento regularizado pela Anvisa.</p>
+          </details>
+          <details>
+            <summary>Dá para parcelar?</summary>
+            <p>Sim. O tratamento de vasinhos pode ser parcelado em até 10x. As condições dos outros tratamentos são passadas na avaliação.</p>
+          </details>
+          <details>
+            <summary>Os resultados são garantidos?</summary>
+            <p>Nenhum profissional sério pode garantir resultado, porque cada corpo responde de um jeito. O que a clínica garante é avaliação honesta, indicação só do que faz sentido para o seu caso e acompanhamento durante o tratamento.</p>
+          </details>
+          <details>
+            <summary>Onde fica a clínica?</summary>
+            <p>Na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro de Canaã dos Carajás. O atendimento é com horário marcado.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao--areia" id="cursos" aria-labelledby="cursos-titulo">
       <div class="largura">
         <div class="secao__cabeca">
           <h2 id="cursos-titulo">Cursos para profissionais</h2>
-          <p>A Dra. Adelaine também ensina. As turmas presenciais acontecem em Canaã dos Carajás, com aulas teóricas e práticas e emissão de certificado.</p>
+          <p>A Dra. Adelaine também forma outros profissionais. As turmas presenciais acontecem em Canaã dos Carajás, com aulas teóricas e práticas e certificado.</p>
         </div>
         <ul class="cursos">
           <li>
-            <h3>Masterclass de Ozonioterapia na Dor Crônica</h3>
-            <p>Protocolos de ozônio para dor crônica, associados à desparasitação e à detoxificação.</p>
-          </li>
-          <li>
             <h3>Interpretação de Exames Laboratoriais</h3>
-            <p>Leitura de exames com estudo de casos, para oferecer um atendimento mais completo.</p>
+            <p>Para biomédicos, enfermeiros, farmacêuticos, nutricionistas, médicos e estudantes da saúde. Estudo de casos, material didático e certificado.</p>
           </li>
           <li>
-            <h3>Imersões e aulas online</h3>
-            <p>Encontros sobre cuidado integrativo e suplementação.</p>
+            <h3>Ozonioterapia na Dor Crônica</h3>
+            <p>Masterclass com protocolos de ozônio para dor crônica, associados à desparasitação e à detoxificação.</p>
+          </li>
+          <li>
+            <h3>Limpeza de Pele</h3>
+            <p>Curso prático para quem quer oferecer limpeza de pele com técnica e segurança.</p>
           </li>
         </ul>
-        <div class="cursos__acoes">
-          <a class="botao botao--ocre" href="https://wa.me/559491182268?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20sobre%20os%20pr%C3%B3ximos%20cursos%20para%20profissionais." target="_blank" rel="noopener">Saber das próximas turmas</a>
-          <a class="link-acao link-acao--claro" href="https://docs.google.com/forms/d/e/1FAIpQLSdvhjEHF39O0No7VtuDPsRw9sGWVJ1twP9jyYrRoTB4givw0w/viewform" target="_blank" rel="noopener">Inscrever-se na Masterclass de Ozonioterapia</a>
-        </div>
+        <a class="link-acao cursos__acao" href="#agendar" data-ir-form data-interesse="cursos">Quero saber das próximas turmas</a>
       </div>
     </section>
 
-    <section class="secao secao--clara relatos" aria-labelledby="relatos-titulo">
-      <div class="largura relatos__conteudo">
-        <h2 id="relatos-titulo">Relatos de pacientes</h2>
-        <p>Os depoimentos de quem passou pela clínica ficam reunidos nos destaques do Instagram da Empatia Humana. Os casos clínicos estão no perfil da Dra. Adelaine.</p>
-        <ul class="relatos__links">
-          <li><a class="link-acao" href="https://www.instagram.com/clinicaempatiahumana/" target="_blank" rel="noopener">Ver depoimentos em @clinicaempatiahumana</a></li>
-          <li><a class="link-acao" href="https://www.instagram.com/biomedicaadelaine/" target="_blank" rel="noopener">Ver casos clínicos em @biomedicaadelaine</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="secao secao--nevoa" id="contato" aria-labelledby="contato-titulo">
+    <section class="secao secao--mata" id="contato" aria-labelledby="contato-titulo">
       <div class="largura contato">
         <div class="contato__info">
-          <h2 id="contato-titulo">Como chegar</h2>
+          <h2 id="contato-titulo">Agende sua avaliação</h2>
+          <p class="contato__sub">Deixe seu nome e WhatsApp no formulário e a equipe chama você para marcar o horário.</p>
+          <a class="botao botao--ouro" href="#agendar" data-ir-form>Quero agendar minha avaliação</a>
+
+          <h3 class="contato__subtitulo">Como chegar</h3>
           <address>
             Rua Círio de Nazaré, 558, salas 1 e 2<br>
             Centro, Canaã dos Carajás (PA)
           </address>
-          <p>Atendimento com horário marcado.</p>
+          <p class="contato__nota">Atendimento com horário marcado.</p>
           <dl class="contato__canais">
             <div>
               <dt>WhatsApp</dt>
-              <dd><a href="https://wa.me/559491182268?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">(94) 99118-2268</a></dd>
+              <dd><a href="https://wa.me/559491182268?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" data-whatsapp>(94) 99118-2268</a></dd>
             </div>
             <div>
               <dt>Instagram</dt>
               <dd><a href="https://www.instagram.com/clinicaempatiahumana/" target="_blank" rel="noopener">@clinicaempatiahumana</a></dd>
             </div>
             <div>
-              <dt>Facebook</dt>
-              <dd><a href="https://www.facebook.com/empatiahumana" target="_blank" rel="noopener">facebook.com/empatiahumana</a></dd>
+              <dt>Mapa</dt>
+              <dd><a href="https://www.google.com/maps/place/Empatia+Humana+-Conceito+em+Est%C3%A9tica+Integrativa/@-6.5311727,-49.848366,15z/data=!4m6!3m5!1s0x92dd9d833f3e3747:0x5975caaf2c422d7e!8m2!3d-6.5311727!4d-49.848366!16s%2Fg%2F11qqnj7w_k" target="_blank" rel="noopener">Abrir no Google Maps</a></dd>
             </div>
           </dl>
-          <div class="contato__acoes">
-            <a class="botao botao--mata" href="https://wa.me/559491182268?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar avaliação</a>
-            <a class="link-acao" href="https://www.google.com/maps/place/Empatia+Humana+-Conceito+em+Est%C3%A9tica+Integrativa/@-6.5311727,-49.848366,15z/data=!4m6!3m5!1s0x92dd9d833f3e3747:0x5975caaf2c422d7e!8m2!3d-6.5311727!4d-49.848366!16s%2Fg%2F11qqnj7w_k" target="_blank" rel="noopener">Abrir no Google Maps</a>
-          </div>
         </div>
         <div class="contato__mapa">
           <iframe title="Mapa com a localização da clínica Empatia Humana em Canaã dos Carajás" src="https://maps.google.com/maps?q=-6.5311727,-49.848366&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -325,14 +406,16 @@
   <footer class="rodape">
     <div class="largura rodape__conteudo">
       <p class="rodape__marca">Empatia Humana, conceito em estética integrativa</p>
-      <p>JG Centro de Estética Integrativa LTDA, CNPJ 20.199.921/0001-32<br>
-        Responsável técnica: Dra. Adelaine Barros Montel, biomédica, <span class="sem-quebra">CRBM 1437/PA</span></p>
+      <p>Dra. Adelaine Montel, biomédica esteta, <span class="sem-quebra">CRBM 1437/PA</span>. Responsável técnica.<br>
+        JG Centro de Estética Integrativa LTDA, <span class="sem-quebra">CNPJ 20.199.921/0001-32</span></p>
       <p>Os resultados variam de pessoa para pessoa. As informações deste site não substituem uma avaliação profissional.</p>
+      <p><a href="politica-de-privacidade.html">Política de privacidade</a></p>
     </div>
   </footer>
 
-  <a class="whats-fixo" href="https://wa.me/559491182268?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Agendar avaliação no WhatsApp</a>
+  <a class="barra-fixa" href="#agendar" data-ir-form>Quero agendar minha avaliação</a>
 
+  <script src="js/config.js"></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
