@@ -1,0 +1,988 @@
+/* Empatia Humana — estética integrativa e ozonioterapia
+   Cores tiradas da identidade da Dra. Adelaine (verde-mata e ocre)
+   e do emblema da árvore da clínica. */
+
+:root {
+  --mata: #1f3a2e;
+  --mata-linha: rgba(237, 240, 232, 0.2);
+  --ocre: #d08a35;
+  --ocre-claro: #e3a055;
+  --ocre-escuro: #8f5410;
+  --nevoa: #edf0e8;
+  --folha: #c9d5c2;
+  --clara: #fbfcf9;
+  --tinta: #17271f;
+  --tinta-suave: #42564b;
+  --nota-escura: #b9c7b5;
+
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Albert Sans", "Segoe UI", system-ui, sans-serif;
+
+  --largura: 70rem;
+  --respiro: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--tinta);
+  background: var(--nevoa);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.12;
+  margin: 0;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.6vw, 2.875rem);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.625rem;
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+ul,
+ol,
+dl,
+dd,
+figure,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ocre);
+  outline-offset: 3px;
+}
+
+.pular {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--clara);
+  color: var(--tinta);
+  font-weight: 600;
+}
+
+.pular:focus {
+  top: 1rem;
+}
+
+.sem-quebra {
+  white-space: nowrap;
+}
+
+.largura {
+  max-width: var(--largura);
+  margin-inline: auto;
+  padding-inline: var(--respiro);
+}
+
+/* Botões e links de ação */
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.botao--ocre {
+  background: var(--ocre);
+  color: var(--tinta);
+}
+
+.botao--ocre:hover {
+  background: var(--ocre-claro);
+}
+
+.botao--mata {
+  background: var(--mata);
+  color: var(--nevoa);
+}
+
+.botao--mata:hover {
+  background: #2b4c3d;
+}
+
+.link-acao {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--mata);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+}
+
+.link-acao:hover {
+  color: var(--ocre-escuro);
+  text-decoration-thickness: 2px;
+}
+
+.link-acao--claro {
+  color: var(--nevoa);
+}
+
+.link-acao--claro:hover {
+  color: var(--ocre-claro);
+}
+
+/* Topo */
+
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--mata);
+  color: var(--nevoa);
+  border-bottom: 1px solid var(--mata-linha);
+}
+
+.topo__barra {
+  max-width: var(--largura);
+  margin-inline: auto;
+  padding: 0.75rem var(--respiro);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.marca img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.marca__nome {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  letter-spacing: 0.01em;
+}
+
+.nav__botao {
+  display: none;
+  font: inherit;
+  font-weight: 600;
+  color: var(--nevoa);
+  background: transparent;
+  border: 1px solid var(--mata-linha);
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+}
+
+.nav__lista {
+  list-style: none;
+  display: flex;
+  gap: 1.75rem;
+}
+
+.nav__lista a {
+  text-decoration: none;
+  font-size: 0.975rem;
+  font-weight: 500;
+  padding-block: 0.5rem;
+  border-bottom: 1px solid transparent;
+}
+
+.nav__lista a:hover {
+  border-bottom-color: var(--ocre);
+}
+
+.topo__cta {
+  min-height: 2.6rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+}
+
+/* Abertura */
+
+.hero {
+  background: var(--mata);
+  color: var(--nevoa);
+}
+
+.hero__grade {
+  max-width: var(--largura);
+  margin-inline: auto;
+  padding: clamp(3rem, 7vw, 5.5rem) var(--respiro) clamp(3.5rem, 7vw, 5.5rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  grid-template-areas:
+    "abertura retrato"
+    "indice   retrato"
+    "acoes    retrato";
+  column-gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.hero__abertura {
+  grid-area: abertura;
+}
+
+.hero h1 {
+  font-size: clamp(2.25rem, 4.3vw, 3.5rem);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  max-width: 17ch;
+}
+
+.hero__sub {
+  margin-top: 1.5rem;
+  max-width: 34rem;
+  font-size: 1.125rem;
+  color: var(--nota-escura);
+}
+
+.hero__retrato {
+  grid-area: retrato;
+  align-self: center;
+}
+
+.retrato {
+  position: relative;
+  width: min(100%, 26rem);
+  aspect-ratio: 1;
+  margin-inline: auto;
+  padding: 1.1rem;
+}
+
+.retrato img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.retrato__anel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.retrato__anel circle {
+  fill: none;
+  stroke: var(--ocre);
+  stroke-width: 0.5;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 0;
+}
+
+.hero__retrato figcaption {
+  margin-top: 1.25rem;
+  text-align: center;
+  line-height: 1.45;
+}
+
+.hero__retrato figcaption strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.hero__retrato figcaption span {
+  font-size: 0.925rem;
+  color: var(--nota-escura);
+}
+
+/* O índice Dor / Varizes / Intestino é o elemento de assinatura da página */
+
+.indice {
+  grid-area: indice;
+  list-style: none;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  border-bottom: 1px solid var(--mata-linha);
+}
+
+.indice a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: baseline;
+  column-gap: 2rem;
+  padding-block: 0.6rem 0.75rem;
+  border-top: 1px solid var(--mata-linha);
+  text-decoration: none;
+}
+
+.indice__palavra {
+  font-family: var(--serif);
+  font-size: clamp(2.75rem, 6.6vw, 5rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  transition: color 0.2s ease;
+}
+
+.indice__nota {
+  justify-self: end;
+  max-width: 19rem;
+  font-size: 0.975rem;
+  line-height: 1.4;
+  text-align: right;
+  color: var(--nota-escura);
+}
+
+.indice a:hover .indice__palavra {
+  color: var(--ocre);
+}
+
+.hero__acoes {
+  grid-area: acoes;
+  margin-top: 2.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+}
+
+.hero__endereco {
+  font-size: 0.975rem;
+  color: var(--nota-escura);
+}
+
+/* Entrada da abertura: o anel se desenha em volta do retrato e o índice aparece em sequência */
+
+@media (prefers-reduced-motion: no-preference) {
+  .retrato__anel circle {
+    stroke-dashoffset: 100;
+    animation: desenhar 1.6s cubic-bezier(0.65, 0, 0.35, 1) 0.2s forwards;
+  }
+
+  .indice li {
+    opacity: 0;
+    transform: translateY(0.75rem);
+    animation: surgir 0.7s ease-out forwards;
+  }
+
+  .indice li:nth-child(1) { animation-delay: 0.35s; }
+  .indice li:nth-child(2) { animation-delay: 0.5s; }
+  .indice li:nth-child(3) { animation-delay: 0.65s; }
+}
+
+@keyframes desenhar {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes surgir {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Seções */
+
+.secao {
+  padding-block: clamp(4.5rem, 9vw, 7rem);
+}
+
+.secao--nevoa {
+  background: var(--nevoa);
+}
+
+.secao--clara {
+  background: var(--clara);
+}
+
+.secao--mata {
+  background: var(--mata);
+  color: var(--nevoa);
+}
+
+.secao__cabeca {
+  max-width: 40rem;
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.secao__cabeca p {
+  margin-top: 1.1rem;
+  font-size: 1.125rem;
+  color: var(--tinta-suave);
+}
+
+.secao--mata .secao__cabeca p {
+  color: var(--nota-escura);
+}
+
+/* Tratamentos */
+
+.tratamento {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+  padding-block: clamp(2.5rem, 5vw, 3.75rem);
+  border-top: 1px solid var(--folha);
+}
+
+.tratamento--invertido .tratamento__visual {
+  order: -1;
+}
+
+.tratamento__texto {
+  max-width: 36rem;
+}
+
+.tratamento__texto > p {
+  margin-top: 1rem;
+  color: var(--tinta-suave);
+}
+
+.tratamento__lista {
+  list-style: none;
+  margin-block: 1.5rem 1.75rem;
+}
+
+.tratamento__lista li {
+  position: relative;
+  padding: 0.55rem 0 0.55rem 1.5rem;
+  border-top: 1px solid var(--folha);
+}
+
+.tratamento__lista li:last-child {
+  border-bottom: 1px solid var(--folha);
+}
+
+.tratamento__lista li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 1.15rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--ocre);
+}
+
+.tratamento__visual img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.tratamento__visual--o3 {
+  display: flex;
+  justify-content: center;
+}
+
+.o3 {
+  font-family: var(--serif);
+  font-size: clamp(7rem, 17vw, 13rem);
+  font-weight: 300;
+  line-height: 0.9;
+  color: var(--mata);
+  opacity: 0.16;
+  user-select: none;
+}
+
+.o3 sub {
+  font-size: 0.4em;
+  vertical-align: baseline;
+  position: relative;
+  top: 0.15em;
+  color: var(--ocre-escuro);
+}
+
+.citacao {
+  padding-left: 1.75rem;
+  border-left: 2px solid var(--ocre);
+}
+
+.citacao p {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  line-height: 1.15;
+  color: var(--mata);
+}
+
+.citacao footer {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--tinta-suave);
+}
+
+.tambem {
+  padding-top: clamp(2.5rem, 5vw, 3.75rem);
+  border-top: 1px solid var(--folha);
+}
+
+.tambem__titulo {
+  font-size: 1.625rem;
+}
+
+.tambem__lista {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem clamp(1.5rem, 4vw, 3rem);
+  margin-block: 1.75rem 2rem;
+}
+
+.tambem__lista dt {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.tambem__lista dd {
+  margin-top: 0.35rem;
+  color: var(--tinta-suave);
+}
+
+/* Sobre a Dra. Adelaine */
+
+.sobre {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(2rem, 7vw, 6rem);
+  align-items: center;
+}
+
+.sobre__foto img {
+  width: 100%;
+  max-width: 21rem;
+  margin-inline: auto;
+  border-radius: 4px;
+}
+
+.sobre__texto {
+  max-width: 38rem;
+}
+
+.sobre__registro {
+  margin-top: 0.6rem;
+  font-weight: 600;
+  color: var(--ocre-escuro);
+}
+
+.sobre__texto > p + p {
+  margin-top: 1.1rem;
+}
+
+.sobre__registro + p {
+  margin-top: 1.5rem;
+}
+
+.sobre__texto p:not(.sobre__registro) {
+  color: var(--tinta-suave);
+}
+
+.sobre__texto .link-acao {
+  margin-top: 1.75rem;
+}
+
+/* Como é o atendimento */
+
+.atendimento {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas:
+    "cabeca cabeca"
+    "etapas foto";
+  column-gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.atendimento .secao__cabeca {
+  grid-area: cabeca;
+}
+
+.etapas {
+  grid-area: etapas;
+  list-style: none;
+  counter-reset: etapa;
+}
+
+.etapas li {
+  counter-increment: etapa;
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  column-gap: 1rem;
+  padding-block: 1.25rem;
+  border-top: 1px solid var(--folha);
+}
+
+.etapas li:last-child {
+  border-bottom: 1px solid var(--folha);
+}
+
+.etapas li::before {
+  content: counter(etapa);
+  grid-row: span 2;
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--ocre-escuro);
+}
+
+.etapas h3 {
+  font-size: 1.375rem;
+}
+
+.etapas p {
+  margin-top: 0.35rem;
+  color: var(--tinta-suave);
+}
+
+.etapas__foto {
+  grid-area: foto;
+}
+
+.etapas__foto img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* Cursos */
+
+.cursos {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem clamp(1.5rem, 4vw, 3rem);
+}
+
+.cursos li {
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--ocre);
+}
+
+.cursos h3 {
+  font-size: 1.5rem;
+}
+
+.cursos p {
+  margin-top: 0.6rem;
+  color: var(--nota-escura);
+}
+
+.cursos__acoes {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+}
+
+/* Relatos */
+
+.relatos {
+  padding-block: clamp(3.5rem, 7vw, 5rem);
+}
+
+.relatos__conteudo {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 1rem clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.relatos__conteudo p {
+  color: var(--tinta-suave);
+}
+
+.relatos__links {
+  grid-column: 2;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+}
+
+/* Contato */
+
+.contato {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.contato address {
+  margin-top: 1.5rem;
+  font-style: normal;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.contato__info > p {
+  margin-top: 0.75rem;
+  color: var(--tinta-suave);
+}
+
+.contato__canais {
+  margin-top: 1.75rem;
+}
+
+.contato__canais div {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  gap: 1rem;
+  padding-block: 0.65rem;
+  border-top: 1px solid var(--folha);
+}
+
+.contato__canais div:last-child {
+  border-bottom: 1px solid var(--folha);
+}
+
+.contato__canais dt {
+  color: var(--tinta-suave);
+}
+
+.contato__canais dd a {
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contato__canais dd a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.contato__acoes {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+}
+
+.contato__mapa iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 0;
+  border-radius: 4px;
+  background: var(--folha);
+}
+
+/* Rodapé */
+
+.rodape {
+  background: var(--tinta);
+  color: var(--nota-escura);
+  padding-block: 3rem;
+  font-size: 0.925rem;
+}
+
+.rodape__conteudo p + p {
+  margin-top: 0.75rem;
+}
+
+.rodape__marca {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--nevoa);
+}
+
+/* Botão fixo do WhatsApp no celular */
+
+.whats-fixo {
+  display: none;
+}
+
+/* Telas médias */
+
+@media (max-width: 960px) {
+  .hero__grade {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "abertura"
+      "retrato"
+      "indice"
+      "acoes";
+  }
+
+  .hero__retrato {
+    margin-top: 2.5rem;
+  }
+
+  .retrato {
+    width: min(78%, 22rem);
+  }
+
+  .tambem__lista,
+  .cursos {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .atendimento {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "cabeca"
+      "etapas"
+      "foto";
+  }
+
+  .etapas__foto {
+    margin-top: 2.5rem;
+  }
+
+  .relatos__conteudo {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .relatos__links {
+    grid-column: auto;
+    margin-top: 0.5rem;
+  }
+
+  .contato {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Celular */
+
+@media (max-width: 860px) {
+  .topo__cta {
+    display: none;
+  }
+
+  .nav__botao {
+    display: inline-flex;
+  }
+
+  .nav__lista {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem var(--respiro) 1.25rem;
+    background: var(--mata);
+    border-bottom: 1px solid var(--mata-linha);
+  }
+
+  .nav__botao[aria-expanded="true"] + .nav__lista {
+    display: flex;
+  }
+
+  .nav__lista a {
+    display: block;
+    padding-block: 0.85rem;
+    font-size: 1.05rem;
+    border-bottom: 1px solid var(--mata-linha);
+  }
+
+  .whats-fixo {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    padding: 1rem var(--respiro) calc(1rem + env(safe-area-inset-bottom));
+    background: var(--ocre);
+    color: var(--tinta);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  body {
+    padding-bottom: 3.5rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .tratamento,
+  .sobre {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tratamento--invertido .tratamento__visual {
+    order: 0;
+  }
+
+  .tratamento__visual--o3 {
+    display: none;
+  }
+
+  .sobre__foto img {
+    max-width: 17rem;
+    margin-inline: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .indice a {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0.25rem;
+  }
+
+  .indice__nota {
+    justify-self: start;
+    text-align: left;
+  }
+
+  .hero__acoes .botao {
+    width: 100%;
+  }
+}
