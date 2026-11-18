@@ -66,14 +66,25 @@ Os textos de cada versão ficam em `js/main.js`, no bloco `VERSOES`.
 
 ## Seções da página
 
-1. Abertura com título, selos de credibilidade, formulário e índice dos tratamentos
-2. "Você se reconhece": as situações que levam a pessoa a procurar a clínica
-3. Tratamentos: vasinhos e varizes em destaque, depois dor, gordura localizada, pele e intestino
-4. Quem vai cuidar de você: credenciais e trajetória da Dra. Adelaine
-5. Como funciona: as 3 etapas, do contato ao plano de tratamento
-6. Dúvidas frequentes
-7. Cursos para profissionais
-8. Chamada final, endereço e mapa
+1. Abertura com título, selos, formulário com foto da Dra. Adelaine e índice dos tratamentos
+2. Faixa dourada com os tratamentos passando
+3. "Você se reconhece": as situações que levam a pessoa a procurar a clínica
+4. Por que escolher a Empatia Humana: 4 diferenciais
+5. Tratamentos: vasinhos em destaque, cartões de dor, gordura localizada e pele, intestino em destaque
+6. Quem vai cuidar de você: credenciais, trajetória e linha do tempo da Dra. Adelaine
+7. A clínica: galeria de fotos (toque para ampliar), vídeos e chamada para o Instagram
+8. Como funciona: as 3 etapas
+9. Dúvidas frequentes
+10. Cursos para profissionais
+11. Chamada final, endereço e mapa
+
+Efeitos: elementos que aparecem ao rolar, barra de progresso no topo, topo que fica compacto, zoom lento na foto do formulário, brilho no botão principal, anel girando no retrato, botão flutuante de WhatsApp. Tudo é desligado para quem ativa "reduzir movimento" no celular ou computador.
+
+## Fotos e vídeos
+
+As fotos novas vêm do ensaio "Adelaine - ensaio" do Google Drive, reduzidas para cerca de 50 KB cada em `assets/img/*.webp`.
+
+Para colocar vídeos (Reels do Instagram, YouTube ou .mp4), cole os links em `videos` no `js/config.js`. Enquanto a lista estiver vazia, a parte de vídeos fica escondida.
 
 ## Como editar
 
@@ -88,6 +99,8 @@ Os textos de cada versão ficam em `js/main.js`, no bloco `VERSOES`.
 - Se o tratamento de vasinhos parcela em até 10x
 - Se a massagem e a drenagem são feitas também em casa
 - Horário de funcionamento
+- Se a Dra. Adelaine ainda é professora universitária e citologista (veio dos materiais de 2021)
+- Links de Reels ou vídeos para a seção de vídeos
 - Depoimentos reais de pacientes, com autorização, para colocar na página
 - Fotos originais em alta resolução, principalmente do espaço da clínica
 - Domínio próprio (ex.: empatiahumana.com.br), se quiserem usar no lugar do endereço do GitHub

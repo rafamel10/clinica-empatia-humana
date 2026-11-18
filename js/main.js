@@ -85,6 +85,135 @@
     });
   }
 
+  var reduzirMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Topo compacto e barra de progresso ao rolar --------------------------- */
+  var topo = document.querySelector(".topo");
+  var raiz = document.documentElement;
+  var agendado = false;
+  function aoRolar() {
+    agendado = false;
+    var y = window.scrollY || raiz.scrollTop;
+    if (topo) topo.classList.toggle("topo--rolado", y > 12);
+    var total = raiz.scrollHeight - window.innerHeight;
+    raiz.style.setProperty("--progresso", total > 0 ? Math.min(1, y / total).toFixed(4) : 0);
+  }
+  window.addEventListener("scroll", function () {
+    if (!agendado) { agendado = true; requestAnimationFrame(aoRolar); }
+  }, { passive: true });
+  aoRolar();
+
+  /* Elementos aparecem ao entrar na tela ---------------------------------- */
+  var revelar = document.querySelectorAll("[data-revelar]");
+  if ("IntersectionObserver" in window && !reduzirMovimento) {
+    // Itens irmãos entram em sequência
+    revelar.forEach(function (el) {
+      var irmaos = el.parentElement ? el.parentElement.querySelectorAll(":scope > [data-revelar]") : [];
+      var i = Array.prototype.indexOf.call(irmaos, el);
+      if (i > 0) el.style.setProperty("--atraso", Math.min(i, 5) * 0.1 + "s");
+    });
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("visivel"); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    revelar.forEach(function (el) { obs.observe(el); });
+  } else {
+    revelar.forEach(function (el) { el.classList.add("visivel"); });
+  }
+
+  /* Galeria: setas e foto ampliada ---------------------------------------- */
+  var galeria = document.querySelector(".galeria");
+  document.querySelectorAll("[data-galeria]").forEach(function (botao) {
+    botao.addEventListener("click", function () {
+      if (!galeria) return;
+      var passo = galeria.clientWidth * 0.8 * (botao.getAttribute("data-galeria") === "anterior" ? -1 : 1);
+      galeria.scrollBy({ left: passo, behavior: reduzirMovimento ? "auto" : "smooth" });
+    });
+  });
+
+  var lupa = document.querySelector(".lupa");
+  if (lupa && typeof lupa.showModal === "function") {
+    var lupaImg = lupa.querySelector("img");
+    var origem = null;
+    document.addEventListener("click", function (e) {
+      var item = e.target.closest && e.target.closest("[data-ampliar]");
+      if (!item) return;
+      var img = item.querySelector("img");
+      lupaImg.src = img.currentSrc || img.src;
+      lupaImg.alt = img.alt;
+      origem = item;
+      lupa.showModal();
+    });
+    lupa.querySelector(".lupa__fechar").addEventListener("click", function () { lupa.close(); });
+    lupa.addEventListener("click", function (e) { if (e.target === lupa) lupa.close(); });
+    lupa.addEventListener("close", function () { if (origem) origem.focus(); });
+  }
+
+  /* Vídeos: lista em js/config.js ----------------------------------------- */
+  var videos = Array.isArray(cfg.videos) ? cfg.videos : [];
+  var blocoVideos = document.getElementById("videos");
+  var listaVideos = document.querySelector("[data-videos]");
+  function idYoutube(url) {
+    var m = String(url).match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/);
+    return m ? m[1] : null;
+  }
+  function idInstagram(url) {
+    var m = String(url).match(/instagram\.com\/(?:reel|p|tv)\/([\w-]+)/);
+    return m ? m[1] : null;
+  }
+  if (blocoVideos && listaVideos && videos.length) {
+    videos.forEach(function (v) {
+      var url = typeof v === "string" ? v : v.url;
+      var titulo = (typeof v === "object" && v.titulo) || "Vídeo da clínica Empatia Humana";
+      var li = document.createElement("li");
+      li.className = "video";
+      var yt = idYoutube(url);
+      var ig = idInstagram(url);
+      if (yt) {
+        // Só carrega o YouTube quando a pessoa clica, para não pesar a página
+        li.classList.add(/shorts\//.test(url) ? "video--vertical" : "video--largo");
+        var play = document.createElement("button");
+        play.type = "button";
+        play.className = "video__play";
+        play.setAttribute("aria-label", "Assistir: " + titulo);
+        var capa = document.createElement("img");
+        capa.src = "https://i.ytimg.com/vi/" + yt + "/hqdefault.jpg";
+        capa.alt = "";
+        capa.loading = "lazy";
+        play.appendChild(capa);
+        play.addEventListener("click", function () {
+          var f = document.createElement("iframe");
+          f.src = "https://www.youtube-nocookie.com/embed/" + yt + "?autoplay=1&rel=0";
+          f.title = titulo;
+          f.allow = "autoplay; encrypted-media; picture-in-picture";
+          f.allowFullscreen = true;
+          li.replaceChildren(f);
+        });
+        li.appendChild(play);
+      } else if (ig) {
+        var fi = document.createElement("iframe");
+        fi.src = "https://www.instagram.com/reel/" + ig + "/embed";
+        fi.title = titulo;
+        fi.loading = "lazy";
+        li.appendChild(fi);
+      } else if (/\.(mp4|webm)(\?|$)/i.test(url)) {
+        var vid = document.createElement("video");
+        vid.src = url;
+        vid.controls = true;
+        vid.preload = "metadata";
+        vid.playsInline = true;
+        if (v.capa) vid.poster = v.capa;
+        vid.setAttribute("aria-label", titulo);
+        li.appendChild(vid);
+      } else {
+        return;
+      }
+      listaVideos.appendChild(li);
+    });
+    if (listaVideos.children.length) blocoVideos.hidden = false;
+  }
+
   var form = document.getElementById("form-agendar");
   var seletor = document.getElementById("interesse");
 
