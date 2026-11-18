@@ -20,6 +20,7 @@ var ABA = 'Leads';
 var FUSO = 'America/Belem';
 var CABECALHO = [
   'Data e hora', 'Nome', 'WhatsApp', 'Abrir conversa', 'Interesse',
+  'Há quanto tempo / Área', 'Melhor horário', 'Formulário',
   'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term',
   'Clique de anúncio', 'Página', 'Veio de'
 ];
@@ -45,6 +46,9 @@ function doPost(e) {
       "'" + whats,
       'https://wa.me/' + whats,
       texto(d.interesse, 60),
+      texto(d.detalhe, 60),
+      texto(d.periodo, 30),
+      texto(d.formulario, 10),
       texto(d.utm_source, 100),
       texto(d.utm_medium, 100),
       texto(d.utm_campaign, 150),
