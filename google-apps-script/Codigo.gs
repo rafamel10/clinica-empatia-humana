@@ -4,7 +4,7 @@
  */
 
 /**
- * Empatia Humana: recebe os pedidos de avaliação do site e grava na planilha.
+ * Empatia Humana: recebe os leads do site (nome, WhatsApp e e-mail) e grava na planilha.
  *
  * Como instalar (uma vez só):
  * 1. Crie uma planilha nova no Google Sheets (de preferência na conta da clínica).
@@ -14,22 +14,25 @@
  * 4. Copie o endereço que termina em /exec e coloque em planilhaUrl, no js/config.js.
  *
  * A planilha continua privada: o endereço só aceita adicionar linhas, ninguém consegue ler os dados por ele.
+ * O site manda os dados como formulário (sendBeacon); este script também aceita JSON.
  */
 
 var ABA = 'Leads';
 var FUSO = 'America/Belem';
 var CABECALHO = [
-  'Data e hora', 'Nome', 'WhatsApp', 'Abrir conversa', 'Interesse',
-  'Há quanto tempo / Área', 'Melhor horário', 'Formulário',
-  'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term',
-  'Clique de anúncio', 'Página', 'Veio de'
+  'Data e hora', 'Nome', 'WhatsApp', 'E-mail', 'Abrir conversa', 'Interesse', 'Página do tratamento',
+  'Formulário', 'Status', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term',
+  'Clique de anúncio', 'Primeira origem', 'Página', 'Veio de', 'ID do lead'
 ];
 
 function doPost(e) {
   var lock = LockService.getScriptLock();
   lock.tryLock(10000);
   try {
-    var d = JSON.parse((e && e.postData && e.postData.contents) || '{}');
+    var d = (e && e.parameter) || {};
+    if (!d.nome && e && e.postData && e.postData.contents && e.postData.contents.charAt(0) === '{') {
+      d = JSON.parse(e.postData.contents);
+    }
 
     // Campo isca: robôs preenchem, pessoas não veem
     if (d.site) return resposta({ ok: true });
@@ -44,19 +47,22 @@ function doPost(e) {
       Utilities.formatDate(new Date(), FUSO, 'dd/MM/yyyy HH:mm:ss'),
       nome,
       "'" + whats,
+      texto(d.email, 120),
       'https://wa.me/' + whats,
       texto(d.interesse, 60),
-      texto(d.detalhe, 60),
-      texto(d.periodo, 30),
-      texto(d.formulario, 10),
+      texto(d.tratamento_pagina, 40),
+      texto(d.formulario, 20),
+      'Novo',
       texto(d.utm_source, 100),
       texto(d.utm_medium, 100),
       texto(d.utm_campaign, 150),
       texto(d.utm_content, 150),
       texto(d.utm_term, 150),
       texto(d.clique, 10),
+      texto(d.primeira_origem, 150),
       texto(d.pagina, 300),
-      texto(d.origem, 300)
+      texto(d.origem, 300),
+      texto(d.lead_id, 30)
     ]);
     return resposta({ ok: true });
   } catch (err) {
@@ -74,7 +80,6 @@ function doGet() {
 
 function aba() {
   var planilha = SpreadsheetApp.getActiveSpreadsheet();
-  // Usa a aba "Leads"; se ela não existir, usa a primeira aba da planilha
   var a = planilha.getSheetByName(ABA) || planilha.getSheets()[0];
   if (a.getLastRow() === 0) {
     a.appendRow(CABECALHO);

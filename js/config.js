@@ -1,18 +1,19 @@
-// Configuração do site. Este é o único arquivo que você precisa editar.
+// Configuração do site. Este é o único arquivo de JavaScript que você precisa editar.
 window.EMPATIA = {
-  // Endereço do Apps Script que grava os pedidos na planilha (termina em /exec).
-  // Passo a passo no README, seção "Planilha de leads".
-  // Vazio: o formulário continua funcionando e leva a pessoa ao WhatsApp, mas nada é gravado.
+  // Endereço do Apps Script que grava os leads na planilha (termina em /exec).
+  // Passo a passo no README, seção "Planilha de leads". Vazio: o formulário leva ao WhatsApp, mas nada é gravado.
   planilhaUrl: "",
 
   // WhatsApp da clínica, só números, com 55 e DDD.
   whatsapp: "559491182268",
 
-  // Antes e depois. A seção só aparece quando houver pelo menos um item aqui.
-  // Só coloque fotos de pacientes que assinaram o termo de consentimento (TCLE)
-  // autorizando a publicação, como exige o Código de Ética da Biomedicina.
-  // Ponha as fotos em assets/img/resultados/ e preencha assim:
-  // { antes: "assets/img/resultados/peim-1-antes.jpg", depois: "assets/img/resultados/peim-1-depois.jpg",
-  //   tratamento: "PEIM integrativo", legenda: "4 sessões" },
-  resultados: [],
+  // E-mail obrigatório no formulário? false = aparece como "(opcional)" (costuma converter mais).
+  emailObrigatorio: true,
+
+  // Medição. Cole os IDs quando tiver: "GTM-XXXXXXX" e o número do Pixel do Meta.
+  gtmId: "",
+  pixelId: "",
+  // "aviso": GTM e Pixel carregam logo e a pessoa pode recusar (mede mais).
+  // "consentimento": só carregam depois do "Aceitar".
+  cookies: "aviso",
 };

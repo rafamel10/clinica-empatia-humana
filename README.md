@@ -1,134 +1,140 @@
 # Empatia Humana — site da clínica
 
-Página de captação da **Empatia Humana, conceito em estética integrativa**, clínica de estética integrativa e ozonioterapia em Canaã dos Carajás (PA). Responsável técnica: Dra. Adelaine Barros Montel, biomédica, inscrição nº 1437 no CRBM 4ª Região.
+Site institucional com captação da **Clínica Empatia Humana, conceito em estética integrativa**, em Canaã dos Carajás (PA). Responsável técnica: Dra. Adelaine Barros Montel, biomédica, inscrição nº 1437 no CRBM 4ª Região.
 
 Publicado pelo GitHub Pages: https://rafamel10.github.io/clinica-empatia-humana/
 
-A página foi feita para receber tráfego pago. A estrutura segue a da LP da Black Voll: formulário no topo, prova social em sequência e um botão de agendamento depois de cada bloco.
+Estrutura inspirada na draotorrino.com.br: home institucional, **uma página por tratamento** (para anúncio e para busca local), página da doutora e **blog** para SEO local e para buscadores com IA (Google AI Overviews, ChatGPT, Perplexity).
 
-## Estrutura
+Conversão: um único objetivo em todas as páginas. A pessoa deixa **nome, WhatsApp e e-mail**, o lead vai para a planilha e ela cai direto na conversa do WhatsApp da clínica, com a mensagem pronta (nome, tratamento da página e código da campanha).
+
+## Como o site é feito
+
+As páginas são **geradas por script**. Nunca edite os HTML à mão: edite os textos e rode o gerador.
 
 ```
-index.html                    página principal com o quiz de agendamento
-obrigado.html                 página depois do envio (dispara o evento de Lead)
-politica-de-privacidade.html  política de privacidade (LGPD)
-css/style.css                 estilos, cores e tipografia
-js/config.js                  planilha, WhatsApp e fotos de antes e depois (o único arquivo de configuração)
-js/main.js                    quiz, formulário final, abas, versões por campanha e eventos
-google-apps-script/Codigo.gs  script que grava os leads na planilha
-assets/img/                   fotos, logo e ícones
-.nojekyll                     publica os arquivos como estão no GitHub Pages
+scripts/dados.py        TODOS os textos: clínica, Dra. Adelaine, tratamentos, depoimentos, avaliações, FAQ, cursos
+scripts/gerar.py        modelos das páginas, dados estruturados, sitemap, robots, llms.txt, feed do blog
+scripts/imagens.py      gera as fotos .webp e a imagem de prévia (og-empatia.jpg)
+conteudo/blog/*.md      posts do blog (um arquivo por post)
+css/site.css            visual
+js/config.js            planilha, WhatsApp, e-mail obrigatório, GTM, Pixel, modo de cookies
+js/medicao.js           consentimento, GTM e Pixel
+js/site.js              formulário, janela de agendamento, menu, barra fixa, eventos
+google-apps-script/     script que grava os leads na planilha
 ```
 
-Não tem etapa de build: o que está no repositório é o que vai ao ar. Cada push na `main` publica de novo em cerca de 1 minuto.
+Para publicar uma mudança:
 
-## Seções da página
+```
+python scripts/gerar.py          # gera as páginas
+python scripts/imagens.py        # só se trocou alguma foto
+git add -A && git commit -m "..." && git push
+```
 
-1. **Abertura**: logo, título, nota 5,0 do Google, três pontos de confiança e o **quiz de agendamento** em 4 passos
-2. **"Esta avaliação é para você se..."**: as situações que trazem a pessoa à clínica, com um mosaico de fotos (recepção, avaliação, consultório, fachada)
-3. **Números**: +18 anos de formação, nota 5,0 no Google, inscrição no CRBM desde 2011
-4. **Depoimentos**: trecho do depoimento em vídeo, três prints do WhatsApp que a clínica publicou nos destaques e 8 avaliações do Google. No celular, os relatos viram um carrossel de arrastar
-5. **Tratamentos em abas**: vasinhos e varizes, dor, gordura localizada, pele e rosto, intestino e detox
-6. **Quem vai cuidar de você**: história, formação e o quadro com o registro conferido no CFBM
-7. **Como funciona a avaliação**: 4 passos
-8. **Antes e depois**: fica escondida até ter fotos (veja abaixo)
-9. **Dúvidas frequentes**
-10. **Cursos para profissionais**
-11. **Onde fica**: endereço, horários e mapa
-12. **Chamada final** com um formulário curto
+O GitHub Pages publica em cerca de 1 minuto. Se mudou CSS ou JS, aumente `VERSAO` no topo do `gerar.py` antes de gerar (limpa o cache do navegador).
 
-## O quiz de agendamento
+## Páginas
 
-São 4 passos, com barra de progresso:
+| Endereço | O que é |
+|---|---|
+| `/` | Home: formulário no topo, "Quando procurar", tratamentos, números, Dra. Adelaine, o que é estética integrativa, depoimentos, dúvidas, blog, cursos, contato |
+| `/tratamentos/` | Todos os tratamentos |
+| `/tratamentos/vasinhos-e-varizes/` | PEIM |
+| `/tratamentos/ozonioterapia/` | Ozonioterapia para dor |
+| `/tratamentos/lipo-ozonizada/` | Gordura localizada |
+| `/tratamentos/consulta-integrativa/` | Consulta de estética integrativa |
+| `/tratamentos/saude-intestinal/` | Disbiose Zero, enema de café, detox |
+| `/tratamentos/limpeza-de-pele/` | Limpeza de pele, peelings, melasma |
+| `/tratamentos/soroterapia/` | Soroterapia e vitaminas |
+| `/dra-adelaine-montel/` | Trajetória, formação e registro no CFBM |
+| `/cursos/` | Cursos para profissionais |
+| `/blog/` e `/blog/<post>/` | Blog |
 
-1. O que você quer tratar (ou "sou profissional e quero fazer um curso")
-2. Há quanto tempo isso incomoda (para quem escolheu curso: qual é a área)
-3. Melhor horário (manhã, tarde ou sábado)
-4. Nome e WhatsApp
+Cada página de tratamento segue a mesma ordem: título com cidade e frase emocional, sinais (chips) e formulário; identificação ("você se reconhece") e a virada; o que o tratamento faz por você; passo a passo; quando procurar; prova social; FAQ; posts relacionados; outros tratamentos; faixa final.
 
-No celular, tocar numa opção já passa para a próxima pergunta. No teclado, a pessoa usa o botão Continuar. Sem JavaScript, as perguntas aparecem todas de uma vez.
+### Links para anúncios
 
-Os botões dos tratamentos ("Quero avaliar minhas pernas" etc.) levam ao quiz com o tratamento já escolhido, direto no passo 2.
+Mande cada anúncio para a página do tratamento, com UTMs:
 
-Depois do envio, a pessoa vai para o `obrigado.html`, que chama pelo nome e tem um botão de WhatsApp com a mensagem pronta (nome, tratamento e melhor horário).
+```
+https://rafamel10.github.io/clinica-empatia-humana/tratamentos/vasinhos-e-varizes/?utm_source=meta&utm_medium=pago&utm_campaign=vasinhos-nov&utm_content=v1
+```
+
+O código `meta-vasinhos-nov-v1` vai no fim da mensagem do WhatsApp e na planilha.
+
+## Blog
+
+Cada post é um arquivo em `conteudo/blog/<endereco-do-post>.md`:
+
+```
+---
+titulo: Ozonioterapia: o que é, para que serve e como é feita
+descricao: (140 a 158 caracteres, aparece no Google)
+categoria: Ozonioterapia
+tratamento: ozonioterapia        (endereço da página de tratamento ligada ao post)
+data: 2026-11-25
+tempo_leitura: 7                 (opcional)
+resumo: (resposta rápida em 2 ou 3 frases: é o que a IA e o Google citam)
+rascunho: sim                    (opcional: não publica)
+---
+
+Abertura...
+
+## Subtítulo em forma de pergunta?
+
+Texto, listas com "- ", **negrito**, [links](/tratamentos/ozonioterapia/).
+
+## Perguntas frequentes
+
+### Pergunta?
+
+Resposta.
+```
+
+O gerador monta sozinho: caixa de "Resposta rápida", índice, botão do tratamento no meio do texto, FAQ com dados estruturados, caixa da autora, posts relacionados, sitemap, feed e `llms.txt`.
+
+Regras que ajudam a ranquear: título com a pergunta que a pessoa pesquisa; resposta direta logo no começo; subtítulos em forma de pergunta; citar Canaã dos Carajás e a região com naturalidade; 2 a 4 links para tratamentos e outros posts; FAQ no fim. Publicar com constância (1 a 2 posts por semana) pesa mais que posts enormes.
+
+## SEO local e IA
+
+- Dados estruturados em todas as páginas: `MedicalClinic` + `HealthAndBeautyBusiness` (endereço, horário, área atendida, nota do Google), `Person` da Dra. Adelaine com o registro no CRBM, `Service`/`MedicalProcedure` em cada tratamento, `FAQPage`, `BlogPosting`, `BreadcrumbList`.
+- `sitemap.xml`, `robots.txt` (libera os robôs de IA) e `llms.txt` (resumo da clínica para IAs) são gerados a cada `gerar.py`.
+- Nome, endereço e telefone iguais em todo o site. Mantenha iguais no Google Meu Negócio, Instagram e Facebook.
 
 ## Planilha de leads
 
 1. Crie uma planilha nova no Google Sheets, de preferência na conta da clínica.
-2. Menu **Extensões > Apps Script**. Apague o que estiver lá e cole o conteúdo de `google-apps-script/Codigo.gs`. Salve.
+2. **Extensões > Apps Script**. Apague o que estiver lá e cole o conteúdo de `google-apps-script/Codigo.gs`. Salve.
 3. **Implantar > Nova implantação**, tipo **App da Web**. Executar como: **Eu**. Quem pode acessar: **Qualquer pessoa**. Implante e autorize.
-4. Copie o endereço que termina em `/exec` e cole em `planilhaUrl`, no `js/config.js`. Faça commit e push.
-5. Teste: abrir o endereço `/exec` no navegador mostra `{"ok":true,"status":"no ar"}`. Depois envie um pedido pelo site e veja a linha aparecer.
+4. Copie o endereço que termina em `/exec` e cole em `planilhaUrl`, no `js/config.js`. Rode `gerar.py` e publique.
+5. Teste: abrir o `/exec` no navegador mostra `{"ok":true,"status":"no ar"}`. Depois envie um lead pelo site e veja a linha.
 
-Colunas: data e hora, nome, WhatsApp, link para abrir a conversa, interesse, há quanto tempo (ou a área, para cursos), melhor horário, qual formulário (quiz ou final), as UTMs, se veio de clique de anúncio (fbclid ou gclid), a página e de onde a pessoa veio.
+Colunas: data e hora, nome, WhatsApp, e-mail, link para abrir a conversa, interesse, página do tratamento, formulário, **status** (começa como "Novo": a equipe atualiza para medir custo por agendamento), UTMs, clique de anúncio, primeira origem, página, de onde veio, ID do lead.
 
-Se já tinha instalado a versão anterior do script, cole o novo código e faça **Implantar > Gerenciar implantações > Editar > Nova versão**. Numa planilha nova, o cabeçalho sai certo sozinho.
+## Pixel, GTM e eventos
 
-## Pixel, Google e Tintim
+Cole os IDs em `js/config.js` (`gtmId`, `pixelId`). O modo de cookies padrão é `"aviso"`: as ferramentas carregam e a pessoa pode recusar. Troque para `"consentimento"` para só carregar depois do "Aceitar".
 
-Cole o código no `<head>` do `index.html` **e** do `obrigado.html`, no lugar do comentário "Pixel do Meta, tag do Google ou script do Tintim".
+| Evento (dataLayer) | Quando | Pixel |
+|---|---|---|
+| `inicio_formulario` | primeiro toque num formulário | |
+| `abriu_formulario` | clique num botão que abre a janela de agendamento | |
+| `lead` | envio válido, com `lead_id` | `Lead` com `eventID` = `lead_id` |
+| `clique_whatsapp` | ida para o WhatsApp | `Contact` (links diretos) |
+| `abriu_duvida` | primeira pergunta aberta | |
+| `rolagem_50` | metade da página | |
+| `cookies_aceitos` / `cookies_recusados` | escolha no aviso | consentimento |
 
-Eventos que o site já dispara:
+Nome, telefone e e-mail nunca vão para o dataLayer nem para o Pixel.
 
-| Evento | Quando |
-|---|---|
-| `Lead` (Meta) / `generate_lead` (Google) | Na página de obrigado, uma vez por envio |
-| `Contact` (Meta) / `contact` (Google) | Clique em qualquer link direto de WhatsApp |
-| `QuizPasso` (personalizado) | A cada passo do quiz, com o número do passo |
-| `AbaTratamento` (personalizado) | Clique numa aba de tratamento |
+## Domínio próprio
 
-Use o `Lead` como conversão das campanhas. O `QuizPasso` mostra em que pergunta as pessoas desistem.
+Quando tiver o domínio (ex.: empatiahumana.com.br): troque `url` e `base` em `SITE` no `scripts/dados.py` (`base` vira `"/"`), crie o arquivo `CNAME` com o domínio, rode `gerar.py`, publique e configure o DNS (A do domínio para os 4 IPs do GitHub Pages e `www` como CNAME de `rafamel10.github.io`).
 
-## Links para os anúncios
+## Pendências
 
-Cada campanha abre a página com o título trocado, o tratamento já escolhido no quiz (que começa no passo 2) e a aba certa aberta:
-
-| Campanha | Link |
-|---|---|
-| Vasinhos e varizes | `https://rafamel10.github.io/clinica-empatia-humana/?tratamento=varizes` |
-| Dor (ozonioterapia) | `…/?tratamento=dor` |
-| Gordura localizada | `…/?tratamento=medidas` |
-| Pele e rosto | `…/?tratamento=pele` |
-| Intestino e detox | `…/?tratamento=intestino` |
-| Cursos | `…/?tratamento=cursos` |
-
-Acrescente as UTMs no mesmo link, por exemplo `?tratamento=varizes&utm_source=meta&utm_medium=pago&utm_campaign=varizes-nov`. Elas vão para a planilha e passam para o obrigado.
-
-Os textos de cada versão ficam em `js/main.js`, no bloco `VERSOES`.
-
-## Antes e depois
-
-A seção já está pronta e só aparece quando houver fotos em `resultados`, no `js/config.js`:
-
-```js
-resultados: [
-  { antes: "assets/img/resultados/peim-1-antes.jpg", depois: "assets/img/resultados/peim-1-depois.jpg",
-    tratamento: "PEIM integrativo", legenda: "4 sessões" },
-],
-```
-
-Pelo Código de Ética da Biomedicina (Resolução CFBM nº 330/2020, art. 10, IV, e art. 11, c), a foto de paciente só pode ser publicada com termo de consentimento (TCLE) assinado para esse fim e com o aviso de que a imagem não garante resultado. O aviso já aparece embaixo da seção.
-
-## De onde vieram as informações
-
-- **Google (perfil da clínica)**: nota 5,0, 27 avaliações, horário de funcionamento, fotos da recepção e o retrato vertical da Dra. Adelaine
-- **Instagram @clinicaempatiahumana**: destaque "Depoimentos" (prints do WhatsApp e depoimento em vídeo) e a foto da fachada
-- **Instagram @biomedicaadelaine**: destaque "Quem sou?" (formação e história) e "Casos clínicos" (como é a consulta integrativa)
-- **Consulta pública do CFBM** (cfbm-br.implanta.net.br): inscrição nº 1437 no CRBM 4ª Região, ativa, requerida em 22/03/2011, com as habilitações Biomedicina Estética, Patologia Clínica e Práticas Integrativas (Ozonioterapia). Também tem a inscrição nº 18758 no CRBM 3ª Região
-- **Cadastro do CNPJ 20.199.921/0001-32**: razão social e endereço
-
-## Como editar
-
-- **WhatsApp**: o número aparece nos links `wa.me` do HTML e em `js/config.js`. Para trocar, faça localizar e substituir em todos os arquivos.
-- **Textos**: estão no `index.html`, na ordem em que aparecem na página.
-- **Depoimentos e avaliações**: blocos `conversa` e `avaliacao` no `index.html`. Para incluir um novo, copie um bloco e troque o texto.
-- **Cores e fontes**: variáveis no topo do `css/style.css` (`--mata`, `--ouro`, `--areia`…). Fontes: Newsreader (títulos), Albert Sans (texto) e Allura (frase manuscrita do final), pelo Google Fonts.
-
-## Para confirmar com a clínica antes de subir os anúncios
-
-- Se a Dra. Adelaine concorda em contar no site o diagnóstico de lúpus (está no destaque "Quem sou?" dela)
-- O título "especialista em terapias injetáveis": o CFBM não mostra especialidade registrada, por isso o site diz "formação em"
-- Autorização dos pacientes cujos relatos aparecem (Marcela, Mávila e a paciente do vídeo). A clínica já publicou os prints, mas vale ter o ok por escrito
-- Fotos de antes e depois com TCLE assinado
-- Fotos originais em alta resolução do espaço e dos atendimentos
-- Domínio próprio (ex.: empatiahumana.com.br), se quiserem usar no lugar do endereço do GitHub
+- `planilhaUrl` (sem ela o lead não fica gravado) e IDs do GTM/Pixel
+- Fotos profissionais da clínica e dos procedimentos (hoje são as do Instagram e do Google)
+- Depoimentos novos por escrito, com autorização
+- Domínio próprio
