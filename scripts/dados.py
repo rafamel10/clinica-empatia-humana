@@ -434,7 +434,7 @@ SINTOMAS = [
 # Dúvidas da home (quebra de objeções)
 FAQ_HOME = [
     ("A avaliação é paga?", "A avaliação para procedimentos, como vasinhos, ozonioterapia, lipo ozonizada e pele, é sem custo. A consulta de estética integrativa, com análise detalhada dos exames e o mapeamento do caso por escrito, tem valor à parte. A equipe confirma tudo pelo WhatsApp."),
-    ("Quanto custa?", "Depende do tratamento e do seu caso. A equipe passa os valores pelo WhatsApp logo depois que você deixar seu contato, e vários tratamentos podem ser parcelados."),
+    ("Quanto custa?", "O valor do tratamento depende do seu caso, e a equipe passa pelo WhatsApp logo depois que você deixar seu contato. O tratamento de vasinhos pode ser parcelado em até 10x."),
     ("Dói?", "A maioria dos procedimentos é feita com agulhas finas e causa só um desconforto rápido. Em cada página de tratamento você encontra como é a sensação, contada sem rodeio."),
     ("Quem vai me atender?", "A própria Dra. Adelaine Montel, biomédica esteta e ozonioterapeuta, com inscrição ativa no CRBM 4ª Região (nº 1437) desde 2011."),
     ("É seguro?", "Os procedimentos são feitos por profissional habilitada, em ambiente de clínica, com material descartável e avaliação antes de qualquer indicação. Se o tratamento não for para você, ela diz."),
@@ -464,3 +464,71 @@ CURSOS = [
         "texto": "Curso prático para quem quer oferecer limpeza de pele com técnica, biossegurança e confiança.",
     },
 ]
+
+
+# ====================================================================================
+# Site v4 (identidade visual da marca): textos da home de vendas e das páginas institucionais
+# ====================================================================================
+
+SLOGAN = "Tratando de dentro para fora"
+
+# A avaliação para procedimentos (vasinhos, ozonioterapia, lipo ozonizada e pele) é sem custo?
+# True: aparece no topo da home, nas faixas e nas dúvidas. False: some de todos esses lugares.
+AVALIACAO_SEM_CUSTO = True
+
+# Faixas em movimento logo abaixo do topo da home
+FAIXA_1 = ["Ozonioterapia", "Vasinhos e varizes", "Lipo ozonizada", "Limpeza de pele", "Saúde intestinal", "Soroterapia", "Consulta integrativa"]
+FAIXA_2 = ["De dentro para fora", "Vasinhos em até 10x", "Nota 5,0 no Google", "Segunda a sábado", "Centro de Canaã", "Dra. Adelaine Montel"]
+
+# "Para quem é": cada linha leva à página do tratamento
+IDENTIFICACAO = [
+    ("Os vasinhos já decidem a roupa que você vai usar", "vasinhos-e-varizes"),
+    ("A dor na coluna ou no joelho volta quando o remédio passa", "ozonioterapia"),
+    ("A gordura localizada não sai nem com dieta e treino", "lipo-ozonizada"),
+    ("A barriga incha todo dia e o cansaço não passa", "saude-intestinal"),
+    ("Os exames estão normais, mas você não se sente bem", "consulta-integrativa"),
+    ("Cravos e manchas voltam, e a base virou obrigação", "limpeza-de-pele"),
+]
+
+# Do primeiro contato ao plano
+PASSOS = [
+    ("Você chama no WhatsApp", "Deixe seu nome e WhatsApp. A equipe responde com valores e horários."),
+    ("Avaliação sem pressa", "A Dra. Adelaine ouve sua história, examina e, se você tiver, analisa seus exames."),
+    ("Plano sob medida", "Você sai sabendo qual tratamento é indicado, quantas sessões e como se cuidar em casa."),
+    ("Sessões e acompanhamento", "Horário marcado, e a evolução revista a cada encontro."),
+]
+
+# Cartões de credencial da Dra. Adelaine: (ícone, título, texto)
+CREDENCIAIS = [
+    ("escudo", "CRBM 1437", "Inscrição ativa no CRBM 4ª Região (Pará)"),
+    ("folha", "+18 anos de formada", "Biomédica esteta e ozonioterapeuta"),
+    ("lupa", "Nutrição Ortomolecular", "Pós-graduada, com formação em análises clínicas"),
+]
+
+# Fotos do espaço: (arquivo, descrição, legenda)
+ESPACO = [
+    ("recepcao", "Recepção da Clínica Empatia Humana, com prateleiras de produtos e sofá", "Recepção", ""),
+    ("fachada", "Fachada da clínica com o letreiro Empatia Humana", "Nossa fachada", "larga"),
+    ("adelaine-consultorio", "Dra. Adelaine Montel de jaleco branco no consultório", "No consultório", ""),
+]
+
+# Página "A clínica"
+CLINICA = {
+    "desde": "2014",  # início de atividade no cadastro público do CNPJ
+    "conceito": [
+        "Empatia Humana é uma clínica de estética integrativa: aqui, a aparência é tratada junto com o que acontece por dentro do corpo. Antes de indicar um procedimento, a Dra. Adelaine quer entender a sua história, a sua rotina e, quando faz sentido, os seus exames.",
+        "É por isso que o nosso lema é tratar de dentro para fora. O vasinho, a dor, a gordura localizada, a mancha e o inchaço são o que aparece. O cuidado começa pelo que está por trás.",
+        "E o nome da clínica resume o jeito de atender: com empatia. Sem pressa, sem protocolo pronto e com explicação de cada etapa.",
+    ],
+    "valores": [
+        ("Escuta antes do procedimento", "Toda paciente passa por avaliação. Se o tratamento não for para você, a gente diz."),
+        ("O corpo inteiro", "Pele, circulação, intestino, vitaminas e hábitos entram na mesma conversa."),
+        ("Formação e registro", "Atendimento com biomédica inscrita no CRBM, com habilitação em estética e ozonioterapia."),
+        ("Acolhimento", "Ambiente tranquilo e atendimento com horário marcado, como as pacientes contam nas avaliações do Google."),
+    ],
+    "faq": [
+        ("O que é a Empatia Humana?", "É uma clínica de estética integrativa e ozonioterapia no Centro de Canaã dos Carajás (PA), sob responsabilidade técnica da biomédica Dra. Adelaine Barros Montel, CRBM 4ª Região nº 1437."),
+        ("Quais tratamentos a clínica oferece?", "Ozonioterapia para dor, tratamento de vasinhos e microvarizes (PEIM), lipo ozonizada, consulta de estética integrativa, saúde intestinal e detox, limpeza de pele e tratamentos faciais, soroterapia e vitaminas, além de massagem e drenagem linfática."),
+        ("Onde fica e qual o horário?", "Na Rua Círio de Nazaré, 558, salas 1 e 2, Centro. Atende de segunda a sexta, das 8h às 12h e das 14h às 18h, e aos sábados das 8h às 12h, com horário marcado."),
+    ],
+}

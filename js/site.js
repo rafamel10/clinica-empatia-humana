@@ -316,6 +316,16 @@
     }).observe(alvo50);
   }
 
+  /* Setas do carrossel de avaliações */
+  d.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-carrossel]");
+    if (!b) return;
+    var alvo = d.getElementById(b.getAttribute("aria-controls"));
+    if (!alvo) return;
+    var passo = Math.max(280, alvo.clientWidth * 0.7) * (b.getAttribute("data-carrossel") === "anterior" ? -1 : 1);
+    alvo.scrollBy({ left: passo, behavior: reduzir ? "auto" : "smooth" });
+  });
+
   /* Filtros do blog */
   var filtros = d.querySelectorAll(".filtro");
   if (filtros.length) {

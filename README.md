@@ -4,7 +4,22 @@ Site institucional com captação da **Clínica Empatia Humana, conceito em est�
 
 Publicado pelo GitHub Pages: https://rafamel10.github.io/clinica-empatia-humana/
 
-Estrutura inspirada na draotorrino.com.br: home institucional, **uma página por tratamento** (para anúncio e para busca local), página da doutora e **blog** para SEO local e para buscadores com IA (Google AI Overviews, ChatGPT, Perplexity).
+Estrutura: **home focada em vendas**, páginas institucionais (A clínica, Dra. Adelaine, Depoimentos, Contato, Cursos), **uma página por tratamento** (para anúncio e para busca local) e **blog** para SEO local e para buscadores com IA (Google AI Overviews, ChatGPT, Perplexity).
+
+## Identidade visual
+
+O visual segue a identidade da marca (pasta "ID Visual", copiada em `assets/marca/`):
+
+| Papel | Cor |
+|---|---|
+| Predominante (rosa) | `#FDA1B3` |
+| Secundária (rosa claro) | `#FCCED8` |
+| Terciária (off-white) | `#F3EEEA` |
+| Letras | `#6D6467` |
+
+Dois tons derivados foram criados para leitura: grafite `#4A4245` (títulos e fundos escuros) e rosa profundo `#C8526E` (destaque em itálico). As variáveis ficam no topo do `css/site.css`. Lema da marca: **"Tratando de dentro para fora"**.
+
+Fontes (Google Fonts): Cormorant Garamond nos títulos, Josefin Sans em caixa alta nos rótulos e botões (como nas peças da marca) e Jost no texto. Os logos do site (símbolo, nome, versões branca e rosa, favicon e imagem de prévia) são gerados por `scripts/imagens.py` a partir dos originais em `assets/marca/`.
 
 Conversão: um único objetivo em todas as páginas. A pessoa deixa **nome, WhatsApp e e-mail**, o lead vai para a planilha e ela cai direto na conversa do WhatsApp da clínica, com a mensagem pronta (nome, tratamento da página e código da campanha).
 
@@ -15,7 +30,8 @@ As páginas são **geradas por script**. Nunca edite os HTML à mão: edite os t
 ```
 scripts/dados.py        TODOS os textos: clínica, Dra. Adelaine, tratamentos, depoimentos, avaliações, FAQ, cursos
 scripts/gerar.py        modelos das páginas, dados estruturados, sitemap, robots, llms.txt, feed do blog
-scripts/imagens.py      gera as fotos .webp e a imagem de prévia (og-empatia.jpg)
+scripts/imagens.py      gera as fotos .webp, os logos, o favicon e a imagem de prévia (og-empatia.jpg)
+assets/marca/           originais da identidade visual (logos e paleta)
 conteudo/blog/*.md      posts do blog (um arquivo por post)
 css/site.css            visual
 js/config.js            planilha, WhatsApp, e-mail obrigatório, GTM, Pixel, modo de cookies
@@ -38,7 +54,11 @@ O GitHub Pages publica em cerca de 1 minuto. Se mudou CSS ou JS, aumente `VERSAO
 
 | Endereço | O que é |
 |---|---|
-| `/` | Home: formulário no topo, "Quando procurar", tratamentos, números, Dra. Adelaine, o que é estética integrativa, depoimentos, dúvidas, blog, cursos, contato |
+| `/` | Home de vendas: título com o lema e botão, faixas em movimento, "para quem é", tratamentos em mosaico, do primeiro contato ao plano, Dra. Adelaine, nota do Google e relatos, o espaço, formulário com mapa, dúvidas e blog |
+| `/a-clinica/` | Conceito, o que você encontra, o espaço e quem atende |
+| `/depoimentos/` | Avaliações do Google e relatos do WhatsApp |
+| `/contato/` | Formulário, endereço, horários, mapa e redes |
+| `/pacientes-de-parauapebas/` | Página para quem vem da cidade vizinha |
 | `/tratamentos/` | Todos os tratamentos |
 | `/tratamentos/vasinhos-e-varizes/` | PEIM |
 | `/tratamentos/ozonioterapia/` | Ozonioterapia para dor |
