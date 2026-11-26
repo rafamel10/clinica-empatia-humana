@@ -263,6 +263,14 @@ FOTOS = {  # reserva, caso scripts/medidas.json não exista
     "adelaine-consultorio": (337, 385), "avaliacao-pernas": (512, 380), "clinica-emblema": (512, 285),
     "recepcao": (660, 780), "fachada": (640, 490), "simbolo-rosa": (320, 304), "simbolo-branco": (320, 304),
     "logotipo-rosa": (720, 146), "logotipo-branco": (946, 192), "logo-rosa": (640, 401), "logo-branca": (640, 401),
+    # fotos do ensaio de fev/2026 (Drive "Adelaine - ensaio"), geradas fora do imagens.py
+    "dra-adelaine-avaliacao-gratuita": (800, 1200),
+    "dra-adelaine-consulta-integrativa": (800, 1200),
+    "dra-adelaine-lipo-ozonizada": (800, 1200),
+    "dra-adelaine-ozonioterapia": (800, 1200),
+    "dra-adelaine-vasinhos-peim": (800, 1200),
+    "disbiose-zero-dra-adelaine": (800, 1200),
+    "loja-home-care-empatia-humana": (800, 1200),
 }
 
 
@@ -1911,6 +1919,14 @@ def antes_depois_html(itens):
 </div></section>""".format(figs=figs)
 
 
+def bloco_resposta_foto(resposta_html, nome_foto, alt, extra=""):
+    """Resposta direta ao lado de uma foto (moldura em arco da marca). Sem foto, só o texto."""
+    if not nome_foto:
+        return '<div class="largura largura--texto">%s%s</div>' % (resposta_html, extra)
+    return '<div class="largura duas-colunas"><div>%s%s</div><figure class="ident__foto">%s</figure></div>' % (
+        resposta_html, extra, foto(nome_foto, alt))
+
+
 def pagamento_html():
     return '<p class="pagamento">%s<span><strong>%s</strong> · Avaliação gratuita para indicar o procedimento</span></p>' % (icone("check"), esc(PAGAMENTO))
 
@@ -1951,7 +1967,7 @@ def pagina_servico(sv):
 </section>
 
 <section class="secao secao--branca secao--curta">
-  <div class="largura largura--texto">{resposta}</div>
+  {resposta}
 </section>
 
 <section class="secao secao--creme" aria-labelledby="quem-titulo">
@@ -2019,7 +2035,7 @@ def pagina_servico(sv):
         mig=migalhas_html([("Início", ""), (pai_nome, pai_cam), (sv["nome"], caminho)]), rot=rotulo(pai_nome), h1=esc(sv["h1"]), sub=esc(sv["sub"]),
         dur=esc(duracao_curta(sv)), preco=esc(preco_txt(sv)),
         cta=botao_agendar(CTA, "servico_topo", msg), cta2=botao("Ver investimento", "", classe="botao--contorno", href="#investimento", abrir=False),
-        resposta=resposta_direta(sv["resposta_direta"], "O que é, em resumo"),
+        resposta=bloco_resposta_foto(resposta_direta(sv["resposta_direta"], "O que é, em resumo"), sv.get("foto"), sv.get("foto_alt", "")),
         cab_quem=secao_cabeca("Para quem é", "Para quem é", pq.get("intro", ""), "quem-titulo"), itens_quem=lista_check(pq["itens"]),
         atencao=lista_check(pq.get("atencao", []), "lista-ok lista-ok--alerta"),
         jornada=jornada(passos, "Como funciona", " ".join(esc(x) for x in sv["como_funciona"]["texto"]), botao_agendar(CTA, "passos", msg, "botao--rosa"), rot="Passo a passo").replace("<h2>", '<h2 id="como-titulo">', 1),
@@ -2251,13 +2267,13 @@ def pagina_loja():
     passos = "".join("<li><h3>%s</h3><p>%s</p></li>" % (esc(x["titulo"]), esc(x["texto"])) for x in P["como_pedir"])
     corpo = """
 {cabeca}
-<section class="secao secao--branca secao--curta"><div class="largura largura--texto">{resposta}<ol class="passos-simples passos-simples--linha">{passos}</ol></div></section>
+<section class="secao secao--branca secao--curta">{resposta}</section>
 <section class="secao secao--creme" aria-labelledby="dest-titulo"><div class="largura">{cab}<ul class="produtos produtos--destaque">{dest}</ul></div></section>
 <section class="secao secao--branca" aria-labelledby="todos-titulo"><div class="largura">{cab2}{grupos}<p class="nota-pequena">{aviso}</p></div></section>
 {duvidas}
 {faixa}
 """.format(cabeca=cabeca_pagina([("Início", ""), ("Loja e home care", caminho)], "Home care", esc(P["h1"]), esc(P["sub"]), '<div class="hero__acoes">%s</div>' % botao_whats("Fazer um pedido", "loja_topo", P["whatsapp_msg"])),
-           resposta=resposta_direta(P["resposta_direta"]), passos=passos,
+           resposta=bloco_resposta_foto(resposta_direta(P["resposta_direta"]), P.get("foto"), P.get("foto_alt", ""), '<ol class="passos-simples passos-simples--linha">%s</ol>' % passos), passos="",
            cab=secao_cabeca("Mais pedidos", "Os queridinhos da clínica", "", "dest-titulo"), dest=dest,
            cab2=secao_cabeca("Vitrine", "Todos os produtos", "Os valores são informados pelo WhatsApp, junto com a disponibilidade.", "todos-titulo"), grupos=grupos, aviso=esc(P.get("aviso", "")),
            duvidas=secao_duvidas(faq, "Dúvidas sobre <em>a loja</em>", ident="faq", interesse="os produtos da loja"),
