@@ -7,7 +7,7 @@
   "use strict";
   var w = window, d = document;
   var cfg = w.EMPATIA || {};
-  var NUMERO = String(cfg.whatsapp || "559491182268").replace(/\D/g, "");
+  var NUMERO = String(cfg.whatsapp || "5594991182268").replace(/\D/g, "");
   var reduzir = w.matchMedia && w.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var tratamentoPagina = d.body.getAttribute("data-tratamento") || "";
 
@@ -296,9 +296,17 @@
 
   /* Links diretos de WhatsApp (se houver) */
   d.addEventListener("click", function (e) {
-    var a = e.target.closest && e.target.closest('a[href^="https://wa.me/"]');
+    var a = e.target.closest && e.target.closest('a[href^="https://wa.me/"], a[data-agendar]');
     if (!a) return;
-    sinal("clique_whatsapp", { origem: a.getAttribute("data-origem") || "link" });
+    var ehWhats = a.href.indexOf("https://wa.me/") === 0;
+    if (ehWhats && !a.hasAttribute("data-ref")) {
+      /* leva a origem do anúncio (utm) para dentro da mensagem, como o formulário já fazia */
+      var o = origem().ultimo;
+      var ref = [o.utm_source, o.utm_campaign, o.utm_content].filter(Boolean).join("-");
+      if (ref && a.href.indexOf("text=") > -1) a.href += encodeURIComponent("\n\n(ref: " + ref.slice(0, 60) + ")");
+      a.setAttribute("data-ref", "1");
+    }
+    sinal(ehWhats ? "clique_whatsapp" : "clique_agendamento", { origem: a.getAttribute("data-origem") || "link" });
     if (typeof w.fbq === "function") w.fbq("track", "Contact");
   });
 

@@ -26,7 +26,7 @@ S = dados.SITE
 DRA = dados.DRA
 BASE = S["base"]
 URL = S["url"].rstrip("/")
-VERSAO = "6"  # aumente a cada publicação que mudar CSS ou JS
+VERSAO = "7"  # aumente a cada publicação que mudar CSS ou JS
 HOJE = S["data_atualizacao"]
 TRAT = {t["slug"]: t for t in dados.TRATAMENTOS}
 SEM_CUSTO = bool(getattr(dados, "AVALIACAO_SEM_CUSTO", False))
@@ -37,6 +37,12 @@ try:
         MEDIDAS = json.load(_f)
 except Exception:
     MEDIDAS = {}
+
+# Configuração central (dados/config.json): WhatsApp, telefone, link de agendamento e medição
+with open(os.path.join(AQUI, "..", "dados", "config.json"), encoding="utf-8") as _f:
+    CONFIG = json.load(_f)
+S["whatsapp"] = "".join(c for c in CONFIG["whatsapp"] if c.isdigit())
+S["telefone"] = CONFIG["telefone"]
 
 
 def esc(t):
@@ -192,6 +198,7 @@ def data_br(iso):
 # Ícones (traço fino, SVG inline) ----------------------------------------------------
 
 ICONES = {
+    "check": '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
     "perna": '<path d="M9 3c0 5 1 8 1 11s-2 4-2 7h5c0-2 1-3 1-6s-1-6-1-12"/><path d="M10.5 9.5c.8.6 1.4 1.6 1.2 2.6M11 15c.6.4 1 1 .9 1.8"/>',
     "ozonio": '<circle cx="8" cy="9" r="4"/><circle cx="16" cy="9" r="3"/><circle cx="12" cy="16" r="3.5"/>',
     "cintura": '<path d="M7 3c1 3 1 5 0 9s-1 6 1 9M17 3c-1 3-1 5 0 9s1 6-1 9"/><path d="M8.5 12h7"/>',
@@ -387,6 +394,33 @@ def botao(texto, origem, interesse="", classe="botao--escuro", href="#agendar", 
 
 
 CTA = "Quero saber valores e horários"
+
+
+def link_agendar(mensagem):
+    """Destino dos botões de agendar: a agenda online, se configurada; senão, o WhatsApp com a mensagem da página."""
+    if CONFIG.get("agendamento_url"):
+        return CONFIG["agendamento_url"]
+    from urllib.parse import quote
+    return "https://wa.me/%s?text=%s" % (S["whatsapp"], quote(mensagem, safe=""))
+
+
+def botao_agendar(texto, origem, mensagem, classe="botao--escuro"):
+    return '<a class="botao %s" href="%s" data-agendar data-origem="%s" target="_blank" rel="noopener"><span>%s</span><span class="botao__seta" aria-hidden="true">%s</span></a>' % (
+        classe, esc(link_agendar(mensagem)), origem, texto, icone("seta-diag", "icone icone--seta"))
+
+
+def config_js():
+    return """// Arquivo GERADO a partir de dados/config.json. Não edite aqui: mude lá e rode python scripts/gerar.py
+window.EMPATIA = %s;
+""" % json.dumps({
+        "planilhaUrl": CONFIG.get("planilha_url", ""),
+        "whatsapp": S["whatsapp"],
+        "agendamentoUrl": CONFIG.get("agendamento_url", ""),
+        "emailObrigatorio": bool(CONFIG.get("email_obrigatorio", True)),
+        "gtmId": CONFIG.get("gtm_id", ""),
+        "pixelId": CONFIG.get("pixel_id", ""),
+        "cookies": CONFIG.get("cookies", "aviso"),
+    }, ensure_ascii=False, indent=2)
 
 
 def prova_google(classe="", href=None):
@@ -764,25 +798,24 @@ def horarios_dl():
 def pagina_home():
     ident = "".join('<li><a href="%s"><span>%s</span>%s</a></li>' % (link("tratamentos/%s/" % sl), esc(tx), icone("seta-diag", "icone icone--seta")) for tx, sl in dados.IDENTIFICACAO)
     posts = "".join(card_post(p) for p in POSTS[:3])
-    if SEM_CUSTO:
-        sub = '<strong>Avaliação sem custo*</strong> com a biomédica Dra. Adelaine Montel, no Centro de <strong>Canaã dos Carajás</strong>. Ela estuda o seu caso antes de indicar qualquer procedimento.'
-        nota = "*Para procedimentos como vasinhos, ozonioterapia, lipo ozonizada e pele. Leva 20 segundos e você vai direto para o WhatsApp."
-    else:
-        sub = 'Com a biomédica Dra. Adelaine Montel, no Centro de <strong>Canaã dos Carajás</strong>. Ela estuda o seu caso antes de indicar qualquer procedimento.'
-        nota = "Leva 20 segundos e você vai direto para o WhatsApp."
+    H = dados.HERO
+    prova_itens = [x for x in H["microprova"] if SEM_CUSTO or "gratuita" not in x.lower()]
+    microprova = '<ul class="microprova">%s</ul>' % "".join("<li>%s<span>%s</span></li>" % (icone("check"), esc(x)) for x in prova_itens)
+    nota = '<p class="hero__nota">%s</p>' % esc(H["nota"]) if SEM_CUSTO else ""
 
     corpo = """
 <section class="hero hero--home" aria-labelledby="hero-titulo">
   <div class="largura hero__grade">
     <div class="hero__texto">
       {rot_hero}
-      <h1 id="hero-titulo">Vasinhos, dor e gordura localizada tratados <em>de dentro para fora</em></h1>
+      <h1 id="hero-titulo">{h1}</h1>
       <p class="hero__sub">{sub}</p>
       <div class="hero__acoes">
         {cta_hero}
-        <a class="link-acao" href="#tratamentos">Conhecer os tratamentos</a>
+        {cta2_hero}
       </div>
-      <p class="hero__nota">{nota}</p>
+      {microprova}
+      {nota}
       {prova}
     </div>
     <div class="hero__visual">
@@ -893,7 +926,7 @@ def pagina_home():
 """.format(
         base=BASE,
         rot_hero=rotulo('<span class="so-desktop">Clínica de estética integrativa · Canaã dos Carajás</span><span class="so-celular">Estética integrativa em Canaã</span>'),
-        sub=sub, nota=nota, cta_hero=botao(CTA, "hero"), prova=prova_google(href="#depoimentos"),
+        h1=H["headline"], sub=esc(H["sub"]), nota=nota, microprova=microprova, cta_hero=botao_agendar(H["cta"], "hero", H["whatsapp_msg"]), cta2_hero=botao(H["cta2"], "", classe="botao--contorno", href="#tratamentos", abrir=False), prova=prova_google(href="#depoimentos"),
         foto_hero=foto("adelaine-vertical", "Dra. Adelaine Montel, biomédica esteta, sorrindo na Clínica Empatia Humana", lazy=False, prioridade=True),
         faixas=faixas_html(), dagua=marca_dagua("marca-dagua--secao"),
         rot_quem=rotulo("Para quem é", "rotulo--claro"), ident=ident, cta_quem=botao(CTA, "para_quem", classe="botao--rosa"),
@@ -1655,6 +1688,7 @@ def grava(caminho, conteudo):
 
 
 def main():
+    grava("js/config.js", config_js())
     grava("index.html", pagina_home())
     grava("tratamentos/index.html", pagina_tratamentos())
     for t in dados.TRATAMENTOS:

@@ -1,0 +1,13 @@
+{
+  "_leia": "Configuração central do site. Mude aqui e rode: python scripts/gerar.py (o js/config.js é gerado a partir deste arquivo).",
+  "whatsapp": "5594991182268",
+  "telefone": "(94) 99118-2268",
+  "_agendamento_url": "Vazio = os botões de agendar abrem o WhatsApp com a mensagem da página. Quando a agenda online da Alurie for ativada, cole o link aqui.",
+  "agendamento_url": "",
+  "_formulario": "planilha_url: endereço do Apps Script que grava os leads (termina em /exec). gtm_id e pixel_id: IDs de medição. cookies: 'aviso' ou 'consentimento'.",
+  "planilha_url": "",
+  "email_obrigatorio": true,
+  "gtm_id": "",
+  "pixel_id": "",
+  "cookies": "aviso"
+}
