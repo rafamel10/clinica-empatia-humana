@@ -7,7 +7,7 @@
   "_formulario": "planilha_url: endereço do Apps Script que grava os leads (termina em /exec). gtm_id e pixel_id: IDs de medição. cookies: 'aviso' ou 'consentimento'.",
   "planilha_url": "",
   "email_obrigatorio": true,
-  "gtm_id": "",
+  "gtm_id": "GTM-N4BXNL74",
   "pixel_id": "",
   "cookies": "aviso",
   "_endereco": "Endereço exibido no site. Vazio = aparece [ENDEREÇO] para a clínica preencher.",
