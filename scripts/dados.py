@@ -112,7 +112,7 @@ PARAUAPEBAS = {
     "faq": [
         ("A clínica atende pacientes de Parauapebas?", "Sim. Muitas pacientes vêm de Parauapebas, Curionópolis e cidades vizinhas para os tratamentos da Empatia Humana, no Centro de Canaã dos Carajás."),
         ("Dá para fazer avaliação e tratamento no mesmo dia?", "Em muitos casos, sim. Quando você marca pelo WhatsApp, avise que vem de Parauapebas: a equipe organiza a agenda para aproveitar a viagem."),
-        ("A clínica atende no sábado?", "Sim, aos sábados das 8h às 12h. De segunda a sexta, das 8h às 12h e das 14h às 18h."),
+        ("A clínica atende no sábado?", "Sim. A clínica atende de segunda a sábado, das 8h às 20h, com horário marcado."),
         ("Onde fica a clínica?", "Na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro de Canaã dos Carajás. O link do Google Maps está nesta página."),
     ],
 }
@@ -439,14 +439,14 @@ FAQ_HOME = [
     ("Quem vai me atender?", "A própria Dra. Adelaine Montel, biomédica esteta e ozonioterapeuta, com inscrição ativa no CRBM 4ª Região (nº 1437) desde 2011."),
     ("É seguro?", "Os procedimentos são feitos por profissional habilitada, em ambiente de clínica, com material descartável e avaliação antes de qualquer indicação. Se o tratamento não for para você, ela diz."),
     ("Homens também são atendidos?", "Sim. Dor, vasinhos, gordura localizada, pele e intestino são tratados em homens e mulheres."),
-    ("Atendem quem é de Parauapebas e da região?", "Sim. Muitas pacientes vêm de Parauapebas, Curionópolis e cidades vizinhas. A clínica fica no Centro de Canaã dos Carajás e atende com horário marcado, inclusive aos sábados de manhã."),
+    ("Atendem quem é de Parauapebas e da região?", "Sim. Muitas pacientes vêm de Parauapebas, Curionópolis e cidades vizinhas. A clínica fica no Centro de Canaã dos Carajás e atende com horário marcado, de segunda a sábado, das 8h às 20h."),
     ("Como confiro o registro da Dra. Adelaine?", "Na consulta pública do Conselho Federal de Biomedicina: busque por Adelaine Barros Montel e veja a inscrição nº 1437 no CRBM 4ª Região, ativa."),
 ]
 
 # Entram no fim do FAQ de toda página de tratamento
 FAQ_TRATAMENTO_COMUM = [
     ("Quanto custa?", "Depende do seu caso e do plano definido na avaliação. A equipe passa os valores pelo WhatsApp logo depois que você deixar seu contato, e vários tratamentos podem ser parcelados."),
-    ("Atendem quem é de Parauapebas e da região?", "Sim. Muitas pacientes vêm de Parauapebas, Curionópolis e cidades vizinhas. A clínica fica no Centro de Canaã dos Carajás e atende com horário marcado, inclusive aos sábados de manhã."),
+    ("Atendem quem é de Parauapebas e da região?", "Sim. Muitas pacientes vêm de Parauapebas, Curionópolis e cidades vizinhas. A clínica fica no Centro de Canaã dos Carajás e atende com horário marcado, de segunda a sábado, das 8h às 20h."),
 ]
 
 CURSOS = [
@@ -495,7 +495,7 @@ HERO = {
 
 # Faixas em movimento logo abaixo do topo da home
 FAIXA_1 = ["Ozonioterapia", "Vasinhos e varizes", "Lipo ozonizada", "Limpeza de pele", "Saúde intestinal", "Soroterapia", "Consulta integrativa"]
-FAIXA_2 = ["De dentro para fora", "Vasinhos em até 10x", "Nota 5,0 no Google", "Segunda a sábado", "Centro de Canaã", "Dra. Adelaine Montel"]
+FAIXA_2 = ["De dentro para fora", "PIX ou cartão em até 10x", "Nota 5,0 no Google", "Segunda a sábado", "Centro de Canaã", "Dra. Adelaine Montel"]
 
 # "Para quem é": cada linha leva à página do tratamento
 IDENTIFICACAO = [
@@ -546,6 +546,6 @@ CLINICA = {
     "faq": [
         ("O que é a Empatia Humana?", "É uma clínica de estética integrativa e ozonioterapia no Centro de Canaã dos Carajás (PA), sob responsabilidade técnica da biomédica Dra. Adelaine Barros Montel, CRBM 4ª Região nº 1437."),
         ("Quais tratamentos a clínica oferece?", "Ozonioterapia para dor, tratamento de vasinhos e microvarizes (PEIM), lipo ozonizada, consulta de estética integrativa, saúde intestinal e detox, limpeza de pele e tratamentos faciais, soroterapia e vitaminas, além de massagem e drenagem linfática."),
-        ("Onde fica e qual o horário?", "Na Rua Círio de Nazaré, 558, salas 1 e 2, Centro. Atende de segunda a sexta, das 8h às 12h e das 14h às 18h, e aos sábados das 8h às 12h, com horário marcado."),
+        ("Onde fica e qual o horário?", "Na Rua Círio de Nazaré, 558, salas 1 e 2, Centro. Atende de segunda a sábado, das 8h às 20h, com horário marcado."),
     ],
 }

@@ -94,7 +94,7 @@ Na Empatia Humana, a responsável é a [Dra. Adelaine Barros Montel](/dra-adelai
 
 O primeiro passo é uma avaliação com a Dra. Adelaine. Ela examina a região que incomoda, conversa sobre sua saúde, seus remédios e sua rotina, e define se a [lipo ozonizada](/tratamentos/lipo-ozonizada/), a hidrolipoclasia ou outro cuidado é indicado para você. Também é na avaliação que se planeja o número de sessões e o intervalo entre elas.
 
-A clínica fica na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro, e atende de segunda a sexta, das 8h às 12h e das 14h às 18h, e aos sábados, das 8h às 12h.
+A clínica fica na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro, e atende de segunda a sábado, das 8h às 20h.
 
 Agende sua avaliação e descubra se a lipo ozonizada faz sentido para o corpo que você quer cuidar.
 

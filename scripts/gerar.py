@@ -1313,7 +1313,7 @@ def pagina_sobre():
 <section class="secao secao--branca">
   <div class="largura estreita texto-longo">
     <h2>Por que a <em>estética integrativa</em></h2>
-    <p>Em 2015, Adelaine Barros Montel recebeu o diagnóstico de lúpus, uma doença autoimune que trouxe momentos muito difíceis. Durante essa jornada, ela conheceu a ozonioterapia e, com o tempo, percebeu mudanças importantes na qualidade de vida: menos dor, menos crises inflamatórias, mais energia e disposição.</p>
+    <p>Em 2015, Adelaine Barros Montel recebeu o diagnóstico de lúpus, uma doença autoimune, e passou a viver o cuidado do lado de quem é paciente. Foi nessa fase que ela conheceu a ozonioterapia, como terapia complementar ao acompanhamento médico, e se aproximou da ideia de olhar para a pessoa por inteiro.</p>
     <p>Quando precisou deixar o laboratório de análises clínicas, onde atuava como biomédica, encontrou na estética integrativa uma forma de continuar cuidando de pessoas. Uniu a experiência com exames laboratoriais, a nutrição ortomolecular e a ozonioterapia num atendimento que olha para o ser humano por inteiro.</p>
     <blockquote class="citacao"><p>{frase}</p></blockquote>
     <h2>Como ela atende</h2>
@@ -1476,74 +1476,102 @@ def pagina_depoimentos():
 
 def pagina_contato():
     caminho = "contato/"
+    C = PAGS["equipe-contato"]["contato"]
+    end = "%s, %s, %s (%s)" % (S["endereco"], S["bairro"], S["cidade"], S["uf"])
+
+    def tx(t):
+        return t.replace("{telefone}", S["telefone"]).replace("{endereco}", end).replace("{horario}", HORARIO_TXT)
+    acoes = {
+        "whatsapp": lambda c: botao_agendar(c["botao"], "contato_whats", C["whatsapp_msg"]),
+        "telefone": lambda c: '<a class="botao botao--contorno" href="tel:+%s" data-origem="contato_tel"><span>%s</span></a>' % (S["whatsapp"], esc(c["botao"])),
+        "endereco": lambda c: '<a class="botao botao--contorno" href="%s" target="_blank" rel="noopener"><span>%s</span></a>' % (esc(S["maps"]), esc(c["botao"])),
+    }
+    canais = "".join("""<li class="canal">
+  <h2 class="canal__titulo">{t}</h2>
+  <p class="canal__valor">{v}</p>
+  <p>{x}</p>
+  {b}
+</li>""".format(t=esc(c["titulo"]), v=esc(tx(c["valor"])), x=esc(tx(c["texto"])), b=acoes[c["tipo"]](c) if c.get("botao") and c["tipo"] in acoes else "") for c in C["canais"])
+    R = C["regiao"]
+    faq = [(x["p"], tx(x["r"])) for x in C["faq"]]
     corpo = """
 {cabeca}
-<section class="secao secao--rosa-claro">
+<section class="secao secao--branca">
   <div class="largura">
-    {comecar}
+    <ul class="canais-grade">{canais}</ul>
   </div>
 </section>
-<section class="secao secao--branca" aria-labelledby="onde-titulo">
-  <div class="largura onde">
+<section class="secao secao--rosa-claro" aria-label="Mapa e redes">
+  <div class="largura">
+    {final}
+  </div>
+</section>
+<section class="secao secao--branca" aria-labelledby="regiao-titulo">
+  <div class="largura duas-colunas">
     <div>
-      <h2 id="onde-titulo">Onde fica a <em>clínica</em></h2>
-      <address class="onde__endereco">{end}<br>{bairro}, {cidade} ({uf})</address>
-      {horarios}
-      <p class="onde__nota">Atendimento com horário marcado. Recebemos pacientes de Canaã, <a href="{parau}">Parauapebas</a>, Curionópolis e região.</p>
-      <p class="onde__nota">{maps_botao}</p>
+      <h2 id="regiao-titulo">{r_t}</h2>
+      <p>{r_x}</p>
+      <p><a class="link-acao" href="{parau}">Para quem vem de Parauapebas</a></p>
     </div>
-    <ul class="canais">
-      <li>{sw}<span><strong>WhatsApp · {tel}</strong><a href="#agendar" data-abrir-form data-origem="contato_whats">Chamar no WhatsApp</a></span></li>
-      <li>{si}<span><strong>Instagram da clínica</strong><a href="{insta}" target="_blank" rel="noopener">@clinicaempatiahumana</a></span></li>
-      <li>{si}<span><strong>Instagram da Dra. Adelaine</strong><a href="{insta_d}" target="_blank" rel="noopener">@biomedicaadelaine</a></span></li>
-      <li>{sf}<span><strong>Facebook</strong><a href="{face}" target="_blank" rel="noopener">facebook.com/empatiahumana</a></span></li>
-    </ul>
+    <div class="cartao-info">
+      <h3>Redes da clínica</h3>
+      <ul class="canais">
+        <li>{si}<span><strong>Instagram da clínica</strong><a href="{insta}" target="_blank" rel="noopener">@clinicaempatiahumana</a></span></li>
+        <li>{si}<span><strong>Instagram da Dra. Adelaine</strong><a href="{insta_d}" target="_blank" rel="noopener">@biomedicaadelaine</a></span></li>
+        <li>{sf}<span><strong>Facebook</strong><a href="{face}" target="_blank" rel="noopener">facebook.com/empatiahumana</a></span></li>
+      </ul>
+    </div>
   </div>
 </section>
+{duvidas}
 <section class="secao secao--creme espaco">
   <div class="largura">
     {espaco}
   </div>
 </section>
-""".format(cabeca=cabeca_pagina([("Início", ""), ("Contato", caminho)], "Contato", 'Fale com a Empatia Humana em <em>Canaã dos Carajás</em>',
-                                "Tire suas dúvidas, peça valores e marque sua avaliação pelo WhatsApp. A clínica fica no Centro, na Rua Círio de Nazaré, 558."),
-           comecar=bloco_comecar("contato", origem="contato"), end=esc(S["endereco"]), bairro=S["bairro"], cidade=S["cidade"], uf=S["uf"], horarios=horarios_dl(),
-           parau=link("pacientes-de-parauapebas/"), maps_botao='<a class="link-acao" href="%s" target="_blank" rel="noopener">Abrir no Google Maps</a>' % esc(S["maps"]),
-           sw=SVG_WHATS, si=SVG_INSTA, sf=SVG_FACE, tel=S["telefone"], insta=S["instagram_clinica"], insta_d=S["instagram_dra"], face=S["facebook"], espaco=espaco_fotos())
-    grafo = [schema_pagina(caminho, "Contato da Clínica Empatia Humana", "ContactPage"), schema_clinica(), schema_site(), schema_migalhas([("Início", ""), ("Contato", caminho)])]
-    h = head("Contato e endereço | Empatia Humana, Canaã dos Carajás",
-             "Endereço, WhatsApp, horários e mapa da Clínica Empatia Humana: Rua Círio de Nazaré, 558, Centro, Canaã dos Carajás (PA). Atendimento de segunda a sábado.",
-             caminho, grafo)
+""".format(cabeca=cabeca_pagina([("Início", ""), ("Contato", caminho)], "Contato", esc(C["h1"]), esc(C["sub"])),
+           canais=canais, final=bloco_final("contato_final"), r_t=esc(R["titulo"]), r_x=esc(R["texto"]), parau=link("pacientes-de-parauapebas/"),
+           si=SVG_INSTA, sf=SVG_FACE, insta=S["instagram_clinica"], insta_d=S["instagram_dra"], face=S["facebook"],
+           duvidas=secao_duvidas(faq, "Dúvidas sobre <em>o atendimento</em>", ident="faq"), espaco=espaco_fotos())
+    grafo = [schema_pagina(caminho, "Contato da Clínica Empatia Humana", "ContactPage"), schema_clinica(), schema_site(), schema_faq(faq), schema_migalhas([("Início", ""), ("Contato", caminho)])]
+    h = head(C["seo"]["title"], C["seo"]["description"], caminho, grafo)
     return pagina(h, corpo, atual="contato", data_pagina="contato")
 
 
 def pagina_cursos():
     caminho = "cursos/"
-    cursos = "".join("<li><h2>%s</h2><p>%s</p>%s</li>" % (esc(c["nome"]), esc(c["texto"]), ('<a class="link-acao" href="%s" target="_blank" rel="noopener">Inscrever-se na lista</a>' % esc(c["link"])) if c.get("link") else "") for c in dados.CURSOS)
+    C = PAGS["programas-spa-cursos"]["cursos"]
+    faq = [(x["p"], x["r"]) for x in C["faq"]]
+    cursos = "".join("""<article class="cartao-info curso">
+  <h2>{n}</h2>
+  <p class="curso__preco">{p}</p>
+  <p>{t}</p>
+  <h3>Para quem é</h3>
+  {pq}
+  <div class="hero__acoes">{b}</div>
+</article>""".format(n=esc(c["nome"]), p=esc(c["preco"]), t=esc(c["texto"]), pq=lista_check(c["para_quem"]),
+                     b=botao_agendar("Quero saber das próximas turmas", "cursos", C["whatsapp_msg"])) for c in C["cursos"])
     corpo = """
 {cabeca}
 <section class="secao secao--branca">
-  <div class="largura cursos-grade">
-    <ul class="cursos">{cursos}</ul>
-    <div class="cartao-form" id="agendar">{form}</div>
+  <div class="largura largura--texto">
+    {cursos}
+    <p class="nota-pequena">Os cursos são para profissionais. Para fazer um tratamento na clínica, veja os <a href="{trats}">tratamentos</a>.</p>
   </div>
 </section>
-""".format(cabeca=cabeca_pagina([("Início", ""), ("Cursos", caminho)], "Para profissionais", 'Cursos para profissionais da saúde e da estética em <em>Canaã dos Carajás</em>',
-                                "Turmas presenciais com a Dra. Adelaine Montel, biomédica com formação em análises clínicas, nutrição ortomolecular e ozonioterapia. Aulas teóricas e práticas, estudo de casos e certificado."),
-           cursos=cursos,
-           form=formulario("cursos", "cursos para profissionais", titulo="Quero saber das próximas turmas", texto="Deixe seus dados e receba as datas e condições pelo WhatsApp.", texto_botao="Quero saber das turmas", origem="cursos"))
-    grafo = [schema_pagina(caminho, "Cursos para profissionais")]
-    grafo += [{"@type": "Course", "name": c["nome"], "description": c["texto"], "inLanguage": "pt-BR", "provider": {"@id": absoluto("#clinica")}} for c in dados.CURSOS]
-    grafo += [schema_clinica(), schema_site(), schema_migalhas([("Início", ""), ("Cursos", caminho)])]
-    h = head("Cursos de ozonioterapia em Canaã dos Carajás",
-             "Cursos presenciais com a Dra. Adelaine Montel em Canaã dos Carajás: interpretação de exames laboratoriais, ozonioterapia na dor crônica e limpeza de pele.",
-             caminho, grafo)
+{duvidas}
+""".format(cabeca=cabeca_pagina([("Início", ""), ("Cursos", caminho)], "Para profissionais", esc(C["h1"]), esc(C["sub"])),
+           cursos=cursos, trats=link("tratamentos/"), duvidas=secao_duvidas(faq, "Dúvidas sobre <em>o curso</em>", ident="faq", interesse="cursos para profissionais"))
+    grafo = [schema_pagina(caminho, C["h1"])]
+    grafo += [{"@type": "Course", "name": c["nome"], "description": c["texto"], "inLanguage": "pt-BR", "provider": {"@id": absoluto("#clinica")}} for c in C["cursos"]]
+    grafo += [schema_clinica(), schema_site(), schema_faq(faq), schema_migalhas([("Início", ""), ("Cursos", caminho)])]
+    h = head(C["seo"]["title"], C["seo"]["description"], caminho, grafo)
     return pagina(h, corpo, interesse="cursos para profissionais", data_pagina="cursos")
 
 
 def pagina_parauapebas():
     caminho = "pacientes-de-parauapebas/"
-    trats = "".join('<li><a href="%s">%s %s</a></li>' % (link("tratamentos/%s/" % t["slug"]), icone(t["icone"], "icone icone--menu"), esc(t["nome"])) for t in dados.TRATAMENTOS)
+    trats = lista_servicos(HOME["carros_chefe"]["servicos"])
     faq = dados.PARAUAPEBAS["faq"]
     inter = "avaliação (venho de Parauapebas)"
     corpo = """
@@ -1552,11 +1580,11 @@ def pagina_parauapebas():
   <div class="largura onde">
     <div>
       <h2>Vale a viagem até <em>Canaã</em>?</h2>
-      <p class="onde__nota">Na Empatia Humana, cada caso é estudado antes de qualquer indicação. Quem vem de fora avisa no WhatsApp e a equipe organiza a agenda para aproveitar a viagem, inclusive aos sábados de manhã.</p>
+      <p class="onde__nota">Na Empatia Humana, cada caso é estudado antes de qualquer indicação. Quem vem de fora avisa no WhatsApp e a equipe organiza a agenda para aproveitar a viagem, inclusive aos sábados.</p>
       <ul class="lista-check">
-        <li>Avaliação com a própria Dra. Adelaine, biomédica com inscrição ativa no CRBM desde 2011</li>
+        <li>Avaliação gratuita com as biomédicas da clínica, a Dra. Adelaine Montel (CRBM 4ª Região nº 1437) e a Dra. Adriana Montel</li>
         <li>Agenda pensada para quem viaja: avaliação e sessão no mesmo dia, quando o caso permite</li>
-        <li>Atendimento aos sábados, das 8h às 12h</li>
+        <li>Atendimento {ht}, com horário marcado</li>
       </ul>
       <h2 class="onde__subtitulo">Como chegar</h2>
       <address class="onde__endereco">{end}<br>{bairro}, {cidade} ({uf})</address>
@@ -1569,7 +1597,7 @@ def pagina_parauapebas():
 <section class="secao secao--creme">
   <div class="largura">
     <div class="cabeca"><h2>Tratamentos que pacientes de Parauapebas <em>procuram</em></h2></div>
-    <ul class="outros">{trats}</ul>
+    {trats}
   </div>
 </section>
 <section class="secao secao--branca">
@@ -1584,14 +1612,14 @@ def pagina_parauapebas():
                                 '<div class="hero__acoes">%s</div>' % botao(CTA, "parauapebas_topo", inter)),
            end=esc(S["endereco"]), bairro=S["bairro"], cidade=S["cidade"], uf=S["uf"], horarios=horarios_dl(),
            maps_botao=botao("Abrir no Google Maps", "", href=S["maps"], abrir=False, externo=True),
-           foto=foto("fachada", "Fachada da Clínica Empatia Humana em Canaã dos Carajás"), embed=esc(S["maps_embed"]), trats=trats,
+           foto=foto("fachada", "Fachada da Clínica Empatia Humana em Canaã dos Carajás"), embed=esc(S["maps_embed"]), trats=trats, ht=HORARIO_TXT,
            notas=bloco_notas("avaliacoes-parauapebas", 'Quem já veio <em>conta</em>', 6),
            duvidas=secao_duvidas(faq, 'Dúvidas de quem vem de <em>Parauapebas</em>', interesse=inter),
            faixa=cta_faixa("Vem de Parauapebas?", "Avise no WhatsApp: a equipe organiza sua agenda para aproveitar a viagem.", inter, "faixa_parauapebas"))
     grafo = [schema_pagina(caminho, "Clínica de estética para quem é de Parauapebas"), schema_clinica(), schema_site(), schema_faq(faq),
              schema_migalhas([("Início", ""), ("Pacientes de Parauapebas", caminho)])]
     h = head("Clínica de estética para pacientes de Parauapebas",
-             "Pacientes de Parauapebas fazem ozonioterapia, tratamento de vasinhos e lipo ozonizada na Empatia Humana, em Canaã dos Carajás. Atendimento aos sábados.",
+             "Pacientes de Parauapebas fazem ozonioterapia, tratamento de vasinhos e lipo ozonizada na Empatia Humana, em Canaã dos Carajás. Atendimento de segunda a sábado.",
              caminho, grafo)
     return pagina(h, corpo, interesse=inter, data_pagina="cidade")
 
@@ -2260,7 +2288,7 @@ def llms():
     l += ["", "## Sobre a Dra. Adelaine Montel", "- [Trajetória, formação e registro](%s)" % absoluto("dra-adelaine-montel/"), "", "## Blog"]
     for p in POSTS:
         l.append("- [%s](%s): %s" % (p["titulo"], absoluto("blog/%s/" % p["slug"]), p.get("resumo", "")))
-    l += ["", "## Cursos", "- [Cursos para profissionais](%s): %s" % (absoluto("cursos/"), "; ".join(c["nome"] for c in dados.CURSOS))]
+    l += ["", "## Cursos", "- [Cursos para profissionais](%s): %s" % (absoluto("cursos/"), "; ".join(c["nome"] for c in PAGS["programas-spa-cursos"]["cursos"]["cursos"]))]
     l += ["", "## Perguntas frequentes"]
     for q, a in faq_home():
         l.append("- **%s** %s" % (q, a))

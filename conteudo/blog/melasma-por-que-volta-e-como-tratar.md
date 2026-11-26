@@ -99,7 +99,7 @@ A avaliação é feita pela [Dra. Adelaine Barros Montel](/dra-adelaine-montel/)
 
 Você sai sabendo o que fazer em casa, o que será feito na clínica e o que esperar. Sem promessa de mancha apagada para sempre. Com um plano para manter o melasma sob controle.
 
-A clínica fica na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro, e atende de segunda a sexta, das 8h às 12h e das 14h às 18h, e aos sábados, das 8h às 12h. Também recebe pacientes de Parauapebas, Curionópolis e região.
+A clínica fica na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro, e atende de segunda a sábado, das 8h às 20h. Também recebe pacientes de Parauapebas, Curionópolis e região.
 
 Agende sua avaliação e monte uma rotina de cuidado pensada para o clima daqui.
 

@@ -109,7 +109,7 @@ Se a sua pele vive com espinhas, oleosidade fora do comum ou falta de viço, val
 
 Antes de começar, a [Dra. Adelaine Barros Montel](/dra-adelaine-montel/), biomédica esteta, avalia sua pele e conversa sobre sua rotina e os produtos que você usa. Com isso, ela define o que é indicado para você: a [limpeza de pele](/tratamentos/limpeza-de-pele/) sozinha ou combinada com outro tratamento, quantas sessões planejar e de quanto em quanto tempo repetir. Ela também ministra cursos de limpeza de pele para outros profissionais.
 
-A clínica fica na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro, e atende de segunda a sexta, das 8h às 12h e das 14h às 18h, e aos sábados, das 8h às 12h.
+A clínica fica na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro, e atende de segunda a sábado, das 8h às 20h.
 
 Agende sua avaliação e descubra o intervalo certo para a sua pele.
 

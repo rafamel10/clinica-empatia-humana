@@ -95,7 +95,7 @@ O primeiro passo é uma avaliação com a [Dra. Adelaine Barros Montel](/dra-ade
 
 Se, na conversa, aparecer algum sinal de alerta, o caminho certo é passar primeiro por um médico. Cuidar bem também é saber a hora de buscar outro profissional.
 
-A clínica fica na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro, e atende de segunda a sexta, das 8h às 12h e das 14h às 18h, e aos sábados, das 8h às 12h.
+A clínica fica na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro, e atende de segunda a sábado, das 8h às 20h.
 
 Agende sua avaliação e comece a cuidar do seu intestino com calma, sem dieta da moda e sem promessa milagrosa.
 

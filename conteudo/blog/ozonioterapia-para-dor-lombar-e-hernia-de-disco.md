@@ -97,7 +97,7 @@ Na avaliação, a Dra. Adelaine quer saber onde dói, há quanto tempo, o que vo
 
 Se a sua história tiver algum sinal de alerta, a orientação é procurar o médico antes de qualquer sessão.
 
-A clínica fica na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro. O atendimento é de segunda a sexta, das 8h às 12h e das 14h às 18h, e aos sábados, das 8h às 12h. A clínica também recebe pacientes de Parauapebas, Curionópolis e região.
+A clínica fica na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro. O atendimento é de segunda a sábado, das 8h às 20h. A clínica também recebe pacientes de Parauapebas, Curionópolis e região.
 
 Agende sua avaliação e entenda, com honestidade, o que a ozonioterapia pode fazer pela sua dor.
 

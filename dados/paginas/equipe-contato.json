@@ -104,7 +104,7 @@
     "tipo": "horario",
     "titulo": "Horário",
     "valor": "{horario}",
-    "texto": "Atendemos de {horario}, sempre com horário marcado.",
+    "texto": "Sempre com horário marcado. Aos domingos a clínica fica fechada.",
     "botao": ""
    }
   ],
@@ -131,7 +131,7 @@
    },
    {
     "p": "Quais formas de pagamento a clínica aceita?",
-    "r": "A clínica aceita PIX, cartão de crédito, cartão de débito e dinheiro. Os valores de cada tratamento são informados antes de você decidir."
+    "r": "A clínica aceita PIX ou cartão em até 10x. Os valores de cada tratamento são informados antes de você decidir."
    },
    {
     "p": "É a minha primeira vez na clínica. Por onde eu começo?",

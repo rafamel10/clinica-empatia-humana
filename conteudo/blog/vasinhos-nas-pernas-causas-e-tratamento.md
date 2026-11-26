@@ -104,7 +104,7 @@ O primeiro passo é uma avaliação com a [Dra. Adelaine Barros Montel](/dra-ade
 
 Se as suas pernas mostrarem sinais de varizes ou de problema de circulação, o caminho certo é passar antes pelo angiologista. Cuidar bem também é saber o que não tratar.
 
-A clínica fica na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro, e atende de segunda a sexta, das 8h às 12h e das 14h às 18h, e aos sábados, das 8h às 12h.
+A clínica fica na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro, e atende de segunda a sábado, das 8h às 20h.
 
 Agende sua avaliação e dê o primeiro passo para voltar a usar short com tranquilidade.
 

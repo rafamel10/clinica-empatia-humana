@@ -1017,3 +1017,16 @@ a.faixa-campanha, a.faixa-campanha:visited, a.faixa-campanha:hover { color: var(
 .guia-secao { margin-bottom: 2rem; }
 .guia-secao h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.8rem; }
 @media print { .cabecalho, .rodape, .barra-fixa, .faixa-campanha, .botao, .migalhas { display: none !important; } body { padding: 0 !important; } }
+
+/* ===== Contato e cursos ===== */
+.canais-grade { display: grid; gap: 1rem; margin: 0; padding: 0; list-style: none; }
+@media (min-width: 48em) { .canais-grade { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 72em) { .canais-grade { grid-template-columns: repeat(4, 1fr); } }
+.canal { display: flex; flex-direction: column; gap: 0.6rem; align-items: flex-start; padding: 1.4rem; border-radius: var(--raio); background: var(--creme); }
+.canal p { margin: 0; }
+.canal__titulo { font-size: 1.35rem; margin: 0; }
+.canal__valor { font-weight: 600; font-size: 1.1rem; }
+.canal .botao { margin-top: auto; }
+.curso { margin-bottom: 1.5rem; }
+.curso__preco { font-weight: 600; font-size: 1.25rem; }
+.curso h3 { margin-top: 1.25rem; }

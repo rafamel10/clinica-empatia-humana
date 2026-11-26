@@ -113,7 +113,7 @@ Tudo começa com a avaliação das pernas, feita pela [Dra. Adelaine Barros Mont
 
 Se as suas pernas mostrarem sinais de varizes ou de problema de circulação, ela orienta você a passar antes pelo angiologista.
 
-Conheça o [tratamento de vasinhos e microvarizes com PEIM](/tratamentos/vasinhos-e-varizes/). A clínica fica na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro, e atende de segunda a sexta, das 8h às 12h e das 14h às 18h, e aos sábados, das 8h às 12h. Quem vem de Parauapebas ou Curionópolis pode aproveitar o sábado pela manhã.
+Conheça o [tratamento de vasinhos e microvarizes com PEIM](/tratamentos/vasinhos-e-varizes/). A clínica fica na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro, e atende de segunda a sábado, das 8h às 20h. Quem vem de Parauapebas ou Curionópolis pode aproveitar o sábado pela manhã.
 
 Agende sua avaliação e saiba quantas sessões as suas pernas pedem.
 

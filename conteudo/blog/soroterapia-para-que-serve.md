@@ -95,7 +95,7 @@ Para um olhar mais completo, existe a [consulta de estética integrativa](/trata
 
 Se você tem exames recentes, leve. Quem mora em Parauapebas, Curionópolis ou em outra cidade da região pode reunir tudo antes, para aproveitar bem a visita.
 
-A clínica fica na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro, e atende de segunda a sexta, das 8h às 12h e das 14h às 18h, e aos sábados, das 8h às 12h.
+A clínica fica na Rua Círio de Nazaré, 558, salas 1 e 2, no Centro, e atende de segunda a sábado, das 8h às 20h.
 
 Agende sua avaliação e descubra, pelos seus exames, o que o seu corpo precisa de verdade.
 
