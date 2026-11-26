@@ -26,7 +26,7 @@ S = dados.SITE
 DRA = dados.DRA
 BASE = S["base"]
 URL = S["url"].rstrip("/")
-VERSAO = "5"  # aumente a cada publicação que mudar CSS ou JS
+VERSAO = "6"  # aumente a cada publicação que mudar CSS ou JS
 HOJE = S["data_atualizacao"]
 TRAT = {t["slug"]: t for t in dados.TRATAMENTOS}
 SEM_CUSTO = bool(getattr(dados, "AVALIACAO_SEM_CUSTO", False))
@@ -404,13 +404,13 @@ def cabecalho(atual=""):
     def ativo(nome):
         return ' aria-current="page"' if atual == nome else ""
 
-    lw, lh = medida("logotipo-branco")
+    lw, lh = medida("nome-branco")
     return """<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 <header class="topo">
   <div class="topo__barra">
     <a class="marca" href="{home}" aria-label="Empatia Humana, página inicial">
       <img class="marca__simbolo" src="{base}assets/img/simbolo-branco.webp" width="46" height="44" alt="">
-      <img class="marca__nome" src="{base}assets/img/logotipo-branco.webp" width="{lw}" height="{lh}" alt="Empatia Humana, conceito em estética integrativa">
+      <img class="marca__nome" src="{base}assets/img/nome-branco.webp" width="{lw}" height="{lh}" alt="Empatia Humana, conceito em estética integrativa">
     </a>
     <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
     <nav class="menu" id="menu" aria-label="Menu principal">
@@ -507,13 +507,14 @@ def rodape():
       </div>
     </div>
     <img class="rodape__marca" src="{base}assets/img/logotipo-branco.webp" width="{lw}" height="{lh}" alt="Empatia Humana, conceito em estética integrativa" loading="lazy" decoding="async">
+    <p class="rodape__lema">{lema}</p>
     <div class="rodape__legal">
       <p><strong>{dra}</strong>, biomédica esteta e ozonioterapeuta, inscrição nº 1437 no CRBM 4ª Região. Responsável técnica.</p>
       <p>{razao}, CNPJ {cnpj}. Os resultados variam de pessoa para pessoa e as informações deste site não substituem uma avaliação profissional.</p>
       <p><a href="{priv}">Política de privacidade</a> · <a href="#" data-cookies-abrir>Preferências de cookies</a></p>
     </div>
   </div>
-</footer>""".format(dagua=marca_dagua("marca-dagua--rodape"), base=BASE, lw=lw, lh=lh, end=esc(S["endereco"]), bairro=S["bairro"], cidade=S["cidade"], uf=S["uf"],
+</footer>""".format(dagua=marca_dagua("marca-dagua--rodape"), lema=esc(dados.SLOGAN), base=BASE, lw=lw, lh=lh, end=esc(S["endereco"]), bairro=S["bairro"], cidade=S["cidade"], uf=S["uf"],
                     maps=esc(S["maps"]), horas=horas, trats=trats, clinica=link("a-clinica/"), sobre=link("dra-adelaine-montel/"), deps=link("depoimentos/"),
                     blog=link("blog/"), cursos=link("cursos/"), parau=link("pacientes-de-parauapebas/"), contato=link("contato/"),
                     sw=SVG_WHATS, tel=S["telefone"], insta=S["instagram_clinica"], insta_d=S["instagram_dra"], face=S["facebook"], si=SVG_INSTA, sf=SVG_FACE,
@@ -592,7 +593,7 @@ def bloco_notas(ident, titulo_html, qtd=9, primeiro=None, tag="h2", mostrar_rotu
     </div>
     {todos}
   </div>
-  <ul class="carrossel avaliacoes" id="{id}" tabindex="0" aria-label="Avaliações de pacientes no Google">{itens}</ul>
+  <ul class="carrossel avaliacoes" id="{id}" tabindex="0" role="region" aria-label="Avaliações de pacientes no Google">{itens}</ul>
 </div>""".format(rot=rotulo("Depoimentos") if mostrar_rotulo else "", tag=tag, titulo=titulo_html, nota=S["nota_google"], n=S["avaliacoes_google"], id=ident,
                  esq=icone("seta-esq", "icone"), dir=icone("seta", "icone"), itens=lista_avaliacoes(qtd, primeiro),
                  todos=('<a class="link-acao" href="%s">Ver todos os depoimentos</a>' % link("depoimentos/")) if link_todos else "")

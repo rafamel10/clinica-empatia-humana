@@ -58,6 +58,42 @@ def pintar(im, cor):
     return novo
 
 
+def sem_assinatura(im):
+    """Tira a linha "conceito em Estética Integrativa" do logotipo: apaga os traços pequenos que ficam só na parte de baixo."""
+    w, h = im.size
+    alfa = im.split()[3]
+    px = alfa.load()
+    visto = bytearray(w * h)
+    limpo = alfa.copy()
+    lp = limpo.load()
+    for y0 in range(h):
+        for x0 in range(w):
+            if px[x0, y0] <= 40 or visto[y0 * w + x0]:
+                continue
+            pilha, pontos = [(x0, y0)], []
+            visto[y0 * w + x0] = 1
+            topo, base = y0, y0
+            while pilha:
+                x, y = pilha.pop()
+                pontos.append((x, y))
+                topo, base = min(topo, y), max(base, y)
+                for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1), (x + 1, y + 1), (x - 1, y - 1), (x + 1, y - 1), (x - 1, y + 1)):
+                    if 0 <= nx < w and 0 <= ny < h and not visto[ny * w + nx] and px[nx, ny] > 40:
+                        visto[ny * w + nx] = 1
+                        pilha.append((nx, ny))
+            if topo > h * 0.6 and (base - topo) < h * 0.3:  # letra miúda da assinatura
+                for x, y in pontos:
+                    lp[x, y] = 0
+    # apaga também o contorno claro que sobra em volta das letras removidas
+    for y in range(int(h * 0.6), h):
+        for x in range(w):
+            if lp[x, y] and lp[x, y] <= 40:
+                lp[x, y] = 0
+    novo = im.copy()
+    novo.putalpha(limpo)
+    return recorte(novo)
+
+
 def salvar(im, nome, largura=None):
     if largura and largura < im.width:
         im = im.resize((largura, round(im.height * largura / im.width)), Image.LANCZOS)
@@ -78,6 +114,7 @@ def marca():
     salvar(simb_branco, "simbolo-branco", 320)
     salvar(logotipo, "logotipo-rosa", 720)
     salvar(pintar(logotipo, (255, 255, 255)), "logotipo-branco")
+    salvar(pintar(sem_assinatura(logotipo), (255, 255, 255)), "nome-branco")
     salvar(logo_rosa, "logo-rosa", 640)
     salvar(logo_branca, "logo-branca", 640)
 

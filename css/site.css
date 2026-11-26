@@ -733,3 +733,103 @@ body.cookies-abertos .barra-fixa { display: none; }
   .hero--trat .cartao-form { position: sticky; top: calc(var(--topo) + 1.5rem); }
   .para-quem__grade { grid-template-columns: 1.2fr 0.8fr; gap: 5rem; }
 }
+
+/* ===== Revisão de acessibilidade e usabilidade (contraste AA, toque de 44 px, celular) ===== */
+:root {
+  --rosa-texto: #ad3a56;  /* rosa da marca para texto pequeno */
+  --vinho: #7d2440;       /* destaque em cima do rosa cheio */
+}
+
+/* 1. Contraste */
+.cuida__nome span, .resumo-trat__grade dt { color: var(--rosa-texto); }
+.link-acao:hover, .lateral-lista a:hover { color: var(--rosa-texto); }
+.texto-longo li::marker { color: var(--rosa-texto); }
+.faixa-cta__titulo em { color: var(--vinho); }
+.campo input::placeholder { color: #70666a; opacity: 1; }
+.bento__item--rosa .bento__texto, .card-post--destaque .card-post__meta { color: var(--grafite); }
+.texto-longo a { text-decoration-color: var(--rosa-texto); }
+@media (max-width: 63.99em) {
+  .hero__frase, .hero--trat .hero__frase { color: var(--rosa-texto); }
+  .hero, .cabeca-pagina, .post__cabeca { background: radial-gradient(30rem 15rem at 100% 0%, var(--rosa-claro), rgba(252, 206, 216, 0) 70%), var(--creme); }
+}
+
+/* 2. Foco */
+.cookies :focus-visible { outline-color: var(--rosa); }
+.campo input:focus { border-color: var(--grafite); outline: 2px solid var(--grafite); outline-offset: 2px; box-shadow: 0 0 0 6px rgba(253, 161, 179, 0.45); background: var(--branco); }
+
+/* 3. Âncoras: o recuo estava somado duas vezes (html + elemento) */
+.cartao-form, .comecar, .texto-longo h2[id] { scroll-margin-top: 0; }
+
+/* 4. Rótulo dos botões */
+.botao > span:first-child, .botao > svg + span { text-wrap: balance; }
+@media (max-width: 26em) {
+  .botao { letter-spacing: 0.06em; gap: 0.6rem; padding-left: 1.25rem; }
+  .botao--cheio { padding-inline: 0.9rem; }
+}
+
+/* 5. Mapa no celular: cartão abaixo do mapa, não em cima do alfinete */
+@media (max-width: 63.99em) {
+  .comecar__mapa { min-height: 0; display: flex; flex-direction: column; }
+  .comecar__mapa iframe { position: static; height: auto; aspect-ratio: 4 / 3; }
+  .comecar__cartao { position: static; border-radius: 0; box-shadow: none; padding: 1.25rem clamp(1.5rem, 4vw, 3rem) 1.5rem; }
+}
+
+/* 6. Menu do celular: botão sempre à vista */
+@media (max-width: 76.99em) {
+  body.menu-aberto .menu { padding-bottom: 0; }
+  body.menu-aberto .menu__lista > li > a { padding: 0.5rem 0; font-size: 1.65rem; }
+  body.menu-aberto .menu__cta { position: sticky; bottom: calc(0.75rem + env(safe-area-inset-bottom)); margin-block: 1.25rem 0.75rem; box-shadow: 0 0 0 0.75rem var(--rosa); }
+}
+
+/* 7. Rótulos em caixa alta: mínimo de 11 px */
+.etiqueta, .bento__selo, .relato-video__selo, .espaco__fotos span, .card-post__cat { font-size: 0.6875rem; }
+.resumo-trat__grade dt, .post__cat { font-size: 0.72rem; }
+@media (max-width: 26em) {
+  .etiqueta { font-size: 0.6875rem; letter-spacing: 0.08em; padding-inline: 0.8rem; }
+  .etiqueta--c { bottom: 24%; }
+}
+
+/* 8. Área de toque (44 px) sem mexer no desenho */
+.link-acao, .prova, .migalhas a, .rodape__legal a { position: relative; }
+.link-acao::after, .prova::after, .migalhas a::after, .rodape__legal a::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2.75rem; transform: translateY(-50%); }
+.redes { gap: 0; }
+.rede { min-height: 2.75rem; }
+.cookies button { min-height: 2.75rem; }
+@media (max-width: 63.99em) {
+  .rodape__links li + li { margin-top: 0; }
+  .rodape__links a { display: block; padding-block: 0.6rem; }
+}
+
+/* 8b. Barra fixa: fora da tabulação enquanto escondida */
+.barra-fixa { visibility: hidden; transition: transform 0.25s ease, visibility 0s 0.25s; }
+.barra-fixa--visivel { visibility: visible; transition-delay: 0s; }
+
+/* 8c. Janela: a rolagem não vaza para a página */
+.modal { overscroll-behavior: contain; }
+
+/* 8d. Aviso de cookies em uma linha no celular (não cobre os campos) */
+@media (max-width: 26em) {
+  .cookies { flex-wrap: nowrap; gap: 0.6rem; padding: 0.55rem 0.7rem; font-size: 0.82rem; line-height: 1.3; }
+  .cookies button { padding-inline: 0.8rem; }
+}
+
+/* 8e. Filtros do blog em uma linha que rola */
+@media (max-width: 39.99em) {
+  .filtros { flex-wrap: nowrap; overflow-x: auto; margin-inline: calc(-1 * var(--respiro)); padding: 0.25rem var(--respiro); scrollbar-width: none; }
+  .filtros li { flex: none; }
+}
+
+/* 9. Avaliações no desktop: título em 2 linhas e corte suave do carrossel */
+@media (min-width: 64em) {
+  .notas { grid-template-columns: minmax(19rem, 0.9fr) 2fr; }
+  .notas h2 { font-size: clamp(2.2rem, 3.2vw, 2.75rem); }
+  .notas .carrossel { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 5rem), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 5rem), transparent); }
+}
+
+/* Identidade: símbolo da árvore nas faixas e no cartão escuro, lema no rodapé */
+.faixa__estrela { display: inline-block; flex: none; font-size: 0; width: 1.35rem; height: 1.3rem; background: url("../assets/img/simbolo-branco.webp") center / contain no-repeat; opacity: 1; }
+.jornada::before { display: none; }
+.jornada::after { left: -6rem; bottom: -8rem; width: 26rem; height: 26rem; border: 0; border-radius: 0; background: url("../assets/img/simbolo-branco.webp") center / contain no-repeat; opacity: 0.05; }
+.rodape__lema { margin-top: 1rem; text-align: center; font-family: var(--serif); font-style: italic; font-size: clamp(1.3rem, 2.4vw, 1.7rem); color: var(--rosa); }
+.marca__nome { width: clamp(9rem, 36vw, 11.5rem); }
+.carrossel-botoes button:disabled { opacity: 0.4; cursor: default; }

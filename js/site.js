@@ -58,18 +58,27 @@
     return "https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(texto);
   }
 
-  /* Menu do celular */
+  /* Menu do celular: Esc fecha e o resto da página fica fora da tabulação enquanto ele está aberto */
   var menuBotao = d.querySelector(".menu-botao");
   var menu = d.getElementById("menu");
-  if (menuBotao && menu) {
-    menuBotao.addEventListener("click", function () {
-      var aberto = menuBotao.getAttribute("aria-expanded") === "true";
-      menuBotao.setAttribute("aria-expanded", String(!aberto));
-      menuBotao.textContent = aberto ? "Menu" : "Fechar";
-      d.body.classList.toggle("menu-aberto", !aberto);
+  function menuAberto() { return menuBotao && menuBotao.getAttribute("aria-expanded") === "true"; }
+  function abrirFecharMenu(abrir) {
+    menuBotao.setAttribute("aria-expanded", String(abrir));
+    menuBotao.textContent = abrir ? "Fechar" : "Menu";
+    d.body.classList.toggle("menu-aberto", abrir);
+    ["main", ".rodape", "[data-barra-fixa]"].forEach(function (sel) {
+      var el = d.querySelector(sel);
+      if (!el) return;
+      if (abrir) el.setAttribute("inert", ""); else el.removeAttribute("inert");
     });
+  }
+  if (menuBotao && menu) {
+    menuBotao.addEventListener("click", function () { abrirFecharMenu(!menuAberto()); });
     menu.addEventListener("click", function (e) {
-      if (e.target.closest("a") && menuBotao.getAttribute("aria-expanded") === "true") menuBotao.click();
+      if (e.target.closest("a") && menuAberto()) abrirFecharMenu(false);
+    });
+    d.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && menuAberto()) { abrirFecharMenu(false); menuBotao.focus(); }
     });
   }
 
@@ -123,7 +132,7 @@
       en.forEach(function (x) { if (x.isIntersecting) visiveis.add(x.target); else visiveis.delete(x.target); });
       atualizar();
     }, { threshold: 0.1 });
-    d.querySelectorAll("main [data-form-lead]").forEach(function (f) { obsForm.observe(f); });
+    d.querySelectorAll("main [data-form-lead], .faixa-cta .botao, .rodape__cta").forEach(function (f) { obsForm.observe(f); });
     var hero = d.querySelector(".hero, .cabeca-pagina, .post__cabeca");
     if (hero) {
       new IntersectionObserver(function (en) { heroVisivel = en[0].isIntersecting; atualizar(); }, { threshold: 0 }).observe(hero);
@@ -324,6 +333,18 @@
     if (!alvo) return;
     var passo = Math.max(280, alvo.clientWidth * 0.7) * (b.getAttribute("data-carrossel") === "anterior" ? -1 : 1);
     alvo.scrollBy({ left: passo, behavior: reduzir ? "auto" : "smooth" });
+  });
+  d.querySelectorAll(".carrossel").forEach(function (car) {
+    if (!car.id) return;
+    var ant = d.querySelector('[data-carrossel="anterior"][aria-controls="' + car.id + '"]');
+    var prox = d.querySelector('[data-carrossel="proximo"][aria-controls="' + car.id + '"]');
+    if (!ant || !prox) return;
+    var conferir = function () {
+      ant.disabled = car.scrollLeft < 8;
+      prox.disabled = car.scrollLeft + car.clientWidth > car.scrollWidth - 8;
+    };
+    car.addEventListener("scroll", conferir, { passive: true });
+    conferir();
   });
 
   /* Filtros do blog */
