@@ -1,0 +1,254 @@
+{
+ "programas": {
+  "seo": {
+   "title": "Programas e Desafios em Canaã dos Carajás | Empatia Humana",
+   "description": "Programas e desafios da Empatia Humana em Canaã dos Carajás: detox, intestino e medidas, com plano definido por biomédicas na avaliação gratuita."
+  },
+  "h1": "Programas e Desafios: um plano com começo, meio e fim",
+  "sub": "Para quem prefere um cuidado organizado em etapas a sessões soltas. As biomédicas avaliam você e indicam o programa que faz sentido para o seu objetivo.",
+  "resposta_direta": "Os Programas e Desafios da Empatia Humana, em Canaã dos Carajás, são planos de cuidado feitos em sessões, com período definido e acompanhamento das biomédicas. Há opções voltadas a hábitos e detox, ao intestino e às medidas. A indicação é individual e o valor é sob avaliação. A avaliação é gratuita e dura cerca de 30 minutos. Não há resultado garantido.",
+  "intro": "Programas e desafios são planos de cuidado com começo, meio e fim, feitos em sessões na clínica. Eles seguem o lema da Empatia Humana: tratando de dentro para fora. O que entra no seu plano, o número de sessões e o valor são definidos na avaliação, conforme o seu objetivo e a sua saúde. Nenhum deles substitui acompanhamento médico ou nutricional.",
+  "como_funciona": [
+   {
+    "titulo": "Avaliação gratuita",
+    "texto": "Em cerca de 30 minutos, você conta o seu objetivo, a sua rotina e os remédios que usa. As biomédicas dizem se algum programa é indicado para você. Ela é diferente da Consulta Estética Integrativa, que dura 2 horas e é um atendimento à parte."
+   },
+   {
+    "titulo": "Proposta do seu plano",
+    "texto": "Você recebe a proposta com o programa indicado, o que entra nele, o número de sessões e o valor. Dá para decidir com calma."
+   },
+   {
+    "titulo": "Sessões na clínica",
+    "texto": "As sessões são feitas com horário marcado. Se surgir dúvida no caminho, é só chamar a clínica pelo WhatsApp."
+   }
+  ],
+  "programas": [
+   "desafio-detox-7-dias-para-secar",
+   "desafio-detox-eh-o3",
+   "disbiose-zero",
+   "programa-reduzindo-medidas"
+  ],
+  "campanha": {
+   "titulo": "Desinflamando para o Natal",
+   "texto": "Programa de fim de ano para cuidar do corpo e da rotina antes das festas. Plano e valor definidos na avaliação gratuita.",
+   "slug": "desinflamando-para-o-natal"
+  },
+  "faq": [
+   {
+    "p": "Qual programa é o mais indicado para mim?",
+    "r": "Depende do seu objetivo, e a indicação é feita na avaliação gratuita. De modo geral, os Desafios Detox são voltados a hábitos e rotina, o Disbiose Zero ao cuidado com o intestino e o Reduzindo Medidas ao cuidado corporal. Se outro tratamento fizer mais sentido, as biomédicas avisam."
+   },
+   {
+    "p": "Quanto custa um programa ou desafio na Empatia Humana?",
+    "r": "O valor é definido sob avaliação, porque depende do programa indicado e do que entra no seu plano. A avaliação é gratuita e dura cerca de 30 minutos. Você recebe o valor antes de decidir."
+   },
+   {
+    "p": "Quanto tempo dura um programa?",
+    "r": "Depende do programa. Os desafios de sete dias são planejados para uma semana, e o Disbiose Zero é feito em 5 ou 10 sessões. Nos demais, o número de sessões e o período são definidos na avaliação."
+   },
+   {
+    "p": "Vou emagrecer ou perder medidas com um desafio detox?",
+    "r": "Não há como garantir perda de peso ou de medidas. Os desafios são períodos de cuidado acompanhado, e a resposta varia de pessoa para pessoa. Conte o seu objetivo na avaliação, e as biomédicas dizem qual caminho faz mais sentido para você."
+   },
+   {
+    "p": "Quem não pode fazer os programas e desafios?",
+    "r": "Depende do que entra em cada plano. Gestantes, lactantes e pessoas com deficiência de G6PD (favismo), entre outros casos, não fazem ozonioterapia, que faz parte de alguns programas. Quem faz tratamento médico ou usa remédio todos os dias precisa contar isso na avaliação. Os programas não substituem acompanhamento médico."
+   }
+  ],
+  "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre os Programas e Desafios"
+ },
+ "spa": {
+  "seo": {
+   "title": "Spa e vale-presente em Canaã dos Carajás | Empatia Humana",
+   "description": "Spa em Canaã dos Carajás: Toque de Spa, escalda-pés, spa das mãos e dos pés e massagens, a partir de R$ 60. Para você ou para dar de vale-presente."
+  },
+  "h1": "Spa e bem-estar: uma pausa para você ou para presentear",
+  "sub": "Massagens, escalda-pés e spa das mãos e dos pés, em sessões de 30 a 60 minutos. Escolha um cuidado para você ou dê de presente a quem vive cuidando dos outros.",
+  "resposta_direta": "O spa da Clínica Empatia Humana, em Canaã dos Carajás, reúne massagens, Toque de Spa, escalda-pés e spa das mãos e dos pés. As sessões duram de 30 a 60 minutos e custam a partir de R$ 60. São cuidados de relaxamento e bem-estar, para você ou para dar de presente. O vale-presente é combinado pelo WhatsApp.",
+  "vale_presente": {
+   "titulo": "Dê uma pausa de presente",
+   "texto": "Aniversário, Dia das Mães, Natal ou um agradecimento fora de data. Você escolhe o cuidado e chama a clínica no WhatsApp. A equipe explica como funciona o vale-presente e como a pessoa presenteada agenda o horário dela.",
+   "whatsapp_msg": "Olá! Vim pelo site e quero dar um vale-presente do spa"
+  },
+  "itens": [
+   {
+    "nome": "Toque de Spa: massagem relaxante nas costas",
+    "pagina": "toque-de-spa",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 75",
+    "texto": "Massagem relaxante concentrada nas costas, para uma pausa na rotina."
+   },
+   {
+    "nome": "Toque de Spa com escalda-pés de mix de ervas",
+    "pagina": "toque-de-spa",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 120",
+    "texto": "Massagem relaxante nas costas combinada com escalda-pés de mix de ervas."
+   },
+   {
+    "nome": "Toque de Spa com escalda-pés de esfera efervescente",
+    "pagina": "toque-de-spa",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 150",
+    "texto": "Massagem relaxante nas costas combinada com escalda-pés de esfera efervescente."
+   },
+   {
+    "nome": "Toque de Spa com escalda-pés de geleia terapêutica",
+    "pagina": "toque-de-spa",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 150",
+    "texto": "Massagem relaxante nas costas combinada com escalda-pés de geleia terapêutica."
+   },
+   {
+    "nome": "Escalda-pés com Mix de Ervas",
+    "pagina": null,
+    "duracao": "40 min",
+    "preco": "a partir de R$ 75",
+    "texto": "Imersão dos pés em água morna com mix de ervas. Um descanso para o fim do dia."
+   },
+   {
+    "nome": "Escalda-pés com Esfera Efervescente",
+    "pagina": null,
+    "duracao": "40 min",
+    "preco": "a partir de R$ 75",
+    "texto": "Imersão dos pés em água morna com esfera efervescente."
+   },
+   {
+    "nome": "Escalda-pés com Geleia Terapêutica",
+    "pagina": null,
+    "duracao": "40 min",
+    "preco": "a partir de R$ 75",
+    "texto": "Imersão dos pés em água morna com geleia terapêutica."
+   },
+   {
+    "nome": "Spa das Mãos",
+    "pagina": null,
+    "duracao": "60 min",
+    "preco": "a partir de R$ 60",
+    "texto": "Esfoliação, hidratação e massagem nas mãos."
+   },
+   {
+    "nome": "Spa dos Pés",
+    "pagina": null,
+    "duracao": "60 min",
+    "preco": "a partir de R$ 60",
+    "texto": "Cuidado de relaxamento para os pés. As etapas são explicadas no agendamento."
+   },
+   {
+    "nome": "Massagem Relaxante",
+    "pagina": "massagens",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 185",
+    "texto": "Toque suave, com pressão e ritmo ajustados a você. Voltada ao relaxamento."
+   },
+   {
+    "nome": "Quick Massage",
+    "pagina": "massagens",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 112",
+    "texto": "Massagem mais objetiva, voltada às regiões que acumulam tensão, como costas e ombros."
+   },
+   {
+    "nome": "Massagem Visceral",
+    "pagina": "massagens",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 180",
+    "texto": "Massagem feita na região do abdômen, com toque e pressão ajustados a você."
+   },
+   {
+    "nome": "Liberação Miofascial",
+    "pagina": "massagens",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 200",
+    "texto": "Pressão e deslizamento sobre os músculos e a fáscia, o tecido que os envolve."
+   },
+   {
+    "nome": "Reflexologia",
+    "pagina": "massagens",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 115",
+    "texto": "Técnica conhecida pela pressão em pontos dos pés."
+   },
+   {
+    "nome": "Massagem Facial",
+    "pagina": "massagens",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 100",
+    "texto": "Toque suave no rosto, voltado ao relaxamento."
+   },
+   {
+    "nome": "Massagem Cranial",
+    "pagina": "massagens",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 100",
+    "texto": "Toque suave na cabeça, voltado ao relaxamento."
+   },
+   {
+    "nome": "Aplicação de Ventosa",
+    "pagina": "massagens",
+    "duracao": "30 min",
+    "preco": "a partir de R$ 80",
+    "texto": "Copos que fazem sucção sobre a pele. Pode deixar marcas arredondadas por alguns dias."
+   }
+  ],
+  "paginas": [
+   "toque-de-spa",
+   "massagens"
+  ],
+  "nota": "Os cuidados do spa são de relaxamento e bem-estar. Não tratam dor nem problema de saúde e não substituem acompanhamento médico.",
+  "faq": [
+   {
+    "p": "Como funciona o vale-presente do spa?",
+    "r": "Você escolhe o cuidado e combina tudo pelo WhatsApp da clínica. Diga qual cuidado quer presentear, como o Toque de Spa ou uma massagem, e para quem é. A equipe explica como o vale é entregue e como a pessoa presenteada agenda o horário dela."
+   },
+   {
+    "p": "Quanto custa uma massagem ou um escalda-pés em Canaã dos Carajás?",
+    "r": "Na Empatia Humana, os cuidados do spa custam a partir de R$ 60, valor do spa das mãos e do spa dos pés. O escalda-pés e o Toque de Spa custam a partir de R$ 75, a aplicação de ventosa, a partir de R$ 80, e as massagens, a partir de R$ 100. O valor de cada cuidado é confirmado no agendamento."
+   },
+   {
+    "p": "Qual cuidado do spa escolher para dar de presente?",
+    "r": "Para um primeiro presente, o Toque de Spa costuma ser uma escolha simples: massagem relaxante nas costas, sozinha ou com escalda-pés, em cerca de 60 minutos. Quem gosta de massagem pode preferir a massagem relaxante. Na dúvida, conte pelo WhatsApp para quem é o presente, e a equipe ajuda a escolher."
+   },
+   {
+    "p": "Grávida pode fazer massagem ou escalda-pés?",
+    "r": "Depende do cuidado e da fase da gestação, e pode ser preciso a liberação do médico. Conte que está grávida antes de agendar. Se for um presente para uma gestante, avise a clínica. A equipe orienta qual cuidado é indicado nesse momento."
+   }
+  ],
+  "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre o Spa e bem-estar"
+ },
+ "cursos": {
+  "seo": {
+   "title": "Curso de Limpeza de Pele em Canaã dos Carajás",
+   "description": "Curso de Limpeza de Pele da Clínica Empatia Humana, em Canaã dos Carajás: curso prático, com técnica e biossegurança. R$ 1.550. Turmas pelo WhatsApp."
+  },
+  "h1": "Curso de Limpeza de Pele em Canaã dos Carajás",
+  "sub": "Curso prático para quem quer oferecer limpeza de pele com técnica, biossegurança e confiança. As datas das próximas turmas são informadas pelo WhatsApp.",
+  "cursos": [
+   {
+    "nome": "Curso de Limpeza de Pele",
+    "preco": "R$ 1.550",
+    "texto": "Curso prático da Clínica Empatia Humana para quem quer oferecer limpeza de pele com técnica, biossegurança e confiança. Carga horária, formato, conteúdo e datas das próximas turmas são informados pelo WhatsApp.",
+    "para_quem": [
+     "Profissionais da saúde e da estética que querem oferecer limpeza de pele.",
+     "Quem já faz limpeza de pele e quer rever técnica e biossegurança.",
+     "Quem quer atender com mais confiança desde a primeira cliente."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "p": "Quanto custa o Curso de Limpeza de Pele?",
+    "r": "O Curso de Limpeza de Pele da Empatia Humana custa R$ 1.550. O que está incluído no valor e as condições de inscrição são informados pelo WhatsApp da clínica."
+   },
+   {
+    "p": "Quando é a próxima turma do curso de limpeza de pele em Canaã dos Carajás?",
+    "r": "As datas das próximas turmas são informadas pelo WhatsApp da clínica. Chame, diga que quer saber do Curso de Limpeza de Pele, e a equipe passa as datas, a carga horária e o formato."
+   },
+   {
+    "p": "Quem pode fazer o Curso de Limpeza de Pele?",
+    "r": "O curso é voltado a quem quer oferecer limpeza de pele com técnica e biossegurança. Se houver exigência de formação anterior, a equipe informa antes da inscrição. Conte pelo WhatsApp a sua experiência e tire a dúvida."
+   }
+  ],
+  "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre o Curso de Limpeza de Pele"
+ }
+}

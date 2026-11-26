@@ -1,0 +1,396 @@
+{
+ "seo": {
+  "title": "Loja e home care: produtos ozonizados em Canaã dos Carajás",
+  "description": "Óleo de Girassol Ozonizado, linha ozonizada, suplementos, kits, skin care e maquiagem da Clínica Empatia Humana, em Canaã dos Carajás. Peça pelo WhatsApp."
+ },
+ "h1": "Loja Empatia Humana: produtos para continuar o cuidado em casa",
+ "sub": "Linha ozonizada, suplementos, kits, skin care e maquiagem. Você escolhe aqui e pede pelo WhatsApp, com orientação da equipe.",
+ "resposta_direta": "A loja da Clínica Empatia Humana, em Canaã dos Carajás, reúne produtos para usar em casa: linha ozonizada, suplementos e kits, skin care, itens de spa dos pés, linha infantil e maquiagem. O mais pedido é o Óleo de Girassol Ozonizado. O pedido é feito pelo WhatsApp, onde a equipe informa o valor, a disponibilidade e o modo de uso.",
+ "como_pedir": [
+  {
+   "titulo": "Escolha o produto",
+   "texto": "Toque no botão do produto que você quer. O WhatsApp abre com a mensagem pronta, já com o nome dele."
+  },
+  {
+   "titulo": "Fale com a equipe",
+   "texto": "A equipe informa o valor, confirma se o produto está disponível e explica o modo de uso. Aproveite para tirar suas dúvidas."
+  },
+  {
+   "titulo": "Combine como receber",
+   "texto": "Depois é só combinar o pagamento e a retirada na clínica, em Canaã dos Carajás."
+  }
+ ],
+ "destaques": [
+  {
+   "nome": "Óleo de Girassol Ozonizado",
+   "texto": "O produto mais pedido da nossa linha ozonizada. A equipe explica o modo de uso no WhatsApp.",
+   "whatsapp_msg": "Olá! Vim pelo site e quero pedir Óleo de Girassol Ozonizado"
+  },
+  {
+   "nome": "Kit KS Melasma Completo",
+   "texto": "Kit de home care da linha KS Melasma. Também vendido nas versões Dia e Noite, separadas.",
+   "whatsapp_msg": "Olá! Vim pelo site e quero pedir Kit KS Melasma Completo"
+  },
+  {
+   "nome": "Kit Detox 7 Dias para Secar",
+   "texto": "Kit ligado ao Desafio Detox 7 Dias para Secar. A equipe explica o que vem nele e como usar.",
+   "whatsapp_msg": "Olá! Vim pelo site e quero pedir Kit Detox 7 Dias para Secar"
+  },
+  {
+   "nome": "Glico Vida",
+   "texto": "Um dos produtos mais pedidos da clínica. Composição e modo de uso, você confere pelo WhatsApp.",
+   "whatsapp_msg": "Olá! Vim pelo site e quero pedir Glico Vida"
+  },
+  {
+   "nome": "Kit Disbiose Zero",
+   "texto": "Kit ligado ao programa Disbiose Zero. A equipe explica o que vem nele e quando é indicado.",
+   "whatsapp_msg": "Olá! Vim pelo site e quero pedir Kit Disbiose Zero"
+  },
+  {
+   "nome": "Gloss das Fadas – by Dra. Adelaine Montel",
+   "texto": "Gloss de marca própria, assinado pela Dra. Adelaine Montel.",
+   "whatsapp_msg": "Olá! Vim pelo site e quero pedir Gloss das Fadas – by Dra. Adelaine Montel"
+  }
+ ],
+ "grupos": [
+  {
+   "slug": "linha-ozonizada",
+   "nome": "Linha ozonizada",
+   "texto": "Óleos e itens de higiene e cuidado diário da nossa linha ozonizada.",
+   "produtos": [
+    {
+     "nome": "Óleo de Girassol Ozonizado",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Óleo de Girassol Ozonizado"
+    },
+    {
+     "nome": "Óleo de Girassol Ozonizado em Cápsulas (OzonO3)",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Óleo de Girassol Ozonizado em Cápsulas (OzonO3)"
+    },
+    {
+     "nome": "Hot Ozonizado",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Hot Ozonizado"
+    },
+    {
+     "nome": "Óleo de Massagem para Pernas com Arnica e Óleo de Girassol Ozonizado",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Óleo de Massagem para Pernas com Arnica e Óleo de Girassol Ozonizado"
+    },
+    {
+     "nome": "Prata Coloidal",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Prata Coloidal"
+    },
+    {
+     "nome": "Espuma de Higiene Íntima",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Espuma de Higiene Íntima"
+    },
+    {
+     "nome": "Sabonete Ozonizado",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Sabonete Ozonizado"
+    },
+    {
+     "nome": "Fluido Ozonizado Biorelaxante",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Fluido Ozonizado Biorelaxante"
+    },
+    {
+     "nome": "Shampoo Ozonizado",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Shampoo Ozonizado"
+    },
+    {
+     "nome": "Condicionador Ozonizado",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Condicionador Ozonizado"
+    },
+    {
+     "nome": "Colírio Ozonizado",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Colírio Ozonizado"
+    },
+    {
+     "nome": "Óleo Ozonizado de Tutti-Frutti",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Óleo Ozonizado de Tutti-Frutti"
+    },
+    {
+     "nome": "Creme Dental Ozonizado",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Creme Dental Ozonizado"
+    },
+    {
+     "nome": "Desodorante sem Alumínio",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Desodorante sem Alumínio"
+    }
+   ]
+  },
+  {
+   "slug": "suplementos-e-kits",
+   "nome": "Suplementos e kits",
+   "texto": "Suplementos e kits para usar em casa, com orientação da equipe antes do pedido.",
+   "produtos": [
+    {
+     "nome": "Kit KS Melasma Completo",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Kit KS Melasma Completo"
+    },
+    {
+     "nome": "Kit KS Melasma – Dia",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Kit KS Melasma – Dia"
+    },
+    {
+     "nome": "Kit KS Melasma – Noite",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Kit KS Melasma – Noite"
+    },
+    {
+     "nome": "Kit Detox 7 Dias para Secar",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Kit Detox 7 Dias para Secar"
+    },
+    {
+     "nome": "Best Face – Suplemento Facial",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Best Face – Suplemento Facial"
+    },
+    {
+     "nome": "Glico Vida",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Glico Vida"
+    },
+    {
+     "nome": "Kit Redux",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Kit Redux"
+    },
+    {
+     "nome": "Colágeno Verisol em Pó",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Colágeno Verisol em Pó"
+    },
+    {
+     "nome": "Kit Disbiose Zero",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Kit Disbiose Zero"
+    },
+    {
+     "nome": "Ora-pro-nóbis Turbo",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Ora-pro-nóbis Turbo"
+    },
+    {
+     "nome": "Kit Desparasitação – Mix 1 e Mix 2",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Kit Desparasitação – Mix 1 e Mix 2"
+    },
+    {
+     "nome": "Magnésio Transdérmico",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Magnésio Transdérmico"
+    },
+    {
+     "nome": "Mix Calmante",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Mix Calmante"
+    }
+   ]
+  },
+  {
+   "slug": "skin-care",
+   "nome": "Skin care",
+   "texto": "Limpeza, hidratação, proteção solar e cuidado com os lábios para a rotina em casa.",
+   "produtos": [
+    {
+     "nome": "Black Secret Peeling",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Black Secret Peeling"
+    },
+    {
+     "nome": "Creme Hidratante Facial com Aloe Vera",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Creme Hidratante Facial com Aloe Vera"
+    },
+    {
+     "nome": "Sérum Facial com Aloe Vera",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Sérum Facial com Aloe Vera"
+    },
+    {
+     "nome": "Espuma de Limpeza",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Espuma de Limpeza"
+    },
+    {
+     "nome": "Leite de Limpeza Facial com Aloe Vera",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Leite de Limpeza Facial com Aloe Vera"
+    },
+    {
+     "nome": "Tônico Facial",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Tônico Facial"
+    },
+    {
+     "nome": "Firm Flaccid",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Firm Flaccid"
+    },
+    {
+     "nome": "Sérum Multirreparador Calmante",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Sérum Multirreparador Calmante"
+    },
+    {
+     "nome": "Protetor Solar Hidrasol FPS 30",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Protetor Solar Hidrasol FPS 30"
+    },
+    {
+     "nome": "Protetor Solar FPS 60",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Protetor Solar FPS 60"
+    },
+    {
+     "nome": "Creme Hidratante Facial",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Creme Hidratante Facial"
+    },
+    {
+     "nome": "Filtro Solar Hidratante",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Filtro Solar Hidratante"
+    },
+    {
+     "nome": "Sabonete Líquido Facial Antiacne",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Sabonete Líquido Facial Antiacne"
+    },
+    {
+     "nome": "Nano Sabonete Mousse Life C+",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Nano Sabonete Mousse Life C+"
+    },
+    {
+     "nome": "Peeling Corpo e Rosto 5 em 1",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Peeling Corpo e Rosto 5 em 1"
+    },
+    {
+     "nome": "Óleo Essencial de Lavanda",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Óleo Essencial de Lavanda"
+    },
+    {
+     "nome": "Gloss das Fadas – by Dra. Adelaine Montel",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Gloss das Fadas – by Dra. Adelaine Montel"
+    },
+    {
+     "nome": "Sweet Lips Esfoliante Labial",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Sweet Lips Esfoliante Labial"
+    },
+    {
+     "nome": "Máscara para Cílios Alongados",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Máscara para Cílios Alongados"
+    },
+    {
+     "nome": "Gloss Labial",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Gloss Labial"
+    },
+    {
+     "nome": "Marezi Nano Sabonete Hidratante",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Marezi Nano Sabonete Hidratante"
+    },
+    {
+     "nome": "Nano Sabonete Hidratante",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Nano Sabonete Hidratante"
+    },
+    {
+     "nome": "Nano Loção Tônica",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Nano Loção Tônica"
+    },
+    {
+     "nome": "Sabonete Líquido Antioleosidade",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Sabonete Líquido Antioleosidade"
+    },
+    {
+     "nome": "Sabonete Clareador Hialux",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Sabonete Clareador Hialux"
+    },
+    {
+     "nome": "CalmSkin Pomada Multirreparadora",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir CalmSkin Pomada Multirreparadora"
+    },
+    {
+     "nome": "Óleo de Menta",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Óleo de Menta"
+    }
+   ]
+  },
+  {
+   "slug": "spa-e-infantil",
+   "nome": "Spa dos pés e infantil",
+   "texto": "Itens para o cuidado dos pés em casa e uma pequena linha infantil.",
+   "produtos": [
+    {
+     "nome": "Micozione",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Micozione"
+    },
+    {
+     "nome": "Esfoliante de Pedra-pomes",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Esfoliante de Pedra-pomes"
+    },
+    {
+     "nome": "Escalda-pés para Usar em Casa",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Escalda-pés para Usar em Casa"
+    },
+    {
+     "nome": "Pracalmar Gel Multifuncional",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Pracalmar Gel Multifuncional"
+    },
+    {
+     "nome": "Hidratante de Bebê",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Hidratante de Bebê"
+    },
+    {
+     "nome": "Shampoo Infantil com Avelã Coloidal",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Shampoo Infantil com Avelã Coloidal"
+    }
+   ]
+  },
+  {
+   "slug": "maquiagem",
+   "nome": "Maquiagem",
+   "texto": "Maquiagem para o dia a dia, com opções veganas.",
+   "produtos": [
+    {
+     "nome": "Paleta de Sombras Vegana",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Paleta de Sombras Vegana"
+    },
+    {
+     "nome": "Base Líquida",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Base Líquida"
+    },
+    {
+     "nome": "Base – Cor 020",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Base – Cor 020"
+    },
+    {
+     "nome": "Primer Matte",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Primer Matte"
+    },
+    {
+     "nome": "Pó Compacto Bauny",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Pó Compacto Bauny"
+    },
+    {
+     "nome": "Blush Bauny",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Blush Bauny"
+    },
+    {
+     "nome": "Máscara para Cílios Volumosos",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Máscara para Cílios Volumosos"
+    },
+    {
+     "nome": "Batom Líquido Matte Vegano",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Batom Líquido Matte Vegano"
+    },
+    {
+     "nome": "Batom Matte",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Batom Matte"
+    },
+    {
+     "nome": "Batom Cremoso",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Batom Cremoso"
+    },
+    {
+     "nome": "Lápis e Lapiseira de Olhos",
+     "whatsapp_msg": "Olá! Vim pelo site e quero pedir Lápis e Lapiseira de Olhos"
+    }
+   ]
+  }
+ ],
+ "aviso": "Os produtos desta página não substituem avaliação, orientação profissional nem acompanhamento médico. Se você está grávida, amamentando, em tratamento de saúde ou vai comprar para uma criança, converse antes com a equipe e com o seu médico.",
+ "faq": [
+  {
+   "p": "Como faço para comprar os produtos da Empatia Humana?",
+   "r": "O pedido é feito pelo WhatsApp da clínica. Toque no botão do produto que você quer e a mensagem já abre pronta, com o nome dele. A equipe confirma a disponibilidade, informa o valor e combina com você o pagamento e a retirada."
+  },
+  {
+   "p": "Qual o preço do Óleo de Girassol Ozonizado?",
+   "r": "O valor do Óleo de Girassol Ozonizado é informado pelo WhatsApp, junto com a disponibilidade. O mesmo vale para os outros produtos da vitrine. Assim você recebe o preço do dia e já tira suas dúvidas sobre o modo de uso."
+  },
+  {
+   "p": "Vocês entregam ou preciso buscar na clínica?",
+   "r": "Você pode retirar o pedido na clínica, em Canaã dos Carajás, de segunda a sábado, das 8h às 20h. Se precisar de entrega ou morar em outra cidade, pergunte pelo WhatsApp. A equipe informa as opções para o seu pedido."
+  },
+  {
+   "p": "O que é o óleo de girassol ozonizado e como usar?",
+   "r": "É um óleo de girassol que passou pelo processo de ozonização, em que o ozônio é incorporado ao óleo. É o produto mais pedido da Empatia Humana. O modo de uso é orientado pela equipe na hora do pedido, conforme o que você procura. Ele não substitui avaliação nem acompanhamento médico."
+  }
+ ],
+ "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre os produtos da loja"
+}

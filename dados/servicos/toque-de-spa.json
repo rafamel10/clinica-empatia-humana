@@ -1,0 +1,143 @@
+{
+ "slug": "toque-de-spa",
+ "nome": "Toque de Spa",
+ "frente": "spa-e-bem-estar",
+ "frentes_extras": [],
+ "resumo_card": "Massagem relaxante nas costas, sozinha ou com escalda-pés. Um cuidado para você ou para presentear.",
+ "seo": {
+  "title": "Toque de Spa: massagem e escalda-pés em Canaã dos Carajás",
+  "description": "Toque de Spa em Canaã dos Carajás: massagem relaxante nas costas, sozinha ou com escalda-pés. Sessão de cerca de 60 minutos, a partir de R$ 75."
+ },
+ "h1": "Toque de Spa: massagem relaxante e escalda-pés",
+ "sub": "Cerca de 60 minutos de pausa, com massagem relaxante nas costas e, se você quiser, escalda-pés. Para quem precisa desacelerar ou quer presentear alguém.",
+ "resposta_direta": "O Toque de Spa é um cuidado de relaxamento da Clínica Empatia Humana, em Canaã dos Carajás. Tem massagem relaxante nas costas, sozinha ou combinada com escalda-pés de mix de ervas, esfera efervescente ou geleia terapêutica. A sessão dura cerca de 60 minutos. É voltado a quem busca uma pausa na rotina e pode ser dado de presente.",
+ "para_quem": {
+  "intro": "O Toque de Spa pode combinar com você se alguma destas situações parece familiar.",
+  "itens": [
+   "A semana foi puxada e você sente que precisa de um tempo só para você.",
+   "Você fica muitas horas sentada ou em pé e sente as costas e os ombros tensos.",
+   "No fim do dia, seus pés pedem descanso.",
+   "Você quer conhecer a clínica por um cuidado leve, antes de pensar em outros tratamentos.",
+   "Você quer dar um presente para a mãe, uma amiga ou alguém que vive cuidando dos outros."
+  ],
+  "atencao": [
+   "Grávida, com cirurgia recente ou em tratamento de saúde? Conte antes de agendar: a massagem ou o escalda-pés podem depender da liberação do seu médico.",
+   "Com febre, ferida, irritação ou infecção na pele das costas ou dos pés, o cuidado não costuma ser indicado. Avise para remarcar.",
+   "Dor forte nas costas, alteração de sensibilidade nos pés ou problema de circulação pedem avaliação antes. O Toque de Spa é um cuidado de relaxamento e não trata dor."
+  ]
+ },
+ "como_funciona": {
+  "texto": [
+   "O Toque de Spa é uma massagem relaxante nas costas, feita na clínica. Você pode fazer só a massagem ou combinar com o escalda-pés, um banho de imersão dos pés em água morna.",
+   "No escalda-pés, você escolhe entre três versões: mix de ervas, esfera efervescente ou geleia terapêutica. Na hora de agendar, pergunte o que vai em cada uma e avise se tiver alergia ou sensibilidade a algum ingrediente ou aroma."
+  ],
+  "passos": [
+   {
+    "titulo": "Avaliação",
+    "texto": "Antes de agendar, conte à equipe pelo WhatsApp se tem dor, alergia ou alguma condição de saúde. Você também pode passar antes pela avaliação gratuita da clínica, que dura cerca de 30 minutos."
+   },
+   {
+    "titulo": "Escolha da versão",
+    "texto": "Diga se prefere só a massagem relaxante nas costas ou a massagem com escalda-pés. Se ficar em dúvida entre as versões, tire a dúvida com a equipe pelo WhatsApp antes de agendar."
+   },
+   {
+    "titulo": "Sessão",
+    "texto": "Dura cerca de 60 minutos. Se quiser, peça para a profissional explicar cada etapa antes de começar. Durante a sessão, você pode pedir ajuste na pressão do toque a qualquer momento."
+   },
+   {
+    "titulo": "Depois",
+    "texto": "Ao final, levante com calma. Se quiser repetir ou presentear alguém, é só combinar pelo WhatsApp."
+   }
+  ]
+ },
+ "duracao_sessoes": {
+  "duracao": "Cerca de 60 minutos por sessão, em todas as versões",
+  "sessoes": "Definido na avaliação, conforme o seu caso",
+  "observacao": "Cada versão é agendada como uma sessão. Se você quiser repetir, a frequência é combinada com a equipe."
+ },
+ "resultados": {
+  "texto": "A proposta do Toque de Spa é oferecer uma pausa. A massagem nas costas pode ajudar a aliviar a sensação de tensão do dia a dia, e o escalda-pés pode trazer conforto para pés cansados. O objetivo é que você saia com a sensação de ter descansado.",
+  "itens": [
+   "Favorecer o relaxamento do corpo",
+   "Ajudar a aliviar a sensação de tensão nas costas",
+   "Trazer conforto para pés cansados, nas versões com escalda-pés",
+   "Oferecer uma pausa na rotina"
+  ],
+  "ressalva": "A resposta varia de pessoa para pessoa e não há resultado garantido. O Toque de Spa é um cuidado de bem-estar: não trata dor nem problema de saúde e não substitui acompanhamento médico."
+ },
+ "cuidados": {
+  "antes": [
+   "Conte sobre a sua saúde, alergias e sensibilidade a aromas ou ingredientes, inclusive gravidez, cirurgia recente ou tratamento médico em andamento.",
+   "Venha com roupa confortável e evite refeição pesada logo antes da sessão.",
+   "Se a pele das costas ou dos pés estiver com queimadura de sol, avise antes: pode ser melhor remarcar."
+  ],
+  "depois": [
+   "Levante com calma ao final da sessão.",
+   "Beba água ao longo do dia.",
+   "Se notar irritação na pele, coceira ou dor depois da sessão, avise a clínica pelo WhatsApp. Se for intenso, procure atendimento médico."
+  ],
+  "nota": "As orientações do seu caso são passadas na avaliação."
+ },
+ "investimento": {
+  "tipo": "a_partir_de",
+  "valor": 75,
+  "texto": "O Toque de Spa custa a partir de R$ 75. O valor muda conforme a versão escolhida, com ou sem escalda-pés.",
+  "variacoes": [
+   {
+    "nome": "Toque de Spa – Massagem Relaxante nas Costas",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 75"
+   },
+   {
+    "nome": "Toque de Spa – Massagem nas Costas + Escalda-pés com Mix de Ervas",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 120"
+   },
+   {
+    "nome": "Toque de Spa – Massagem nas Costas + Escalda-pés com Esfera Efervescente",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 150"
+   },
+   {
+    "nome": "Toque de Spa – Massagem nas Costas + Escalda-pés com Geleia Terapêutica",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 150"
+   }
+  ]
+ },
+ "faq": [
+  {
+   "p": "Posso fazer só o escalda-pés, sem a massagem?",
+   "r": "Sim, o escalda-pés também é oferecido sozinho na clínica, com mix de ervas, esfera efervescente ou geleia terapêutica. A sessão dura cerca de 40 minutos e custa a partir de R$ 75. No Toque de Spa, ele vem junto com a massagem relaxante nas costas."
+  },
+  {
+   "p": "Posso dar o Toque de Spa de presente?",
+   "r": "Sim, o Toque de Spa pode ser dado de presente. Chame a clínica no WhatsApp e diga qual versão você escolheu. A equipe explica como funciona o vale-presente e como a pessoa presenteada agenda o horário dela."
+  },
+  {
+   "p": "Qual a diferença entre o escalda-pés com mix de ervas, esfera efervescente e geleia terapêutica?",
+   "r": "A diferença está no item usado no escalda-pés: mix de ervas, esfera efervescente ou geleia terapêutica. A composição de cada um é explicada pela equipe quando você agenda. Se tiver alergia ou sensibilidade a aromas, avise antes."
+  },
+  {
+   "p": "Quanto tempo dura o Toque de Spa?",
+   "r": "Cerca de 60 minutos, em todas as versões. Isso vale para a massagem relaxante nas costas sozinha e para as versões com escalda-pés. Chegue alguns minutos antes para começar com calma."
+  },
+  {
+   "p": "Grávida pode fazer o Toque de Spa?",
+   "r": "Depende do seu caso e pode exigir a liberação do seu médico. Conte que está grávida antes de agendar. A equipe orienta se a massagem e o escalda-pés são indicados para você nesse momento."
+  },
+  {
+   "p": "Qual a diferença entre o Toque de Spa e a massagem relaxante?",
+   "r": "O Toque de Spa concentra a massagem nas costas e pode incluir o escalda-pés. A massagem relaxante é outro serviço da clínica e tem uma página própria aqui no site, junto com as outras massagens. Se ficar em dúvida, conte pelo WhatsApp o que você quer e a equipe indica a opção."
+  },
+  {
+   "p": "Quanto custa o Toque de Spa?",
+   "r": "O Toque de Spa custa a partir de R$ 75, na versão só com a massagem relaxante nas costas. Com escalda-pés de mix de ervas, a partir de R$ 120. Com esfera efervescente ou geleia terapêutica, a partir de R$ 150."
+  }
+ ],
+ "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre Toque de Spa",
+ "relacionados": [
+  "massagens",
+  "drenagem-linfatica"
+ ]
+}

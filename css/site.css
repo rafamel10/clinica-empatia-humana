@@ -859,3 +859,141 @@ body.cookies-abertos .barra-fixa { display: none; }
   .barra-fixa .icone-whats { width: 1.3rem; height: 1.3rem; fill: currentColor; }
   body { padding-bottom: calc(4rem + env(safe-area-inset-bottom)); }
 }
+
+/* ===== Estrutura por objetivo: faixa de campanha, cartões e template de serviço ===== */
+.faixa-campanha { display: flex; align-items: center; justify-content: center; gap: 0.35rem 0.7rem; flex-wrap: wrap; min-height: 2.75rem; padding: 0.45rem var(--respiro); background: var(--vinho); color: var(--branco); font-size: 0.9rem; line-height: 1.3; text-align: center; text-decoration: none; }
+.faixa-campanha strong { font-family: var(--rotulo); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+.faixa-campanha .icone { width: 1rem; height: 1rem; }
+.faixa-campanha:hover span { text-decoration: underline; }
+@media (max-width: 39.99em) { .faixa-campanha span { display: none; } .faixa-campanha { min-height: 2.5rem; } }
+
+.subtitulo-secao { margin: clamp(2.5rem, 5vw, 3.5rem) 0 1.25rem; font-size: clamp(1.6rem, 3.2vw, 2.1rem); }
+.secao--curta { padding-block: clamp(2rem, 5vw, 3.25rem); }
+.largura--texto { max-width: 52rem; }
+.centro-bloco { text-align: center; }
+.texto-intro { margin-top: 1.25rem; font-size: 1.08rem; }
+.nota-pequena { margin-top: 1rem; font-size: 0.9rem; line-height: 1.5; color: var(--texto); }
+
+/* Cartões das 4 frentes */
+.objetivos { list-style: none; display: grid; gap: 1rem; }
+@media (min-width: 40em) { .objetivos { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 72em) { .objetivos { grid-template-columns: repeat(4, 1fr); } }
+.objetivo a { display: flex; flex-direction: column; gap: 0.7rem; height: 100%; padding: 1.5rem 1.4rem; border-radius: var(--raio); background: var(--branco); border: 1px solid var(--linha); color: var(--texto); text-decoration: none; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.objetivo .icone--card { width: 2.6rem; height: 2.6rem; padding: 0.5rem; border-radius: 50%; background: var(--rosa-claro); color: var(--grafite); }
+.objetivo__titulo { font-family: var(--serif); font-size: 1.65rem; font-weight: 600; line-height: 1.1; color: var(--grafite); }
+.objetivo__queixas { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.objetivo__queixas span { padding: 0.25rem 0.7rem; border-radius: 999px; background: var(--creme); font-size: 0.85rem; }
+.objetivo__mais, .card-serv__mais { display: inline-flex; align-items: center; gap: 0.35rem; margin-top: auto; font-family: var(--rotulo); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--grafite); }
+.objetivo__mais .icone, .card-serv__mais .icone { width: 1rem; height: 1rem; transition: transform 0.2s ease; }
+@media (hover: hover) {
+  .objetivo a:hover, .card-serv a:hover, .cartao-campanha:hover { transform: translateY(-3px); box-shadow: var(--sombra); }
+  .objetivo a:hover .objetivo__mais .icone, .card-serv a:hover .card-serv__mais .icone { transform: rotate(45deg); }
+}
+
+/* Cartões de serviço */
+.cards-serv { list-style: none; display: grid; gap: 1rem; }
+@media (min-width: 40em) { .cards-serv { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 64em) { .cards-serv { grid-template-columns: repeat(3, 1fr); } }
+.card-serv a { display: flex; flex-direction: column; gap: 0.55rem; height: 100%; padding: 1.35rem 1.35rem 1.2rem; border-radius: var(--raio); background: var(--branco); border: 1px solid var(--linha); color: var(--texto); text-decoration: none; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.secao--branca .card-serv a { background: var(--creme); border-color: transparent; }
+.card-serv--destaque a, .secao--branca .card-serv--destaque a { background: var(--rosa-claro); border-color: var(--linha-rosa); }
+.card-serv__frente { font-family: var(--rotulo); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rosa-texto); }
+.card-serv__nome { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; line-height: 1.12; color: var(--grafite); }
+.card-serv__texto { font-size: 0.98rem; line-height: 1.5; }
+.card-serv__rodape { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; margin-top: auto; padding-top: 0.75rem; border-top: 1px solid var(--linha); }
+.card-serv__preco { font-weight: 600; color: var(--grafite); }
+.card-serv__rodape .card-serv__mais { margin-top: 0; }
+
+/* Topo da página de serviço */
+.cabeca-servico h1 { max-width: 22ch; }
+.fatos { list-style: none; display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.4rem; }
+.fatos li { display: flex; flex-direction: column; gap: 0.1rem; min-width: 8.5rem; padding: 0.6rem 1rem; border-radius: 14px; background: var(--branco); border: 1px solid var(--linha-rosa); }
+.fatos span { font-family: var(--rotulo); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rosa-texto); }
+.fatos strong { font-weight: 600; color: var(--grafite); }
+.cabeca-pagina .hero__acoes { margin-top: 1.5rem; }
+
+.resposta-direta { padding: 1.4rem 1.5rem; border-left: 4px solid var(--rosa); border-radius: 0 var(--raio) var(--raio) 0; background: var(--creme); }
+.resposta-direta__rotulo { margin-bottom: 0.5rem; font-family: var(--rotulo); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rosa-texto); }
+.resposta-direta p:last-child { font-size: 1.08rem; color: var(--grafite); }
+
+.duas-colunas { display: grid; gap: 1.5rem; }
+@media (min-width: 56em) { .duas-colunas { grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; } }
+.cartao-info, .cartao-atencao { padding: 1.5rem; border-radius: var(--raio); background: var(--branco); }
+.secao--branca .cartao-info { background: var(--creme); }
+.cartao-info h2 { font-size: clamp(1.8rem, 3.6vw, 2.4rem); margin-bottom: 1rem; }
+.cartao-info h3, .cartao-atencao h3 { margin-bottom: 0.9rem; font-size: 1.45rem; }
+.cartao-atencao { border: 1px solid var(--linha-rosa); }
+.lista-ok { list-style: none; display: grid; gap: 0.7rem; margin-top: 1rem; }
+.lista-ok li { display: flex; gap: 0.6rem; align-items: flex-start; line-height: 1.5; }
+.lista-ok .icone { width: 1.2rem; height: 1.2rem; margin-top: 0.15rem; color: var(--rosa-texto); stroke-width: 2.2; }
+.lista-ok--alerta .icone { color: var(--grafite); }
+.dados-lista { display: grid; gap: 0.9rem; }
+.dados-lista dt { font-family: var(--rotulo); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rosa-texto); }
+.dados-lista dd { margin: 0.15rem 0 0; color: var(--grafite); }
+
+/* Investimento: cartões, nunca tabela */
+.precos { list-style: none; display: grid; gap: 0.75rem; }
+@media (min-width: 40em) { .precos { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 64em) { .precos--spa { grid-template-columns: repeat(3, 1fr); } }
+.preco { display: grid; grid-template-columns: 1fr auto; gap: 0.2rem 1rem; align-items: baseline; padding: 1rem 1.2rem; border-radius: 16px; background: var(--branco); border: 1px solid var(--linha); }
+.preco__nome { font-weight: 600; color: var(--grafite); }
+.preco__dur { grid-column: 1; font-size: 0.9rem; }
+.preco__valor { grid-column: 2; grid-row: 1 / span 2; align-self: center; font-weight: 600; color: var(--rosa-texto); text-align: right; }
+.preco__texto { grid-column: 1 / -1; font-size: 0.92rem; line-height: 1.45; }
+.pagamento { display: flex; gap: 0.6rem; align-items: flex-start; margin-top: 1.25rem; font-size: 0.98rem; }
+.pagamento .icone { width: 1.2rem; height: 1.2rem; margin-top: 0.15rem; color: var(--rosa-texto); stroke-width: 2.2; }
+.pagamento strong { color: var(--grafite); }
+.centro { text-align: center; }
+#investimento .centro { margin-top: 1.5rem; }
+
+/* Listas da página de tratamentos */
+.grupo-trat + .grupo-trat { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+.grupo-trat__cabeca { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 1rem; margin-bottom: 1.1rem; }
+.grupo-trat__cabeca h2 { font-size: clamp(1.8rem, 3.6vw, 2.4rem); }
+
+/* Programas, spa, equipe e loja */
+.cartao-campanha { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.25rem; padding: 1.5rem; border-radius: var(--raio); background: var(--vinho); color: var(--branco); text-decoration: none; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.cartao-campanha strong { font-family: var(--serif); font-size: 1.9rem; font-weight: 600; line-height: 1.1; }
+.cartao-campanha__selo { font-family: var(--rotulo); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rosa); }
+.cartao-campanha .card-serv__mais { color: var(--branco); }
+.equipe { display: grid; gap: clamp(2rem, 5vw, 3.5rem); }
+.pessoa { display: grid; gap: 1.5rem; align-items: start; }
+@media (min-width: 48em) { .pessoa { grid-template-columns: 16rem 1fr; gap: 2.5rem; } }
+.pessoa__foto { display: block; width: 100%; max-width: 16rem; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 999px 999px var(--raio) var(--raio); background: var(--rosa); }
+.pessoa__foto--iniciais { display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 4rem; color: var(--branco); }
+.pessoa__cargo { margin: 0.35rem 0 1rem; font-family: var(--rotulo); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--rosa-texto); }
+.pessoa__texto p + p { margin-top: 0.8rem; }
+.pessoa__frase { margin: 1.25rem 0 0; padding-left: 1rem; border-left: 3px solid var(--rosa); font-family: var(--serif); font-style: italic; font-size: 1.3rem; color: var(--grafite); }
+.passos-simples { list-style: none; counter-reset: p; display: grid; gap: 1rem; }
+@media (min-width: 56em) { .passos-simples { grid-template-columns: repeat(3, 1fr); } }
+.passos-simples li { counter-increment: p; padding: 1.3rem; border-radius: var(--raio); background: var(--branco); }
+.secao--branca .passos-simples li { background: var(--creme); }
+.passos-simples li::before { content: counter(p); display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; margin-bottom: 0.6rem; border-radius: 50%; background: var(--rosa); color: var(--grafite-2); font-weight: 600; }
+.passos-simples h3 { margin-bottom: 0.35rem; font-size: 1.35rem; }
+.passos-simples--linha { margin-top: 1.5rem; }
+.produtos { list-style: none; display: grid; gap: 0.6rem; }
+@media (min-width: 48em) { .produtos { grid-template-columns: repeat(2, 1fr); } }
+.produtos--destaque { gap: 1rem; }
+@media (min-width: 64em) { .produtos--destaque { grid-template-columns: repeat(3, 1fr); } }
+.produto { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 2.75rem; padding: 0.6rem 1rem; border-radius: 14px; background: var(--creme); }
+.produto--destaque { flex-direction: column; align-items: flex-start; padding: 1.35rem; border-radius: var(--raio); background: var(--branco); }
+.produto--destaque strong { font-family: var(--serif); font-size: 1.45rem; color: var(--grafite); line-height: 1.15; }
+.produto--destaque .botao { margin-top: auto; }
+.produto .link-acao { flex: none; font-size: 0.78rem; }
+.grupo-loja + .grupo-loja { margin-top: 2rem; }
+.grupo-loja h3 { font-size: 1.6rem; }
+.grupo-loja > p { margin: 0.3rem 0 0.9rem; }
+
+/* Antes e depois: componente pronto, sem conteúdo até haver autorização */
+.antes-depois { display: grid; gap: 1.25rem; }
+.antes-depois__fotos { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+.antes-depois__fotos img { width: 100%; height: auto; border-radius: 14px; }
+
+/* Entrada suave dos cartões, só com transform e opacity */
+@media (prefers-reduced-motion: no-preference) {
+  .js .objetivo, .js .card-serv, .js .preco, .js .produto--destaque { animation: subir 0.5s ease both; animation-timeline: view(); animation-range: entry 0% entry 40%; }
+}
+@keyframes subir { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+a.faixa-campanha, a.faixa-campanha:visited, a.faixa-campanha:hover { color: var(--branco); }
+.faixa-campanha strong { color: var(--rosa); }

@@ -1,0 +1,132 @@
+{
+ "slug": "skinbooster",
+ "nome": "Skinbooster",
+ "frente": "pele-e-rejuvenescimento",
+ "frentes_extras": [],
+ "resumo_card": "Hidratação injetável da pele, para quem busca viço e maciez sem mudar o formato do rosto.",
+ "seo": {
+  "title": "Skinbooster em Canaã dos Carajás | Empatia Humana",
+  "description": "Skinbooster em Canaã dos Carajás: hidratação injetável da pele, indicada por biomédicas estetas depois de avaliar você. Agende sua avaliação gratuita."
+ },
+ "h1": "Skinbooster: hidratação da pele em Canaã dos Carajás",
+ "sub": "Aplicação de ativos hidratantes na pele, em geral ácido hialurônico, em pequenas quantidades. Para quem quer viço e maciez sem mudar o formato do rosto.",
+ "resposta_direta": "Skinbooster é a aplicação de ativos hidratantes na pele, em geral ácido hialurônico, em pequenas quantidades, com o objetivo de hidratar por dentro e melhorar o viço e a maciez. É voltado a quem sente a pele seca ou sem brilho. Na Empatia Humana, em Canaã dos Carajás, a indicação é feita em avaliação pelas biomédicas.",
+ "para_quem": {
+  "intro": "O skinbooster costuma fazer sentido para quem quer cuidar da qualidade da pele e manter os traços do rosto como são.",
+  "itens": [
+   "Você hidrata a pele todos os dias e ainda sente que ela pede mais.",
+   "Você sente a pele repuxar ou perder o brilho ao longo do dia, mesmo usando hidratante.",
+   "A maquiagem já não assenta como antes e você prefere tratar a pele a escondê-la.",
+   "Você busca um cuidado discreto, que respeite os seus traços.",
+   "Você já faz limpeza de pele ou peeling e quer saber qual é o próximo passo.",
+   "Você nunca fez um procedimento injetável e quer entender tudo antes de decidir."
+  ],
+  "atencao": [
+   "Grávidas e mulheres que amamentam: procedimentos injetáveis não costumam ser indicados nesse período. Conte isso na avaliação.",
+   "Pele com ferida, infecção ou inflamação ativa na área a ser tratada pede avaliação antes. Nesses casos, a aplicação costuma ser adiada.",
+   "Quem faz tratamento médico, usa remédio de uso contínuo ou já teve alergia a algum produto injetável deve contar isso antes. Nesses casos, o skinbooster pode não ser indicado."
+  ]
+ },
+ "como_funciona": {
+  "texto": [
+   "Skinbooster é o nome dado à aplicação de ácido hialurônico na pele, em pequenas quantidades e em vários pontos. O ácido hialurônico é uma substância que ajuda a pele a reter água. Por isso, o objetivo é hidratar por dentro, de um jeito diferente do creme, que age na superfície.",
+   "O produto, a área e o número de sessões são definidos na avaliação, conforme a sua pele. Nada é aplicado antes dessa conversa."
+  ],
+  "passos": [
+   {
+    "titulo": "Avaliação",
+    "texto": "A avaliação gratuita dura cerca de 30 minutos. A biomédica olha a sua pele, ouve o que você busca e pergunta sobre saúde, remédios e alergias. Se o skinbooster não for o mais indicado, ela diz e sugere outro caminho."
+   },
+   {
+    "titulo": "Preparo da pele",
+    "texto": "No dia da sessão, a pele é limpa antes da aplicação. Se o seu caso pedir algum cuidado a mais, você fica sabendo na avaliação."
+   },
+   {
+    "titulo": "Aplicação",
+    "texto": "A biomédica faz a aplicação na área definida na avaliação e explica cada etapa enquanto trabalha. A sessão ocupa cerca de 60 minutos na agenda."
+   },
+   {
+    "titulo": "Acompanhamento",
+    "texto": "Você sai com as orientações para os dias seguintes. Novas sessões, quando indicadas, são combinadas conforme a resposta da sua pele."
+   }
+  ]
+ },
+ "duracao_sessoes": {
+  "duracao": "Cerca de 60 minutos por sessão",
+  "sessoes": "Definido na avaliação, conforme o seu caso",
+  "observacao": "O intervalo entre as sessões, quando houver mais de uma, também é definido na avaliação."
+ },
+ "resultados": {
+  "texto": "A proposta do skinbooster é melhorar a hidratação da pele. Quando isso acontece, a paciente pode perceber a pele mais macia e com mais viço. O tempo para notar e a duração do efeito dependem da sua pele, da sua rotina e do produto indicado, e são explicados na avaliação.",
+  "itens": [
+   "Melhorar a hidratação da pele por dentro",
+   "Contribuir para uma textura mais uniforme ao toque",
+   "Ajudar a suavizar o aspecto de linhas finas de ressecamento",
+   "Preservar a naturalidade dos traços do rosto"
+  ],
+  "ressalva": "A resposta varia de pessoa para pessoa e não há resultado garantido. O skinbooster não substitui os cuidados diários com a pele, como hidratação e protetor solar."
+ },
+ "cuidados": {
+  "antes": [
+   "Informe remédios, suplementos e produtos de pele que você usa.",
+   "Avise se está grávida, amamentando ou se já teve alergia a algum produto.",
+   "Conte se a pele está com ferida, irritação ou inflamação na área.",
+   "Se puder, venha com a pele limpa e sem maquiagem."
+  ],
+  "depois": [
+   "Vermelhidão, leve inchaço ou pequenas marcas nos pontos de aplicação podem acontecer. Se persistirem ou incomodarem, avise a clínica.",
+   "Evite apertar ou massagear a área, a não ser que receba outra orientação.",
+   "Use protetor solar e evite sol forte e calor intenso pelo tempo que a biomédica orientar.",
+   "Se sentir dor forte ou notar inchaço que aumenta, avise a clínica pelo WhatsApp. Se for intenso, busque atendimento médico."
+  ],
+  "nota": "As orientações do seu caso são passadas na avaliação."
+ },
+ "investimento": {
+  "tipo": "a_partir_de",
+  "valor": 500,
+  "texto": "O skinbooster custa a partir de R$ 500. O valor do seu caso é confirmado na avaliação, que é gratuita.",
+  "variacoes": [
+   {
+    "nome": "Skinbooster",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 500"
+   }
+  ]
+ },
+ "faq": [
+  {
+   "p": "Qual a diferença entre skinbooster e preenchimento?",
+   "r": "O preenchimento busca dar volume ou contorno a uma área do rosto, e o skinbooster tem o objetivo de hidratar a pele e cuidar da textura. No skinbooster, usam-se ativos hidratantes, em geral ácido hialurônico, distribuídos pela pele. Se ele faz sentido para você, a biomédica diz na avaliação."
+  },
+  {
+   "p": "Skinbooster dói?",
+   "r": "Pode haver um incômodo de pequenas picadas, que varia de pessoa para pessoa. Se você tem receio de agulha ou pele mais sensível, conte na avaliação. A biomédica explica como é a aplicação e o que pode deixar a sessão mais confortável."
+  },
+  {
+   "p": "Quantas sessões de skinbooster são necessárias?",
+   "r": "O número de sessões de skinbooster é definido na avaliação, porque não existe um padrão que sirva para todas as pacientes. Ele depende da sua pele e do produto indicado. O intervalo entre as sessões é combinado do mesmo jeito."
+  },
+  {
+   "p": "Quanto tempo dura o efeito do skinbooster?",
+   "r": "A duração do efeito do skinbooster varia de pessoa para pessoa e depende da pele, da rotina de cuidados e do produto usado. Na avaliação, a biomédica explica o que esperar no seu caso e quando vale reavaliar."
+  },
+  {
+   "p": "Posso voltar ao trabalho depois do skinbooster?",
+   "r": "Em geral, sim, mas a pele pode ficar com vermelhidão, leve inchaço ou pequenas marcas nos pontos de aplicação. Por isso, vale não marcar a sessão na véspera de um evento importante. As orientações para os dias seguintes são passadas pela biomédica."
+  },
+  {
+   "p": "Quanto custa o skinbooster em Canaã dos Carajás?",
+   "r": "Na Empatia Humana, o skinbooster custa a partir de R$ 500. O valor do seu caso é confirmado na avaliação, que é gratuita e dura cerca de 30 minutos."
+  },
+  {
+   "p": "Quem aplica o skinbooster na Empatia Humana?",
+   "r": "Uma biomédica esteta da clínica. A aplicação só acontece depois da avaliação, quando ela olha a sua pele e confirma se o procedimento é indicado para você."
+  }
+ ],
+ "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre Skinbooster",
+ "relacionados": [
+  "microagulhamento",
+  "rejuvenescimento-e-revitalizacao-facial",
+  "limpeza-de-pele"
+ ]
+}

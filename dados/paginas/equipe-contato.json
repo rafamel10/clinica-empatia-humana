@@ -1,0 +1,143 @@
+{
+ "equipe": {
+  "seo": {
+   "title": "Equipe: biomédicas em Canaã dos Carajás | Empatia Humana",
+   "description": "Conheça a Dra. Adelaine Montel (CRBM 4ª Região nº 1437) e a Dra. Adriana Montel, biomédicas estetas e ozonioterapeutas da Empatia Humana, em Canaã dos Carajás."
+  },
+  "h1": "Quem cuida de você na Empatia Humana",
+  "sub": "Duas biomédicas estetas e ozonioterapeutas atendem você em Canaã dos Carajás. Todo tratamento começa por uma avaliação.",
+  "intro": "Quem atende na Clínica Empatia Humana são a Dra. Adelaine Montel e a Dra. Adriana Montel. O lema da clínica é tratar de dentro para fora: antes de indicar um procedimento, a biomédica ouve a sua história, entende a sua rotina e, quando faz sentido, olha os seus exames.",
+  "pessoas": [
+   {
+    "nome": "Dra. Adelaine Montel",
+    "cargo": "Biomédica esteta e ozonioterapeuta",
+    "registro": "CRBM 4ª Região nº 1437",
+    "bio": [
+     "A Dra. Adelaine Montel é biomédica esteta e ozonioterapeuta e a responsável técnica da Clínica Empatia Humana. Tem mais de 18 anos de formada e inscrição no CRBM 4ª Região desde 2011.",
+     "Antes da estética, ela trabalhou em laboratório de análises clínicas. Dessa experiência vem o hábito de estudar cada caso antes de indicar qualquer procedimento. Hoje ela une a leitura de exames, a nutrição ortomolecular e a ozonioterapia em um atendimento que olha para a pessoa por inteiro.",
+     "É pós-graduada em Nutrição Ortomolecular (Hi-Nutrition), tem formação em Citologia pela PUC Goiás e formação em terapias injetáveis. No Conselho de Biomedicina, suas habilitações registradas são Biomedicina Estética, Patologia Clínica (Análises Clínicas) e Práticas Integrativas e Complementares em Saúde (Ozonioterapia).",
+     "Ela também ensina: forma outros profissionais da saúde e da estética em cursos presenciais em Canaã dos Carajás. E assina um produto próprio, o Gloss das Fadas."
+    ],
+    "frase": "Saúde e beleza não são resultado de uma única escolha, mas da soma de bons hábitos, constância e cuidado diário.",
+    "atende": [
+     "emagrecimento-e-medidas",
+     "pele-e-rejuvenescimento",
+     "pernas-e-circulacao",
+     "saude-integrativa"
+    ],
+    "foto": "adelaine-vertical.webp"
+   },
+   {
+    "nome": "Dra. Adriana Montel",
+    "cargo": "Biomédica esteta e ozonioterapeuta",
+    "registro": "",
+    "bio": [
+     "A Dra. Adriana Montel é biomédica esteta e ozonioterapeuta e atende na Clínica Empatia Humana ao lado da Dra. Adelaine."
+    ],
+    "frase": "",
+    "atende": [],
+    "foto": ""
+   }
+  ],
+  "como_atendemos": [
+   {
+    "titulo": "Escuta antes do procedimento",
+    "texto": "Toda paciente passa por avaliação. Se o tratamento não for para você, a gente diz."
+   },
+   {
+    "titulo": "O corpo inteiro na mesma conversa",
+    "texto": "Pele, circulação, intestino, vitaminas e hábitos são olhados juntos. É o que chamamos de tratar de dentro para fora."
+   },
+   {
+    "titulo": "Explicação de cada etapa",
+    "texto": "O atendimento é com horário marcado, sem pressa e sem protocolo pronto. Você entende o que será feito, e por quê, antes de decidir."
+   }
+  ],
+  "faq": [
+   {
+    "p": "Quem atende na Clínica Empatia Humana?",
+    "r": "Quem atende são duas biomédicas estetas e ozonioterapeutas: a Dra. Adelaine Montel, responsável técnica da clínica, e a Dra. Adriana Montel. Os atendimentos acontecem na clínica, em Canaã dos Carajás, com horário marcado."
+   },
+   {
+    "p": "Como eu confiro o registro profissional da biomédica?",
+    "r": "O registro é conferido na consulta pública do Conselho Federal de Biomedicina (CFBM), pelo nome ou pelo número de inscrição. A Dra. Adelaine Barros Montel tem a inscrição nº 1437 no CRBM 4ª Região.",
+    "link": "https://cfbm-br.implanta.net.br/visaonacional/publico/consulta-publica/index",
+    "link_texto": "Conferir na consulta pública do CFBM"
+   },
+   {
+    "p": "A avaliação é feita pela própria biomédica?",
+    "r": "Sim. A avaliação gratuita, de cerca de 30 minutos, é feita por uma das biomédicas da clínica. É nela que você conta o que incomoda e fica sabendo qual procedimento é indicado para o seu caso. Se tiver preferência por uma das doutoras, diga isso ao agendar pelo WhatsApp."
+   }
+  ],
+  "whatsapp_msg": "Olá! Vim pelo site, conheci a equipe e quero agendar minha avaliação"
+ },
+ "contato": {
+  "seo": {
+   "title": "Contato e WhatsApp | Empatia Humana, Canaã dos Carajás",
+   "description": "WhatsApp, endereço, mapa e horário da Clínica Empatia Humana, em Canaã dos Carajás (PA). Agende sua avaliação gratuita pelo WhatsApp, com horário marcado."
+  },
+  "h1": "Fale com a Empatia Humana em Canaã dos Carajás",
+  "sub": "Agende sua avaliação, tire dúvidas e peça valores pelo WhatsApp. O atendimento é com horário marcado.",
+  "canais": [
+   {
+    "tipo": "whatsapp",
+    "titulo": "WhatsApp",
+    "valor": "{telefone}",
+    "texto": "O caminho mais curto para agendar, tirar dúvidas e pedir valores. A mensagem já sai pronta: é só enviar.",
+    "botao": "Agendar minha avaliação"
+   },
+   {
+    "tipo": "telefone",
+    "titulo": "Telefone",
+    "valor": "{telefone}",
+    "texto": "Prefere falar por ligação? O número é o mesmo do WhatsApp.",
+    "botao": "Ligar para a clínica"
+   },
+   {
+    "tipo": "endereco",
+    "titulo": "Endereço",
+    "valor": "{endereco}",
+    "texto": "Venha no horário marcado. O mapa abre a rota no seu celular.",
+    "botao": "Abrir no Google Maps"
+   },
+   {
+    "tipo": "horario",
+    "titulo": "Horário",
+    "valor": "{horario}",
+    "texto": "Atendemos de {horario}, sempre com horário marcado.",
+    "botao": ""
+   }
+  ],
+  "como_chegar": "A clínica fica em {endereco}: toque em Abrir no Google Maps para traçar a rota a partir de onde você está.",
+  "regiao": {
+   "titulo": "Vem de outra cidade?",
+   "texto": "Muitas pacientes vêm de Parauapebas, Curionópolis e cidades vizinhas para se tratar na Empatia Humana. Ao agendar pelo WhatsApp, avise de onde você vem: a equipe organiza a agenda para aproveitar a sua viagem. Em muitos casos, dá para fazer a avaliação e a primeira sessão no mesmo dia.",
+   "cidades": [
+    "Canaã dos Carajás",
+    "Parauapebas",
+    "Curionópolis",
+    "Água Azul do Norte",
+    "Marabá"
+   ]
+  },
+  "faq": [
+   {
+    "p": "Qual o horário de atendimento da Clínica Empatia Humana?",
+    "r": "A clínica atende de {horario}, com horário marcado. Para garantir a sua vaga, agende antes pelo WhatsApp."
+   },
+   {
+    "p": "Onde fica a Clínica Empatia Humana?",
+    "r": "A clínica fica em {endereco}. O botão Abrir no Google Maps, nesta página, mostra a rota a partir de onde você está."
+   },
+   {
+    "p": "Quais formas de pagamento a clínica aceita?",
+    "r": "A clínica aceita PIX, cartão de crédito, cartão de débito e dinheiro. Os valores de cada tratamento são informados antes de você decidir."
+   },
+   {
+    "p": "É a minha primeira vez na clínica. Por onde eu começo?",
+    "r": "Comece pela avaliação gratuita, que dura cerca de 30 minutos. Nela, a biomédica ouve você, examina e indica o procedimento adequado ao seu caso. Para marcar, toque em Agendar minha avaliação e envie a mensagem pronta pelo WhatsApp."
+   }
+  ],
+  "whatsapp_msg": "Olá! Vim pela página de contato do site e quero agendar minha avaliação"
+ }
+}

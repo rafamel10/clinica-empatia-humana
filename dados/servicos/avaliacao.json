@@ -1,0 +1,140 @@
+{
+ "slug": "avaliacao",
+ "nome": "Avaliação gratuita",
+ "frente": "saude-integrativa",
+ "frentes_extras": [
+  "emagrecimento-e-medidas",
+  "pele-e-rejuvenescimento",
+  "pernas-e-circulacao"
+ ],
+ "resumo_card": "30 minutos com a biomédica para entender o seu caso e indicar o tratamento, antes de você decidir.",
+ "seo": {
+  "title": "Avaliação gratuita em Canaã dos Carajás | Empatia Humana",
+  "description": "Avaliação gratuita de 30 minutos em Canaã dos Carajás: a biomédica ouve você, examina e diz o que é indicado para o seu caso. Agende pelo WhatsApp."
+ },
+ "h1": "Avaliação gratuita: entenda o seu caso antes de decidir",
+ "sub": "Uma conversa de 30 minutos com a biomédica, sem custo, para quem quer saber o que é indicado para a sua queixa antes de escolher um tratamento.",
+ "resposta_direta": "A avaliação gratuita da Clínica Empatia Humana, em Canaã dos Carajás, é um atendimento de cerca de 30 minutos em que a biomédica ouve a sua queixa, examina e indica o procedimento adequado ao seu caso. Serve para quem quer cuidar da pele, das medidas, das pernas ou da saúde e ainda não sabe qual tratamento procurar.",
+ "para_quem": {
+  "intro": "A avaliação é o primeiro passo para quem quer se cuidar e prefere entender antes de decidir.",
+  "itens": [
+   "Você tem uma queixa de pele, medidas, vasinhos ou bem-estar e não sabe qual tratamento procurar.",
+   "Você viu um procedimento nas redes sociais e quer saber se ele é para o seu caso.",
+   "Você quer conhecer etapas e valores antes de começar qualquer coisa.",
+   "Você já tentou outros caminhos e quer um novo olhar sobre a sua queixa.",
+   "Você nunca veio à clínica e quer conhecer a equipe antes de confiar o seu cuidado a ela.",
+   "Você já é paciente e está na hora de rever o seu plano na reavaliação."
+  ],
+  "atencao": [
+   "A avaliação gratuita não substitui consulta médica. Dor forte, febre ou sintoma que piora rápido pedem atendimento médico.",
+   "Se você está grávida, amamentando, faz tratamento de saúde ou usa remédio todo dia, conte logo no início. Isso pode mudar o que é indicado.",
+   "Quer uma análise completa, com mais tempo para o seu histórico? O caminho é a Consulta Estética Integrativa, que é outro atendimento."
+  ]
+ },
+ "como_funciona": {
+  "texto": [
+   "Você agenda pelo WhatsApp e vem à clínica no horário marcado. Quem atende é a Dra. Adelaine Montel ou a Dra. Adriana Montel, biomédicas estetas e ozonioterapeutas."
+  ],
+  "passos": [
+   {
+    "titulo": "A avaliação começa pela escuta",
+    "texto": "Você conta o que incomoda, há quanto tempo e o que já tentou. Com calma e sem julgamento."
+   },
+   {
+    "titulo": "Exame da pele ou da região",
+    "texto": "A biomédica olha de perto a área da queixa e pergunta sobre sua saúde, sua rotina e os remédios que você usa."
+   },
+   {
+    "titulo": "Indicação explicada",
+    "texto": "Você fica sabendo qual procedimento pode ajudar, como ele é feito e qual é o investimento. Se nenhum for indicado para você, a gente diz."
+   },
+   {
+    "titulo": "A decisão é sua",
+    "texto": "Você não precisa decidir na hora. Se quiser começar depois, é só chamar no WhatsApp para agendar a primeira sessão."
+   }
+  ]
+ },
+ "duracao_sessoes": {
+  "duracao": "Cerca de 30 minutos",
+  "sessoes": "A avaliação é um encontro só. O número de sessões do tratamento é definido nela, conforme o seu caso.",
+  "observacao": "A reavaliação também dura cerca de 30 minutos e é marcada conforme o tratamento indicado."
+ },
+ "resultados": {
+  "texto": "A proposta da avaliação é que você saia com clareza sobre a sua queixa, os caminhos possíveis e o que cada um pede de você. Com essa conversa, a escolha do tratamento pode ficar mais tranquila.",
+  "itens": [
+   "Entender melhor a sua queixa e o que pode influenciar nela",
+   "Saber qual procedimento pode ser indicado para você, e por quê",
+   "Conhecer etapas, cuidados e valores antes de decidir",
+   "Tirar suas dúvidas direto com a biomédica"
+  ],
+  "ressalva": "A resposta a qualquer tratamento varia de pessoa para pessoa e não há resultado garantido. A avaliação serve para alinhar expectativas antes de começar."
+ },
+ "cuidados": {
+  "antes": [
+   "Leve suas dúvidas anotadas para não esquecer nenhuma na hora.",
+   "Tenha em mãos a lista de remédios e suplementos que você usa.",
+   "Se a queixa for de pele, vir sem maquiagem facilita o exame.",
+   "Se não puder comparecer, avise pelo WhatsApp para remarcar."
+  ],
+  "depois": [
+   "Anote as orientações que recebeu para rever com calma.",
+   "Surgiu dúvida depois? Chame a equipe no WhatsApp.",
+   "Se decidir começar, agende a primeira sessão em um horário que caiba na sua rotina.",
+   "Mudou algo na sua saúde antes de começar o tratamento? Avise a equipe."
+  ],
+  "nota": "As orientações do seu caso são passadas na avaliação."
+ },
+ "investimento": {
+  "tipo": "gratuito",
+  "valor": null,
+  "texto": "A avaliação é gratuita. Se houver indicação de tratamento, você conhece os valores antes de decidir.",
+  "variacoes": [
+   {
+    "nome": "Avaliação",
+    "duracao": "30 min",
+    "preco": "gratuita"
+   },
+   {
+    "nome": "Reavaliação",
+    "duracao": "30 min",
+    "preco": "gratuita"
+   }
+  ]
+ },
+ "faq": [
+  {
+   "p": "Quanto custa a avaliação na Empatia Humana?",
+   "r": "A avaliação é gratuita e dura cerca de 30 minutos. Ela serve para a biomédica entender o seu caso e indicar o procedimento. Você só tem custo se decidir fazer um tratamento."
+  },
+  {
+   "p": "Qual a diferença entre a avaliação gratuita e a Consulta Estética Integrativa?",
+   "r": "A avaliação gratuita dura cerca de 30 minutos e serve para indicar o procedimento, enquanto a Consulta Estética Integrativa dura 2 horas, faz uma análise completa do seu caso e custa a partir de R$ 450. São dois atendimentos diferentes. Na dúvida, a equipe orienta pelo WhatsApp qual das duas é para você."
+  },
+  {
+   "p": "Preciso passar pela avaliação antes de fazer um procedimento?",
+   "r": "Sim. Na Empatia Humana, a avaliação vem antes de qualquer indicação de procedimento. É nela que a biomédica confirma se o tratamento é adequado para você. Se não for, ela diz."
+  },
+  {
+   "p": "Sou obrigada a fechar um tratamento depois da avaliação?",
+   "r": "Não. A avaliação serve para você entender o que é indicado e quais são os valores. A decisão de começar é sua, no seu tempo."
+  },
+  {
+   "p": "Posso fazer a avaliação e o tratamento no mesmo dia?",
+   "r": "Em muitos casos, sim. Depende do procedimento indicado e da agenda do dia. Ao marcar pelo WhatsApp, avise que quer aproveitar a ida, principalmente se você vem de outra cidade."
+  },
+  {
+   "p": "O que é a reavaliação e ela também é gratuita?",
+   "r": "A reavaliação é um retorno de cerca de 30 minutos para acompanhar a sua evolução e ajustar o plano, e também é gratuita. O momento de fazer é combinado conforme o seu tratamento."
+  },
+  {
+   "p": "Como agendar uma avaliação gratuita em Canaã dos Carajás?",
+   "r": "O agendamento é feito pelo WhatsApp da clínica. Toque em Agendar minha avaliação e a mensagem já sai pronta. O atendimento é de segunda a sábado, das 8h às 20h, com horário marcado."
+  }
+ ],
+ "whatsapp_msg": "Olá! Vim pelo site e quero agendar minha avaliação gratuita",
+ "relacionados": [
+  "consulta-integrativa",
+  "lipo-ozonizada",
+  "vasinhos-e-varizes"
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "slug": "limpeza-de-pele",
+ "nome": "Limpeza de Pele",
+ "frente": "pele-e-rejuvenescimento",
+ "frentes_extras": [],
+ "resumo_card": "Limpeza profunda para cravos e oleosidade, com avaliação da pele antes. Sessão de cerca de 2 horas.",
+ "seo": {
+  "title": "Limpeza de Pele em Canaã dos Carajás | Empatia Humana",
+  "description": "Limpeza de pele profunda em Canaã dos Carajás: extração de cravos, máscara e hidratação em sessão de cerca de 2 horas. Agende sua avaliação gratuita."
+ },
+ "h1": "Limpeza de pele profunda em Canaã dos Carajás",
+ "sub": "Higienização, esfoliação, extração de cravos, máscara e hidratação em uma sessão de cerca de 2 horas. Para quem convive com cravos, oleosidade ou pele sem viço.",
+ "resposta_direta": "A limpeza de pele é um procedimento estético que higieniza o rosto, retira células mortas e extrai cravos, com máscara e hidratação no final. Na Empatia Humana, em Canaã dos Carajás, a sessão dura cerca de 2 horas e é feita depois de uma avaliação gratuita da pele. Serve para quem tem cravos, poros obstruídos ou oleosidade.",
+ "para_quem": {
+  "intro": "A limpeza de pele costuma fazer sentido para quem quer cuidar do rosto com regularidade e começar pelo básico bem feito.",
+  "itens": [
+   "Os cravos voltam rápido, mesmo com o cuidado em casa.",
+   "A oleosidade aparece no meio da tarde.",
+   "A pele parece sem viço e a base virou obrigação para sair de casa.",
+   "Faz tempo que você não faz uma limpeza de pele profissional, ou nunca fez.",
+   "Você quer começar a cuidar do rosto e não sabe qual é o primeiro passo.",
+   "Você quer um momento de autocuidado só seu, sem pressa."
+  ],
+  "atencao": [
+   "Acne muito inflamada, com muitas espinhas doloridas, pede avaliação de dermatologista antes. A limpeza de pele, sozinha, não trata a acne inflamada.",
+   "Herpes ativo no rosto, pele queimada de sol, muito irritada ou com feridas: nesses casos, a sessão costuma ser adiada. O mesmo vale para quem usa isotretinoína oral ou parou há pouco tempo, conforme a orientação do dermatologista.",
+   "Se você usa ácidos no rosto, está grávida ou amamentando, conte na avaliação. Isso pode mudar o que é feito na sessão."
+  ]
+ },
+ "como_funciona": {
+  "texto": [
+   "A limpeza de pele profissional higieniza o rosto, retira as células mortas da superfície e extrai os cravos. A sessão termina com máscara e hidratação.",
+   "Antes de começar, a biomédica avalia a sua pele e pergunta sobre a sua rotina de cuidados. A limpeza costuma ser o primeiro passo do cuidado facial. Se a sua pele pedir outro tratamento, você fica sabendo na avaliação."
+  ],
+  "passos": [
+   {
+    "titulo": "Avaliação da pele",
+    "texto": "A biomédica olha a sua pele de perto e pergunta o que incomoda, quais produtos e remédios você usa e se tem alguma alergia. A avaliação é gratuita."
+   },
+   {
+    "titulo": "Higienização e esfoliação",
+    "texto": "A higienização remove maquiagem, protetor solar e oleosidade. Depois, a esfoliação retira as células mortas da superfície."
+   },
+   {
+    "titulo": "Extração dos cravos",
+    "texto": "Os cravos são retirados com técnica e material adequados. Essa etapa pode incomodar um pouco."
+   },
+   {
+    "titulo": "Máscara, hidratação e orientações",
+    "texto": "A máscara e a hidratação finalizam a sessão. Você sai com orientações de cuidados em casa e de protetor solar para os dias seguintes."
+   }
+  ]
+ },
+ "duracao_sessoes": {
+  "duracao": "Cerca de 2 horas (120 minutos) por sessão",
+  "sessoes": "Definido na avaliação, conforme a sua pele. Como referência, a limpeza de pele costuma ser repetida a cada um ou dois meses.",
+  "observacao": ""
+ },
+ "resultados": {
+  "texto": "O objetivo da limpeza de pele é deixar os poros desobstruídos e a pele com sensação de limpa e leve. Com regularidade e cuidado em casa, a pele pode ficar com menos oleosidade aparente e mais viço. A limpeza não trata sozinha a acne inflamada, não clareia manchas e não muda o tamanho dos poros.",
+  "itens": [
+   "Retirar cravos e impurezas que obstruem os poros",
+   "Remover as células mortas da superfície da pele",
+   "Contribuir para uma pele com menos oleosidade aparente e mais viço",
+   "Orientar o cuidado em casa, para a pele se manter bem entre uma sessão e outra"
+  ],
+  "ressalva": "A resposta varia de pessoa para pessoa e não há resultado garantido. O que a pele mostra depois depende do tipo de pele e do cuidado diário em casa."
+ },
+ "cuidados": {
+  "antes": [
+   "Se puder, venha sem maquiagem.",
+   "Conte quais produtos, ácidos e remédios você usa, inclusive isotretinoína.",
+   "Avise se está grávida, amamentando ou se já teve alergia a algum produto.",
+   "Evite sol forte no rosto nos dias anteriores. Pele queimada de sol pede adiar a sessão."
+  ],
+  "depois": [
+   "Use protetor solar e reaplique ao longo do dia.",
+   "Evite sol direto nos dias seguintes.",
+   "Se puder, fique sem maquiagem no mesmo dia.",
+   "Não esprema espinhas e não use ácidos nem esfoliantes por alguns dias, conforme a orientação recebida."
+  ],
+  "nota": "As orientações do seu caso são passadas na avaliação."
+ },
+ "investimento": {
+  "tipo": "a_partir_de",
+  "valor": 200,
+  "texto": "Cada sessão de limpeza de pele sai a partir de R$ 200. Antes dela, a biomédica faz a avaliação gratuita da sua pele e confirma o valor para o seu caso.",
+  "variacoes": [
+   {
+    "nome": "Limpeza de Pele",
+    "duracao": "120 min",
+    "preco": "a partir de R$ 200"
+   }
+  ]
+ },
+ "faq": [
+  {
+   "p": "De quanto em quanto tempo devo fazer limpeza de pele?",
+   "r": "Para a maioria das peles, a cada um ou dois meses. Peles mais oleosas costumam pedir intervalos menores, e peles secas ou sensíveis, intervalos maiores. O intervalo certo para você é definido na avaliação."
+  },
+  {
+   "p": "Limpeza de pele dói?",
+   "r": "A extração dos cravos pode incomodar, principalmente no nariz e no queixo, onde costuma haver mais cravos. A sensação varia de pessoa para pessoa. Se estiver desconfortável, avise durante a sessão."
+  },
+  {
+   "p": "A pele fica vermelha depois da limpeza de pele?",
+   "r": "Pode ficar levemente avermelhada por algumas horas, principalmente onde houve extração. A pele também pode ficar mais sensível naquele dia. Em geral, melhora até o dia seguinte. Se a vermelhidão continuar, avise a clínica pelo WhatsApp."
+  },
+  {
+   "p": "Limpeza de pele fecha os poros?",
+   "r": "Não. Os poros não abrem nem fecham. A limpeza retira o que está obstruindo, e por isso eles podem parecer menores. O tamanho do poro depende muito da genética e da oleosidade da pele."
+  },
+  {
+   "p": "Limpeza de pele ajuda quem tem acne?",
+   "r": "A limpeza de pele pode ajudar no cuidado com cravos e oleosidade, mas não trata sozinha a acne inflamada. Quando há muitas espinhas doloridas, o dermatologista deve avaliar antes. Nesses casos, a limpeza entra como complemento, no momento certo."
+  },
+  {
+   "p": "Grávida pode fazer limpeza de pele?",
+   "r": "Em geral, sim, com produtos adequados para a gestação. Conte na avaliação que você está grávida, para a sessão ser ajustada. Alguns ácidos e procedimentos ficam para depois."
+  },
+  {
+   "p": "Quanto custa a limpeza de pele em Canaã dos Carajás?",
+   "r": "Na Empatia Humana, a limpeza de pele custa a partir de R$ 200 por sessão. O valor do seu caso é confirmado na avaliação, que é gratuita e vem antes do procedimento."
+  }
+ ],
+ "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre Limpeza de Pele",
+ "relacionados": [
+  "peeling-quimico",
+  "peeling-de-cristal-e-ozonizado",
+  "ozonio-facial-e-olheiras"
+ ]
+}

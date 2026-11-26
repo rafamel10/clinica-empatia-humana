@@ -1,0 +1,129 @@
+{
+ "slug": "terapia-neural",
+ "nome": "Terapia Neural",
+ "frente": "saude-integrativa",
+ "frentes_extras": [],
+ "resumo_card": "Técnica integrativa com pequenas aplicações em pontos do corpo. Indicação individual, feita em avaliação.",
+ "seo": {
+  "title": "Terapia Neural em Canaã dos Carajás | Empatia Humana",
+  "description": "Terapia Neural na Clínica Empatia Humana, em Canaã dos Carajás: sessão de 60 min, a partir de R$ 250. Indicação individual, com avaliação gratuita."
+ },
+ "h1": "Terapia Neural em Canaã dos Carajás",
+ "sub": "Técnica integrativa que usa pequenas aplicações de anestésico local em pontos do corpo. Para quem busca um cuidado complementar, com indicação feita em avaliação.",
+ "resposta_direta": "A terapia neural é uma técnica integrativa de origem alemã que usa pequenas aplicações de anestésico local em baixa concentração em pontos específicos do corpo, como a pele e cicatrizes. Na Empatia Humana, em Canaã dos Carajás, é oferecida a quem busca um cuidado complementar, com indicação individual definida em avaliação. Não substitui acompanhamento médico.",
+ "para_quem": {
+  "intro": "A terapia neural pode fazer sentido para quem busca um cuidado integrativo e quer decidir com orientação profissional.",
+  "itens": [
+   "Você tem receio de agulha e quer entender como é a aplicação antes de marcar.",
+   "Você convive com tensões ou desconfortos no corpo e quer conversar com a biomédica para saber se a técnica tem indicação no seu caso.",
+   "Você tem cicatrizes antigas, de cirurgia ou cesárea, e quer entender como a técnica olha para elas.",
+   "Você já ouviu falar da terapia neural e quer tirar suas dúvidas antes de decidir.",
+   "Você já faz acompanhamento médico e procura um cuidado complementar, sem substituir o que já faz."
+  ],
+  "atencao": [
+   "Alergia ou reação anterior a anestésicos locais: avise antes. Nesses casos a técnica não costuma ser indicada.",
+   "Gestantes, lactantes e quem usa anticoagulante ou tem alteração de coagulação precisam de avaliação cuidadosa antes de qualquer aplicação.",
+   "Dor forte, repentina ou sem diagnóstico pede consulta médica primeiro. A terapia neural não substitui esse acompanhamento."
+  ]
+ },
+ "como_funciona": {
+  "texto": [
+   "A sessão é feita em consultório. Com uma agulha fina, a biomédica aplica pequenas quantidades de anestésico local em pontos escolhidos para o seu caso, na pele ou sobre cicatrizes antigas.",
+   "A proposta da técnica é oferecer um estímulo ao sistema nervoso autônomo, a parte do sistema nervoso que regula as funções automáticas do corpo. Os pontos, a quantidade de aplicações e o número de sessões são definidos na avaliação, olhando para o seu histórico."
+  ],
+  "passos": [
+   {
+    "titulo": "Avaliação",
+    "texto": "Na avaliação gratuita, de cerca de 30 minutos, a biomédica ouve você, pergunta sobre saúde, alergias e remédios e diz se a terapia neural é indicada para o seu caso."
+   },
+   {
+    "titulo": "Plano das aplicações",
+    "texto": "Se houver indicação, ela explica quais pontos serão trabalhados, o que esperar de cada sessão e quantas sessões sugere para você."
+   },
+   {
+    "titulo": "Sessão",
+    "texto": "A biomédica faz as aplicações nos pontos combinados no plano. A sessão dura cerca de 60 minutos, com tempo para você tirar dúvidas."
+   },
+   {
+    "titulo": "Acompanhamento",
+    "texto": "A cada retorno, você conta como se sentiu e o plano é ajustado quando for preciso."
+   }
+  ]
+ },
+ "duracao_sessoes": {
+  "duracao": "Cerca de 60 minutos por sessão",
+  "sessoes": "Definido na avaliação, conforme o seu caso",
+  "observacao": "O intervalo entre as sessões também é definido na avaliação."
+ },
+ "resultados": {
+  "texto": "A terapia neural pode contribuir para a sensação de bem-estar, dentro de um plano de cuidado integrativo. O que você pode perceber, e em quanto tempo, depende do seu organismo e do que for definido na avaliação.",
+  "itens": [
+   "Oferecer um estímulo ao sistema nervoso autônomo, como propõe a técnica",
+   "Apoiar a sensação de bem-estar e de conforto no dia a dia",
+   "Complementar o seu plano de cuidado integrativo, sem substituir o acompanhamento médico"
+  ],
+  "ressalva": "A resposta varia de pessoa para pessoa e não há resultado garantido."
+ },
+ "cuidados": {
+  "antes": [
+   "Conte sobre alergias, principalmente a anestésicos, e sobre os remédios que você usa.",
+   "Avise se está grávida, amamentando ou em algum tratamento de saúde.",
+   "Faça uma refeição leve antes da sessão e venha hidratada."
+  ],
+  "depois": [
+   "Pode ficar sensibilidade, vermelhidão ou um pequeno roxo no ponto da aplicação.",
+   "Evite esfregar ou apertar a região no mesmo dia.",
+   "Se sentir tontura ou mal-estar, avise a equipe antes de sair da clínica.",
+   "Notou algo diferente do que foi orientado? Fale com a clínica pelo WhatsApp."
+  ],
+  "nota": "As orientações do seu caso são passadas na avaliação."
+ },
+ "investimento": {
+  "tipo": "a_partir_de",
+  "valor": 250,
+  "texto": "A sessão de Terapia Neural custa a partir de R$ 250. A avaliação para saber se a técnica é indicada para você é gratuita.",
+  "variacoes": [
+   {
+    "nome": "Terapia Neural",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 250"
+   }
+  ]
+ },
+ "faq": [
+  {
+   "p": "Terapia neural dói?",
+   "r": "Pode causar um incômodo leve e rápido. As aplicações são feitas com agulha fina, e o mais comum é sentir a picada e uma ardência passageira no local. A sensibilidade varia de pessoa para pessoa e de região para região. Se você tem receio de agulha, conte na avaliação."
+  },
+  {
+   "p": "Quantas sessões de terapia neural são necessárias?",
+   "r": "Não existe um número fixo: a quantidade de sessões é definida na avaliação, conforme o seu caso. Cada sessão dura cerca de 60 minutos. O intervalo entre elas também é combinado com a biomédica, de acordo com a sua resposta."
+  },
+  {
+   "p": "Quanto custa a terapia neural?",
+   "r": "A sessão de terapia neural custa a partir de R$ 250 na Empatia Humana, em Canaã dos Carajás. O valor do seu plano depende do número de sessões indicado para você. A avaliação para saber se a técnica faz sentido no seu caso é gratuita."
+  },
+  {
+   "p": "Terapia neural substitui tratamento médico?",
+   "r": "Não. A terapia neural é um cuidado complementar e não substitui consulta, diagnóstico nem tratamento médico. Mantenha os seus remédios e o seu acompanhamento, e conte para a biomédica tudo o que você usa."
+  },
+  {
+   "p": "Quem não pode fazer terapia neural?",
+   "r": "Quem tem alergia a anestésicos locais não costuma ter indicação para a técnica. Gestantes, lactantes e quem usa anticoagulante precisam de uma avaliação cuidadosa antes. Por isso nenhuma aplicação é feita sem avaliar você primeiro."
+  },
+  {
+   "p": "Posso voltar à rotina depois da sessão de terapia neural?",
+   "r": "Em geral, sim, mas a orientação para o seu caso é passada pela biomédica. Pode ficar uma sensibilidade ou um pequeno roxo no ponto da aplicação. Se sentir tontura ou mal-estar depois da sessão, avise a equipe antes de sair da clínica."
+  },
+  {
+   "p": "Terapia neural tem comprovação científica?",
+   "r": "Ainda há poucos estudos sobre a terapia neural, e ela é oferecida como cuidado complementar. Por isso, na Empatia Humana a indicação é individual, feita em avaliação, sem promessa de resultado. Ela não substitui o seu acompanhamento médico."
+  }
+ ],
+ "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre Terapia Neural",
+ "relacionados": [
+  "consulta-integrativa",
+  "ozonioterapia",
+  "soroterapia"
+ ]
+}

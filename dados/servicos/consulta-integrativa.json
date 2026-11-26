@@ -1,0 +1,136 @@
+{
+ "slug": "consulta-integrativa",
+ "nome": "Consulta Estética Integrativa",
+ "frente": "saude-integrativa",
+ "frentes_extras": [],
+ "resumo_card": "Consulta de 2 horas: sua história e seus exames lidos com calma e um plano por escrito para o seu caso.",
+ "seo": {
+  "title": "Consulta Estética Integrativa em Canaã dos Carajás",
+  "description": "Consulta Estética Integrativa em Canaã dos Carajás: 2 horas com a biomédica para analisar sua história e seus exames e montar um plano por escrito."
+ },
+ "h1": "Consulta Estética Integrativa em Canaã dos Carajás",
+ "sub": "Duas horas para ouvir sua história, ler seus exames com calma e montar um plano por escrito. Para quem quer entender o corpo antes de escolher um tratamento.",
+ "resposta_direta": "A Consulta Estética Integrativa é uma consulta de 2 horas com biomédica esteta, na Empatia Humana, em Canaã dos Carajás. Nela, sua história, rotina e exames são analisados, e você recebe por escrito o mapeamento do caso, com o plano proposto. É indicada para quem quer planejar cuidados de pele, medidas e bem-estar. Não substitui o acompanhamento médico.",
+ "para_quem": {
+  "intro": "A consulta costuma ser o começo indicado para quem quer um plano completo antes de escolher um procedimento.",
+  "itens": [
+   "Você quer se cuidar e não sabe por qual tratamento começar.",
+   "Seus exames vieram dentro da referência e você ainda quer entender melhor o que sente.",
+   "Cansaço, inchaço ou mudanças na pele entraram na rotina e você quer dar atenção a isso.",
+   "Você já fez procedimentos soltos e agora quer olhar para o conjunto.",
+   "Você pensa em um tratamento mais longo e quer decidir com informação.",
+   "Você prefere uma consulta em que dá tempo de falar e de perguntar."
+  ],
+  "atencao": [
+   "Dor forte, febre, sangramento ou perda de peso sem motivo pedem atendimento médico antes da consulta.",
+   "Se você está grávida, amamentando ou em tratamento médico, avise ao agendar: o plano leva isso em conta.",
+   "A consulta não faz diagnóstico de doenças e não altera remédios receitados pelo seu médico."
+  ]
+ },
+ "como_funciona": {
+  "texto": [
+   "É uma consulta sem pressa, de cerca de 2 horas. Na estética integrativa, o que aparece na pele, nas medidas e na disposição é olhado junto com os seus hábitos e os seus exames.",
+   "O atendimento é com biomédica esteta e não substitui o acompanhamento com o seu médico."
+  ],
+  "passos": [
+   {
+    "titulo": "Avaliação gratuita",
+    "texto": "Em 30 minutos, a biomédica entende o que você procura e diz se a consulta é o melhor começo para o seu caso. Se você já decidiu, é só pedir a consulta pelo WhatsApp."
+   },
+   {
+    "titulo": "Antes da consulta",
+    "texto": "Você agenda pelo WhatsApp e separa os exames recentes que tiver."
+   },
+   {
+    "titulo": "Na consulta",
+    "texto": "A biomédica ouve sua história, conversa sobre sua rotina e seus sintomas e lê seus exames laboratoriais."
+   },
+   {
+    "titulo": "Mapeamento e plano",
+    "texto": "Você recebe por escrito o estudo do seu caso e o plano proposto, na ordem em que faz sentido começar: tratamentos da clínica, cuidados em casa e, quando necessário, a orientação de procurar outro especialista."
+   }
+  ]
+ },
+ "duracao_sessoes": {
+  "duracao": "Cerca de 2 horas (120 minutos). A Análise de Exames Laboratoriais avulsa leva cerca de 60 minutos.",
+  "sessoes": "Um encontro. Se houver retorno, ele é definido na consulta, conforme o seu caso.",
+  "observacao": "A consulta é diferente da avaliação gratuita de 30 minutos, que serve para indicar o procedimento."
+ },
+ "resultados": {
+  "texto": "A consulta é um ponto de partida. A proposta é que você saia com mais clareza para decidir os próximos passos. O que pode mudar depois depende do plano escolhido e de como o seu corpo responde.",
+  "itens": [
+   "Entender melhor o que foi observado na sua história e nos seus exames.",
+   "Ter um plano por escrito, pensado para o seu caso.",
+   "Saber por onde começar e em que ordem seguir.",
+   "Receber orientações de alimentação e suplementação, quando indicadas."
+  ],
+  "ressalva": "A resposta a qualquer plano varia de pessoa para pessoa, e não existe resultado garantido."
+ },
+ "cuidados": {
+  "antes": [
+   "Reúna os exames laboratoriais que você fez recentemente, inclusive os que vieram sem alteração.",
+   "Anote os remédios, suplementos e vitaminas que você usa.",
+   "Liste o que mais incomoda você e há quanto tempo.",
+   "Reserve as 2 horas com folga na agenda."
+  ],
+  "depois": [
+   "Guarde o mapeamento por escrito e releia em casa.",
+   "Se surgir dúvida sobre o plano, chame a clínica pelo WhatsApp.",
+   "Mantenha o acompanhamento com o seu médico e não mude remédios por conta própria."
+  ],
+  "nota": "As orientações do seu caso são passadas na consulta."
+ },
+ "investimento": {
+  "tipo": "a_partir_de",
+  "valor": 450,
+  "texto": "A Consulta Estética Integrativa custa a partir de R$ 450, com cerca de 2 horas de atendimento. O valor é confirmado pelo WhatsApp, antes de você agendar.",
+  "variacoes": [
+   {
+    "nome": "Consulta Estética Integrativa",
+    "duracao": "120 min",
+    "preco": "a partir de R$ 450"
+   },
+   {
+    "nome": "Análise de Exames Laboratoriais",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 450"
+   }
+  ]
+ },
+ "faq": [
+  {
+   "p": "Quanto custa a Consulta Estética Integrativa?",
+   "r": "A consulta custa a partir de R$ 450 e dura cerca de 2 horas. A Análise de Exames Laboratoriais avulsa, de 60 minutos, também parte de R$ 450. O valor do seu atendimento é confirmado pelo WhatsApp, antes de agendar."
+  },
+  {
+   "p": "Qual a diferença entre a consulta e a avaliação gratuita?",
+   "r": "São dois atendimentos diferentes. A avaliação gratuita dura 30 minutos e serve para indicar o procedimento. A Consulta Estética Integrativa dura 2 horas, inclui a leitura dos seus exames e termina com o mapeamento do seu caso por escrito."
+  },
+  {
+   "p": "Preciso levar exames para a consulta?",
+   "r": "Leve os exames recentes que você tiver. Se faltar algum importante para o seu caso, a biomédica pede na consulta."
+  },
+  {
+   "p": "A consulta é com médico?",
+   "r": "Não. A consulta é com biomédica esteta e ozonioterapeuta. A Dra. Adelaine Montel (CRBM 4ª Região nº 1437) tem formação em análises clínicas e nutrição ortomolecular. A consulta não substitui o seu médico, e a biomédica orienta quando é preciso procurar um."
+  },
+  {
+   "p": "O que eu recebo no fim da consulta?",
+   "r": "Você recebe o mapeamento do seu caso por escrito. Ele traz o que foi observado e o plano proposto, na ordem em que faz sentido começar."
+  },
+  {
+   "p": "Já saio da consulta com algum tratamento marcado?",
+   "r": "Não necessariamente. Você sai com o plano por escrito, e os tratamentos indicados são marcados depois com a equipe, no seu tempo."
+  },
+  {
+   "p": "Posso fazer só a análise dos meus exames?",
+   "r": "Sim. A Análise de Exames Laboratoriais é um atendimento de cerca de 60 minutos. Pelo WhatsApp, a equipe orienta se ela ou a consulta completa faz mais sentido para você."
+  }
+ ],
+ "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre a Consulta Estética Integrativa",
+ "relacionados": [
+  "avaliacao",
+  "soroterapia",
+  "ozonioterapia"
+ ]
+}

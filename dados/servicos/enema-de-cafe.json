@@ -1,0 +1,131 @@
+{
+ "slug": "enema-de-cafe",
+ "nome": "Enema de Café",
+ "frente": "saude-integrativa",
+ "frentes_extras": [],
+ "resumo_card": "Cuidado integrativo com o intestino, feito em sala reservada. Indicação individual, definida em avaliação.",
+ "seo": {
+  "title": "Enema de Café em Canaã dos Carajás | Empatia Humana",
+  "description": "Enema de Café na Clínica Empatia Humana, em Canaã dos Carajás: sessão de 60 min, a partir de R$ 400. Indicação individual, com avaliação gratuita."
+ },
+ "h1": "Enema de Café em Canaã dos Carajás",
+ "sub": "Procedimento integrativo com solução de café, por via retal, feito em sala reservada. Para quem busca um cuidado complementar, com indicação feita em avaliação.",
+ "resposta_direta": "O enema de café é um procedimento integrativo em que uma solução de café é introduzida no intestino por via retal e evacuada depois de um tempo curto. Na Empatia Humana, em Canaã dos Carajás, é feito em sala reservada, para quem busca um cuidado complementar, com indicação individual definida em avaliação. Não substitui acompanhamento médico.",
+ "para_quem": {
+  "intro": "O enema de café pode fazer sentido para quem busca um cuidado integrativo com o intestino e quer decidir com orientação profissional.",
+  "itens": [
+   "Você ouviu falar do enema de café e quer entender como funciona antes de decidir.",
+   "Você sente que o seu intestino pede mais atenção e quer uma avaliação que olhe para a sua rotina inteira.",
+   "Você prefere fazer o procedimento na clínica, com orientação em cada etapa, em vez de tentar sozinha.",
+   "Você tem vergonha ou receio do procedimento e quer tirar as dúvidas com calma, em uma conversa reservada.",
+   "Você já faz outro cuidado integrativo e quer saber se o enema combina com o seu plano.",
+   "Você já faz acompanhamento médico e procura um cuidado complementar, sem substituir o que já faz."
+  ],
+  "atencao": [
+   "Gestantes, lactantes e quem tem problema de saúde no coração, nos rins ou no intestino precisam de avaliação cuidadosa antes. Nesses casos o enema não costuma ser indicado.",
+   "Hemorroida inflamada, fissura, sangramento ou cirurgia recente na região: avise antes. O procedimento costuma ser adiado.",
+   "Dor forte na barriga, sangue nas fezes, febre ou perda de peso sem motivo pedem consulta médica primeiro. O enema de café não substitui esse acompanhamento."
+  ]
+ },
+ "como_funciona": {
+  "texto": [
+   "Enema é a introdução de um líquido no intestino por via retal. No enema de café, esse líquido é uma solução de café preparada para esse uso. Ela permanece no intestino por um tempo curto e depois é evacuada no banheiro.",
+   "Antes de qualquer sessão, a biomédica explica o passo a passo e tira as suas dúvidas. Se o enema não for indicado para o seu caso, ela diz isso na avaliação."
+  ],
+  "passos": [
+   {
+    "titulo": "Avaliação",
+    "texto": "Na avaliação gratuita, de cerca de 30 minutos, a biomédica ouve você, pergunta sobre saúde, intestino e remédios e diz se o enema de café é indicado para o seu caso."
+   },
+   {
+    "titulo": "Orientação e preparo",
+    "texto": "Se houver indicação, ela explica o procedimento passo a passo, passa as orientações de preparo e responde às suas dúvidas antes de marcar a sessão."
+   },
+   {
+    "titulo": "Sessão",
+    "texto": "Você fica deitada em posição confortável. A solução é introduzida devagar, por via retal, e permanece por um tempo curto. Depois você vai ao banheiro para evacuar. A sessão dura cerca de 60 minutos."
+   },
+   {
+    "titulo": "Acompanhamento",
+    "texto": "Você conta como se sentiu e a biomédica avalia se faz sentido repetir o procedimento dentro do seu plano."
+   }
+  ]
+ },
+ "duracao_sessoes": {
+  "duracao": "Cerca de 60 minutos por sessão",
+  "sessoes": "Definido na avaliação, conforme o seu caso",
+  "observacao": "O intervalo entre as sessões também é definido na avaliação."
+ },
+ "resultados": {
+  "texto": "O enema de café pode entrar como parte de um plano de cuidado com o intestino e com os hábitos. É uma prática integrativa, e os estudos sobre ela ainda são limitados. O que você pode perceber, e em quanto tempo, depende do seu organismo e do que for definido na avaliação.",
+  "itens": [
+   "Favorecer o esvaziamento da parte final do intestino, efeito esperado de um enema",
+   "Apoiar a sensação de bem-estar, junto com as orientações de hábitos para o dia a dia",
+   "Somar ao plano de cuidado com o intestino definido na avaliação, quando houver indicação"
+  ],
+  "ressalva": "A resposta varia de pessoa para pessoa e não há resultado garantido."
+ },
+ "cuidados": {
+  "antes": [
+   "Conte sobre a sua saúde, o funcionamento do intestino e os remédios que você usa.",
+   "Avise se está grávida, amamentando, ou se tem hemorroida, fissura ou sensibilidade à cafeína.",
+   "Faça uma refeição leve e venha hidratada, com roupa confortável.",
+   "Deixe um tempo livre depois da sessão, sem compromisso logo em seguida."
+  ],
+  "depois": [
+   "Beba água ao longo do dia.",
+   "Você pode sentir vontade de ir ao banheiro de novo nas horas seguintes.",
+   "Prefira refeições leves no restante do dia.",
+   "Se sentir cólica forte, tontura, sangramento ou mal-estar, avise a clínica e procure atendimento médico."
+  ],
+  "nota": "As orientações do seu caso são passadas na avaliação."
+ },
+ "investimento": {
+  "tipo": "a_partir_de",
+  "valor": 400,
+  "texto": "A sessão de Enema de Café custa a partir de R$ 400. A avaliação para saber se o procedimento é indicado para você é gratuita.",
+  "variacoes": [
+   {
+    "nome": "Enema de Café",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 400"
+   }
+  ]
+ },
+ "faq": [
+  {
+   "p": "Para que serve o enema de café?",
+   "r": "O enema de café serve para favorecer o esvaziamento da parte final do intestino, que é o efeito esperado de qualquer enema. É uma prática integrativa em que uma solução de café é introduzida por via retal. Benefícios além desse ainda não têm comprovação científica sólida, por isso a indicação é individual e feita em avaliação."
+  },
+  {
+   "p": "Enema de café dói?",
+   "r": "Não costuma doer. O mais comum é sentir pressão na barriga e vontade de evacuar enquanto a solução está no intestino, às vezes com uma cólica leve. O procedimento é feito com calma, em sala reservada, com orientação em cada etapa. Se algo incomodar, avise na hora."
+  },
+  {
+   "p": "Quanto custa o enema de café?",
+   "r": "A sessão de enema de café custa a partir de R$ 400 na Empatia Humana, em Canaã dos Carajás. O valor do seu plano depende do número de sessões indicado para você. A avaliação para saber se o procedimento faz sentido no seu caso é gratuita."
+  },
+  {
+   "p": "Quantas sessões de enema de café são necessárias?",
+   "r": "Não existe um número fixo: a quantidade de sessões é definida na avaliação, conforme o seu caso. Cada sessão dura cerca de 60 minutos. O intervalo entre elas também é combinado com a biomédica."
+  },
+  {
+   "p": "Quem não pode fazer enema de café?",
+   "r": "Gestantes, lactantes e quem tem problema de saúde no coração, nos rins ou no intestino não costumam ter indicação. Hemorroida inflamada, fissura, sangramento ou cirurgia recente na região também pedem cuidado. Por isso nenhum procedimento é feito sem avaliar você primeiro."
+  },
+  {
+   "p": "Posso fazer enema de café em casa, sozinha?",
+   "r": "O mais seguro é não fazer por conta própria, sem orientação profissional. Erros na temperatura, na quantidade ou na frequência podem causar queimadura e irritação no intestino. Na Empatia Humana, o procedimento só é feito depois de uma avaliação, com orientação da biomédica."
+  },
+  {
+   "p": "Posso voltar à rotina depois do enema de café?",
+   "r": "Em geral, sim, mas quem confirma isso para o seu caso é a biomédica, na avaliação. Como você pode sentir vontade de ir ao banheiro de novo nas horas seguintes, vale deixar um tempo livre depois da sessão, que dura cerca de 60 minutos."
+  }
+ ],
+ "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre Enema de Café",
+ "relacionados": [
+  "disbiose-zero",
+  "consulta-integrativa",
+  "ozonioterapia-outras-vias"
+ ]
+}

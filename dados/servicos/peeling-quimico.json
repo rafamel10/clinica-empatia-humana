@@ -1,0 +1,132 @@
+{
+ "slug": "peeling-quimico",
+ "nome": "Peeling Químico",
+ "frente": "pele-e-rejuvenescimento",
+ "frentes_extras": [],
+ "resumo_card": "Aplicação de ácidos que estimula a renovação da pele, para cuidar de manchas, marcas e textura.",
+ "seo": {
+  "title": "Peeling químico em Canaã dos Carajás | Empatia Humana",
+  "description": "Peeling químico em Canaã dos Carajás, com biomédicas estetas: renovação da pele para cuidar de manchas, marcas e textura. Agende sua avaliação gratuita."
+ },
+ "h1": "Peeling químico em Canaã dos Carajás",
+ "sub": "Aplicação controlada de ácidos que estimula a renovação da pele. Para quem quer cuidar de manchas, marcas de espinhas, textura irregular ou pele sem viço.",
+ "resposta_direta": "O peeling químico é a aplicação controlada de ácidos sobre a pele para estimular a renovação da camada superficial. Na Empatia Humana, em Canaã dos Carajás, é feito por biomédicas estetas e costuma ser procurado por quem quer cuidar de manchas, marcas de espinhas e textura irregular da pele. O tipo de peeling é definido na avaliação.",
+ "para_quem": {
+  "intro": "O peeling químico costuma ser procurado por quem se reconhece em situações como estas.",
+  "itens": [
+   "As manchas ficam mais marcadas depois de cada temporada de sol.",
+   "As espinhas passaram, mas as marcas continuam aparecendo.",
+   "A pele perdeu o viço, e a base virou obrigação para sair de casa.",
+   "A textura está irregular ao toque e os poros aparecem mais do que você gostaria.",
+   "Você já faz limpeza de pele e quer dar o próximo passo no cuidado.",
+   "Você quer um tom mais uniforme sem mudar o seu rosto."
+  ],
+  "atencao": [
+   "Pele com ferida, irritação, queimadura de sol ou herpes ativo na região: o peeling espera a pele se recuperar.",
+   "Gravidez, amamentação e uso de alguns remédios, como os de tratamento para acne, pedem avaliação antes.",
+   "Pele que mancha com facilidade ou com tendência a queloide precisa de mais cuidado na escolha do peeling."
+  ]
+ },
+ "como_funciona": {
+  "texto": [
+   "O peeling químico é a aplicação de um ácido sobre a pele, em concentração e tempo controlados. Ele provoca uma esfoliação que estimula a troca da camada mais superficial da pele por uma nova.",
+   "Existem peelings mais suaves e mais intensos. O ácido e a intensidade são escolhidos pela biomédica na avaliação, conforme o seu tipo de pele, o que incomoda você e a sua rotina de sol."
+  ],
+  "passos": [
+   {
+    "titulo": "Avaliação gratuita",
+    "texto": "Em cerca de 30 minutos, a biomédica olha a sua pele, ouve o que incomoda e pergunta sobre remédios, produtos e exposição ao sol. No fim, ela diz se o peeling químico é indicado e qual tipo faz sentido para você."
+   },
+   {
+    "titulo": "Preparo da pele",
+    "texto": "No dia da sessão, a pele é limpa antes da aplicação. Se a sua pele precisar de preparo em casa nos dias anteriores, a orientação é dada na avaliação."
+   },
+   {
+    "titulo": "Aplicação do ácido",
+    "texto": "A biomédica aplica o produto e acompanha a reação da pele durante todo o tempo de ação. É comum sentir calor ou ardência nesse momento."
+   },
+   {
+    "titulo": "Recuperação em casa",
+    "texto": "Você sai com as orientações de cuidado e de protetor solar. Nos dias seguintes, a pele pode ficar vermelha, sensível ou descamar, conforme o tipo de peeling."
+   }
+  ]
+ },
+ "duracao_sessoes": {
+  "duracao": "Cerca de 60 minutos por sessão",
+  "sessoes": "Definido na avaliação, conforme o seu caso",
+  "observacao": "O intervalo entre as sessões também é definido na avaliação, conforme a resposta da sua pele."
+ },
+ "resultados": {
+  "texto": "O peeling químico pode ajudar a deixar o tom da pele mais uniforme, a textura mais lisa e o aspecto mais luminoso. A resposta depende do tipo de peeling, do seu tipo de pele e do cuidado com o sol depois da sessão.",
+  "itens": [
+   "Estimular a renovação da camada superficial da pele",
+   "Ajudar a uniformizar o tom e a suavizar a aparência de manchas",
+   "Melhorar a textura e a aparência de marcas de espinhas e poros",
+   "Dar mais viço e luminosidade à pele"
+  ],
+  "ressalva": "A resposta varia de pessoa para pessoa e não há resultado garantido."
+ },
+ "cuidados": {
+  "antes": [
+   "Conte na avaliação os remédios que você toma e os produtos que passa no rosto, como ácidos e clareadores.",
+   "Evite tomar sol e se bronzear nos dias anteriores à sessão.",
+   "Pause ácidos e esfoliantes em casa se a biomédica orientar.",
+   "Avise se estiver grávida, amamentando ou com alguma ferida ou herpes no rosto."
+  ],
+  "depois": [
+   "Use protetor solar todos os dias e evite sol direto pelo tempo que a biomédica indicar.",
+   "Se a pele descamar, não puxe as pelinhas. Deixe soltar sozinhas.",
+   "Use só os produtos orientados para a recuperação e mantenha a pele hidratada.",
+   "Ardor forte, bolhas ou manchas escurecendo: fale com a clínica pelo WhatsApp."
+  ],
+  "nota": "As orientações do seu caso são passadas na avaliação."
+ },
+ "investimento": {
+  "tipo": "a_partir_de",
+  "valor": 500,
+  "texto": "A sessão de peeling químico custa a partir de R$ 500. O valor do seu caso é confirmado na avaliação, que é gratuita.",
+  "variacoes": [
+   {
+    "nome": "Peeling Químico",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 500"
+   }
+  ]
+ },
+ "faq": [
+  {
+   "p": "Peeling químico dói?",
+   "r": "Costuma arder ou esquentar enquanto o ácido age, e a intensidade varia conforme o tipo de peeling e a sensibilidade da pele. A biomédica acompanha a sua reação durante toda a aplicação. Se o desconforto passar do que você tolera, avise na hora."
+  },
+  {
+   "p": "A pele descasca depois do peeling químico?",
+   "r": "Pode descascar, e isso depende do tipo de peeling indicado. Nos mais suaves, a descamação costuma ser discreta. Nos mais intensos, a pele pode ficar vermelha e soltar pelinhas durante a recuperação. Na avaliação, a biomédica explica o que esperar no seu caso, para você se programar."
+  },
+  {
+   "p": "Quantas sessões de peeling químico preciso fazer?",
+   "r": "Não existe um número fixo. Depende do tipo de pele, do que você quer cuidar, do peeling escolhido e de como a pele responde. O número de sessões e o intervalo entre elas são definidos na avaliação."
+  },
+  {
+   "p": "Quanto custa o peeling químico?",
+   "r": "A sessão de peeling químico custa a partir de R$ 500 na Empatia Humana. O valor do seu caso é confirmado na avaliação, que é gratuita e dura cerca de 30 minutos."
+  },
+  {
+   "p": "Posso fazer peeling químico no verão?",
+   "r": "Alguns peelings podem ser feitos o ano todo, desde que você use protetor solar todos os dias e evite sol direto durante a recuperação. Em Canaã dos Carajás, onde o sol é forte o ano inteiro, esse cuidado pesa na escolha. A biomédica indica o tipo adequado para a sua pele e para a sua rotina."
+  },
+  {
+   "p": "Peeling químico serve para manchas e melasma?",
+   "r": "Pode fazer parte do cuidado com manchas, mas a indicação depende da avaliação. O melasma é um tipo de mancha sensível, que pode escurecer se a pele for irritada, por isso o peeling é escolhido com cautela. O objetivo é ajudar a uniformizar o tom, junto com protetor solar e cuidados em casa, sem resultado garantido."
+  },
+  {
+   "p": "Qual a diferença entre peeling químico e peeling de cristal?",
+   "r": "O peeling químico usa ácidos para renovar a pele, e o peeling de cristal é físico: esfolia a superfície de forma mecânica, sem ácido. Cada um atende a um objetivo e a um tipo de pele. Na avaliação, a biomédica indica qual faz sentido para você."
+  }
+ ],
+ "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre Peeling Químico",
+ "relacionados": [
+  "limpeza-de-pele",
+  "peeling-de-cristal-e-ozonizado",
+  "microagulhamento"
+ ]
+}

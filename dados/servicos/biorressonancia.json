@@ -1,0 +1,128 @@
+{
+ "slug": "biorressonancia",
+ "nome": "Teste de Biorressonância",
+ "frente": "saude-integrativa",
+ "frentes_extras": [],
+ "resumo_card": "Teste complementar e não invasivo, de cerca de 60 minutos, conduzido por biomédicas. Não é exame diagnóstico.",
+ "seo": {
+  "title": "Biorressonância em Canaã dos Carajás | Empatia Humana",
+  "description": "Teste de Biorressonância em Canaã dos Carajás, com biomédicas. Prática complementar e não invasiva, em cerca de 60 minutos. Avaliação gratuita antes."
+ },
+ "h1": "Teste de Biorressonância em Canaã dos Carajás",
+ "sub": "Prática complementar e não invasiva da saúde integrativa, conduzida por biomédicas, para quem quer conhecer o teste de perto. Não é exame diagnóstico.",
+ "resposta_direta": "O Teste de Biorressonância é uma prática complementar e não invasiva, feita com um aparelho. Na Empatia Humana, em Canaã dos Carajás, é conduzido por biomédicas e dura cerca de 60 minutos. É para quem se interessa por saúde integrativa e quer conhecer o teste com orientação profissional. Não é exame diagnóstico nem substitui acompanhamento médico.",
+ "para_quem": {
+  "intro": "O teste costuma interessar a quem busca saúde integrativa e quer tirar as dúvidas direto com uma biomédica.",
+  "itens": [
+   "Você se interessa por práticas integrativas e ouviu falar do teste.",
+   "Você quer começar a se cuidar de dentro para fora e não sabe por onde.",
+   "Você já faz acompanhamento médico e busca um olhar complementar, sem trocar um pelo outro.",
+   "Você está em dúvida entre o teste e a Consulta Estética Integrativa e quer orientação para escolher.",
+   "Você quer entender o que o teste é e o que ele não é antes de decidir."
+  ],
+  "atencao": [
+   "Gestantes e pessoas com marca-passo ou outro dispositivo eletrônico implantado precisam avisar antes de agendar: a biomédica avalia se o teste é indicado.",
+   "Sintomas fortes, novos ou que estão piorando pedem consulta médica. O teste não é atendimento de urgência.",
+   "Quem faz tratamento médico segue com ele normalmente. O teste não é motivo para mudar ou suspender medicação."
+  ]
+ },
+ "como_funciona": {
+  "texto": [
+   "A biorressonância é uma prática complementar da saúde integrativa, também conhecida como teste quântico. De modo geral, o teste é feito com um aparelho e sensores em contato com a pele, sem agulha e sem coleta de sangue.",
+   "Na Empatia Humana, o teste é conduzido por uma biomédica e dura cerca de 60 minutos. Ele não faz diagnóstico e não ocupa o lugar de exames laboratoriais ou de imagem. A proposta é que a leitura entre como mais um elemento na conversa sobre o seu cuidado, junto com a sua história e os exames que você já tem."
+  ],
+  "passos": [
+   {
+    "titulo": "Avaliação gratuita",
+    "texto": "Em cerca de 30 minutos, a biomédica ouve o que você busca e diz se o teste faz sentido para o seu caso."
+   },
+   {
+    "titulo": "O teste",
+    "texto": "No dia marcado, o atendimento leva cerca de 60 minutos. A biomédica explica cada etapa antes de começar."
+   },
+   {
+    "titulo": "A leitura",
+    "texto": "Você conversa com a biomédica sobre a leitura do aparelho, em linguagem simples, e tira suas dúvidas. A leitura não é um diagnóstico."
+   },
+   {
+    "titulo": "Próximos passos",
+    "texto": "A biomédica conversa com você sobre como seguir o seu cuidado. Quando é o caso, orienta procurar o seu médico."
+   }
+  ]
+ },
+ "duracao_sessoes": {
+  "duracao": "Cerca de 60 minutos por atendimento",
+  "sessoes": "Definido na avaliação, conforme o seu caso",
+  "observacao": "A avaliação gratuita, de 30 minutos, é um atendimento à parte e vem antes do teste."
+ },
+ "resultados": {
+  "texto": "O teste não é um tratamento e, por isso, não se espera mudança no corpo depois dele. O que ele pode oferecer é uma leitura complementar, que seria vista pela biomédica ao lado do que você conta e dos seus exames, sem valor de diagnóstico.",
+  "itens": [
+   "Conhecer a prática com a orientação de uma biomédica",
+   "Ter um momento para conversar sobre hábitos, rotina e o que você busca",
+   "Sair sabendo os próximos passos, inclusive quando procurar o seu médico"
+  ],
+  "ressalva": "A resposta varia de pessoa para pessoa, a leitura não equivale a um diagnóstico e não há resultado garantido."
+ },
+ "cuidados": {
+  "antes": [
+   "Leve a lista de medicamentos e suplementos que você usa.",
+   "Se tiver exames recentes, leve também: eles ajudam na conversa.",
+   "Avise se está grávida, amamentando ou se usa marca-passo ou outro dispositivo eletrônico implantado."
+  ],
+  "depois": [
+   "Mantenha seus medicamentos e tratamentos como estão. Qualquer mudança é conversada com o seu médico.",
+   "Siga com suas consultas e seus exames de rotina.",
+   "Se surgir alguma dúvida depois, fale com a clínica pelo WhatsApp."
+  ],
+  "nota": "As orientações do seu caso são passadas na avaliação."
+ },
+ "investimento": {
+  "tipo": "a_partir_de",
+  "valor": 350,
+  "texto": "O Teste de Biorressonância custa a partir de R$ 350, em um atendimento de cerca de 60 minutos. A avaliação gratuita vem antes e serve para saber se o teste é indicado para você.",
+  "variacoes": [
+   {
+    "nome": "Teste de Biorressonância (Teste Quântico)",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 350"
+   }
+  ]
+ },
+ "faq": [
+  {
+   "p": "O que é o teste de biorressonância?",
+   "r": "É um teste complementar e não invasivo, feito com um aparelho, usado dentro da saúde integrativa. Também é conhecido como teste quântico. Na Empatia Humana, é conduzido por uma biomédica e dura cerca de 60 minutos. A indicação é individual e definida na avaliação."
+  },
+  {
+   "p": "O teste de biorressonância detecta doenças?",
+   "r": "Não. O teste é uma prática complementar, não é reconhecido como método de diagnóstico, não detecta doenças e não substitui exames de sangue ou de imagem. A proposta é que ele entre como mais um elemento na conversa com a biomédica sobre o seu cuidado. Qualquer suspeita de problema de saúde deve ser investigada com o seu médico."
+  },
+  {
+   "p": "O teste de biorressonância dói?",
+   "r": "Não costuma doer. A biorressonância é conhecida como uma prática não invasiva, sem agulha e sem coleta de sangue. Se você tiver algum receio, fale com a biomédica na avaliação."
+  },
+  {
+   "p": "Quanto custa o teste de biorressonância?",
+   "r": "A partir de R$ 350, em um atendimento de cerca de 60 minutos. Antes dele, a avaliação é gratuita e serve para saber se o teste é indicado para você. O valor é confirmado pela clínica no agendamento."
+  },
+  {
+   "p": "Quem pode fazer o teste de biorressonância?",
+   "r": "Quem pode fazer é definido na avaliação gratuita, porque a indicação é individual. Gestantes e pessoas com marca-passo ou outro dispositivo eletrônico implantado precisam avisar antes de agendar, para a biomédica avaliar se o teste é indicado. Quem faz tratamento médico segue com ele normalmente."
+  },
+  {
+   "p": "Qual a diferença entre o teste de biorressonância e a Consulta Estética Integrativa?",
+   "r": "São atendimentos diferentes. O teste é feito com um aparelho e dura cerca de 60 minutos. A Consulta Estética Integrativa dura 2 horas e traz a análise completa da sua história e dos seus exames. Na avaliação gratuita, a biomédica orienta por qual começar."
+  },
+  {
+   "p": "Onde fazer teste de biorressonância em Canaã dos Carajás?",
+   "r": "Na Clínica Empatia Humana, em Canaã dos Carajás, com biomédicas. O atendimento é de segunda a sábado, das 8h às 20h, e o agendamento é feito pelo WhatsApp."
+  }
+ ],
+ "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre o Teste de Biorressonância",
+ "relacionados": [
+  "consulta-integrativa",
+  "avaliacao",
+  "soroterapia"
+ ]
+}

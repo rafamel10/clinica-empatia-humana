@@ -1,0 +1,168 @@
+{
+ "seo": {
+  "title": "Estética integrativa em Canaã dos Carajás | Empatia Humana",
+  "description": "Clínica de estética integrativa e ozonioterapia em Canaã dos Carajás. Pele, medidas, vasinhos e saúde integrativa com biomédicas. Avaliação gratuita."
+ },
+ "hero": {
+  "rotulo": "Estética integrativa e ozonioterapia",
+  "headline": "Estética e saúde que começam ouvindo você.",
+  "destaque": "ouvindo você",
+  "sub": "Pele, medidas, vasinhos e saúde integrativa com ozonioterapia, em Canaã dos Carajás. Nossas biomédicas avaliam você antes de indicar o tratamento.",
+  "cta": "Agendar minha avaliação",
+  "cta2": "Conhecer os tratamentos",
+  "microprova": [
+   "Avaliação gratuita",
+   "Biomédicas ozonioterapeutas",
+   "+400 pacientes atendidas"
+  ],
+  "nota": "A avaliação gratuita leva cerca de 30 minutos e serve para indicar o procedimento. A Consulta Estética Integrativa, de 2 horas, tem valor à parte.",
+  "whatsapp_msg": "Olá! Vim pelo site e quero agendar minha avaliação gratuita. Queria conversar sobre o meu caso.",
+  "alternativas": [
+   {
+    "headline": "Estética que cuida de você por inteiro.",
+    "destaque": "por inteiro",
+    "sub": "Pele, medidas, vasinhos e saúde integrativa com ozonioterapia, no mesmo lugar. Com biomédicas que ouvem você, em Canaã dos Carajás."
+   },
+   {
+    "headline": "Pele e corpo cuidados de dentro para fora.",
+    "destaque": "de dentro para fora",
+    "sub": "Por fora, pele, medidas e vasinhos; por dentro, saúde integrativa com ozonioterapia. Estética com biomédicas que ouvem você, em Canaã dos Carajás."
+   }
+  ]
+ },
+ "objetivos": {
+  "titulo": "O que você quer cuidar?",
+  "sub": "Escolha um objetivo para ver os tratamentos. Se ainda não souber por onde começar, a avaliação gratuita ajuda você a decidir.",
+  "cards": [
+   {
+    "frente": "emagrecimento-e-medidas",
+    "titulo": "Emagrecimento e medidas",
+    "texto": "Gordura localizada, medidas e contorno do corpo. Lipo Ozonizada, hidrolipoclasia e drenagens."
+   },
+   {
+    "frente": "pele-e-rejuvenescimento",
+    "titulo": "Pele e rejuvenescimento",
+    "texto": "Limpeza de pele, peelings, microagulhamento e cuidados para a firmeza da pele."
+   },
+   {
+    "frente": "pernas-e-circulacao",
+    "titulo": "Pernas e circulação",
+    "texto": "Vasinhos e sensação de pernas pesadas. PEIM Integrativo e drenagens."
+   },
+   {
+    "frente": "saude-integrativa",
+    "titulo": "Saúde integrativa",
+    "texto": "Consulta de 2 horas, ozonioterapia, soroterapia e cuidado com o intestino."
+   }
+  ]
+ },
+ "carros_chefe": {
+  "titulo": "Os tratamentos mais procurados",
+  "sub": "São os que mais trazem pacientes à clínica. Toque em um deles para ver como funciona, quanto tempo leva e o investimento.",
+  "servicos": [
+   "lipo-ozonizada",
+   "consulta-integrativa",
+   "vasinhos-e-varizes",
+   "peeling-quimico",
+   "ozonioterapia",
+   "limpeza-de-pele"
+  ]
+ },
+ "consulta": {
+  "titulo": "Quer um plano completo? Comece pela Consulta Integrativa",
+  "texto": "São 2 horas com a biomédica. Ela ouve a sua história, conversa sobre a sua rotina e lê os seus exames com calma. No fim, você recebe por escrito o mapeamento do seu caso, com o plano proposto. A consulta não substitui o acompanhamento médico.",
+  "comparacao": [
+   {
+    "nome": "Avaliação gratuita",
+    "duracao": "30 min",
+    "preco": "gratuita",
+    "para": "Quem tem uma queixa ou um procedimento em mente e quer saber o que é indicado antes de decidir."
+   },
+   {
+    "nome": "Consulta Estética Integrativa",
+    "duracao": "2 horas",
+    "preco": "a partir de R$ 450",
+    "para": "Quem quer uma análise completa: história, rotina e exames lidos com calma, com o plano por escrito."
+   }
+  ],
+  "cta": "Agendar minha Consulta Integrativa",
+  "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre a Consulta Estética Integrativa",
+  "link_texto": "Ver como é a consulta",
+  "link": "/tratamentos/consulta-integrativa/"
+ },
+ "equipe": {
+  "titulo": "Quem cuida de você",
+  "texto": "A Dra. Adelaine Montel (CRBM 4ª Região nº 1437) e a Dra. Adriana Montel são biomédicas estetas e ozonioterapeutas. O atendimento é com horário marcado, sem pressa e com explicação de cada etapa. Se um tratamento não for para você, elas dizem.",
+  "link_texto": "Conhecer a equipe",
+  "link": "/equipe/"
+ },
+ "prova": {
+  "titulo": "O que as pacientes contam",
+  "texto": "Avaliações públicas do Google e mensagens de pacientes, do jeito que foram escritas. Elas falam da experiência de cada uma com o atendimento. A resposta a um tratamento varia de pessoa para pessoa.",
+  "fontes": [
+   "GOOGLE",
+   "WHATSAPP"
+  ]
+ },
+ "programas": {
+  "titulo": "Programas e Desafios: um plano com começo, meio e fim",
+  "texto": "Para quem prefere um cuidado acompanhado a sessões soltas. O Programa Reduzindo Medidas e Elevando a Saúde, o Disbiose Zero e os Desafios Detox reúnem as sessões em um plano só, com acompanhamento das biomédicas. O que entra no seu plano e o valor são definidos na avaliação. Eles não substituem o acompanhamento médico.",
+  "link_texto": "Ver programas e desafios",
+  "link": "/programas-e-desafios/"
+ },
+ "loja": {
+  "titulo": "Cuidado que continua em casa",
+  "texto": "Na loja da clínica você encontra a linha ozonizada, suplementos, kits e cuidados para a pele. O Óleo de Girassol Ozonizado é o mais pedido, e o Gloss das Fadas leva a assinatura da Dra. Adelaine. Você escolhe na vitrine e faz o pedido pelo WhatsApp.",
+  "link_texto": "Ver a loja",
+  "link": "/loja/"
+ },
+ "guia": {
+  "titulo": "Guia gratuito: cuidados depois do procedimento",
+  "texto": "Um material simples, com os cuidados gerais para os dias seguintes a um procedimento estético. Deixe seu nome, WhatsApp e e-mail para receber. As orientações do seu caso continuam sendo as que a biomédica passa no atendimento.",
+  "cta": "Quero receber o guia"
+ },
+ "faq": [
+  {
+   "p": "Quanto custa um tratamento na Empatia Humana?",
+   "r": "O valor depende do tratamento, e a maioria tem um preço inicial publicado na página de cada um. A Limpeza de Pele, por exemplo, parte de R$ 200, e a Consulta Estética Integrativa, de R$ 450. Lipo Ozonizada, Harmonização Ozonizada, Programas e Desafios têm valor definido na avaliação, porque o plano muda de pessoa para pessoa."
+  },
+  {
+   "p": "A avaliação é mesmo gratuita?",
+   "r": "Sim. A avaliação é gratuita, dura cerca de 30 minutos e serve para a biomédica entender o seu caso e indicar o procedimento. Você só tem custo se decidir fazer um tratamento. A Consulta Estética Integrativa é outro atendimento: dura 2 horas, faz uma análise completa e custa a partir de R$ 450."
+  },
+  {
+   "p": "Quais são as formas de pagamento?",
+   "r": "A clínica aceita PIX e cartão em até 10x. As condições do seu tratamento são confirmadas pela equipe no WhatsApp, antes de você começar."
+  },
+  {
+   "p": "Quem vai me atender?",
+   "r": "Quem atende são a Dra. Adelaine Montel e a Dra. Adriana Montel, biomédicas estetas e ozonioterapeutas. A Dra. Adelaine tem inscrição no CRBM 4ª Região, nº 1437, que pode ser conferida na consulta pública do Conselho Federal de Biomedicina. São elas que avaliam você antes de indicar qualquer tratamento."
+  },
+  {
+   "p": "Qual é o horário de atendimento?",
+   "r": "A clínica atende {horario}, sempre com horário marcado. O agendamento é feito pelo WhatsApp."
+  },
+  {
+   "p": "Onde fica a Clínica Empatia Humana?",
+   "r": "O endereço da Clínica Empatia Humana é {endereco}. O mapa com a rota fica na página de Contato."
+  },
+  {
+   "p": "A ozonioterapia é segura?",
+   "r": "A ozonioterapia é um procedimento complementar autorizado no Brasil pela Lei nº 14.648/2023, e a segurança depende da indicação correta e de quem aplica. Na Empatia Humana, ela é feita por biomédicas ozonioterapeutas, depois de uma avaliação que confere o seu histórico de saúde e as contraindicações. Como todo procedimento, pode causar reações, que são explicadas antes de você decidir. Ela não substitui o acompanhamento médico."
+  },
+  {
+   "p": "Vocês atendem quem é de Parauapebas?",
+   "r": "Sim. A clínica recebe pacientes de Parauapebas, Curionópolis e cidades vizinhas, em Canaã dos Carajás. Ao agendar pelo WhatsApp, avise de onde você vem: a equipe organiza o horário para aproveitar a viagem. Conforme o procedimento e a agenda do dia, a avaliação e a primeira sessão podem ser no mesmo dia."
+  }
+ ],
+ "cta_final": {
+  "titulo": "Vamos conversar sobre o seu caso?",
+  "texto": "Você chama no WhatsApp e a equipe combina o horário. Na avaliação gratuita, de cerca de 30 minutos, a biomédica ouve você e indica o que faz sentido para o seu caso. Decidir se começa, e quando, fica com você.",
+  "cta": "Agendar minha avaliação"
+ },
+ "faixa_campanha": {
+  "texto": "Desinflamando para o Natal",
+  "chamada": "Programa de fim de ano: conheça e agende sua avaliação.",
+  "slug": "desinflamando-para-o-natal"
+ }
+}

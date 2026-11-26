@@ -1,0 +1,166 @@
+{
+ "slug": "massagens",
+ "nome": "Massagens e terapias manuais",
+ "frente": "spa-e-bem-estar",
+ "frentes_extras": [],
+ "resumo_card": "Massagem relaxante, facial, cranial, visceral, reflexologia, liberação miofascial e ventosa.",
+ "seo": {
+  "title": "Massagem em Canaã dos Carajás | Empatia Humana",
+  "description": "Massagem relaxante, facial, cranial, visceral, reflexologia, liberação miofascial e ventosa em Canaã dos Carajás. Sessões de 30 a 60 minutos."
+ },
+ "h1": "Massagens e terapias manuais em Canaã dos Carajás",
+ "sub": "Oito opções de massagem e terapia manual, da relaxante à ventosa, em sessões de 30 a 60 minutos. Para quem quer uma pausa na rotina ou quer presentear alguém.",
+ "resposta_direta": "Massagens e terapias manuais são cuidados feitos pelo toque, com pressão e ritmo ajustados a cada pessoa, voltados ao relaxamento e ao bem-estar. Na Empatia Humana, em Canaã dos Carajás, há oito opções, como massagem relaxante, reflexologia, liberação miofascial e ventosa, em sessões de 30 a 60 minutos. Servem para quem quer relaxar ou sente o corpo tenso no dia a dia.",
+ "para_quem": {
+  "intro": "Estas sessões podem combinar com você se alguma das situações abaixo parece familiar.",
+  "itens": [
+   "Você sente os ombros e o pescoço tensos no fim do dia.",
+   "Faz tempo que você não reserva uma hora só para você.",
+   "Você passa muitas horas sentada, em pé ou na mesma posição.",
+   "Você gosta de massagem e quer experimentar uma técnica diferente.",
+   "Você quer dar um presente de cuidado para alguém querido.",
+   "Você já faz um tratamento na clínica e quer incluir um momento de relaxamento."
+  ],
+  "atencao": [
+   "Dor forte, que surgiu de repente ou que não passa pede atendimento médico antes de qualquer massagem.",
+   "Grávida, com cirurgia recente, em tratamento de saúde ou usando remédio que afina o sangue? Conte antes de agendar: a técnica pode mudar ou depender da liberação do seu médico.",
+   "Com febre ou infecção, a sessão não costuma ser indicada. O mesmo vale quando a pele da região está com ferida, irritação ou queimadura de sol. Avise para remarcar."
+  ]
+ },
+ "como_funciona": {
+  "texto": [
+   "Massagens e terapias manuais usam o toque, com pressão e ritmo que mudam de uma técnica para outra. Algumas são suaves e voltadas ao relaxamento, como a massagem relaxante, a facial e a cranial. Outras trabalham pontos ou regiões específicas: a reflexologia é conhecida pela pressão em pontos dos pés, a massagem visceral é feita na região do abdômen e a liberação miofascial usa pressão e deslizamento sobre os músculos e a fáscia, o tecido que os envolve.",
+   "A quick massage é conhecida por se concentrar nas regiões que costumam acumular tensão, como costas, ombros e pescoço. A ventosa usa copos que fazem sucção sobre a pele. A técnica que combina com você, a pressão e as regiões trabalhadas são definidas na avaliação."
+  ],
+  "passos": [
+   {
+    "titulo": "Avaliação",
+    "texto": "Antes da primeira sessão, você conta o que procura, como é a sua rotina e o seu histórico de saúde. A avaliação é gratuita, dura cerca de 30 minutos e serve para indicar a técnica que combina com você."
+   },
+   {
+    "titulo": "Escolha da técnica",
+    "texto": "Com a indicação, você escolhe entre as opções e agenda o horário. Se for um presente, combine os detalhes pelo WhatsApp."
+   },
+   {
+    "titulo": "Sessão",
+    "texto": "É feita na clínica e dura de 30 a 60 minutos, conforme a técnica. Você pode pedir mais ou menos pressão a qualquer momento."
+   },
+   {
+    "titulo": "Depois da sessão",
+    "texto": "Você recebe as orientações para o restante do dia. Se quiser repetir, a frequência é combinada com você."
+   }
+  ]
+ },
+ "duracao_sessoes": {
+  "duracao": "De 30 a 60 minutos por sessão, conforme a técnica",
+  "sessoes": "Definido na avaliação, conforme o seu caso",
+  "observacao": "A aplicação de ventosa dura cerca de 30 minutos. As demais opções duram cerca de 60 minutos."
+ },
+ "resultados": {
+  "texto": "A proposta das massagens é oferecer um tempo de cuidado, com o toque ajustado ao que você procura. Durante e depois da sessão, você pode sentir o corpo mais solto e as regiões trabalhadas menos tensas. O efeito depende da técnica, da pressão e de como o seu corpo responde.",
+  "itens": [
+   "Favorecer o relaxamento durante e depois da sessão",
+   "Ajudar a aliviar a sensação de tensão muscular",
+   "Contribuir para a sensação de bem-estar",
+   "Reservar um tempo de cuidado só para você"
+  ],
+  "ressalva": "A resposta varia de pessoa para pessoa e não há resultado garantido. As massagens e terapias manuais não tratam doenças e não substituem acompanhamento médico nem fisioterapia."
+ },
+ "cuidados": {
+  "antes": [
+   "Conte sobre a sua saúde, os remédios que você usa e se está grávida.",
+   "Evite refeição pesada logo antes da sessão.",
+   "Venha com roupa confortável e, se puder, chegue alguns minutos antes."
+  ],
+  "depois": [
+   "Beba água ao longo do dia.",
+   "Se puder, deixe o restante do dia mais tranquilo.",
+   "Depois da ventosa, marcas arredondadas na pele podem aparecer por alguns dias.",
+   "Se notar dor forte ou qualquer reação que preocupe, avise a clínica pelo WhatsApp. Se for intenso, procure atendimento médico."
+  ],
+  "nota": "As orientações do seu caso são passadas na avaliação."
+ },
+ "investimento": {
+  "tipo": "a_partir_de",
+  "valor": 80,
+  "texto": "A aplicação de ventosa custa a partir de R$ 80 e as massagens, a partir de R$ 100. Cada técnica tem o seu valor, confirmado no agendamento.",
+  "variacoes": [
+   {
+    "nome": "Massagem Relaxante",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 185"
+   },
+   {
+    "nome": "Quick Massage",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 112"
+   },
+   {
+    "nome": "Massagem Visceral",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 180"
+   },
+   {
+    "nome": "Liberação Miofascial",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 200"
+   },
+   {
+    "nome": "Reflexologia",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 115"
+   },
+   {
+    "nome": "Massagem Facial",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 100"
+   },
+   {
+    "nome": "Massagem Cranial",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 100"
+   },
+   {
+    "nome": "Aplicação de Ventosa",
+    "duracao": "30 min",
+    "preco": "a partir de R$ 80"
+   }
+  ]
+ },
+ "faq": [
+  {
+   "p": "Qual massagem é a mais indicada para mim?",
+   "r": "Depende do que você procura. Para relaxar, a massagem relaxante, a facial e a cranial costumam ser as mais suaves. Para regiões com mais tensão, a liberação miofascial e a quick massage podem fazer mais sentido. Na avaliação gratuita, a biomédica indica a técnica que combina com você."
+  },
+  {
+   "p": "Quanto custa uma massagem em Canaã dos Carajás?",
+   "r": "Na Empatia Humana, as massagens custam a partir de R$ 100 e a aplicação de ventosa, a partir de R$ 80. A massagem relaxante custa a partir de R$ 185. O valor de cada técnica é confirmado no agendamento, e a avaliação é gratuita."
+  },
+  {
+   "p": "Quanto tempo dura a sessão de massagem?",
+   "r": "Cerca de 60 minutos na maioria das técnicas. A aplicação de ventosa é mais curta, com cerca de 30 minutos. O tempo da sua sessão é confirmado no agendamento."
+  },
+  {
+   "p": "Massagem dói?",
+   "r": "Não costuma doer. As massagens relaxante, facial e cranial são conhecidas pelo toque suave. A liberação miofascial e a ventosa podem causar algum desconforto, porque usam mais pressão ou sucção. Você pode pedir para ajustar a pressão a qualquer momento."
+  },
+  {
+   "p": "A ventosa deixa marca na pele?",
+   "r": "Pode deixar. A sucção dos copos pode causar marcas arredondadas, avermelhadas ou arroxeadas, que tendem a clarear com os dias. Se você tem um evento ou vai usar roupa que mostra a região, avise antes para combinar o melhor momento."
+  },
+  {
+   "p": "Posso dar uma massagem de presente?",
+   "r": "Sim. Chame a clínica pelo WhatsApp e diga qual massagem você quer dar de presente e para quem. A equipe explica como funciona o presente e combina o agendamento."
+  },
+  {
+   "p": "Grávida pode fazer massagem?",
+   "r": "Depende da técnica e da fase da gestação. Conte que está grávida antes de agendar. A biomédica avalia se a sessão é indicada e pode pedir a liberação do seu médico."
+  }
+ ],
+ "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre Massagens e terapias manuais",
+ "relacionados": [
+  "toque-de-spa",
+  "drenagem-linfatica",
+  "disbiose-zero"
+ ]
+}

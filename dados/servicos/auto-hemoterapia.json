@@ -1,0 +1,130 @@
+{
+ "slug": "auto-hemoterapia",
+ "nome": "Auto-hemoterapia Menor ou Ozonizada",
+ "frente": "saude-integrativa",
+ "frentes_extras": [],
+ "resumo_card": "Técnica feita com o seu próprio sangue, com ou sem ozônio. Indicação individual, definida em avaliação.",
+ "seo": {
+  "title": "Auto-hemoterapia em Canaã dos Carajás | Empatia Humana",
+  "description": "Auto-hemoterapia menor ou ozonizada com biomédicas em Canaã dos Carajás. Entenda como é feita, quanto dura e agende sua avaliação gratuita."
+ },
+ "h1": "Auto-hemoterapia menor ou ozonizada em Canaã dos Carajás",
+ "sub": "Uma pequena quantidade do seu sangue é coletada e reaplicada no músculo, com ou sem ozônio. A indicação é individual e definida em avaliação com a biomédica.",
+ "resposta_direta": "A auto-hemoterapia menor é uma técnica em que uma pequena quantidade do sangue da própria paciente é coletada da veia e reaplicada no músculo. Na versão ozonizada, o sangue recebe uma mistura de oxigênio e ozônio antes da reaplicação. É oferecida como complemento: a indicação é individual, feita em avaliação, e não substitui acompanhamento médico.",
+ "para_quem": {
+  "intro": "A conversa sobre a auto-hemoterapia costuma começar em situações como estas.",
+  "itens": [
+   "Você ouviu falar da auto-hemoterapia e quer entender como ela é feita antes de decidir.",
+   "Você já faz acompanhamento integrativo e quer saber se a técnica cabe no seu plano de cuidados.",
+   "Você já fez ozonioterapia por outras vias e quer conhecer a versão ozonizada.",
+   "Você tem receio de agulha e quer saber como são a coleta e a aplicação antes de marcar.",
+   "Você busca um cuidado complementar e pretende manter o acompanhamento médico que já faz."
+  ],
+  "atencao": [
+   "Gestantes e mulheres que amamentam: a técnica não costuma ser indicada, e a decisão passa pela avaliação.",
+   "Quem usa anticoagulantes ou tem alteração de coagulação precisa informar isso na avaliação e conversar com o médico antes.",
+   "Quem está em tratamento médico deve manter o tratamento e avisar o médico: a técnica não substitui esse acompanhamento."
+  ]
+ },
+ "como_funciona": {
+  "texto": [
+   "A sessão tem duas etapas, feitas em sequência no mesmo atendimento: a coleta de uma pequena quantidade de sangue e a reaplicação no músculo. O que muda entre as duas versões é o preparo do sangue antes da reaplicação, explicado nos passos abaixo.",
+   "A coleta e a aplicação são feitas com material descartável. A versão indicada, a quantidade de sangue e o número de sessões são definidos na avaliação, conforme o seu caso."
+  ],
+  "passos": [
+   {
+    "titulo": "Avaliação gratuita",
+    "texto": "A biomédica ouve você, pergunta sobre sua saúde e os medicamentos que você usa e avalia se a técnica se aplica ao seu caso. A conversa dura cerca de 30 minutos."
+   },
+   {
+    "titulo": "Coleta do sangue",
+    "texto": "No dia da sessão, uma pequena quantidade de sangue é coletada de uma veia, como em um exame de laboratório."
+   },
+   {
+    "titulo": "Preparo e aplicação",
+    "texto": "O sangue é reaplicado em seguida no músculo. Na versão ozonizada, ele recebe antes a mistura de oxigênio e ozônio."
+   },
+   {
+    "titulo": "Orientações e retorno",
+    "texto": "Você recebe as orientações para as horas seguintes. As próximas sessões seguem o plano combinado na avaliação."
+   }
+  ]
+ },
+ "duracao_sessoes": {
+  "duracao": "Cerca de 30 minutos por sessão",
+  "sessoes": "Definido na avaliação, conforme o seu caso",
+  "observacao": "O intervalo entre as sessões também é definido na avaliação."
+ },
+ "resultados": {
+  "texto": "Na prática integrativa, a auto-hemoterapia pode entrar como complemento em um plano de cuidados, nunca como tratamento de doenças. Os estudos sobre a técnica ainda são limitados. Por isso, o que se pode esperar no seu caso é conversado com você na avaliação.",
+  "itens": [
+   "O objetivo é oferecer um cuidado complementar feito com o seu próprio sangue, dentro de um plano definido em avaliação.",
+   "A proposta é somar ao acompanhamento que você já faz, sem substituir consultas, exames ou medicamentos.",
+   "A proposta é que você decida com informação: como a técnica é feita, quais são os limites e o que os estudos ainda não mostram."
+  ],
+  "ressalva": "A resposta varia de pessoa para pessoa e não há resultado garantido."
+ },
+ "cuidados": {
+  "antes": [
+   "Informe todos os medicamentos e suplementos que você usa, principalmente os que alteram a coagulação.",
+   "Avise se você está grávida, amamentando ou em tratamento médico.",
+   "Venha alimentada e hidratada, a não ser que receba outra orientação na avaliação.",
+   "Conte se você costuma passar mal em coletas de sangue ou aplicações."
+  ],
+  "depois": [
+   "O local da coleta ou da aplicação pode ficar sensível ou com um pequeno roxo.",
+   "Siga as orientações que receber sobre esforço físico e cuidados com o local no dia da sessão.",
+   "Se notar dor forte, inchaço, vermelhidão que aumenta, febre ou mal-estar, avise a clínica e procure atendimento médico.",
+   "Mantenha seus medicamentos e seu acompanhamento médico normalmente."
+  ],
+  "nota": "As orientações do seu caso são passadas na avaliação."
+ },
+ "investimento": {
+  "tipo": "a_partir_de",
+  "valor": 450,
+  "texto": "A auto-hemoterapia menor ou ozonizada tem valor a partir de R$ 450. A avaliação é gratuita, e é nela que a biomédica confirma a indicação e o valor do seu plano.",
+  "variacoes": [
+   {
+    "nome": "Auto-hemoterapia Menor ou Ozonizada",
+    "duracao": "30 min",
+    "preco": "a partir de R$ 450"
+   }
+  ]
+ },
+ "faq": [
+  {
+   "p": "O que é auto-hemoterapia menor?",
+   "r": "É uma técnica em que uma pequena quantidade do seu próprio sangue é coletada da veia e reaplicada no músculo logo em seguida. O termo menor se refere à pequena quantidade de sangue usada. A indicação é individual e feita em avaliação."
+  },
+  {
+   "p": "Qual a diferença entre a auto-hemoterapia menor e a ozonizada?",
+   "r": "A diferença é o ozônio. Na auto-hemoterapia menor, o sangue coletado é reaplicado como está. Na ozonizada, ele recebe uma mistura de oxigênio e ozônio antes da reaplicação. Qual das duas se aplica ao seu caso é definido na avaliação."
+  },
+  {
+   "p": "A auto-hemoterapia dói?",
+   "r": "Pode incomodar: você sente a picada da coleta e a da aplicação no músculo, parecidas com as de um exame de sangue e de uma injeção. O local pode ficar sensível depois. Se você tem medo de agulha ou costuma passar mal em coletas, avise na avaliação."
+  },
+  {
+   "p": "Quantas sessões de auto-hemoterapia são necessárias?",
+   "r": "O número de sessões é definido na avaliação, conforme o seu caso. O intervalo entre elas também é combinado nessa conversa. Cada sessão dura cerca de 30 minutos."
+  },
+  {
+   "p": "A auto-hemoterapia substitui tratamento médico?",
+   "r": "Não. A auto-hemoterapia entra como complemento e não substitui consulta, exame ou medicamento indicado pelo seu médico. Se você está em tratamento, mantenha tudo como está e avise o seu médico antes de começar."
+  },
+  {
+   "p": "Quem não pode fazer auto-hemoterapia?",
+   "r": "A técnica não costuma ser indicada para gestantes, para quem amamenta e para quem usa anticoagulantes ou tem alteração de coagulação sem liberação médica. Outras situações são analisadas caso a caso. Por isso, a avaliação vem antes de qualquer aplicação."
+  },
+  {
+   "p": "Quanto custa a auto-hemoterapia?",
+   "r": "A auto-hemoterapia menor ou ozonizada custa a partir de R$ 450 na Empatia Humana, em Canaã dos Carajás. O valor do seu plano depende da versão indicada e do número de sessões, definidos na avaliação. A avaliação é gratuita."
+  }
+ ],
+ "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre Auto-hemoterapia Menor ou Ozonizada",
+ "relacionados": [
+  "ozonioterapia",
+  "soroterapia",
+  "consulta-integrativa"
+ ]
+}

@@ -9,5 +9,39 @@
   "email_obrigatorio": true,
   "gtm_id": "",
   "pixel_id": "",
-  "cookies": "aviso"
+  "cookies": "aviso",
+  "_endereco": "Endereço exibido no site. Vazio = aparece [ENDEREÇO] para a clínica preencher.",
+  "endereco": "Rua Círio de Nazaré, 558, salas 1 e 2",
+  "bairro": "Centro",
+  "horarios": [
+    [
+      "Segunda a sábado",
+      "8h às 20h"
+    ],
+    [
+      "Domingo",
+      "Fechado"
+    ]
+  ],
+  "horario_texto": "segunda a sábado, das 8h às 20h",
+  "horario_schema": {
+    "dias": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "abre": "08:00",
+    "fecha": "20:00"
+  },
+  "pagamento": "PIX ou cartão em até 10x",
+  "_faixa_campanha": "Faixa no topo de todas as páginas. ativa: true/false. link: caminho dentro do site.",
+  "faixa_campanha": {
+    "ativa": true,
+    "texto": "Desinflamando para o Natal",
+    "chamada": "Programa de fim de ano: veja como funciona",
+    "link": "tratamentos/desinflamando-para-o-natal/"
+  }
 }

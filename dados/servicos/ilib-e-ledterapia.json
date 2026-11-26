@@ -1,0 +1,134 @@
+{
+ "slug": "ilib-e-ledterapia",
+ "nome": "ILIB (Laserterapia) e Ledterapia",
+ "frente": "saude-integrativa",
+ "frentes_extras": [],
+ "resumo_card": "Laser de baixa intensidade e luz de LED, com indicação definida em avaliação com a biomédica.",
+ "seo": {
+  "title": "ILIB e Ledterapia em Canaã dos Carajás | Empatia Humana",
+  "description": "ILIB (laserterapia) e ledterapia em Canaã dos Carajás: luz de baixa intensidade sobre a pele, sessões de 40 min, a partir de R$ 200. Avaliação gratuita."
+ },
+ "h1": "ILIB e Ledterapia: a luz como parte do seu cuidado",
+ "sub": "Duas técnicas que usam luz de baixa intensidade. Para quem quer saber se elas fazem sentido no seu caso: a indicação vem só depois da avaliação com a biomédica.",
+ "resposta_direta": "ILIB é uma técnica de laserterapia que aplica laser de baixa intensidade sobre a pele, em geral no pulso. A ledterapia usa luz de LED sobre a área a ser cuidada. Na Clínica Empatia Humana, em Canaã dos Carajás, as duas entram como complemento de um plano de cuidado, e a indicação é individual, definida em avaliação com a biomédica.",
+ "para_quem": {
+  "intro": "Estas são situações em que vale conversar com a biomédica sobre ILIB e ledterapia.",
+  "itens": [
+   "Você procura um cuidado com luz e quer entender, antes de decidir, como é a aplicação.",
+   "Você ouviu falar de ILIB, o laser no pulso, e quer entender se faz sentido para você.",
+   "Você já cuida da saúde de forma integrativa e tem curiosidade sobre o uso da luz.",
+   "Você tem a rotina corrida e prefere sessões curtas, de cerca de 40 minutos.",
+   "Você quer ser ouvida e avaliada antes de receber qualquer indicação."
+  ],
+  "atencao": [
+   "Se você está grávida ou amamentando, converse com a biomédica e com o seu médico antes de agendar.",
+   "Se você tem sensibilidade à luz ou usa medicamentos que deixam a pele mais sensível à luz, avise na avaliação.",
+   "Se você está em tratamento médico, a indicação é avaliada caso a caso. A luz não substitui esse acompanhamento."
+  ]
+ },
+ "como_funciona": {
+  "texto": [
+   "ILIB e ledterapia são dois jeitos de usar a luz no cuidado. No ILIB, um laser de baixa intensidade é aplicado sobre a pele, em geral na região do pulso. Na forma mais comum em clínicas, não há agulha nem corte. Na ledterapia, a luz de LED é direcionada para a área a ser cuidada.",
+   "As duas técnicas fazem parte da fotobiomodulação, nome dado ao uso da luz em baixa intensidade. Aqui, elas entram como complemento de um plano e nunca no lugar de acompanhamento médico. Quem define se há indicação, qual das duas usar e com que frequência é a biomédica, na avaliação."
+  ],
+  "passos": [
+   {
+    "titulo": "Avaliação",
+    "texto": "Na avaliação gratuita, de cerca de 30 minutos, você conta o que busca e como está a sua saúde. A biomédica avalia se a luz faz sentido para o seu caso e qual técnica indicar."
+   },
+   {
+    "titulo": "Preparo",
+    "texto": "No dia da sessão, a biomédica explica o passo a passo e prepara a área onde a luz será aplicada. É o momento de tirar as dúvidas que ficaram."
+   },
+   {
+    "titulo": "Aplicação da luz",
+    "texto": "O aparelho é posicionado sobre a pele e fica ligado pelo tempo definido para você. Se sentir qualquer incômodo durante a aplicação, é só avisar a biomédica."
+   },
+   {
+    "titulo": "Orientações e retorno",
+    "texto": "Ao final, você recebe as orientações do seu caso e combina os próximos passos. A biomédica acompanha como você responde e ajusta o plano quando preciso."
+   }
+  ]
+ },
+ "duracao_sessoes": {
+  "duracao": "Cerca de 40 minutos por sessão",
+  "sessoes": "Definido na avaliação, conforme o seu caso",
+  "observacao": "ILIB e ledterapia têm a mesma duração. A avaliação gratuita, de cerca de 30 minutos, é feita antes."
+ },
+ "resultados": {
+  "texto": "O que esperar do ILIB ou da ledterapia depende do seu objetivo, da sua saúde e do protocolo definido para você. A proposta das duas técnicas é somar ao cuidado que você já faz, e a biomédica explica na avaliação, antes da primeira sessão, o que cada uma pode ou não oferecer no seu caso.",
+  "itens": [
+   "Complementar o plano de cuidado integrativo definido na avaliação",
+   "Usar o laser de baixa intensidade (ILIB) como recurso de apoio ao seu plano, quando houver indicação",
+   "Apoiar o cuidado com a pele, se a ledterapia for indicada para você"
+  ],
+  "ressalva": "A resposta varia de pessoa para pessoa e não há resultado garantido. ILIB e ledterapia não substituem acompanhamento médico."
+ },
+ "cuidados": {
+  "antes": [
+   "Conte na avaliação quais medicamentos e suplementos você usa.",
+   "Avise se você está grávida, amamentando ou em tratamento médico.",
+   "Venha com a pele da área limpa, sem creme, óleo ou maquiagem."
+  ],
+  "depois": [
+   "Siga as orientações que a biomédica passar para o seu caso.",
+   "Mantenha os tratamentos e os remédios indicados pelo seu médico.",
+   "Observe como você se sente nos dias seguintes e conte no retorno.",
+   "Se notar algo diferente na área da aplicação, avise a clínica pelo WhatsApp."
+  ],
+  "nota": "As orientações do seu caso são passadas na avaliação."
+ },
+ "investimento": {
+  "tipo": "a_partir_de",
+  "valor": 200,
+  "texto": "ILIB e ledterapia custam a partir de R$ 200 por sessão. O valor do seu plano é confirmado depois da avaliação, que é gratuita.",
+  "variacoes": [
+   {
+    "nome": "ILIB (Laserterapia)",
+    "duracao": "40 min",
+    "preco": "a partir de R$ 200"
+   },
+   {
+    "nome": "Ledterapia",
+    "duracao": "40 min",
+    "preco": "a partir de R$ 200"
+   }
+  ]
+ },
+ "faq": [
+  {
+   "p": "O que é ILIB e para que serve?",
+   "r": "ILIB é a sigla, em inglês, de uma técnica de laserterapia que usa laser de baixa intensidade, em geral aplicado sobre a pele na região do pulso. Ela faz parte da fotobiomodulação, o uso da luz em baixa intensidade. Para que serve no seu caso é o que a biomédica avalia antes de indicar, e a técnica não substitui acompanhamento médico."
+  },
+  {
+   "p": "Qual a diferença entre ILIB e ledterapia?",
+   "r": "A diferença está no tipo de luz e no local da aplicação. O ILIB usa laser de baixa intensidade em um ponto, em geral o pulso. A ledterapia usa luz de LED sobre a área a ser cuidada. A biomédica indica uma, outra ou nenhuma das duas, conforme o seu caso."
+  },
+  {
+   "p": "ILIB tem agulha?",
+   "r": "Na forma mais comum em clínicas, o ILIB não tem agulha nem corte: a luz é aplicada por cima da pele, em geral no pulso. A biomédica mostra como é a aplicação antes de começar. Se você sentir qualquer incômodo durante a sessão, avise na hora."
+  },
+  {
+   "p": "Quantas sessões de ILIB ou ledterapia são necessárias?",
+   "r": "O número de sessões é definido na avaliação, conforme o seu caso e o seu objetivo. Cada sessão dura cerca de 40 minutos. A biomédica explica a frequência indicada e combina os retornos com você."
+  },
+  {
+   "p": "Quanto custa uma sessão de ILIB ou ledterapia?",
+   "r": "ILIB e ledterapia custam a partir de R$ 200 por sessão na Empatia Humana. O valor total depende do plano indicado para você. A avaliação é gratuita e vem antes de qualquer procedimento."
+  },
+  {
+   "p": "ILIB substitui tratamento médico?",
+   "r": "Não. ILIB e ledterapia são recursos complementares e não substituem consulta, exame ou tratamento médico. Se você faz acompanhamento, mantenha tudo como o seu médico orientou e conte isso na avaliação."
+  },
+  {
+   "p": "Quem não pode fazer ILIB ou ledterapia?",
+   "r": "Gestantes, lactantes, pessoas com sensibilidade à luz e quem está em tratamento médico precisam de avaliação antes, e em alguns casos o procedimento não é indicado. Conte à biomédica os medicamentos que você usa e o seu histórico de saúde. A decisão é tomada com você, caso a caso."
+  }
+ ],
+ "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre ILIB (Laserterapia) e Ledterapia",
+ "relacionados": [
+  "consulta-integrativa",
+  "ozonioterapia",
+  "soroterapia"
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "bloco": {
+  "titulo": "Guia gratuito: os cuidados depois do procedimento",
+  "texto": "Sol, treino, maquiagem e produtos: o que costuma valer nos primeiros dias depois de um procedimento estético, em linguagem simples. Preencha seus dados para receber.",
+  "itens": [
+   "Os cuidados das primeiras 24 horas, um por um",
+   "O que perguntar antes de sair da clínica sobre sol, treino e maquiagem",
+   "Os sinais que pedem uma mensagem para a clínica"
+  ],
+  "botao": "Quero receber o guia",
+  "privacidade": "Seus dados ficam só com a clínica. Usamos para enviar o guia e, de vez em quando, dicas de cuidado e novidades da Empatia Humana. Você pode pedir para sair quando quiser. Veja a política de privacidade.",
+  "sucesso": "Pronto! Seu guia está liberado. Abra agora e guarde o link para consultar depois do seu atendimento."
+ },
+ "pagina": {
+  "seo": {
+   "title": "Guia de cuidados pós-procedimento estético | Empatia Humana",
+   "description": "Guia gratuito da Clínica Empatia Humana, em Canaã dos Carajás: cuidados gerais com sol, pele, hidratação e treino depois de procedimentos estéticos."
+  },
+  "h1": "Guia de cuidados depois do procedimento estético",
+  "intro": "O cuidado continua em casa. Este guia reúne orientações gerais para os dias seguintes a procedimentos estéticos no rosto e no corpo. As orientações que você recebeu no atendimento vêm sempre em primeiro lugar.",
+  "secoes": [
+   {
+    "titulo": "Antes de sair da clínica",
+    "itens": [
+     "Pergunte o que é esperado sentir na área tratada nas próximas horas e nos próximos dias.",
+     "Pergunte quando você pode tomar sol, treinar, usar maquiagem e voltar aos seus produtos de sempre.",
+     "Confirme quais produtos usar em casa e quais pausar por enquanto.",
+     "Anote a data do retorno ou da próxima sessão.",
+     "Salve o WhatsApp da clínica no celular, para falar rápido se surgir uma dúvida."
+    ]
+   },
+   {
+    "titulo": "Primeiras 24 horas",
+    "itens": [
+     "Siga primeiro o que foi combinado no seu atendimento. Este guia entra como lembrete.",
+     "Evite tocar, coçar, apertar ou massagear a área tratada, a não ser que você tenha sido orientada a fazer isso.",
+     "Se precisar encostar na área, lave as mãos antes.",
+     "Vermelhidão leve, inchaço discreto e sensibilidade podem aparecer depois de alguns procedimentos. O que é esperado no seu caso é explicado no atendimento.",
+     "Na dúvida sobre maquiagem, deixe a pele descansar no primeiro dia.",
+     "No corpo, prefira roupas leves e confortáveis sobre a área tratada, a não ser que tenha recebido outra orientação.",
+     "Não use remédio, pomada ou receita caseira na área por conta própria. Pergunte antes à clínica."
+    ]
+   },
+   {
+    "titulo": "Sol e calor",
+    "itens": [
+     "Evite sol direto na área tratada nos dias seguintes. O tempo exato depende do procedimento e é informado no atendimento.",
+     "Em Canaã dos Carajás o sol é forte o ano inteiro. Se puder, resolva as coisas da rua no começo da manhã ou no fim da tarde.",
+     "Chapéu, boné, sombrinha e roupa que cobre a área ajudam quando não dá para evitar o sol.",
+     "Use o protetor solar indicado para você e reaplique ao longo do dia, assim que a pele puder receber produto.",
+     "Sauna, banho muito quente, praia e piscina ficam para depois, até a clínica liberar."
+    ]
+   },
+   {
+    "titulo": "Pele e hidratação",
+    "itens": [
+     "Lave a área com delicadeza, com água em temperatura amena e um produto suave. Seque sem esfregar.",
+     "Use só os produtos indicados no atendimento.",
+     "Pause ácidos, esfoliantes e produtos novos até ser liberada.",
+     "Se a pele descamar ou formar casquinhas, deixe soltar sozinha. Não puxe.",
+     "Beba água ao longo do dia e mantenha uma alimentação leve, do jeito que você já costuma se cuidar."
+    ]
+   },
+   {
+    "titulo": "Atividade física e rotina",
+    "itens": [
+     "Pergunte quando você pode voltar a treinar. Alguns procedimentos pedem uma pausa, outros não.",
+     "Sem orientação sobre treino, descanse no dia do procedimento.",
+     "Enquanto a área estiver sensível, evite suor intenso e atrito no local.",
+     "Depilação, esfoliação e massagem na área tratada só depois da liberação da clínica.",
+     "Ao dormir, evite pressionar a área tratada enquanto ela estiver sensível.",
+     "Mantenha o intervalo combinado entre as sessões. Se precisar remarcar, avise com antecedência."
+    ]
+   },
+   {
+    "titulo": "Quando falar com a clínica",
+    "itens": [
+     "Dor forte ou que aumenta com o passar das horas.",
+     "Vermelhidão ou inchaço que aumentam em vez de diminuir.",
+     "Calor no local, secreção, bolhas ou febre.",
+     "Coceira intensa ou placas na pele.",
+     "Qualquer reação diferente do que foi explicado no atendimento.",
+     "Na dúvida, mande mensagem. Uma foto da área em boa luz ajuda a clínica a orientar você.",
+     "Falta de ar, inchaço no rosto ou na garganta ou mal-estar forte pedem pronto atendimento na hora. Depois, avise a clínica."
+    ]
+   }
+  ],
+  "aviso": "Este guia traz orientações gerais para procedimentos estéticos e não substitui as orientações passadas no seu atendimento nem o acompanhamento médico. Se houver diferença, siga o que a profissional indicou para você.",
+  "cta": "Falar com a clínica pelo WhatsApp",
+  "whatsapp_msg": "Olá! Vim pelo site, li o guia de cuidados pós-procedimento e tenho uma dúvida"
+ }
+}

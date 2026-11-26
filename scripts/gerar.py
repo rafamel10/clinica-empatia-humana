@@ -26,7 +26,7 @@ S = dados.SITE
 DRA = dados.DRA
 BASE = S["base"]
 URL = S["url"].rstrip("/")
-VERSAO = "8"  # aumente a cada publicação que mudar CSS ou JS
+VERSAO = "9"  # aumente a cada publicação que mudar CSS ou JS
 HOJE = S["data_atualizacao"]
 TRAT = {t["slug"]: t for t in dados.TRATAMENTOS}
 SEM_CUSTO = bool(getattr(dados, "AVALIACAO_SEM_CUSTO", False))
@@ -43,6 +43,34 @@ with open(os.path.join(AQUI, "..", "dados", "config.json"), encoding="utf-8") as
     CONFIG = json.load(_f)
 S["whatsapp"] = "".join(c for c in CONFIG["whatsapp"] if c.isdigit())
 S["telefone"] = CONFIG["telefone"]
+S["endereco"] = CONFIG.get("endereco") or "[ENDEREÇO]"
+S["bairro"] = CONFIG.get("bairro", S["bairro"])
+S["horarios"] = [tuple(x) for x in CONFIG["horarios"]]
+HORARIO_TXT = CONFIG["horario_texto"]
+PAGAMENTO = CONFIG["pagamento"]
+
+
+def _carregar(sub):
+    pasta = os.path.join(RAIZ, "dados", sub)
+    out = {}
+    for f in sorted(os.listdir(pasta)):
+        if f.endswith(".json"):
+            with open(os.path.join(pasta, f), encoding="utf-8") as _f:
+                out[f[:-5]] = json.load(_f)
+    return out
+
+
+SERV = _carregar("servicos")          # páginas de serviço (template único)
+PAGS = _carregar("paginas")           # frentes, programas, spa, cursos, equipe, contato, loja, home, guia
+FRENTES = PAGS["frentes"]["frentes"]
+FRENTE = {f["slug"]: f for f in FRENTES}
+PROG = PAGS["programas-spa-cursos"]["programas"]
+SPA = PAGS["programas-spa-cursos"]["spa"]
+EQUIPE = PAGS["equipe-contato"]["equipe"]
+LOJA = PAGS["loja"]
+PAI = {f["slug"]: (f["nome"], f["slug"] + "/") for f in FRENTES}
+PAI.update({"programas-e-desafios": ("Programas e desafios", "programas-e-desafios/"), "spa-e-bem-estar": ("Spa e bem-estar", "spa/")})
+ICONE_FRENTE = {"emagrecimento-e-medidas": "cintura", "pele-e-rejuvenescimento": "rosto", "pernas-e-circulacao": "perna", "saude-integrativa": "folha"}
 
 
 def esc(t):
@@ -262,7 +290,7 @@ def schema_clinica():
         "name": S["nome_completo"],
         "alternateName": ["Empatia Humana", "Clínica Empatia Humana"],
         "slogan": dados.SLOGAN,
-        "description": "Clínica de estética integrativa e ozonioterapia em Canaã dos Carajás (PA): vasinhos e varizes (PEIM), ozonioterapia para dor, lipo ozonizada, saúde intestinal, limpeza de pele e soroterapia.",
+        "description": "Clínica de estética integrativa e ozonioterapia em Canaã dos Carajás (PA), com biomédicas: emagrecimento e medidas, pele e rejuvenescimento, pernas e circulação e saúde integrativa.",
         "url": absoluto(),
         "logo": absoluto("assets/img/logo-empatia-humana.png"),
         "image": [absoluto("assets/img/fachada.jpg"), absoluto("assets/img/recepcao.jpg"), absoluto("assets/img/adelaine-retrato.jpg")],
@@ -273,14 +301,13 @@ def schema_clinica():
         "hasMap": S["maps_cid"],
         "areaServed": [{"@type": "City", "name": c} for c in S["regiao"]],
         "openingHoursSpecification": [
-            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "12:00"},
-            {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "14:00", "closes": "18:00"},
-            {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00"},
+            {"@type": "OpeningHoursSpecification", "dayOfWeek": CONFIG["horario_schema"]["dias"], "opens": CONFIG["horario_schema"]["abre"], "closes": CONFIG["horario_schema"]["fecha"]},
         ],
+        "paymentAccepted": "PIX, cartão de crédito",
         "founder": {"@id": absoluto("dra-adelaine-montel/#pessoa")},
-        "employee": {"@id": absoluto("dra-adelaine-montel/#pessoa")},
+        "employee": [{"@id": absoluto("dra-adelaine-montel/#pessoa")}, {"@type": "Person", "name": "Dra. Adriana Montel", "jobTitle": "Biomédica esteta e ozonioterapeuta"}],
         "sameAs": [S["instagram_clinica"], S["facebook"], S["maps_cid"]],
-        "availableService": [{"@id": absoluto("tratamentos/%s/#servico" % t["slug"])} for t in dados.TRATAMENTOS],
+        "availableService": [{"@id": absoluto("tratamentos/%s/#servico" % sl)} for sl in SERV],
     }
 
 
@@ -432,14 +459,24 @@ def marca_dagua(classe=""):
     return '<img class="marca-dagua %s" src="%s" width="%d" height="%d" alt="" loading="lazy" decoding="async">' % (classe, link("assets/img/simbolo-branco.webp"), w, h)
 
 
+def faixa_campanha():
+    fc = CONFIG.get("faixa_campanha") or {}
+    if not fc.get("ativa"):
+        return ""
+    return '<a class="faixa-campanha" href="%s" data-origem="faixa_campanha"><strong>%s</strong><span>%s</span>%s</a>' % (
+        link(fc["link"]), esc(fc["texto"]), esc(fc["chamada"]), icone("seta", "icone"))
+
+
 def cabecalho(atual=""):
-    itens_trat = "".join('<li><a href="%s">%s %s</a></li>' % (link("tratamentos/%s/" % t["slug"]), icone(t["icone"], "icone icone--menu"), esc(t["menu"])) for t in dados.TRATAMENTOS)
+    itens_trat = "".join('<li><a href="%s">%s %s</a></li>' % (link(f["slug"] + "/"), icone(ICONE_FRENTE.get(f["slug"], "folha"), "icone icone--menu"), esc(f["nome"])) for f in FRENTES)
+    itens_trat += '<li><a href="%s">%s Todos os tratamentos</a></li>' % (link("tratamentos/"), icone("seta", "icone icone--menu"))
 
     def ativo(nome):
         return ' aria-current="page"' if atual == nome else ""
 
     lw, lh = medida("nome-branco")
     return """<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+{faixa}
 <header class="topo">
   <div class="topo__barra">
     <a class="marca" href="{home}" aria-label="Empatia Humana, página inicial">
@@ -453,18 +490,18 @@ def cabecalho(atual=""):
           <a href="{trats}"{a_t}>Tratamentos</a>
           <ul class="menu__sub">{itens}</ul>
         </li>
-        <li><a href="{clinica}"{a_cl}>A clínica</a></li>
-        <li><a href="{sobre}"{a_s}>Dra. Adelaine</a></li>
-        <li><a href="{deps}"{a_d}>Depoimentos</a></li>
-        <li><a href="{blog}"{a_b}>Blog</a></li>
+        <li><a href="{prog}"{a_p}>Programas</a></li>
+        <li><a href="{spa}"{a_s}>Spa</a></li>
+        <li><a href="{equipe}"{a_e}>Equipe</a></li>
+        <li><a href="{loja}"{a_l}>Loja</a></li>
         <li><a href="{contato}"{a_c}>Contato</a></li>
       </ul>
       {cta}
     </nav>
   </div>
-</header>""".format(home=link(), base=BASE, lw=lw, lh=lh, trats=link("tratamentos/"), clinica=link("a-clinica/"), sobre=link("dra-adelaine-montel/"),
-                    deps=link("depoimentos/"), blog=link("blog/"), contato=link("contato/"), itens=itens_trat,
-                    a_t=ativo("tratamentos"), a_cl=ativo("clinica"), a_s=ativo("sobre"), a_d=ativo("depoimentos"), a_b=ativo("blog"), a_c=ativo("contato"),
+</header>""".format(faixa=faixa_campanha(), home=link(), base=BASE, lw=lw, lh=lh, trats=link("tratamentos/"), prog=link("programas-e-desafios/"), spa=link("spa/"),
+                    equipe=link("equipe/"), loja=link("loja/"), contato=link("contato/"), itens=itens_trat,
+                    a_t=ativo("tratamentos"), a_p=ativo("programas"), a_s=ativo("spa"), a_e=ativo("equipe"), a_l=ativo("loja"), a_c=ativo("contato"),
                     cta=botao("Agendar avaliação", "menu", classe="botao--escuro menu__cta"))
 
 
@@ -499,7 +536,8 @@ def formulario(prefixo, interesse="", titulo="Valores e horários pelo WhatsApp"
 
 
 def rodape():
-    trats = "".join('<li><a href="%s">%s</a></li>' % (link("tratamentos/%s/" % t["slug"]), esc(t["menu"])) for t in dados.TRATAMENTOS)
+    trats = "".join('<li><a href="%s">%s</a></li>' % (link(f["slug"] + "/"), esc(f["nome"])) for f in FRENTES)
+    trats += "".join('<li><a href="%s">%s</a></li>' % (link(c), n) for c, n in (("programas-e-desafios/", "Programas e desafios"), ("spa/", "Spa e vale-presente"), ("loja/", "Loja e home care"), ("tratamentos/", "Todos os tratamentos")))
     horas = "".join("<li><span>%s</span> %s</li>" % (esc(a), esc(b)) for a, b in S["horarios"])
     lw, lh = medida("logotipo-branco")
     return """<footer class="rodape">
@@ -521,6 +559,7 @@ def rodape():
         <p class="rodape__titulo">A clínica</p>
         <ul class="rodape__links">
           <li><a href="{clinica}">Sobre a Empatia Humana</a></li>
+          <li><a href="{equipe}">Equipe</a></li>
           <li><a href="{sobre}">Dra. Adelaine Montel</a></li>
           <li><a href="{deps}">Depoimentos</a></li>
           <li><a href="{blog}">Blog</a></li>
@@ -549,7 +588,7 @@ def rodape():
     </div>
   </div>
 </footer>""".format(dagua=marca_dagua("marca-dagua--rodape"), lema=esc(dados.SLOGAN), base=BASE, lw=lw, lh=lh, end=esc(S["endereco"]), bairro=S["bairro"], cidade=S["cidade"], uf=S["uf"],
-                    maps=esc(S["maps"]), horas=horas, trats=trats, clinica=link("a-clinica/"), sobre=link("dra-adelaine-montel/"), deps=link("depoimentos/"),
+                    maps=esc(S["maps"]), horas=horas, trats=trats, equipe=link("equipe/"), clinica=link("a-clinica/"), sobre=link("dra-adelaine-montel/"), deps=link("depoimentos/"),
                     blog=link("blog/"), cursos=link("cursos/"), parau=link("pacientes-de-parauapebas/"), contato=link("contato/"),
                     sw=SVG_WHATS, tel=S["telefone"], insta=S["instagram_clinica"], insta_d=S["instagram_dra"], face=S["facebook"], si=SVG_INSTA, sf=SVG_FACE,
                     cta=botao(CTA, "rodape_botao", classe="botao--rosa"), dra=DRA["nome_completo"], razao=S["razao"], cnpj=S["cnpj"], priv=link("politica-de-privacidade.html"))
@@ -579,8 +618,8 @@ def links_diretos(html, interesse=""):
 
 
 def pagina(head_html, corpo, atual="", interesse="", data_pagina="", data_trat=""):
-    return links_diretos("%s\n<body data-pagina=\"%s\" data-tratamento=\"%s\">\n%s\n<main id=\"conteudo\">\n%s\n</main>\n%s\n%s\n</body>\n</html>\n" % (
-        head_html, data_pagina, data_trat, cabecalho(atual), corpo, rodape(), modal_e_barra(interesse)), interesse)
+    return links_diretos(("%s\n<body data-pagina=\"%s\" data-tratamento=\"%s\">\n%s\n<main id=\"conteudo\">\n%s\n</main>\n%s\n%s\n</body>\n</html>\n" % (
+        head_html, data_pagina, data_trat, cabecalho(atual), corpo, rodape(), modal_e_barra(interesse))).replace(link("tratamentos/saude-intestinal/"), link("tratamentos/disbiose-zero/")), interesse)
 
 
 def migalhas_html(itens):
@@ -863,10 +902,11 @@ def pagina_home():
 <section class="secao secao--creme" id="tratamentos" aria-labelledby="trat-titulo">
   <div class="largura">
     <div class="cabeca cabeca--dupla">
-      <div>{rot_trat}<h2 id="trat-titulo">O que você quer <em>tratar</em>?</h2></div>
-      <p>Todo tratamento começa por uma avaliação com a Dra. Adelaine. Escolha o que mais incomoda você e veja como funciona.</p>
+      <div>{rot_trat}<h2 id="trat-titulo">O que você quer <em>cuidar</em>?</h2></div>
+      <p>Todo tratamento começa pela avaliação gratuita com as biomédicas. Escolha o seu objetivo e veja as opções, o tempo de cada sessão e o investimento.</p>
     </div>
     {bento}
+    <h3 class="subtitulo-secao">Os mais procurados</h3>
     {outros}
   </div>
 </section>
@@ -937,7 +977,7 @@ def pagina_home():
         foto_quem=foto("avaliacao-pernas", "Dra. Adelaine Montel examinando as pernas de uma paciente"),
         notas=bloco_notas("avaliacoes-home", 'Quem passou pela clínica <em>conta</em>', primeiro=["Aurora F.", "Marcos Z.", "Juliane A.", "Fernandes S."]).replace("<h2>", '<h2 id="dep-titulo">', 1),
         relatos=bloco_relatos(dados.WHATSAPP[:2]), cta_dep=botao(CTA, "depoimentos"),
-        rot_trat=rotulo("Tratamentos"), bento=bento_tratamentos(), outros=etiquetas_outros(),
+        rot_trat=rotulo("Tratamentos"), bento=cards_frentes(), outros=lista_servicos(PAGS["home"]["carros_chefe"]["servicos"]),
         jornada=jornada(dados.PASSOS, 'Do primeiro contato ao <em>seu plano</em>', "Um caminho simples, sem pressão para fechar nada no primeiro dia. Se o tratamento não for para você, a Dra. Adelaine diz.", botao(CTA, "jornada", classe="botao--rosa")).replace("<h2>", '<h2 id="jornada-titulo">', 1),
         foto_dra=foto("adelaine-retrato", "Retrato da Dra. Adelaine Montel"), rot_dra=rotulo("Quem cuida de você"),
         frase=esc(DRA["frase"]), sobre=link("dra-adelaine-montel/"), credenciais=credenciais_html(),
@@ -1593,9 +1633,462 @@ def pagina_404():
 
 # Arquivos de SEO e IA --------------------------------------------------------------
 
+# ======================================================================================
+# Estrutura por objetivo (briefing, seção 4): template único de serviço, frentes e páginas novas
+# Os textos vêm de dados/servicos/*.json e dados/paginas/*.json
+# ======================================================================================
+
+def reais(v):
+    v = float(v)
+    txt = ("%.2f" % v).replace(".", ",")
+    inteiro, cent = txt.split(",")
+    inteiro = "{:,}".format(int(inteiro)).replace(",", ".")
+    return "R$ %s" % inteiro if cent == "00" else "R$ %s,%s" % (inteiro, cent)
+
+
+def preco_txt(sv):
+    inv = sv["investimento"]
+    if inv["tipo"] == "gratuito":
+        return "Gratuita"
+    if inv["tipo"] == "sob_avaliacao" or not inv.get("valor"):
+        return "Sob avaliação"
+    return "A partir de %s" % reais(inv["valor"])
+
+
+def duracao_curta(sv):
+    vs = sv["investimento"].get("variacoes") or []
+    ds = sorted({x.get("duracao", "") for x in vs if x.get("duracao")})
+    if len(ds) == 1:
+        return ds[0]
+    return sv["duracao_sessoes"]["duracao"]
+
+
+def marc(t):
+    return (t.replace("{telefone}", S["telefone"]).replace("{endereco}", "%s, %s, %s (%s)" % (S["endereco"], S["bairro"], S["cidade"], S["uf"]))
+            .replace("{horario}", HORARIO_TXT))
+
+
+def link_whats(msg):
+    from urllib.parse import quote
+    return "https://wa.me/%s?text=%s" % (S["whatsapp"], quote(msg, safe=""))
+
+
+def botao_whats(texto, origem, msg, classe="botao--escuro"):
+    return '<a class="botao %s" href="%s" data-origem="%s" target="_blank" rel="noopener"><span>%s</span><span class="botao__seta" aria-hidden="true">%s</span></a>' % (
+        classe, esc(link_whats(msg)), origem, esc(texto), icone("seta-diag", "icone icone--seta"))
+
+
+def lista_check(itens, classe="lista-ok"):
+    return '<ul class="%s">%s</ul>' % (classe, "".join("<li>%s<span>%s</span></li>" % (icone("check"), esc(marc(x))) for x in itens))
+
+
+def resposta_direta(texto, rot="Em resumo"):
+    return '<div class="resposta-direta"><p class="resposta-direta__rotulo">%s</p><p>%s</p></div>' % (rot, esc(marc(texto)))
+
+
+def card_servico(sv, tag="h3", destaque=False):
+    pai = PAI.get(sv["frente"], ("", ""))[0]
+    return """<li class="card-serv{d}"><a href="{h}">
+  <span class="card-serv__frente">{pai}</span>
+  <{tag} class="card-serv__nome">{n}</{tag}>
+  <span class="card-serv__texto">{t}</span>
+  <span class="card-serv__rodape"><span class="card-serv__preco">{p}</span><span class="card-serv__mais">Ver detalhes {seta}</span></span>
+</a></li>""".format(d=" card-serv--destaque" if destaque else "", h=link("tratamentos/%s/" % sv["slug"]), pai=esc(pai), tag=tag, n=esc(sv["nome"]),
+                    t=esc(sv["resumo_card"]), p=esc(preco_txt(sv)), seta=icone("seta-diag", "icone icone--seta"))
+
+
+def lista_servicos(slugs, tag="h3", destaque=None):
+    return '<ul class="cards-serv">%s</ul>' % "".join(card_servico(SERV[sl], tag, sl == destaque) for sl in slugs if sl in SERV)
+
+
+def cards_frentes(tag="h3"):
+    itens = []
+    for f in FRENTES:
+        c = f["card_home"]
+        itens.append("""<li class="objetivo"><a href="{h}">
+  {ic}
+  <{tag} class="objetivo__titulo">{t}</{tag}>
+  <span class="objetivo__texto">{x}</span>
+  <span class="objetivo__queixas">{q}</span>
+  <span class="objetivo__mais">Ver tratamentos {seta}</span>
+</a></li>""".format(h=link(f["slug"] + "/"), ic=icone(ICONE_FRENTE.get(f["slug"], "folha"), "icone icone--card"), tag=tag, t=esc(c["titulo"]), x=esc(c["texto"]),
+                    q="".join("<span>%s</span>" % esc(x) for x in c["queixas"]), seta=icone("seta-diag", "icone icone--seta")))
+    return '<ul class="objetivos">%s</ul>' % "".join(itens)
+
+
+def antes_depois_html(itens):
+    """Componente de antes e depois: pronto, mas só aparece com fotos autorizadas pela paciente e conforme as regras do CRBM."""
+    if not itens:
+        return ""
+    figs = "".join('<figure class="antes-depois__item"><div class="antes-depois__fotos">%s%s</div><figcaption>%s</figcaption></figure>' % (
+        foto(x["antes"], "Antes: " + x["legenda"]), foto(x["depois"], "Depois: " + x["legenda"]), esc(x["legenda"])) for x in itens)
+    return """<section class="secao secao--branca" aria-labelledby="ad-titulo"><div class="largura">
+  <h2 id="ad-titulo">Antes e depois</h2>
+  <div class="antes-depois">{figs}</div>
+  <p class="nota-pequena">Fotos publicadas com autorização da paciente. A resposta varia de pessoa para pessoa e não há resultado garantido.</p>
+</div></section>""".format(figs=figs)
+
+
+def pagamento_html():
+    return '<p class="pagamento">%s<span><strong>%s</strong> · Avaliação gratuita para indicar o procedimento</span></p>' % (icone("check"), esc(PAGAMENTO))
+
+
+def secao_cabeca(rot, titulo_html, texto="", ident=""):
+    return '<div class="cabeca">%s<h2%s>%s</h2>%s</div>' % (rotulo(rot) if rot else "", (' id="%s"' % ident) if ident else "", titulo_html, ("<p>%s</p>" % esc(texto)) if texto else "")
+
+
+def pagina_servico(sv):
+    sl = sv["slug"]
+    caminho = "tratamentos/%s/" % sl
+    pai_nome, pai_cam = PAI.get(sv["frente"], ("Tratamentos", "tratamentos/"))
+    inv = sv["investimento"]
+    msg = sv.get("whatsapp_msg") or mensagem_whats(sv["nome"])
+    faq = [(x["p"], x["r"]) for x in sv["faq"]]
+    passos = [(x["titulo"], x["texto"]) for x in sv["como_funciona"]["passos"]]
+    dur = sv["duracao_sessoes"]
+    res = sv["resultados"]
+    cuid = sv["cuidados"]
+    pq = sv["para_quem"]
+    variacoes = "".join("""<li class="preco"><span class="preco__nome">{n}</span><span class="preco__dur">{d}</span><span class="preco__valor">{p}</span></li>""".format(
+        n=esc(x["nome"]), d=esc(x.get("duracao", "")), p=esc(x["preco"][:1].upper() + x["preco"][1:])) for x in inv.get("variacoes", []))
+    rel = [x for x in sv.get("relacionados", []) if x in SERV and x != sl][:3]
+    corpo = """
+<section class="cabeca-pagina cabeca-servico">
+  <div class="largura">
+    {mig}
+    {rot}
+    <h1>{h1}</h1>
+    <p class="cabeca-pagina__texto">{sub}</p>
+    <ul class="fatos">
+      <li><span>Duração</span><strong>{dur}</strong></li>
+      <li><span>Investimento</span><strong>{preco}</strong></li>
+      <li><span>Avaliação</span><strong>Gratuita</strong></li>
+    </ul>
+    <div class="hero__acoes">{cta}{cta2}</div>
+  </div>
+</section>
+
+<section class="secao secao--branca secao--curta">
+  <div class="largura largura--texto">{resposta}</div>
+</section>
+
+<section class="secao secao--creme" aria-labelledby="quem-titulo">
+  <div class="largura duas-colunas">
+    <div>
+      {cab_quem}
+      {itens_quem}
+    </div>
+    <aside class="cartao-atencao" aria-labelledby="atencao-titulo">
+      <h3 id="atencao-titulo">Converse na avaliação antes se</h3>
+      {atencao}
+    </aside>
+  </div>
+</section>
+
+<section class="secao secao--branca" aria-labelledby="como-titulo">
+  <div class="largura">
+    {jornada}
+  </div>
+</section>
+
+<section class="secao secao--creme" aria-labelledby="dur-titulo">
+  <div class="largura duas-colunas">
+    <div class="cartao-info">
+      <h2 id="dur-titulo">Duração e sessões</h2>
+      <dl class="dados-lista">
+        <div><dt>Cada sessão</dt><dd>{dur_txt}</dd></div>
+        <div><dt>Número de sessões</dt><dd>{sessoes}</dd></div>
+      </dl>
+      {obs}
+    </div>
+    <div class="cartao-info">
+      <h2 id="res-titulo">Resultados esperados</h2>
+      <p>{res_txt}</p>
+      {res_itens}
+      <p class="nota-pequena">{ressalva}</p>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--branca" aria-labelledby="cuid-titulo">
+  <div class="largura">
+    {cab_cuid}
+    <div class="duas-colunas">
+      <div class="cartao-info"><h3>Antes</h3>{antes}</div>
+      <div class="cartao-info"><h3>Depois</h3>{depois}</div>
+    </div>
+    <p class="nota-pequena">{nota_cuid}</p>
+  </div>
+</section>
+
+<section class="secao secao--creme" id="investimento" aria-labelledby="inv-titulo">
+  <div class="largura">
+    {cab_inv}
+    <ul class="precos">{variacoes}</ul>
+    {pagamento}
+    <p class="centro">{cta3}</p>
+  </div>
+</section>
+{antes_depois}
+{duvidas}
+{relacionados}
+{faixa}
+""".format(
+        mig=migalhas_html([("Início", ""), (pai_nome, pai_cam), (sv["nome"], caminho)]), rot=rotulo(pai_nome), h1=esc(sv["h1"]), sub=esc(sv["sub"]),
+        dur=esc(duracao_curta(sv)), preco=esc(preco_txt(sv)),
+        cta=botao_agendar(CTA, "servico_topo", msg), cta2=botao("Ver investimento", "", classe="botao--contorno", href="#investimento", abrir=False),
+        resposta=resposta_direta(sv["resposta_direta"], "O que é, em resumo"),
+        cab_quem=secao_cabeca("Para quem é", "Para quem é", pq.get("intro", ""), "quem-titulo"), itens_quem=lista_check(pq["itens"]),
+        atencao=lista_check(pq.get("atencao", []), "lista-ok lista-ok--alerta"),
+        jornada=jornada(passos, "Como funciona", " ".join(esc(x) for x in sv["como_funciona"]["texto"]), botao_agendar(CTA, "passos", msg, "botao--rosa"), rot="Passo a passo").replace("<h2>", '<h2 id="como-titulo">', 1),
+        dur_txt=esc(dur["duracao"]), sessoes=esc(dur["sessoes"]), obs=('<p class="nota-pequena">%s</p>' % esc(dur["observacao"])) if dur.get("observacao") else "",
+        res_txt=esc(res["texto"]), res_itens=lista_check(res["itens"]), ressalva=esc(res["ressalva"]),
+        cab_cuid=secao_cabeca("Cuidados", "Cuidados antes e depois", "", "cuid-titulo"), antes=lista_check(cuid["antes"]), depois=lista_check(cuid["depois"]), nota_cuid=esc(cuid.get("nota", "")),
+        cab_inv=secao_cabeca("Investimento", "Quanto custa", inv.get("texto", ""), "inv-titulo"), variacoes=variacoes, pagamento=pagamento_html(),
+        cta3=botao_agendar(CTA, "investimento", msg),
+        antes_depois=antes_depois_html(sv.get("antes_depois") or []),
+        duvidas=secao_duvidas(faq, "Perguntas sobre <em>%s</em>" % esc(sv["nome"]), ident="faq", interesse=sv["nome"]),
+        relacionados=('<section class="secao secao--branca" aria-labelledby="rel-titulo"><div class="largura">%s%s</div></section>' % (
+            secao_cabeca("Veja também", "Outros tratamentos", "", "rel-titulo"), lista_servicos(rel))) if rel else "",
+        faixa=cta_faixa("Comece pela <em>avaliação gratuita</em>", "As biomédicas ouvem você e indicam o que faz sentido para o seu caso, em Canaã dos Carajás.", sv["nome"], "faixa_final"),
+    )
+    servico = {"@type": ["Service", "MedicalProcedure"], "@id": absoluto(caminho + "#servico"), "name": sv["nome"], "serviceType": sv["nome"],
+               "description": sv["resposta_direta"], "provider": {"@id": absoluto("#clinica")}, "areaServed": [{"@type": "City", "name": c} for c in S["regiao"]], "url": absoluto(caminho)}
+    if inv["tipo"] == "a_partir_de" and inv.get("valor"):
+        servico["offers"] = {"@type": "Offer", "priceCurrency": "BRL", "price": "%.2f" % float(inv["valor"]), "url": absoluto(caminho),
+                             "priceSpecification": {"@type": "PriceSpecification", "minPrice": float(inv["valor"]), "priceCurrency": "BRL"}}
+    elif inv["tipo"] == "gratuito":
+        servico["offers"] = {"@type": "Offer", "priceCurrency": "BRL", "price": "0", "url": absoluto(caminho)}
+    grafo = [
+        {"@type": "MedicalWebPage", "@id": absoluto(caminho + "#pagina"), "url": absoluto(caminho), "name": sv["h1"], "description": sv["seo"]["description"], "inLanguage": "pt-BR",
+         "isPartOf": {"@id": absoluto("#site")}, "about": {"@id": absoluto(caminho + "#servico")}, "lastReviewed": HOJE},
+        servico, schema_clinica(), schema_site(), schema_faq(faq),
+        schema_migalhas([("Início", ""), (pai_nome, pai_cam), (sv["nome"], caminho)]),
+    ]
+    h = head(sv["seo"]["title"], sv["seo"]["description"], caminho, grafo)
+    return pagina(h, corpo, atual="tratamentos", interesse=sv["nome"], data_pagina="servico", data_trat=sl)
+
+
+def pagina_frente(f):
+    caminho = f["slug"] + "/"
+    faq = [(x["p"], x["r"]) for x in f["faq"]]
+    outros = ""
+    if f.get("outros_servicos"):
+        outros = '<div class="tambem"><p class="tambem__titulo">Também na clínica</p><ul class="etiquetas">%s</ul></div>' % "".join("<li>%s</li>" % esc(o) for o in f["outros_servicos"])
+    acoes = '<div class="hero__acoes">%s%s</div>' % (botao_agendar(CTA, "frente_topo", f["whatsapp_msg"]), botao("Ver os tratamentos", "", classe="botao--contorno", href="#lista", abrir=False))
+    corpo = """
+{cabeca}
+<section class="secao secao--branca secao--curta">
+  <div class="largura largura--texto">{resposta}</div>
+</section>
+<section class="secao secao--creme" aria-labelledby="ident-titulo">
+  <div class="largura largura--texto">
+    {cab_ident}
+    {ident}
+  </div>
+</section>
+<section class="secao secao--branca" id="lista" aria-labelledby="lista-titulo">
+  <div class="largura">
+    {cab_lista}
+    {lista}
+    {outros}
+    {pagamento}
+  </div>
+</section>
+{duvidas}
+{faixa}
+""".format(cabeca=cabeca_pagina([("Início", ""), (f["nome"], caminho)], "Tratamentos por objetivo", esc(f["h1"]), esc(f["sub"]), acoes),
+           resposta=resposta_direta(f["resposta_direta"]),
+           cab_ident=secao_cabeca("Para quem é", "Você se reconhece?", "", "ident-titulo"), ident=lista_check(f["identificacao"]),
+           cab_lista=secao_cabeca("Tratamentos", "Tratamentos para <em>%s</em>" % esc(f["nome"].lower()), "Toque em um tratamento para ver como funciona, quanto tempo leva e o investimento.", "lista-titulo"),
+           lista=lista_servicos(f["servicos"], destaque=f.get("destaque")), outros=outros, pagamento=pagamento_html(),
+           duvidas=secao_duvidas(faq, "Dúvidas sobre <em>%s</em>" % esc(f["nome"].lower()), ident="faq", interesse=f["nome"].lower()),
+           faixa=cta_faixa("Não sabe qual escolher?", "Na avaliação gratuita, as biomédicas ouvem você e indicam o caminho para o seu caso.", f["nome"].lower(), "faixa_final"))
+    grafo = [schema_pagina(caminho, f["h1"], "CollectionPage", {"description": f["seo"]["description"], "mainEntity": {"@type": "ItemList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "url": absoluto("tratamentos/%s/" % sl), "name": SERV[sl]["nome"]} for i, sl in enumerate([x for x in f["servicos"] if x in SERV])]}}),
+        schema_clinica(), schema_site(), schema_faq(faq), schema_migalhas([("Início", ""), (f["nome"], caminho)])]
+    h = head(f["seo"]["title"], f["seo"]["description"], caminho, grafo)
+    return pagina(h, corpo, atual="tratamentos", interesse=f["nome"].lower(), data_pagina="frente")
+
+
+def pagina_tratamentos():
+    caminho = "tratamentos/"
+    grupos = []
+    for f in FRENTES:
+        grupos.append('<section class="grupo-trat" aria-labelledby="g-%s"><div class="grupo-trat__cabeca"><h2 id="g-%s">%s</h2><a class="link-acao" href="%s">Ver a página %s</a></div>%s</section>' % (
+            f["slug"], f["slug"], esc(f["nome"]), link(f["slug"] + "/"), icone("seta-diag", "icone icone--seta"), lista_servicos(f["servicos"])))
+    grupos.append('<section class="grupo-trat" aria-labelledby="g-prog"><div class="grupo-trat__cabeca"><h2 id="g-prog">Programas e desafios</h2><a class="link-acao" href="%s">Ver a página %s</a></div>%s</section>' % (
+        link("programas-e-desafios/"), icone("seta-diag", "icone icone--seta"), lista_servicos(PROG["programas"] + ["desinflamando-para-o-natal"])))
+    grupos.append('<section class="grupo-trat" aria-labelledby="g-spa"><div class="grupo-trat__cabeca"><h2 id="g-spa">Spa e bem-estar</h2><a class="link-acao" href="%s">Ver a página %s</a></div>%s</section>' % (
+        link("spa/"), icone("seta-diag", "icone icone--seta"), lista_servicos(SPA.get("paginas", ["toque-de-spa", "massagens"]))))
+    corpo = """
+{cabeca}
+<section class="secao secao--creme">
+  <div class="largura">
+    {objetivos}
+  </div>
+</section>
+<section class="secao secao--branca">
+  <div class="largura">
+    {grupos}
+    {pagamento}
+  </div>
+</section>
+{faixa}
+""".format(cabeca=cabeca_pagina([("Início", ""), ("Tratamentos", caminho)], "Tratamentos", 'Tratamentos de estética integrativa em <em>Canaã dos Carajás</em>',
+                                "Organizados pelo que você quer cuidar: emagrecimento e medidas, pele e rejuvenescimento, pernas e circulação e saúde integrativa. Todos começam pela avaliação gratuita."),
+           objetivos=cards_frentes("h2"), grupos="".join(grupos), pagamento=pagamento_html(),
+           faixa=cta_faixa("Não sabe por onde começar?", "Conte o que você sente. As biomédicas indicam o caminho na avaliação gratuita.", "", "faixa_hub"))
+    grafo = [schema_pagina(caminho, "Tratamentos da Clínica Empatia Humana", "CollectionPage", {
+        "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": absoluto("tratamentos/%s/" % sl), "name": sv["nome"]} for i, (sl, sv) in enumerate(SERV.items())]}}),
+        schema_clinica(), schema_site(), schema_migalhas([("Início", ""), ("Tratamentos", caminho)])]
+    h = head("Tratamentos estéticos em Canaã dos Carajás | Empatia Humana",
+             "Emagrecimento e medidas, pele, vasinhos e saúde integrativa com ozonioterapia em Canaã dos Carajás (PA). Veja cada tratamento, a duração e o investimento.",
+             caminho, grafo)
+    return pagina(h, corpo, atual="tratamentos", data_pagina="tratamentos")
+
+
+def pagina_programas():
+    caminho = "programas-e-desafios/"
+    P = PROG
+    faq = [(x["p"], x["r"]) for x in P["faq"]]
+    camp = P.get("campanha") or {}
+    campanha = ""
+    if camp:
+        campanha = '<a class="cartao-campanha" href="%s"><span class="cartao-campanha__selo">Campanha da estação</span><strong>%s</strong><span>%s</span><span class="card-serv__mais">Ver o programa %s</span></a>' % (
+            link("tratamentos/%s/" % camp["slug"]), esc(camp["titulo"]), esc(camp["texto"]), icone("seta-diag", "icone icone--seta"))
+    passos = [(x["titulo"], x["texto"]) for x in P["como_funciona"]]
+    acoes = '<div class="hero__acoes">%s</div>' % botao_agendar(CTA, "programas_topo", P["whatsapp_msg"])
+    corpo = """
+{cabeca}
+<section class="secao secao--branca secao--curta"><div class="largura largura--texto">{resposta}<p class="texto-intro">{intro}</p></div></section>
+<section class="secao secao--creme" aria-labelledby="lista-titulo"><div class="largura">
+  {cab}
+  {campanha}
+  {lista}
+  <p class="nota-pequena">Os programas são indicados na avaliação. O valor é sob avaliação, porque depende do que entra no seu plano.</p>
+  {pagamento}
+</div></section>
+<section class="secao secao--branca" aria-labelledby="como-titulo"><div class="largura">{jornada}</div></section>
+{duvidas}
+{faixa}
+""".format(cabeca=cabeca_pagina([("Início", ""), ("Programas e desafios", caminho)], "Programas e desafios", esc(P["h1"]), esc(P["sub"]), acoes),
+           resposta=resposta_direta(P["resposta_direta"]), intro=esc(P.get("intro", "")),
+           cab=secao_cabeca("Programas", "Escolha o seu ponto de partida", "", "lista-titulo"), campanha=campanha, lista=lista_servicos(P["programas"]), pagamento=pagamento_html(),
+           jornada=jornada(passos, "Como funciona", "Do primeiro contato ao seu plano, com tudo combinado antes de começar.", botao_agendar(CTA, "passos", P["whatsapp_msg"], "botao--rosa"), rot="Passo a passo").replace("<h2>", '<h2 id="como-titulo">', 1),
+           duvidas=secao_duvidas(faq, "Dúvidas sobre <em>os programas</em>", ident="faq", interesse="os programas e desafios"),
+           faixa=cta_faixa("Qual programa é para você?", "A resposta vem na avaliação gratuita, depois de ouvir o seu objetivo e a sua rotina.", "os programas e desafios", "faixa_final"))
+    grafo = [schema_pagina(caminho, P["h1"], "CollectionPage", {"mainEntity": {"@type": "ItemList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "url": absoluto("tratamentos/%s/" % sl), "name": SERV[sl]["nome"]} for i, sl in enumerate(P["programas"]) if sl in SERV]}}),
+        schema_clinica(), schema_site(), schema_faq(faq), schema_migalhas([("Início", ""), ("Programas e desafios", caminho)])]
+    return pagina(head(P["seo"]["title"], P["seo"]["description"], caminho, grafo), corpo, atual="programas", interesse="os programas e desafios", data_pagina="programas")
+
+
+def pagina_spa():
+    caminho = "spa/"
+    P = SPA
+    faq = [(x["p"], x["r"]) for x in P["faq"]]
+    vp = P["vale_presente"]
+    itens = "".join('<li class="preco"><span class="preco__nome">%s</span><span class="preco__dur">%s</span><span class="preco__valor">%s</span>%s</li>' % (
+        esc(x["nome"]), esc(x.get("duracao", "")), esc(x["preco"][:1].upper() + x["preco"][1:]), ('<span class="preco__texto">%s</span>' % esc(x["texto"])) if x.get("texto") else "") for x in P["itens"])
+    acoes = '<div class="hero__acoes">%s%s</div>' % (botao_agendar("Agendar um horário", "spa_topo", P["whatsapp_msg"]), botao_whats("Quero dar um vale-presente", "vale_presente", vp["whatsapp_msg"], "botao--contorno"))
+    corpo = """
+{cabeca}
+<section class="secao secao--branca secao--curta"><div class="largura largura--texto">{resposta}</div></section>
+<section class="secao secao--rosa-claro" aria-labelledby="vp-titulo"><div class="largura largura--texto centro-bloco">
+  <h2 id="vp-titulo">{vp_t}</h2><p>{vp_x}</p><p>{vp_b}</p>
+</div></section>
+<section class="secao secao--creme" aria-labelledby="menu-spa"><div class="largura">
+  {cab}
+  <ul class="precos precos--spa">{itens}</ul>
+  {nota}
+  {pagamento}
+</div></section>
+<section class="secao secao--branca"><div class="largura">{cab2}{paginas}</div></section>
+{duvidas}
+{faixa}
+""".format(cabeca=cabeca_pagina([("Início", ""), ("Spa e bem-estar", caminho)], "Spa e bem-estar", esc(P["h1"]), esc(P["sub"]), acoes),
+           resposta=resposta_direta(P["resposta_direta"]), vp_t=esc(vp["titulo"]), vp_x=esc(vp["texto"]), vp_b=botao_whats("Pedir um vale-presente", "vale_presente", vp["whatsapp_msg"]),
+           cab=secao_cabeca("Cardápio", "Cuidados do spa", "", "menu-spa"), itens=itens, nota=('<p class="nota-pequena">%s</p>' % esc(P["nota"])) if P.get("nota") else "", pagamento=pagamento_html(),
+           cab2=secao_cabeca("Saiba mais", "Como é cada cuidado"), paginas=lista_servicos(P.get("paginas", [])),
+           duvidas=secao_duvidas(faq, "Dúvidas sobre <em>o spa</em>", ident="faq", interesse="o spa"),
+           faixa=cta_faixa("Uma pausa para você <em>ou para quem você ama</em>", "Agende pelo WhatsApp ou peça um vale-presente.", "o spa", "faixa_final"))
+    grafo = [schema_pagina(caminho, P["h1"], extra={"description": P["seo"]["description"]}), schema_clinica(), schema_site(), schema_faq(faq), schema_migalhas([("Início", ""), ("Spa e bem-estar", caminho)])]
+    return pagina(head(P["seo"]["title"], P["seo"]["description"], caminho, grafo), corpo, atual="spa", interesse="o spa", data_pagina="spa")
+
+
+def pagina_equipe():
+    caminho = "equipe/"
+    P = EQUIPE
+    faq = [(x["p"], x["r"]) for x in P["faq"]]
+    pessoas = []
+    for x in P["pessoas"]:
+        nome_foto = (x.get("foto") or "").replace(".webp", "")
+        if nome_foto and os.path.exists(os.path.join(RAIZ, "assets", "img", nome_foto + ".webp")):
+            img = foto(nome_foto, x["nome"], "pessoa__foto")
+        else:
+            iniciais = "".join(p[0] for p in x["nome"].replace("Dra. ", "").split()[:2])
+            img = '<span class="pessoa__foto pessoa__foto--iniciais" aria-hidden="true">%s</span>' % esc(iniciais)
+        bio = "".join("<p>%s</p>" % esc(b) for b in x.get("bio", []))
+        frase = ('<blockquote class="pessoa__frase">%s</blockquote>' % esc(x["frase"])) if x.get("frase") else ""
+        extra = ('<p><a class="link-acao" href="%s">Trajetória completa %s</a></p>' % (link("dra-adelaine-montel/"), icone("seta-diag", "icone icone--seta"))) if "Adelaine" in x["nome"] else ""
+        pessoas.append("""<article class="pessoa">
+  <div class="pessoa__midia">{img}</div>
+  <div class="pessoa__texto">
+    <h2>{n}</h2>
+    <p class="pessoa__cargo">{c}{r}</p>
+    {bio}{frase}{extra}
+  </div>
+</article>""".format(img=img, n=esc(x["nome"]), c=esc(x["cargo"]), r=(" · " + esc(x["registro"])) if x.get("registro") else "", bio=bio, frase=frase, extra=extra))
+    como = "".join("<li><h3>%s</h3><p>%s</p></li>" % (esc(x["titulo"]), esc(x["texto"])) if isinstance(x, dict) else "<li><p>%s</p></li>" % esc(x) for x in P.get("como_atendemos", []))
+    corpo = """
+{cabeca}
+<section class="secao secao--branca"><div class="largura equipe">{intro}{pessoas}</div></section>
+<section class="secao secao--creme" aria-labelledby="como-titulo"><div class="largura">{cab}<ol class="passos-simples">{como}</ol></div></section>
+{duvidas}
+{faixa}
+""".format(cabeca=cabeca_pagina([("Início", ""), ("Equipe", caminho)], "Equipe", esc(P["h1"]), esc(P["sub"]), '<div class="hero__acoes">%s</div>' % botao_agendar(CTA, "equipe_topo", P["whatsapp_msg"])),
+           intro=('<p class="texto-intro">%s</p>' % esc(P["intro"])) if P.get("intro") else "", pessoas="".join(pessoas),
+           cab=secao_cabeca("Como atendemos", "Como é o atendimento", "", "como-titulo"), como=como,
+           duvidas=secao_duvidas(faq, "Dúvidas sobre <em>a equipe</em>", ident="faq"),
+           faixa=cta_faixa("Agende com <em>as biomédicas</em>", "A avaliação é gratuita e serve para indicar o que faz sentido para você.", "", "faixa_final"))
+    grafo = [schema_pagina(caminho, P["h1"], "AboutPage"), schema_clinica(), schema_pessoa(), schema_site(), schema_faq(faq), schema_migalhas([("Início", ""), ("Equipe", caminho)])]
+    return pagina(head(P["seo"]["title"], P["seo"]["description"], caminho, grafo), corpo, atual="equipe", data_pagina="equipe")
+
+
+def pagina_loja():
+    caminho = "loja/"
+    P = LOJA
+    faq = [(x["p"], x["r"]) for x in P["faq"]]
+    dest = "".join("""<li class="produto produto--destaque"><strong>{n}</strong><span>{t}</span>{b}</li>""".format(
+        n=esc(x["nome"]), t=esc(x["texto"]), b=botao_whats("Pedir pelo WhatsApp", "loja_destaque", x["whatsapp_msg"], "botao--rosa")) for x in P["destaques"])
+    grupos = "".join("""<section class="grupo-loja" aria-labelledby="gl-{sl}"><h3 id="gl-{sl}">{n}</h3><p>{t}</p><ul class="produtos">{itens}</ul></section>""".format(
+        sl=g["slug"], n=esc(g["nome"]), t=esc(g.get("texto", "")),
+        itens="".join('<li class="produto"><span>%s</span><a class="link-acao" href="%s" data-origem="loja_item" target="_blank" rel="noopener">Pedir %s</a></li>' % (
+            esc(x["nome"]), esc(link_whats(x["whatsapp_msg"])), icone("seta-diag", "icone icone--seta")) for x in g["produtos"])) for g in P["grupos"])
+    passos = "".join("<li><h3>%s</h3><p>%s</p></li>" % (esc(x["titulo"]), esc(x["texto"])) for x in P["como_pedir"])
+    corpo = """
+{cabeca}
+<section class="secao secao--branca secao--curta"><div class="largura largura--texto">{resposta}<ol class="passos-simples passos-simples--linha">{passos}</ol></div></section>
+<section class="secao secao--creme" aria-labelledby="dest-titulo"><div class="largura">{cab}<ul class="produtos produtos--destaque">{dest}</ul></div></section>
+<section class="secao secao--branca" aria-labelledby="todos-titulo"><div class="largura">{cab2}{grupos}<p class="nota-pequena">{aviso}</p></div></section>
+{duvidas}
+{faixa}
+""".format(cabeca=cabeca_pagina([("Início", ""), ("Loja e home care", caminho)], "Home care", esc(P["h1"]), esc(P["sub"]), '<div class="hero__acoes">%s</div>' % botao_whats("Fazer um pedido", "loja_topo", P["whatsapp_msg"])),
+           resposta=resposta_direta(P["resposta_direta"]), passos=passos,
+           cab=secao_cabeca("Mais pedidos", "Os queridinhos da clínica", "", "dest-titulo"), dest=dest,
+           cab2=secao_cabeca("Vitrine", "Todos os produtos", "Os valores são informados pelo WhatsApp, junto com a disponibilidade.", "todos-titulo"), grupos=grupos, aviso=esc(P.get("aviso", "")),
+           duvidas=secao_duvidas(faq, "Dúvidas sobre <em>a loja</em>", ident="faq", interesse="os produtos da loja"),
+           faixa=cta_faixa("Não sabe qual produto escolher?", "Chame no WhatsApp e conte o que você procura.", "os produtos da loja", "faixa_final"))
+    grafo = [schema_pagina(caminho, P["h1"], "CollectionPage", {"description": P["seo"]["description"]}), schema_clinica(), schema_site(), schema_faq(faq), schema_migalhas([("Início", ""), ("Loja e home care", caminho)])]
+    return pagina(head(P["seo"]["title"], P["seo"]["description"], caminho, grafo), corpo, atual="loja", interesse="os produtos da loja", data_pagina="loja")
+
+
 def urls_do_site():
     u = [("", "1.0"), ("tratamentos/", "0.9")]
-    u += [("tratamentos/%s/" % t["slug"], "0.9") for t in dados.TRATAMENTOS]
+    u += [(f["slug"] + "/", "0.9") for f in FRENTES]
+    u += [("programas-e-desafios/", "0.8"), ("spa/", "0.7"), ("equipe/", "0.8"), ("loja/", "0.7")]
+    u += [("tratamentos/%s/" % sl, "0.8") for sl in SERV]
     u += [("a-clinica/", "0.8"), ("dra-adelaine-montel/", "0.8"), ("depoimentos/", "0.7"), ("contato/", "0.7"),
           ("pacientes-de-parauapebas/", "0.7"), ("blog/", "0.8"), ("cursos/", "0.6")]
     u += [("blog/%s/" % p["slug"], "0.7") for p in POSTS]
@@ -1628,15 +2121,26 @@ def llms():
          "- Nome: Clínica Empatia Humana (Empatia Humana - Conceito em Estética Integrativa)",
          "- Endereço: %s, %s, %s - %s" % (S["endereco"], S["bairro"], S["cidade"], S["uf"]),
          "- WhatsApp: %s" % S["telefone"],
-         "- Horário: segunda a sexta, 8h às 12h e 14h às 18h; sábado, 8h às 12h; atendimento com horário marcado",
+         "- Horário: %s, com horário marcado" % HORARIO_TXT,
+         "- Equipe: Dra. Adelaine Montel e Dra. Adriana Montel, biomédicas estetas e ozonioterapeutas",
+         "- Pagamento: %s. Avaliação gratuita para indicar o procedimento." % PAGAMENTO,
          "- Atende pacientes de: %s" % ", ".join(S["regiao"]),
          "- Instagram: %s e %s" % (S["instagram_clinica"], S["instagram_dra"]),
          "- Google Maps: %s" % S["maps_cid"],
          "- Registro da responsável: Adelaine Barros Montel, CRBM 4ª Região nº 1437, ativo; habilitações em %s" % "; ".join(DRA["habilitacoes"]),
          "- [Sobre a clínica](%s) · [Contato](%s) · [Depoimentos](%s)" % (absoluto("a-clinica/"), absoluto("contato/"), absoluto("depoimentos/")),
-         "", "## Tratamentos"]
-    for t in dados.TRATAMENTOS:
-        l.append("- [%s](%s): %s" % (t["nome"], absoluto("tratamentos/%s/" % t["slug"]), dados.RESUMOS.get(t["slug"], t["card"])))
+         ""]
+    for f in FRENTES:
+        l += ["## %s" % f["nome"], "[Página da frente](%s): %s" % (absoluto(f["slug"] + "/"), f["resposta_direta"])]
+        for sl in f["servicos"]:
+            if sl in SERV:
+                l.append("- [%s](%s) (%s): %s" % (SERV[sl]["nome"], absoluto("tratamentos/%s/" % sl), preco_txt(SERV[sl]).lower(), SERV[sl]["resumo_card"]))
+        l.append("")
+    l += ["## Programas e desafios", "[Página](%s): %s" % (absoluto("programas-e-desafios/"), PROG["resposta_direta"])]
+    for sl in PROG["programas"]:
+        l.append("- [%s](%s): %s" % (SERV[sl]["nome"], absoluto("tratamentos/%s/" % sl), SERV[sl]["resumo_card"]))
+    l += ["", "## Spa e bem-estar", "[Página](%s): %s" % (absoluto("spa/"), SPA["resposta_direta"]),
+          "", "## Equipe", "[Equipe](%s)" % absoluto("equipe/"), "", "## Loja e home care", "[Loja](%s): %s" % (absoluto("loja/"), LOJA["resposta_direta"])]
     l += ["", "## Sobre a Dra. Adelaine Montel", "- [Trajetória, formação e registro](%s)" % absoluto("dra-adelaine-montel/"), "", "## Blog"]
     for p in POSTS:
         l.append("- [%s](%s): %s" % (p["titulo"], absoluto("blog/%s/" % p["slug"]), p.get("resumo", "")))
@@ -1695,8 +2199,18 @@ def main():
     grava("js/config.js", config_js())
     grava("index.html", pagina_home())
     grava("tratamentos/index.html", pagina_tratamentos())
-    for t in dados.TRATAMENTOS:
-        grava("tratamentos/%s/index.html" % t["slug"], pagina_tratamento(t))
+    for sl, sv in SERV.items():
+        grava("tratamentos/%s/index.html" % sl, pagina_servico(sv))
+    for f in FRENTES:
+        grava("%s/index.html" % f["slug"], pagina_frente(f))
+    grava("programas-e-desafios/index.html", pagina_programas())
+    grava("spa/index.html", pagina_spa())
+    grava("equipe/index.html", pagina_equipe())
+    grava("loja/index.html", pagina_loja())
+    antigo = os.path.join(RAIZ, "tratamentos", "saude-intestinal")
+    if os.path.isdir(antigo):
+        import shutil
+        shutil.rmtree(antigo)
     grava("a-clinica/index.html", pagina_clinica())
     grava("dra-adelaine-montel/index.html", pagina_sobre())
     grava("depoimentos/index.html", pagina_depoimentos())
@@ -1715,7 +2229,7 @@ def main():
     dominio = URL.split("//", 1)[-1].split("/")[0]
     if BASE == "/" and not dominio.endswith("github.io"):
         grava("CNAME", dominio + "\n")
-    print("Gerado: %d tratamentos, %d posts, %d URLs no sitemap." % (len(dados.TRATAMENTOS), len(POSTS), len(urls_do_site())))
+    print("Gerado: %d páginas de serviço, %d frentes, %d posts, %d URLs no sitemap." % (len(SERV), len(FRENTES), len(POSTS), len(urls_do_site())))
 
 
 if __name__ == "__main__":

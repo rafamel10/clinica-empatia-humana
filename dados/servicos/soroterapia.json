@@ -1,0 +1,141 @@
+{
+ "slug": "soroterapia",
+ "nome": "Soroterapia e vitaminas",
+ "frente": "saude-integrativa",
+ "frentes_extras": [],
+ "resumo_card": "Vitaminas e minerais em soro ou por aplicação intramuscular, indicados a partir dos seus exames.",
+ "seo": {
+  "title": "Soroterapia em Canaã dos Carajás | Empatia Humana",
+  "description": "Soroterapia, vitaminas intramusculares e soro ozonizado em Canaã dos Carajás, indicados por biomédicas a partir dos seus exames. Agende sua avaliação."
+ },
+ "h1": "Soroterapia e vitaminas injetáveis em Canaã dos Carajás",
+ "sub": "Reposição de vitaminas e minerais em soro ou por aplicação intramuscular, indicada a partir dos seus exames, para quem sente que o corpo não acompanha a rotina.",
+ "resposta_direta": "Soroterapia é a reposição de vitaminas e minerais em soro, feita na clínica. Na Empatia Humana, em Canaã dos Carajás, há também a aplicação intramuscular de vitaminas e o soro ozonizado. É voltada a quem tem carência de vitaminas ou minerais apontada nos exames. A indicação é individual, feita em avaliação pelas biomédicas, e não substitui acompanhamento médico.",
+ "para_quem": {
+  "intro": "A reposição costuma fazer sentido para quem tem alguma carência de vitaminas ou minerais confirmada em exame e quer uma indicação individual.",
+  "itens": [
+   "Você descansa, mas o cansaço continua ao longo do dia.",
+   "Seus exames mostraram vitaminas ou minerais abaixo do esperado.",
+   "Cabelo, unhas e disposição parecem dar sinais ao mesmo tempo.",
+   "Você já fez reposição de vitaminas antes e quer retomar com acompanhamento.",
+   "Você toma suplementos por conta própria e quer uma indicação feita para você."
+  ],
+  "atencao": [
+   "Grávidas e mulheres que amamentam precisam de avaliação individual antes de qualquer aplicação. Converse também com o médico que acompanha você.",
+   "Quem faz tratamento médico, usa remédio de uso contínuo ou já teve alergia a injetáveis deve contar isso antes. Nesses casos, a reposição pode não ser indicada.",
+   "Sem exames que mostrem a necessidade, a reposição não costuma ser indicada."
+  ]
+ },
+ "como_funciona": {
+  "texto": [
+   "A reposição pode ser feita de três formas, todas na clínica: em soro, por aplicação intramuscular, que é uma injeção no músculo, ou com o soro ozonizado, uma variação do soro feita com ozônio.",
+   "O ponto de partida são os seus exames e o que você conta na avaliação. A partir deles, as biomédicas indicam o que repor, por qual via e com que frequência. A indicação é individual e não substitui acompanhamento médico."
+  ],
+  "passos": [
+   {
+    "titulo": "Avaliação",
+    "texto": "A avaliação gratuita dura cerca de 30 minutos. Você conta como anda a sua rotina e leva os exames que já tem. Se o seu caso pedir uma análise completa, as biomédicas indicam a Consulta Estética Integrativa, que é um atendimento à parte."
+   },
+   {
+    "titulo": "Indicação",
+    "texto": "Com os exames e o seu relato, as biomédicas indicam o que repor e a via: soro, aplicação intramuscular ou soro ozonizado. Se a reposição não fizer sentido para você, elas dizem."
+   },
+   {
+    "titulo": "Aplicação",
+    "texto": "É feita na clínica. A aplicação intramuscular ocupa um horário de 30 minutos. O soro leva cerca de 60 minutos, com você sentada."
+   },
+   {
+    "titulo": "Reavaliação",
+    "texto": "Novos exames ajudam a acompanhar a evolução e a ajustar o plano."
+   }
+  ]
+ },
+ "duracao_sessoes": {
+  "duracao": "De 30 a 60 minutos por sessão: cerca de 30 na aplicação intramuscular e cerca de 60 no soro e no soro ozonizado",
+  "sessoes": "Definido na avaliação, conforme o seu caso",
+  "observacao": "A frequência das aplicações é revista a cada novo exame."
+ },
+ "resultados": {
+  "texto": "A proposta é repor o que os seus exames mostram abaixo do esperado. Quando isso acontece, a paciente pode perceber mais disposição no dia a dia. O efeito depende do que precisava ser reposto, da sua rotina e da resposta do seu organismo.",
+  "itens": [
+   "Repor as vitaminas e os minerais que os exames mostraram em nível baixo",
+   "Contribuir para a disposição no dia a dia",
+   "Ter uma indicação individual no lugar da suplementação por conta própria",
+   "Apoiar outros tratamentos da clínica, quando houver indicação"
+  ],
+  "ressalva": "A resposta varia de pessoa para pessoa e não há resultado garantido. A reposição não substitui alimentação equilibrada nem acompanhamento médico."
+ },
+ "cuidados": {
+  "antes": [
+   "Leve os seus exames mais recentes.",
+   "Informe remédios, suplementos e vitaminas que você já usa.",
+   "Avise se está grávida, amamentando ou se já teve alergia a alguma medicação.",
+   "Alimente-se e beba água antes da sessão, a não ser que receba outra orientação."
+  ],
+  "depois": [
+   "Beba água ao longo do dia.",
+   "Um leve incômodo ou uma marca roxa no local da aplicação pode acontecer. Se persistir por mais de alguns dias, avise a clínica.",
+   "Se sentir mal-estar depois da aplicação, avise a clínica pelo WhatsApp. Se for intenso, busque atendimento médico.",
+   "Mantenha remédios e suplementos como combinado na avaliação, sem incluir outros por conta própria."
+  ],
+  "nota": "As orientações do seu caso são passadas na avaliação."
+ },
+ "investimento": {
+  "tipo": "a_partir_de",
+  "valor": 220,
+  "texto": "Os valores variam conforme a via indicada: a aplicação intramuscular de vitaminas custa a partir de R$ 220, a soroterapia a partir de R$ 250 e o soro ozonizado a partir de R$ 300. O valor do seu caso é confirmado na avaliação, que é gratuita.",
+  "variacoes": [
+   {
+    "nome": "Soroterapia",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 250"
+   },
+   {
+    "nome": "Aplicação Intramuscular de Vitaminas",
+    "duracao": "30 min",
+    "preco": "a partir de R$ 220"
+   },
+   {
+    "nome": "Soro Ozonizado",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 300"
+   }
+  ]
+ },
+ "faq": [
+  {
+   "p": "Preciso de exames para fazer soroterapia?",
+   "r": "Sim. A reposição é indicada a partir dos seus exames, para repor o que de fato o seu organismo precisa. Se você não tem exames recentes, conte isso na avaliação e as biomédicas orientam o próximo passo."
+  },
+  {
+   "p": "Qual a diferença entre soroterapia e vitamina intramuscular?",
+   "r": "A diferença está na via e no tempo de aplicação. Na soroterapia, a reposição é feita em soro, em uma sessão de cerca de 60 minutos. Na aplicação intramuscular, é uma injeção no músculo, em um horário de 30 minutos. A via indicada para você é definida na avaliação."
+  },
+  {
+   "p": "Soroterapia dói?",
+   "r": "A sensação é a de uma picada, como em qualquer injeção. O soro é feito com você sentada, de forma confortável. Se você tem receio de agulha, avise na avaliação."
+  },
+  {
+   "p": "Quantas aplicações de soroterapia vou precisar?",
+   "r": "Depende do que os seus exames mostram. A frequência é definida na avaliação e revista nos exames seguintes. Não existe um número padrão para todas as pacientes."
+  },
+  {
+   "p": "O que é o soro ozonizado?",
+   "r": "É uma variação do soro feita com ozônio. A indicação é individual, feita em avaliação, e ele não é proposto para todas as pacientes. Assim como a soroterapia, não substitui acompanhamento médico."
+  },
+  {
+   "p": "Quanto custa a soroterapia em Canaã dos Carajás?",
+   "r": "Na Empatia Humana, a soroterapia custa a partir de R$ 250. A aplicação intramuscular de vitaminas custa a partir de R$ 220 e o soro ozonizado, a partir de R$ 300. O valor do seu caso é confirmado na avaliação, que é gratuita."
+  },
+  {
+   "p": "A avaliação para soroterapia é paga?",
+   "r": "Não. A avaliação para indicar o procedimento é gratuita e dura cerca de 30 minutos. Ela é diferente da Consulta Estética Integrativa, que dura 2 horas, traz uma análise completa e tem valor próprio."
+  }
+ ],
+ "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre Soroterapia e vitaminas",
+ "relacionados": [
+  "consulta-integrativa",
+  "avaliacao",
+  "ozonioterapia"
+ ]
+}

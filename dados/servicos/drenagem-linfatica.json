@@ -1,0 +1,137 @@
+{
+ "slug": "drenagem-linfatica",
+ "nome": "Drenagem Linfática e Tessaliana",
+ "frente": "pernas-e-circulacao",
+ "frentes_extras": [
+  "emagrecimento-e-medidas"
+ ],
+ "resumo_card": "Drenagem linfática ou Tessaliana, para quem convive com sensação de inchaço e pernas pesadas.",
+ "seo": {
+  "title": "Drenagem linfática em Canaã dos Carajás | Empatia Humana",
+  "description": "Drenagem linfática e Tessaliana em Canaã dos Carajás, para quem sente inchaço e pernas pesadas. Sessões de 60 minutos. Agende sua avaliação gratuita."
+ },
+ "h1": "Drenagem linfática e Tessaliana em Canaã dos Carajás",
+ "sub": "Duas modalidades de drenagem, em sessões de cerca de 60 minutos, para quem convive com sensação de inchaço, pernas pesadas ou retenção de líquido.",
+ "resposta_direta": "A drenagem linfática é uma técnica de massagem com movimentos leves e ritmados, que seguem o caminho da linfa. É voltada a quem convive com sensação de inchaço, pernas pesadas ou retenção de líquido. Na Empatia Humana, em Canaã dos Carajás, há duas modalidades, linfática e Tessaliana, em sessões de cerca de 60 minutos, indicadas na avaliação gratuita.",
+ "para_quem": {
+  "intro": "A drenagem pode fazer sentido se alguma destas situações faz parte da sua rotina.",
+  "itens": [
+   "No fim do dia, as pernas pesam e os tornozelos parecem inchados.",
+   "Você passa muitas horas em pé ou sentada na mesma posição.",
+   "Em alguns dias, o anel, o sapato ou a roupa apertam mais do que o normal.",
+   "Você nota mais inchaço em certas fases do mês ou nos dias de muito calor.",
+   "Você está em um plano de redução de medidas e quer saber se a drenagem entra nele.",
+   "Você ouviu falar da drenagem Tessaliana e quer entender se ela combina com o seu caso."
+  ],
+  "atencao": [
+   "Inchaço que surge de repente, em uma perna só, ou com dor, calor e vermelhidão pede atendimento médico antes de qualquer drenagem.",
+   "Grávida, com cirurgia recente ou em tratamento de saúde? Conte na avaliação: a drenagem pode depender da liberação do seu médico.",
+   "Com febre, infecção ou ferida na pele da região, a drenagem não costuma ser indicada. Avise antes para remarcar."
+  ]
+ },
+ "como_funciona": {
+  "texto": [
+   "A linfa é o líquido que circula entre os tecidos do corpo. Na drenagem linfática, como a técnica é conhecida, o toque suave acompanha esse trajeto. O objetivo é estimular essa circulação e ajudar o corpo a escoar o líquido acumulado.",
+   "A clínica tem duas modalidades: a drenagem linfática e a drenagem Tessaliana. Na avaliação, a biomédica explica como cada uma é feita e indica a que combina com o seu caso. As regiões trabalhadas e o número de sessões também são definidos nesse momento."
+  ],
+  "passos": [
+   {
+    "titulo": "Avaliação",
+    "texto": "A avaliação gratuita dura cerca de 30 minutos. Você conta o que sente, como é a sua rotina e o seu histórico de saúde. A biomédica diz se a drenagem é indicada e qual das duas modalidades faz mais sentido para você."
+   },
+   {
+    "titulo": "Plano",
+    "texto": "Com a indicação, você recebe o plano: modalidade, regiões a trabalhar, número de sessões e intervalo entre elas."
+   },
+   {
+    "titulo": "Sessão",
+    "texto": "Dura cerca de 60 minutos, na modalidade e nas regiões combinadas no plano. Se sentir qualquer desconforto, é só avisar."
+   },
+   {
+    "titulo": "Acompanhamento",
+    "texto": "A cada sessão, você conta como se sentiu e o plano pode ser ajustado. A reavaliação também é gratuita."
+   }
+  ]
+ },
+ "duracao_sessoes": {
+  "duracao": "Cerca de 60 minutos por sessão, nas duas modalidades",
+  "sessoes": "Definido na avaliação, conforme o seu caso",
+  "observacao": "O intervalo entre as sessões também é definido na avaliação."
+ },
+ "resultados": {
+  "texto": "Depois da drenagem, você pode sentir as pernas mais leves e menos sensação de inchaço. A sessão também pode ser um momento de pausa e relaxamento. Em um plano de redução de medidas, a drenagem pode entrar como apoio aos outros cuidados.",
+  "itens": [
+   "Estimular a circulação linfática",
+   "Ajudar a reduzir a retenção de líquido e a sensação de inchaço",
+   "Contribuir para a sensação de pernas mais leves",
+   "Favorecer o relaxamento durante a sessão"
+  ],
+  "ressalva": "A resposta varia de pessoa para pessoa e não há resultado garantido. A drenagem não trata gordura localizada e não substitui acompanhamento médico, alimentação equilibrada nem atividade física."
+ },
+ "cuidados": {
+  "antes": [
+   "Na avaliação, conte sobre a sua saúde e os remédios que você usa.",
+   "Venha com roupa confortável e evite refeição pesada logo antes da sessão.",
+   "Se a pele da região estiver irritada ou queimada de sol no dia, avise antes: pode ser melhor remarcar."
+  ],
+  "depois": [
+   "Beba água ao longo do dia.",
+   "Ter mais vontade de urinar nas horas seguintes pode acontecer.",
+   "Se notar dor, manchas roxas ou inchaço que aumenta, avise a clínica pelo WhatsApp. Se for intenso, procure atendimento médico."
+  ],
+  "nota": "As orientações do seu caso são passadas na avaliação."
+ },
+ "investimento": {
+  "tipo": "a_partir_de",
+  "valor": 200,
+  "texto": "A drenagem linfática custa a partir de R$ 200 e a drenagem Tessaliana, a partir de R$ 300. O valor do seu caso é confirmado na avaliação, que é gratuita.",
+  "variacoes": [
+   {
+    "nome": "Drenagem Linfática",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 200"
+   },
+   {
+    "nome": "Drenagem Tessaliana",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 300"
+   }
+  ]
+ },
+ "faq": [
+  {
+   "p": "Quanto tempo dura uma sessão de drenagem linfática?",
+   "r": "Cerca de 60 minutos, tanto na drenagem linfática quanto na Tessaliana. Antes da primeira sessão, você passa pela avaliação gratuita, que dura cerca de 30 minutos e define a modalidade indicada para você."
+  },
+  {
+   "p": "Drenagem linfática emagrece?",
+   "r": "Não. A drenagem trabalha o líquido retido, e gordura localizada pede outros tratamentos. O que pode mudar é a sensação de inchaço e de roupa apertada. Se o seu objetivo é reduzir medidas, conte na avaliação: a biomédica indica o que faz sentido para você."
+  },
+  {
+   "p": "Drenagem linfática dói?",
+   "r": "Não costuma doer. A drenagem linfática é conhecida pelos movimentos leves, sem apertar com força. Se você sentir desconforto, avise na hora para o toque ser ajustado. Sobre a Tessaliana, a biomédica explica na avaliação o que você pode sentir."
+  },
+  {
+   "p": "Quantas sessões de drenagem linfática eu preciso fazer?",
+   "r": "O número de sessões é definido na avaliação, conforme o seu caso. Ele depende do que você sente, da sua rotina e do objetivo do cuidado. O intervalo entre as sessões também é combinado nesse momento."
+  },
+  {
+   "p": "Quem não pode fazer drenagem linfática?",
+   "r": "Quem está com febre, infecção ou inchaço que surgiu de repente precisa de atendimento médico antes. Gestantes, quem fez cirurgia há pouco tempo e quem trata problema de coração, rins ou circulação devem contar isso na avaliação. Nesses casos, a drenagem pode depender da liberação do seu médico."
+  },
+  {
+   "p": "Qual a diferença entre drenagem linfática e DrenO3?",
+   "r": "A diferença é o ozônio: a DrenO3 é a drenagem ozonizada da clínica e tem uma página própria aqui no site. Esta página trata da drenagem linfática e da Tessaliana. Na avaliação, a biomédica indica qual combina com o seu caso."
+  },
+  {
+   "p": "Quanto custa a drenagem linfática em Canaã dos Carajás?",
+   "r": "Na Empatia Humana, a drenagem linfática custa a partir de R$ 200 e a drenagem Tessaliana, a partir de R$ 300. O valor do seu caso é confirmado na avaliação, que é gratuita e dura cerca de 30 minutos."
+  }
+ ],
+ "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre Drenagem Linfática e Tessaliana",
+ "relacionados": [
+  "dreno3-drenagem-ozonizada",
+  "vasinhos-e-varizes",
+  "massagens"
+ ]
+}

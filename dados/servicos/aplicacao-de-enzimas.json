@@ -1,0 +1,134 @@
+{
+ "slug": "aplicacao-de-enzimas",
+ "nome": "Aplicação de Enzimas",
+ "frente": "emagrecimento-e-medidas",
+ "frentes_extras": [
+  "pele-e-rejuvenescimento"
+ ],
+ "resumo_card": "Aplicação injetável em áreas do rosto, do corpo ou do couro cabeludo, com indicação definida na avaliação.",
+ "seo": {
+  "title": "Aplicação de Enzimas em Canaã dos Carajás | Empatia Humana",
+  "description": "Aplicação de enzimas para rosto, corpo ou couro cabeludo em Canaã dos Carajás. Indicação individual feita por biomédicas. Agende sua avaliação gratuita."
+ },
+ "h1": "Aplicação de enzimas em Canaã dos Carajás",
+ "sub": "Procedimento injetável para quem quer cuidar de uma área específica do rosto, do corpo ou do couro cabeludo. A indicação é individual e começa pela avaliação gratuita.",
+ "resposta_direta": "Aplicação de enzimas é um procedimento injetável: a biomédica aplica ativos em pontos de uma área do rosto, do corpo ou do couro cabeludo. É mais conhecida no cuidado da gordura localizada, para quem quer tratar uma região determinada. Na Empatia Humana, em Canaã dos Carajás, a indicação, os ativos e o número de sessões são definidos na avaliação.",
+ "para_quem": {
+  "intro": "A aplicação costuma fazer sentido para quem quer cuidar de uma área específica e busca uma indicação individual.",
+  "itens": [
+   "Você cuida da alimentação e se movimenta, mas quer tratar uma região específica do corpo.",
+   "Você procura um cuidado localizado, feito na clínica e sem cirurgia.",
+   "Você quer cuidar de uma área do rosto e saber se a aplicação tem indicação para você.",
+   "Você quer incluir o couro cabeludo nos seus cuidados e prefere começar por uma avaliação.",
+   "Você já ouviu falar em enzimas e quer entender o que é aplicado antes de decidir.",
+   "Você tem receio de agulha ou de reação e quer tirar as dúvidas com a biomédica antes de marcar a aplicação."
+  ],
+  "atencao": [
+   "Grávidas e mulheres que amamentam: a aplicação não costuma ser indicada nesse período.",
+   "Quem faz tratamento médico, usa remédio de uso contínuo ou já teve alergia a injetáveis deve contar isso antes. Nesses casos, a aplicação pode não ser indicada.",
+   "Pele ferida, irritada ou com infecção na região pede avaliação e, em geral, outro momento para a aplicação."
+  ]
+ },
+ "como_funciona": {
+  "texto": [
+   "Na sessão, a biomédica faz pequenas aplicações, com agulha, em pontos da região combinada com você. A área pode ser do rosto, do corpo ou do couro cabeludo.",
+   "O nome vem dos ativos usados na aplicação. Quais ativos entram, em que área e em quantas sessões depende do seu objetivo e do que a avaliação mostrar. Por isso a indicação é individual e o protocolo é definido antes da primeira sessão. O procedimento não substitui acompanhamento médico."
+  ],
+  "passos": [
+   {
+    "titulo": "Avaliação",
+    "texto": "A avaliação gratuita dura cerca de 30 minutos. A biomédica ouve o que você busca, examina a região e pergunta sobre sua saúde, remédios e alergias. Se a aplicação não fizer sentido para você, ela diz."
+   },
+   {
+    "titulo": "Indicação",
+    "texto": "Havendo indicação, a biomédica define a área, os ativos e o número de sessões, e confirma o valor do seu plano."
+   },
+   {
+    "titulo": "Aplicação",
+    "texto": "É feita na clínica, em um horário de cerca de 60 minutos. A biomédica prepara a pele e faz as aplicações nos pontos combinados."
+   },
+   {
+    "titulo": "Acompanhamento",
+    "texto": "A cada retorno, a biomédica pergunta como a região reagiu à aplicação anterior e, se for preciso, revê o plano com você."
+   }
+  ]
+ },
+ "duracao_sessoes": {
+  "duracao": "Cerca de 60 minutos por sessão",
+  "sessoes": "Definido na avaliação, conforme o seu caso",
+  "observacao": "O intervalo entre as sessões também é definido na avaliação."
+ },
+ "resultados": {
+  "texto": "A proposta é cuidar de uma área específica, combinada com você na avaliação. No corpo, a técnica é mais conhecida no cuidado da gordura localizada. No rosto e no couro cabeludo, o objetivo depende do que a avaliação mostrar. O que você pode esperar, e em quanto tempo, é conversado antes da primeira sessão.",
+  "itens": [
+   "No corpo: cuidar da gordura localizada em uma área específica, quando houver indicação",
+   "No rosto: cuidar da região indicada na avaliação, dentro do plano para a sua pele",
+   "No couro cabeludo: complementar os cuidados com os fios, quando houver indicação",
+   "Concentrar o cuidado na região combinada, sem ter a perda de peso como objetivo"
+  ],
+  "ressalva": "A resposta varia de pessoa para pessoa e não há resultado garantido. A aplicação não substitui alimentação equilibrada, atividade física nem acompanhamento médico."
+ },
+ "cuidados": {
+  "antes": [
+   "Conte sobre remédios de uso contínuo, alergias e tratamentos de saúde em andamento.",
+   "Avise se está grávida, amamentando ou tentando engravidar.",
+   "No dia, venha com a pele da região limpa, sem creme nem maquiagem.",
+   "Alimente-se antes da sessão, a não ser que receba outra orientação."
+  ],
+  "depois": [
+   "Vermelhidão, inchaço, sensibilidade ou marcas roxas no local podem acontecer. Se durarem mais do que alguns dias ou aumentarem, avise a clínica.",
+   "Não aperte nem massageie a região por conta própria.",
+   "Evite sol direto na área enquanto houver marcas.",
+   "Se sentir dor forte, febre ou mal-estar, avise a clínica pelo WhatsApp e busque atendimento médico."
+  ],
+  "nota": "As orientações do seu caso são passadas na avaliação."
+ },
+ "investimento": {
+  "tipo": "a_partir_de",
+  "valor": 250,
+  "texto": "A partir de R$ 250. A área tratada e o número de sessões entram na conta, e a biomédica fecha o valor com você na avaliação gratuita.",
+  "variacoes": [
+   {
+    "nome": "Aplicação de Enzimas – Facial, Corporal ou Capilar",
+    "duracao": "60 min",
+    "preco": "a partir de R$ 250"
+   }
+  ]
+ },
+ "faq": [
+  {
+   "p": "Em quais áreas posso fazer aplicação de enzimas?",
+   "r": "No rosto, no corpo e no couro cabeludo. A área é definida na avaliação, depois que a biomédica ouve você e examina a região. Nem toda área tem indicação, e a biomédica avisa quando outro tratamento faz mais sentido."
+  },
+  {
+   "p": "Aplicação de enzimas dói?",
+   "r": "Pode haver desconforto, porque o procedimento é feito com agulha. A sensação varia de pessoa para pessoa e conforme a área. Se você tem receio de agulha ou é mais sensível, avise na avaliação."
+  },
+  {
+   "p": "Aplicação de enzimas tem riscos?",
+   "r": "Sim, como todo procedimento injetável. Vermelhidão, inchaço, sensibilidade e marcas roxas no local podem acontecer, e reações alérgicas são possíveis. Por isso a avaliação vem antes: a biomédica pergunta sobre sua saúde, remédios e alergias para saber se a aplicação é indicada para você."
+  },
+  {
+   "p": "Quantas sessões de enzimas vou precisar?",
+   "r": "Depende da área e do objetivo. O número de sessões e o intervalo entre elas são definidos na avaliação. Não existe um número padrão para todas as pacientes."
+  },
+  {
+   "p": "Enzimas para gordura localizada emagrecem?",
+   "r": "Não. A aplicação trata uma área específica e não tem como objetivo a perda de peso. O número na balança pode não mudar. Se o seu objetivo for emagrecer, as biomédicas indicam outros caminhos na avaliação."
+  },
+  {
+   "p": "Qual a diferença entre aplicação de enzimas e lipo ozonizada?",
+   "r": "A diferença está no que é aplicado. Na lipo ozonizada, a aplicação é de ozônio na gordura localizada. Na aplicação de enzimas, são usados ativos injetáveis escolhidos conforme o objetivo. Qual das duas faz sentido para você é definido na avaliação."
+  },
+  {
+   "p": "Quanto custa a aplicação de enzimas em Canaã dos Carajás?",
+   "r": "Na Empatia Humana, a aplicação de enzimas custa a partir de R$ 250. O valor do seu plano depende da área e do número de sessões, e é confirmado na avaliação, que é gratuita."
+  }
+ ],
+ "whatsapp_msg": "Olá! Vim pelo site e quero saber sobre Aplicação de Enzimas",
+ "relacionados": [
+  "lipo-ozonizada",
+  "hidrolipoclasia",
+  "programa-reduzindo-medidas"
+ ]
+}
