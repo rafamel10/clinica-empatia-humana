@@ -26,7 +26,7 @@ S = dados.SITE
 DRA = dados.DRA
 BASE = S["base"]
 URL = S["url"].rstrip("/")
-VERSAO = "9"  # aumente a cada publicação que mudar CSS ou JS
+VERSAO = "10"  # aumente a cada publicação que mudar CSS ou JS
 HOJE = S["data_atualizacao"]
 TRAT = {t["slug"]: t for t in dados.TRATAMENTOS}
 SEM_CUSTO = bool(getattr(dados, "AVALIACAO_SEM_CUSTO", False))
@@ -67,6 +67,9 @@ FRENTE = {f["slug"]: f for f in FRENTES}
 PROG = PAGS["programas-spa-cursos"]["programas"]
 SPA = PAGS["programas-spa-cursos"]["spa"]
 EQUIPE = PAGS["equipe-contato"]["equipe"]
+HOME = PAGS["home"]
+GUIA = PAGS["guia"]
+GUIA_CAMINHO = "guia-cuidados-pos-procedimento/"
 LOJA = PAGS["loja"]
 PAI = {f["slug"]: (f["nome"], f["slug"] + "/") for f in FRENTES}
 PAI.update({"programas-e-desafios": ("Programas e desafios", "programas-e-desafios/"), "spa-e-bem-estar": ("Spa e bem-estar", "spa/")})
@@ -838,13 +841,107 @@ def horarios_dl():
 
 # Páginas ---------------------------------------------------------------------------
 
+def faq_home():
+    end = "%s, %s, %s (%s)" % (S["endereco"], S["bairro"], S["cidade"], S["uf"])
+    return [(x["p"], x["r"].replace("{horario}", HORARIO_TXT).replace("{endereco}", end)) for x in HOME["faq"]]
+
+
+def formulario_guia(prefixo, origem):
+    G = GUIA["bloco"]
+    return """<form class="form-lead form-guia" data-form-lead data-guia="{destino}" data-origem="{o}" data-interesse="Guia de cuidados pós-procedimento" novalidate>
+  <div class="campo">
+    <label for="{p}-nome">Seu nome</label>
+    <input id="{p}-nome" name="nome" type="text" autocomplete="name" autocapitalize="words" enterkeyhint="next" maxlength="80" required aria-describedby="{p}-nome-erro" data-clarity-mask="true">
+    <p class="campo__erro" id="{p}-nome-erro" aria-live="polite" hidden></p>
+  </div>
+  <div class="campo">
+    <label for="{p}-whatsapp">WhatsApp com DDD</label>
+    <input id="{p}-whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" enterkeyhint="next" placeholder="(94) 99999-9999" maxlength="16" required aria-describedby="{p}-whatsapp-erro" data-clarity-mask="true">
+    <p class="campo__erro" id="{p}-whatsapp-erro" aria-live="polite" hidden></p>
+  </div>
+  <div class="campo">
+    <label for="{p}-email">E-mail</label>
+    <input id="{p}-email" name="email" type="email" inputmode="email" autocomplete="email" enterkeyhint="send" placeholder="voce@email.com" maxlength="120" required aria-describedby="{p}-email-erro" data-clarity-mask="true">
+    <p class="campo__erro" id="{p}-email-erro" aria-live="polite" hidden></p>
+  </div>
+  <div class="campo-isca" aria-hidden="true"><label for="{p}-site">Não preencha</label><input id="{p}-site" name="site" type="text" tabindex="-1" autocomplete="off"></div>
+  <button class="botao botao--escuro botao--cheio form-lead__enviar" type="submit"><span>{b}</span></button>
+  <p class="form-lead__nota">{priv} <a href="{lp}">Política de privacidade</a>.</p>
+  <div class="form-lead__ok" role="status" hidden><p class="form-lead__ok-titulo">{ok}</p><p><a href="{destino}" data-wa-link>Abrir o guia</a></p></div>
+</form>""".format(p=prefixo, o=origem, destino=link(GUIA_CAMINHO), b=esc(G["botao"]), ok=esc(G["sucesso"]),
+                  priv=esc(G["privacidade"].replace(" Veja a política de privacidade.", "")), lp=link("politica-de-privacidade.html"))
+
+
+def bloco_guia(prefixo="guia", origem="guia", classe="secao--rosa-claro"):
+    G = GUIA["bloco"]
+    return """<section class="secao {classe}" id="guia" aria-labelledby="{p}-titulo">
+  <div class="largura guia">
+    <div class="guia__texto">
+      {rot}
+      <h2 id="{p}-titulo">{t}</h2>
+      <p>{x}</p>
+      {itens}
+    </div>
+    <div class="guia__form">{form}</div>
+  </div>
+</section>""".format(classe=classe, p=prefixo, rot=rotulo("Material gratuito"), t=esc(G["titulo"]), x=esc(G["texto"]),
+                     itens=lista_check(G["itens"]), form=formulario_guia(prefixo, origem))
+
+
+def bloco_consulta():
+    C = HOME["consulta"]
+    cards = "".join("""<li class="compara__item{d}">
+  <p class="compara__nome">{n}</p>
+  <p class="compara__dados"><span>{dur}</span><strong>{pr}</strong></p>
+  <p>{para}</p>
+</li>""".format(d=" compara__item--destaque" if i else "", n=esc(x["nome"]), dur=esc(x["duracao"]), pr=esc(x["preco"][:1].upper() + x["preco"][1:]), para=esc(x["para"]))
+        for i, x in enumerate(C["comparacao"]) if SEM_CUSTO or "gratuita" not in x["preco"])
+    return """<section class="secao secao--branca" aria-labelledby="consulta-titulo">
+  <div class="largura">
+    <div class="cabeca cabeca--dupla">
+      <div>{rot}<h2 id="consulta-titulo">{t}</h2></div>
+      <p>{x}</p>
+    </div>
+    <ul class="compara">{cards}</ul>
+    <div class="hero__acoes centro-bloco">{b}<a class="link-acao" href="{l}">{lt}</a></div>
+  </div>
+</section>""".format(rot=rotulo("Por onde começar"), t=esc(C["titulo"]), x=esc(C["texto"]), cards=cards,
+                     b=botao_agendar(C["cta"], "home_consulta", C["whatsapp_msg"]), l=link(C["link"].strip("/") + "/"), lt=esc(C["link_texto"]))
+
+
+def bloco_final(origem="final"):
+    F = HOME["cta_final"]
+    horas = "".join("<li><span>%s</span> %s</li>" % (esc(a), esc(b)) for a, b in S["horarios"][:2])
+    return """<div class="comecar" id="agendar">
+  <div class="comecar__form final">
+    {rot}
+    <h2 id="final-titulo">{t}</h2>
+    <p>{x}</p>
+    {b}
+    {pag}
+    <p class="final__tel">Prefere ligar? <a href="tel:+{wa}">{tel}</a></p>
+  </div>
+  <div class="comecar__mapa">
+    <iframe title="Mapa com a localização da Clínica Empatia Humana em Canaã dos Carajás" src="{embed}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="comecar__cartao">
+      <p class="comecar__nome">Empatia Humana</p>
+      <address>{end}<br>{bairro}, {cidade} ({uf})</address>
+      <ul>{horas}</ul>
+      <a class="link-acao" href="{maps}" target="_blank" rel="noopener">Abrir no Google Maps</a>
+    </div>
+  </div>
+</div>""".format(rot=rotulo("Agendar"), t=esc(F["titulo"]), x=esc(F["texto"]), b=botao_agendar(F["cta"], origem, dados.HERO["whatsapp_msg"]), pag=pagamento_html(),
+                 wa=S["whatsapp"], tel=S["telefone"], embed=esc(S["maps_embed"]), end=esc(S["endereco"]), bairro=S["bairro"], cidade=S["cidade"], uf=S["uf"], horas=horas, maps=esc(S["maps"]))
+
+
 def pagina_home():
-    ident = "".join('<li><a href="%s"><span>%s</span>%s</a></li>' % (link("tratamentos/%s/" % sl), esc(tx), icone("seta-diag", "icone icone--seta")) for tx, sl in dados.IDENTIFICACAO)
     posts = "".join(card_post(p) for p in POSTS[:3])
     H = dados.HERO
     prova_itens = [x for x in H["microprova"] if SEM_CUSTO or "gratuita" not in x.lower()]
     microprova = '<ul class="microprova">%s</ul>' % "".join("<li>%s<span>%s</span></li>" % (icone("check"), esc(x)) for x in prova_itens)
     nota = '<p class="hero__nota">%s</p>' % esc(H["nota"]) if SEM_CUSTO else ""
+    O, CC, EQ, PR, PG, LJ = HOME["objetivos"], HOME["carros_chefe"], HOME["equipe"], HOME["prova"], HOME["programas"], HOME["loja"]
+    faq = faq_home()
 
     corpo = """
 <section class="hero hero--home" aria-labelledby="hero-titulo">
@@ -874,40 +971,44 @@ def pagina_home():
   </div>
 </section>
 
-{faixas}
-
-<section class="secao secao--escura para-quem" aria-labelledby="quem-titulo">
-  {dagua}
-  <div class="largura para-quem__grade">
-    <div>
-      {rot_quem}
-      <h2 id="quem-titulo">É para você <em>se…</em></h2>
-      <p class="para-quem__dica">Toque no seu caso e veja como é o tratamento.</p>
-      <ul class="lista-linhas">{ident}</ul>
-      <p class="para-quem__fecho">Na Empatia Humana, o incômodo de fora é tratado junto com a causa de dentro.</p>
-      {cta_quem}
+<section class="secao secao--creme" id="tratamentos" aria-labelledby="trat-titulo">
+  <div class="largura">
+    <div class="cabeca cabeca--dupla">
+      <div>{rot_trat}<h2 id="trat-titulo">O que você quer <em>cuidar</em>?</h2></div>
+      <p>{o_sub}</p>
     </div>
-    <figure class="para-quem__foto">{foto_quem}</figure>
+    {bento}
+    <h3 class="subtitulo-secao">{cc_t}</h3>
+    <p class="texto-intro">{cc_sub}</p>
+    {outros}
+    <p class="centro"><a class="link-acao" href="{todos}">Ver todos os tratamentos</a></p>
+  </div>
+</section>
+
+{consulta}
+
+<section class="secao secao--creme" id="dra-adelaine" aria-labelledby="dra-titulo">
+  <div class="largura">
+    <div class="cuida">
+      <figure class="cuida__foto">{foto_dra}</figure>
+      <div class="cuida__texto">
+        {rot_dra}
+        <h2 id="dra-titulo">{eq_t}</h2>
+        <p>{eq_x}</p>
+        <blockquote class="citacao"><p>{frase}</p></blockquote>
+        <a class="link-acao" href="{equipe}">{eq_l}</a>
+      </div>
+    </div>
+    {credenciais}
   </div>
 </section>
 
 <section class="secao secao--branca" id="depoimentos" aria-labelledby="dep-titulo">
   <div class="largura">
     {notas}
+    <p class="nota-pequena centro">{pr_x}</p>
     {relatos}
     <p class="centro">{cta_dep}</p>
-  </div>
-</section>
-
-<section class="secao secao--creme" id="tratamentos" aria-labelledby="trat-titulo">
-  <div class="largura">
-    <div class="cabeca cabeca--dupla">
-      <div>{rot_trat}<h2 id="trat-titulo">O que você quer <em>cuidar</em>?</h2></div>
-      <p>Todo tratamento começa pela avaliação gratuita com as biomédicas. Escolha o seu objetivo e veja as opções, o tempo de cada sessão e o investimento.</p>
-    </div>
-    {bento}
-    <h3 class="subtitulo-secao">Os mais procurados</h3>
-    {outros}
   </div>
 </section>
 
@@ -917,23 +1018,24 @@ def pagina_home():
   </div>
 </section>
 
-<section class="secao secao--creme" id="dra-adelaine" aria-labelledby="dra-titulo">
-  <div class="largura">
-    <div class="cuida">
-      <figure class="cuida__foto">{foto_dra}</figure>
-      <div class="cuida__texto">
-        {rot_dra}
-        <h2 id="dra-titulo">Antes do procedimento, alguém que <em>estuda o seu caso</em></h2>
-        <p class="cuida__nome">Dra. Adelaine Montel <span>Biomédica esteta e ozonioterapeuta</span></p>
-        <p>Em 2015, Adelaine recebeu o diagnóstico de lúpus. Foi como paciente que ela conheceu a ozonioterapia e sentiu a diferença: menos dor, menos crises, mais disposição.</p>
-        <p>Depois de anos em laboratório de análises clínicas, ela uniu a biomedicina, a nutrição ortomolecular e a ozonioterapia num jeito de atender que olha para o corpo inteiro.</p>
-        <blockquote class="citacao"><p>{frase}</p></blockquote>
-        <a class="link-acao" href="{sobre}">Conhecer a trajetória da Dra. Adelaine</a>
-      </div>
+<section class="secao secao--creme" aria-label="Programas e loja">
+  <div class="largura duas-colunas">
+    <div class="cartao-info">
+      {rot_pg}
+      <h2>{pg_t}</h2>
+      <p>{pg_x}</p>
+      <a class="link-acao" href="{pg_l}">{pg_lt}</a>
     </div>
-    {credenciais}
+    <div class="cartao-info">
+      {rot_lj}
+      <h2>{lj_t}</h2>
+      <p>{lj_x}</p>
+      <a class="link-acao" href="{lj_l}">{lj_lt}</a>
+    </div>
   </div>
 </section>
+
+{guia}
 
 <section class="secao secao--branca espaco" aria-labelledby="espaco-titulo">
   <div class="largura">
@@ -950,9 +1052,9 @@ def pagina_home():
 
 {duvidas}
 
-<section class="secao secao--rosa-claro" aria-label="Agendar avaliação">
+<section class="secao secao--rosa-claro" aria-labelledby="final-titulo">
   <div class="largura">
-    {comecar}
+    {final}
   </div>
 </section>
 
@@ -965,34 +1067,48 @@ def pagina_home():
     <ul class="cards-post">{posts}</ul>
   </div>
 </section>
-
-{faixa}
 """.format(
         base=BASE,
         rot_hero=rotulo('<span class="so-desktop">Clínica de estética integrativa · Canaã dos Carajás</span><span class="so-celular">Estética integrativa em Canaã</span>'),
         h1=H["headline"], sub=esc(H["sub"]), nota=nota, microprova=microprova, cta_hero=botao_agendar(H["cta"], "hero", H["whatsapp_msg"]), cta2_hero=botao(H["cta2"], "", classe="botao--contorno", href="#tratamentos", abrir=False), prova=prova_google(href="#depoimentos"),
         foto_hero=foto("adelaine-vertical", "Dra. Adelaine Montel, biomédica esteta, sorrindo na Clínica Empatia Humana", lazy=False, prioridade=True),
-        faixas=faixas_html(), dagua=marca_dagua("marca-dagua--secao"),
-        rot_quem=rotulo("Para quem é", "rotulo--claro"), ident=ident, cta_quem=botao(CTA, "para_quem", classe="botao--rosa"),
-        foto_quem=foto("avaliacao-pernas", "Dra. Adelaine Montel examinando as pernas de uma paciente"),
-        notas=bloco_notas("avaliacoes-home", 'Quem passou pela clínica <em>conta</em>', primeiro=["Aurora F.", "Marcos Z.", "Juliane A.", "Fernandes S."]).replace("<h2>", '<h2 id="dep-titulo">', 1),
-        relatos=bloco_relatos(dados.WHATSAPP[:2]), cta_dep=botao(CTA, "depoimentos"),
-        rot_trat=rotulo("Tratamentos"), bento=cards_frentes(), outros=lista_servicos(PAGS["home"]["carros_chefe"]["servicos"]),
-        jornada=jornada(dados.PASSOS, 'Do primeiro contato ao <em>seu plano</em>', "Um caminho simples, sem pressão para fechar nada no primeiro dia. Se o tratamento não for para você, a Dra. Adelaine diz.", botao(CTA, "jornada", classe="botao--rosa")).replace("<h2>", '<h2 id="jornada-titulo">', 1),
-        foto_dra=foto("adelaine-retrato", "Retrato da Dra. Adelaine Montel"), rot_dra=rotulo("Quem cuida de você"),
-        frase=esc(DRA["frase"]), sobre=link("dra-adelaine-montel/"), credenciais=credenciais_html(),
+        rot_trat=rotulo("Tratamentos"), o_sub=esc(O["sub"]), bento=cards_frentes(), cc_t=esc(CC["titulo"]), cc_sub=esc(CC["sub"]), outros=lista_servicos(CC["servicos"]), todos=link("tratamentos/"),
+        consulta=bloco_consulta(),
+        foto_dra=foto("adelaine-retrato", "Retrato da Dra. Adelaine Montel"), rot_dra=rotulo("Equipe"),
+        eq_t=esc(EQ["titulo"]), eq_x=esc(EQ["texto"]), frase=esc(DRA["frase"]), equipe=link(EQ["link"].strip("/") + "/"), eq_l=esc(EQ["link_texto"]), credenciais=credenciais_html(),
+        notas=bloco_notas("avaliacoes-home", 'O que as pacientes <em>contam</em>', primeiro=["Aurora F.", "Marcos Z.", "Juliane A.", "Fernandes S."]).replace("<h2>", '<h2 id="dep-titulo">', 1),
+        pr_x=esc(PR["texto"]), relatos=bloco_relatos(dados.WHATSAPP[:2]), cta_dep=botao(CTA, "depoimentos"),
+        jornada=jornada(dados.PASSOS, 'Do primeiro contato ao <em>seu plano</em>', "Um caminho simples, sem pressão para fechar nada no primeiro dia. Se o tratamento não for para você, as biomédicas dizem.", botao(CTA, "jornada", classe="botao--rosa")).replace("<h2>", '<h2 id="jornada-titulo">', 1),
+        rot_pg=rotulo("Programas"), pg_t=esc(PG["titulo"]), pg_x=esc(PG["texto"]), pg_l=link(PG["link"].strip("/") + "/"), pg_lt=esc(PG["link_texto"]),
+        rot_lj=rotulo("Loja"), lj_t=esc(LJ["titulo"]), lj_x=esc(LJ["texto"]), lj_l=link(LJ["link"].strip("/") + "/"), lj_lt=esc(LJ["link_texto"]),
+        guia=bloco_guia("guia-home", "guia_home"),
         espaco=espaco_fotos(), clinica=link("a-clinica/"),
-        duvidas=secao_duvidas(FAQ_HOME, 'Perguntas que <em>sempre aparecem</em>').replace("Muitas pacientes vêm de Parauapebas", 'Muitas pacientes vêm de <a href="%s">Parauapebas</a>' % link("pacientes-de-parauapebas/"), 1),
-        comecar=bloco_comecar("home"),
+        duvidas=secao_duvidas(faq, 'Perguntas que <em>sempre aparecem</em>').replace("de Parauapebas, Curionópolis", 'de <a href="%s">Parauapebas</a>, Curionópolis' % link("pacientes-de-parauapebas/"), 1),
+        final=bloco_final("final_home"),
         rot_blog=rotulo("Blog"), blog=link("blog/"), posts=posts,
-        faixa=cta_faixa('As avaliações são feitas pela própria <em>Dra. Adelaine</em>', "Com horário marcado, de segunda a sábado. Peça os horários desta semana.", "", "faixa_home"),
     )
-    grafo = [schema_clinica(), schema_pessoa(), schema_site(), schema_faq(FAQ_HOME),
+    grafo = [schema_clinica(), schema_pessoa(), schema_site(), schema_faq(faq),
              schema_pagina("", "Clínica de estética integrativa em Canaã dos Carajás")]
-    h = head("Clínica de estética em Canaã dos Carajás | Empatia Humana",
-             "Ozonioterapia, tratamento de vasinhos (PEIM), lipo ozonizada, saúde intestinal e limpeza de pele em Canaã dos Carajás (PA), com a Dra. Adelaine Montel.",
-             "", grafo)
+    h = head(HOME["seo"]["title"], HOME["seo"]["description"], "", grafo)
     return pagina(h, corpo, data_pagina="inicio")
+
+
+def pagina_guia():
+    P = GUIA["pagina"]
+    caminho = GUIA_CAMINHO
+    secoes = "".join('<section class="guia-secao"><h2>%s</h2>%s</section>' % (esc(x["titulo"]), lista_check(x["itens"])) for x in P["secoes"])
+    corpo = """
+{cabeca}
+<section class="secao secao--branca"><div class="largura largura--texto">
+  {secoes}
+  <p class="cartao-atencao">{aviso}</p>
+  <p class="centro">{b}</p>
+  <p class="centro"><button class="botao botao--contorno" type="button" onclick="window.print()"><span>Imprimir ou salvar em PDF</span></button></p>
+</div></section>
+""".format(cabeca=cabeca_pagina([("Início", ""), ("Guia de cuidados", caminho)], "Guia gratuito", esc(P["h1"]), esc(P["intro"])),
+           secoes=secoes, aviso=esc(P["aviso"]), b=botao_agendar(P["cta"], "guia_pagina", P["whatsapp_msg"]))
+    grafo = [schema_pagina(caminho, P["h1"]), schema_site()]
+    return pagina(head(P["seo"]["title"], P["seo"]["description"], caminho, grafo, robots="noindex, follow"), corpo, data_pagina="guia")
 
 
 def pagina_tratamento(t):
@@ -2146,7 +2262,7 @@ def llms():
         l.append("- [%s](%s): %s" % (p["titulo"], absoluto("blog/%s/" % p["slug"]), p.get("resumo", "")))
     l += ["", "## Cursos", "- [Cursos para profissionais](%s): %s" % (absoluto("cursos/"), "; ".join(c["nome"] for c in dados.CURSOS))]
     l += ["", "## Perguntas frequentes"]
-    for q, a in FAQ_HOME:
+    for q, a in faq_home():
         l.append("- **%s** %s" % (q, a))
     l += ["", "## Pacientes de outras cidades", "- [Pacientes de Parauapebas](%s)" % absoluto("pacientes-de-parauapebas/"), ""]
     return "\n".join(l)
@@ -2207,6 +2323,7 @@ def main():
     grava("spa/index.html", pagina_spa())
     grava("equipe/index.html", pagina_equipe())
     grava("loja/index.html", pagina_loja())
+    grava(GUIA_CAMINHO + "index.html", pagina_guia())
     antigo = os.path.join(RAIZ, "tratamentos", "saude-intestinal")
     if os.path.isdir(antigo):
         import shutil

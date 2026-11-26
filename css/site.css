@@ -997,3 +997,23 @@ body.cookies-abertos .barra-fixa { display: none; }
 
 a.faixa-campanha, a.faixa-campanha:visited, a.faixa-campanha:hover { color: var(--branco); }
 .faixa-campanha strong { color: var(--rosa); }
+
+/* ===== Home: comparação avaliação x consulta, guia gratuito, bloco final ===== */
+.compara { display: grid; gap: 1rem; margin: 0 0 1.5rem; padding: 0; list-style: none; }
+@media (min-width: 48em) { .compara { grid-template-columns: 1fr 1fr; } }
+.compara__item { padding: 1.4rem; border-radius: var(--raio); background: var(--creme); }
+.compara__item--destaque { background: var(--rosa-claro); }
+.compara__nome { font-family: var(--serifa, inherit); font-size: 1.35rem; font-weight: 600; margin: 0 0 0.4rem; }
+.compara__dados { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; align-items: baseline; margin: 0 0 0.6rem; }
+.compara__dados strong { font-size: 1.15rem; }
+.centro-bloco { justify-content: center; align-items: center; flex-wrap: wrap; gap: 1rem 1.5rem; }
+.guia { display: grid; gap: 1.5rem; }
+@media (min-width: 56em) { .guia { grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: center; } }
+.guia__form .form-lead { padding: 1.5rem; border-radius: var(--raio-g); background: var(--branco); box-shadow: var(--sombra); }
+.final { padding: clamp(1.5rem, 4vw, 2.75rem); display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; }
+.final h2 { margin: 0; }
+.final p { margin: 0; }
+.final__tel a { font-weight: 600; }
+.guia-secao { margin-bottom: 2rem; }
+.guia-secao h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.8rem; }
+@media print { .cabecalho, .rodape, .barra-fixa, .faixa-campanha, .botao, .migalhas { display: none !important; } body { padding: 0 !important; } }

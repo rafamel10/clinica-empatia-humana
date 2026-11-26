@@ -160,7 +160,8 @@
     var botao = form.querySelector(".form-lead__enviar");
     var opcional = form.querySelector("[data-email-opcional]");
     if (!cfg.emailObrigatorio && opcional) opcional.hidden = false;
-    if (cfg.emailObrigatorio) email.required = true;
+    var guia = form.getAttribute("data-guia");
+    if (cfg.emailObrigatorio || guia) email.required = true;
 
     form.addEventListener("focusin", function () {
       if (comecou) return;
@@ -205,14 +206,14 @@
       if (vNome.length < 2) { erro(nome, "Escreva seu nome para a equipe saber com quem vai falar."); primeiro = nome; } else erro(nome, "");
       if (!telValido(vTel)) { erro(tel, vTel.length < 10 ? "Confira o número: coloque o DDD e o celular, por exemplo (94) 99999-9999." : "Esse número não parece um celular válido. Confira o DDD e os dígitos."); primeiro = primeiro || tel; } else erro(tel, "");
       if (vEmail && !emailValido(vEmail)) { erro(email, "Confira o e-mail, por exemplo maria@gmail.com."); primeiro = primeiro || email; }
-      else if (!vEmail && cfg.emailObrigatorio) { erro(email, "Coloque seu e-mail para receber as orientações da clínica."); primeiro = primeiro || email; }
+      else if (!vEmail && (cfg.emailObrigatorio || guia)) { erro(email, "Coloque seu e-mail para receber as orientações da clínica."); primeiro = primeiro || email; }
       else erro(email, "");
       if (primeiro) { primeiro.focus(); return; }
 
       enviando = true;
       var textoBotao = botao.innerHTML;
       botao.disabled = true;
-      botao.querySelector("span").textContent = "Abrindo o WhatsApp…";
+      botao.querySelector("span").textContent = guia ? "Liberando o guia…" : "Abrindo o WhatsApp…";
 
       var leadId = Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
       var interesse = form.getAttribute("data-interesse") || "";
@@ -251,6 +252,14 @@
       // Eventos (sem nome, telefone ou e-mail nas ferramentas de anúncio)
       sinal("lead", { lead_id: leadId, origem: dados.formulario });
       if (typeof w.fbq === "function") w.fbq("track", "Lead", {}, { eventID: leadId });
+
+      if (guia) {
+        sinal("guia_liberado", { origem: dados.formulario });
+        var okg = form.querySelector(".form-lead__ok");
+        if (okg) { okg.hidden = false; form.classList.add("form-lead--enviado"); }
+        setTimeout(function () { enviando = false; botao.disabled = false; botao.innerHTML = textoBotao; location.href = guia; }, 900);
+        return;
+      }
 
       var primeiroNome = vNome.split(" ")[0];
       var msg = "Olá! Meu nome é " + primeiroNome + ". Vim pelo site da Empatia Humana e quero saber valores e horários" + (interesse ? " para " + interesse : " dos tratamentos") + ".";

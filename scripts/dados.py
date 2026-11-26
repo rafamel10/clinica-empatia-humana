@@ -509,8 +509,8 @@ IDENTIFICACAO = [
 
 # Do primeiro contato ao plano
 PASSOS = [
-    ("Você chama no WhatsApp", "Deixe seu nome e WhatsApp. A equipe responde com valores e horários."),
-    ("Avaliação sem pressa", "A Dra. Adelaine ouve sua história, examina e, se você tiver, analisa seus exames."),
+    ("Você chama no WhatsApp", "Toque em agendar e envie a mensagem que já vai pronta. A equipe combina o melhor horário."),
+    ("Avaliação gratuita, sem pressa", "A biomédica ouve sua história, examina e, se você tiver, olha seus exames."),
     ("Plano sob medida", "Você sai sabendo qual tratamento é indicado, quantas sessões e como se cuidar em casa."),
     ("Sessões e acompanhamento", "Horário marcado, e a evolução revista a cada encontro."),
 ]
