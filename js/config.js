@@ -4,7 +4,7 @@ window.EMPATIA = {
   "whatsapp": "5594991182268",
   "agendamentoUrl": "",
   "emailObrigatorio": true,
-  "gtmId": "",
+  "gtmId": "GTM-N4BXNL74",
   "pixelId": "",
   "cookies": "aviso"
 };
