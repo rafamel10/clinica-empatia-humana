@@ -673,7 +673,7 @@ def bloco_notas(ident, titulo_html, qtd=9, primeiro=None, tag="h2", mostrar_rotu
     </div>
     {todos}
   </div>
-  <ul class="carrossel avaliacoes" id="{id}" tabindex="0" role="region" aria-label="Avaliações de pacientes no Google">{itens}</ul>
+  <ul class="carrossel avaliacoes" id="{id}" tabindex="0" aria-label="Avaliações de pacientes no Google">{itens}</ul>
 </div>""".format(rot=rotulo("Depoimentos") if mostrar_rotulo else "", tag=tag, titulo=titulo_html, nota=S["nota_google"], n=S["avaliacoes_google"], id=ident,
                  esq=icone("seta-esq", "icone"), dir=icone("seta", "icone"), itens=lista_avaliacoes(qtd, primeiro),
                  todos=('<a class="link-acao" href="%s">Ver todos os depoimentos</a>' % link("depoimentos/")) if link_todos else "")
