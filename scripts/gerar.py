@@ -293,7 +293,7 @@ def schema_clinica():
         "name": S["nome_completo"],
         "alternateName": ["Empatia Humana", "Clínica Empatia Humana"],
         "slogan": dados.SLOGAN,
-        "description": "Clínica de estética integrativa e ozonioterapia em Canaã dos Carajás (PA), com biomédicas: emagrecimento e medidas, pele e rejuvenescimento, pernas e circulação e saúde integrativa.",
+        "description": "Clínica de estética integrativa e ozonioterapia em Canaã dos Carajás (PA), com biomédica: emagrecimento e medidas, pele e rejuvenescimento, pernas e circulação e saúde integrativa.",
         "url": absoluto(),
         "logo": absoluto("assets/img/logo-empatia-humana.png"),
         "image": [absoluto("assets/img/fachada.jpg"), absoluto("assets/img/recepcao.jpg"), absoluto("assets/img/adelaine-retrato.jpg")],
@@ -308,7 +308,7 @@ def schema_clinica():
         ],
         "paymentAccepted": "PIX, cartão de crédito",
         "founder": {"@id": absoluto("dra-adelaine-montel/#pessoa")},
-        "employee": [{"@id": absoluto("dra-adelaine-montel/#pessoa")}, {"@type": "Person", "name": "Dra. Adriana Montel", "jobTitle": "Biomédica esteta e ozonioterapeuta"}],
+        "employee": [{"@id": absoluto("dra-adelaine-montel/#pessoa")}],
         "sameAs": [S["instagram_clinica"], S["facebook"], S["maps_cid"]],
         "availableService": [{"@id": absoluto("tratamentos/%s/#servico" % sl)} for sl in SERV],
     }
@@ -1106,7 +1106,7 @@ def pagina_home():
         eq_t=esc(EQ["titulo"]), eq_x=esc(EQ["texto"]), frase=esc(DRA["frase"]), equipe=link(EQ["link"].strip("/") + "/"), eq_l=esc(EQ["link_texto"]), credenciais=credenciais_html(),
         notas=bloco_notas("avaliacoes-home", 'O que as pacientes <em>contam</em>', primeiro=["Aurora F.", "Marcos Z.", "Juliane A.", "Fernandes S."]).replace("<h2>", '<h2 id="dep-titulo">', 1),
         pr_x=esc(PR["texto"]), relatos=bloco_relatos(dados.WHATSAPP[:2]), cta_dep=botao(CTA, "depoimentos"),
-        jornada=jornada(dados.PASSOS, 'Do primeiro contato ao <em>seu plano</em>', "Um caminho simples, sem pressão para fechar nada no primeiro dia. Se o tratamento não for para você, as biomédicas dizem.", botao(CTA, "jornada", classe="botao--rosa")).replace("<h2>", '<h2 id="jornada-titulo">', 1),
+        jornada=jornada(dados.PASSOS, 'Do primeiro contato ao <em>seu plano</em>', "Um caminho simples, sem pressão para fechar nada no primeiro dia. Se o tratamento não for para você, a biomédica diz.", botao(CTA, "jornada", classe="botao--rosa")).replace("<h2>", '<h2 id="jornada-titulo">', 1),
         rot_pg=rotulo("Programas"), pg_t=esc(PG["titulo"]), pg_x=esc(PG["texto"]), pg_l=link(PG["link"].strip("/") + "/"), pg_lt=esc(PG["link_texto"]),
         rot_lj=rotulo("Loja"), lj_t=esc(LJ["titulo"]), lj_x=esc(LJ["texto"]), lj_l=link(LJ["link"].strip("/") + "/"), lj_lt=esc(LJ["link_texto"]),
         guia=bloco_guia("guia-home", "guia_home"),
@@ -1610,7 +1610,7 @@ def pagina_parauapebas():
       <h2>Vale a viagem até <em>Canaã</em>?</h2>
       <p class="onde__nota">Na Empatia Humana, cada caso é estudado antes de qualquer indicação. Quem vem de fora avisa no WhatsApp e a equipe organiza a agenda para aproveitar a viagem, inclusive aos sábados.</p>
       <ul class="lista-check">
-        <li>Avaliação gratuita com as biomédicas da clínica, a Dra. Adelaine Montel (CRBM 4ª Região nº 1437) e a Dra. Adriana Montel</li>
+        <li>Avaliação gratuita com a Dra. Adelaine Montel, biomédica esteta e ozonioterapeuta (CRBM 4ª Região nº 1437)</li>
         <li>Agenda pensada para quem viaja: avaliação e sessão no mesmo dia, quando o caso permite</li>
         <li>Atendimento {ht}, com horário marcado</li>
       </ul>
@@ -2032,7 +2032,7 @@ def pagina_servico(sv):
         duvidas=secao_duvidas(faq, "Perguntas sobre <em>%s</em>" % esc(sv["nome"]), ident="faq", interesse=sv["nome"]),
         relacionados=('<section class="secao secao--branca" aria-labelledby="rel-titulo"><div class="largura">%s%s</div></section>' % (
             secao_cabeca("Veja também", "Outros tratamentos", "", "rel-titulo"), lista_servicos(rel))) if rel else "",
-        faixa=cta_faixa("Comece pela <em>avaliação gratuita</em>", "As biomédicas ouvem você e indicam o que faz sentido para o seu caso, em Canaã dos Carajás.", sv["nome"], "faixa_final"),
+        faixa=cta_faixa("Comece pela <em>avaliação gratuita</em>", "A biomédica ouve você e indica o que faz sentido para o seu caso, em Canaã dos Carajás.", sv["nome"], "faixa_final"),
     )
     servico = {"@type": ["Service", "MedicalProcedure"], "@id": absoluto(caminho + "#servico"), "name": sv["nome"], "serviceType": sv["nome"],
                "description": sv["resposta_direta"], "provider": {"@id": absoluto("#clinica")}, "areaServed": [{"@type": "City", "name": c} for c in S["regiao"]], "url": absoluto(caminho)}
@@ -2085,7 +2085,7 @@ def pagina_frente(f):
            cab_lista=secao_cabeca("Tratamentos", "Tratamentos para <em>%s</em>" % esc(f["nome"].lower()), "Toque em um tratamento para ver como funciona, quanto tempo leva e o investimento.", "lista-titulo"),
            lista=lista_servicos(f["servicos"], destaque=f.get("destaque")), outros=outros, pagamento=pagamento_html(),
            duvidas=secao_duvidas(faq, "Dúvidas sobre <em>%s</em>" % esc(f["nome"].lower()), ident="faq", interesse=f["nome"].lower()),
-           faixa=cta_faixa("Não sabe qual escolher?", "Na avaliação gratuita, as biomédicas ouvem você e indicam o caminho para o seu caso.", f["nome"].lower(), "faixa_final"))
+           faixa=cta_faixa("Não sabe qual escolher?", "Na avaliação gratuita, a biomédica ouve você e indica o caminho para o seu caso.", f["nome"].lower(), "faixa_final"))
     grafo = [schema_pagina(caminho, f["h1"], "CollectionPage", {"description": f["seo"]["description"], "mainEntity": {"@type": "ItemList", "itemListElement": [
         {"@type": "ListItem", "position": i + 1, "url": absoluto("tratamentos/%s/" % sl), "name": SERV[sl]["nome"]} for i, sl in enumerate([x for x in f["servicos"] if x in SERV])]}}),
         schema_clinica(), schema_site(), schema_faq(faq), schema_migalhas([("Início", ""), (f["nome"], caminho)])]
@@ -2120,7 +2120,7 @@ def pagina_tratamentos():
 """.format(cabeca=cabeca_pagina([("Início", ""), ("Tratamentos", caminho)], "Tratamentos", 'Tratamentos de estética integrativa em <em>Canaã dos Carajás</em>',
                                 "Organizados pelo que você quer cuidar: emagrecimento e medidas, pele e rejuvenescimento, pernas e circulação e saúde integrativa. Todos começam pela avaliação gratuita."),
            objetivos=cards_frentes("h2"), grupos="".join(grupos), pagamento=pagamento_html(),
-           faixa=cta_faixa("Não sabe por onde começar?", "Conte o que você sente. As biomédicas indicam o caminho na avaliação gratuita.", "", "faixa_hub"))
+           faixa=cta_faixa("Não sabe por onde começar?", "Conte o que você sente. A biomédica indica o caminho na avaliação gratuita.", "", "faixa_hub"))
     grafo = [schema_pagina(caminho, "Tratamentos da Clínica Empatia Humana", "CollectionPage", {
         "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": absoluto("tratamentos/%s/" % sl), "name": sv["nome"]} for i, (sl, sv) in enumerate(SERV.items())]}}),
         schema_clinica(), schema_site(), schema_migalhas([("Início", ""), ("Tratamentos", caminho)])]
@@ -2233,7 +2233,7 @@ def pagina_equipe():
            intro=('<p class="texto-intro">%s</p>' % esc(P["intro"])) if P.get("intro") else "", pessoas="".join(pessoas),
            cab=secao_cabeca("Como atendemos", "Como é o atendimento", "", "como-titulo"), como=como,
            duvidas=secao_duvidas(faq, "Dúvidas sobre <em>a equipe</em>", ident="faq"),
-           faixa=cta_faixa("Agende com <em>as biomédicas</em>", "A avaliação é gratuita e serve para indicar o que faz sentido para você.", "", "faixa_final"))
+           faixa=cta_faixa("Agende com <em>a biomédica</em>", "A avaliação é gratuita e serve para indicar o que faz sentido para você.", "", "faixa_final"))
     grafo = [schema_pagina(caminho, P["h1"], "AboutPage"), schema_clinica(), schema_pessoa(), schema_site(), schema_faq(faq), schema_migalhas([("Início", ""), ("Equipe", caminho)])]
     return pagina(head(P["seo"]["title"], P["seo"]["description"], caminho, grafo), corpo, atual="equipe", data_pagina="equipe")
 
@@ -2304,7 +2304,7 @@ def llms():
          "- Endereço: %s, %s, %s - %s" % (S["endereco"], S["bairro"], S["cidade"], S["uf"]),
          "- WhatsApp: %s" % S["telefone"],
          "- Horário: %s, com horário marcado" % HORARIO_TXT,
-         "- Equipe: Dra. Adelaine Montel e Dra. Adriana Montel, biomédicas estetas e ozonioterapeutas",
+         "- Quem atende: Dra. Adelaine Montel, biomédica esteta e ozonioterapeuta",
          "- Pagamento: %s. Avaliação gratuita para indicar o procedimento." % PAGAMENTO,
          "- Atende pacientes de: %s" % ", ".join(S["regiao"]),
          "- Instagram: %s e %s" % (S["instagram_clinica"], S["instagram_dra"]),

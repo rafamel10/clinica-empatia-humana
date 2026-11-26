@@ -479,19 +479,19 @@ AVALIACAO_SEM_CUSTO = True
 # Hero da home (briefing, seção 5). Está em uso a versão 1, a mais bem avaliada em clareza, visão da paciente e regras.
 HERO = {
     "headline": "Estética e saúde que começam <em>ouvindo você</em>.",
-    "sub": "Pele, medidas, vasinhos e saúde integrativa com ozonioterapia, em Canaã dos Carajás. Nossas biomédicas avaliam você antes de indicar o tratamento.",
+    "sub": "Pele, medidas, vasinhos e saúde integrativa com ozonioterapia, em Canaã dos Carajás. Nossa biomédica avalia você antes de indicar o tratamento.",
     "cta": "Agendar minha avaliação",
     "cta2": "Conhecer os tratamentos",
-    "microprova": ["Avaliação gratuita", "Biomédicas ozonioterapeutas", "+400 pacientes atendidas"],
+    "microprova": ["Avaliação gratuita", "Biomédica ozonioterapeuta", "+400 pacientes atendidas"],
     "nota": "A avaliação gratuita leva cerca de 30 minutos e serve para indicar o procedimento. A Consulta Estética Integrativa, de 2 horas, tem valor à parte.",
     "whatsapp_msg": "Olá! Vim pelo site e quero agendar minha avaliação gratuita. Queria conversar sobre o meu caso.",
 }
 # Versão 2 (para teste A/B: tire o comentário das linhas abaixo)
 # HERO["headline"] = "Estética que cuida de você <em>por inteiro</em>."
-# HERO["sub"] = "Pele, medidas, vasinhos e saúde integrativa com ozonioterapia, no mesmo lugar. Com biomédicas que ouvem você, em Canaã dos Carajás."
+# HERO["sub"] = "Pele, medidas, vasinhos e saúde integrativa com ozonioterapia, no mesmo lugar. Com uma biomédica que ouve você, em Canaã dos Carajás."
 # Versão 3
 # HERO["headline"] = "Pele e corpo cuidados <em>de dentro para fora</em>."
-# HERO["sub"] = "Por fora, pele, medidas e vasinhos; por dentro, saúde integrativa com ozonioterapia. Estética com biomédicas que ouvem você, em Canaã dos Carajás."
+# HERO["sub"] = "Por fora, pele, medidas e vasinhos; por dentro, saúde integrativa com ozonioterapia. Estética com uma biomédica que ouve você, em Canaã dos Carajás."
 
 # Faixas em movimento logo abaixo do topo da home
 FAIXA_1 = ["Ozonioterapia", "Vasinhos e varizes", "Lipo ozonizada", "Limpeza de pele", "Saúde intestinal", "Soroterapia", "Consulta integrativa"]
