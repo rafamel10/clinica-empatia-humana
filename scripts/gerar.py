@@ -26,7 +26,7 @@ S = dados.SITE
 DRA = dados.DRA
 BASE = S["base"]
 URL = S["url"].rstrip("/")
-VERSAO = "7"  # aumente a cada publicação que mudar CSS ou JS
+VERSAO = "8"  # aumente a cada publicação que mudar CSS ou JS
 HOJE = S["data_atualizacao"]
 TRAT = {t["slug"]: t for t in dados.TRATAMENTOS}
 SEM_CUSTO = bool(getattr(dados, "AVALIACAO_SEM_CUSTO", False))
@@ -393,7 +393,7 @@ def botao(texto, origem, interesse="", classe="botao--escuro", href="#agendar", 
     return '<a %s><span>%s</span><span class="botao__seta" aria-hidden="true">%s</span></a>' % (attrs, texto, icone("seta-diag", "icone icone--seta"))
 
 
-CTA = "Quero saber valores e horários"
+CTA = "Agendar minha avaliação"
 
 
 def link_agendar(mensagem):
@@ -465,7 +465,7 @@ def cabecalho(atual=""):
 </header>""".format(home=link(), base=BASE, lw=lw, lh=lh, trats=link("tratamentos/"), clinica=link("a-clinica/"), sobre=link("dra-adelaine-montel/"),
                     deps=link("depoimentos/"), blog=link("blog/"), contato=link("contato/"), itens=itens_trat,
                     a_t=ativo("tratamentos"), a_cl=ativo("clinica"), a_s=ativo("sobre"), a_d=ativo("depoimentos"), a_b=ativo("blog"), a_c=ativo("contato"),
-                    cta=botao("Valores e horários", "menu", classe="botao--escuro menu__cta"))
+                    cta=botao("Agendar avaliação", "menu", classe="botao--escuro menu__cta"))
 
 
 def formulario(prefixo, interesse="", titulo="Valores e horários pelo WhatsApp", texto="", texto_botao=CTA, origem="pagina", titulo_tag="h2"):
@@ -555,28 +555,32 @@ def rodape():
                     cta=botao(CTA, "rodape_botao", classe="botao--rosa"), dra=DRA["nome_completo"], razao=S["razao"], cnpj=S["cnpj"], priv=link("politica-de-privacidade.html"))
 
 
+def mensagem_whats(interesse=""):
+    if interesse:
+        return "Olá! Vim pelo site e quero saber sobre %s." % interesse
+    return dados.HERO["whatsapp_msg"]
+
+
 def modal_e_barra(interesse=""):
-    return """<dialog class="modal" id="modal-agendar" aria-labelledby="modal-titulo">
-  <div class="modal__caixa">
-    <button class="modal__fechar" type="button" data-fechar-form aria-label="Fechar">×</button>
-    <div class="modal__topo">
-      <img src="{base}assets/img/adelaine-avatar.webp" width="64" height="64" alt="" loading="lazy">
-      <p>Atendimento com a <strong>Dra. Adelaine Montel</strong><br>Biomédica · CRBM 1437</p>
-    </div>
-    {form}
-  </div>
-</dialog>
-<div class="barra-fixa" data-barra-fixa>
-  <a class="botao botao--escuro botao--cheio" href="#agendar" data-abrir-form data-origem="barra_fixa">{svg}<span>Ver valores e horários</span></a>
+    return """<div class="barra-fixa barra-fixa--visivel" data-barra-fixa>
+  <a class="botao botao--escuro botao--cheio" href="{href}" data-agendar data-origem="barra_fixa" target="_blank" rel="noopener">{svg}<span>Agendar pelo WhatsApp</span></a>
 </div>
-<script src="{base}js/site.js?v={v}" defer></script>""".format(
-        base=BASE, v=VERSAO, svg=SVG_WHATS,
-        form=formulario("modal", interesse, origem="modal").replace('class="form-lead__titulo"', 'class="form-lead__titulo" id="modal-titulo"'))
+<script src="{base}js/site.js?v={v}" defer></script>""".format(base=BASE, v=VERSAO, svg=SVG_WHATS, href=esc(link_agendar(mensagem_whats(interesse))))
+
+
+def links_diretos(html, interesse=""):
+    """Todo botão que abria a janela do formulário vira link direto de agendamento (WhatsApp com a mensagem da página)."""
+    import re
+
+    def sub(m):
+        inter = m.group(3) or interesse
+        return 'href="%s" data-agendar data-origem="%s" target="_blank" rel="noopener"' % (esc(link_agendar(mensagem_whats(inter))), m.group(1))
+    return re.sub(r'href="#agendar" data-abrir-form data-origem="([^"]*)"( data-interesse="([^"]*)")?', sub, html)
 
 
 def pagina(head_html, corpo, atual="", interesse="", data_pagina="", data_trat=""):
-    return "%s\n<body data-pagina=\"%s\" data-tratamento=\"%s\">\n%s\n<main id=\"conteudo\">\n%s\n</main>\n%s\n%s\n</body>\n</html>\n" % (
-        head_html, data_pagina, data_trat, cabecalho(atual), corpo, rodape(), modal_e_barra(interesse))
+    return links_diretos("%s\n<body data-pagina=\"%s\" data-tratamento=\"%s\">\n%s\n<main id=\"conteudo\">\n%s\n</main>\n%s\n%s\n</body>\n</html>\n" % (
+        head_html, data_pagina, data_trat, cabecalho(atual), corpo, rodape(), modal_e_barra(interesse)), interesse)
 
 
 def migalhas_html(itens):

@@ -122,23 +122,6 @@
     abrirForm(g.getAttribute("data-origem"), g.getAttribute("data-interesse"));
   });
 
-  /* Barra fixa do celular: aparece depois da primeira tela e some quando um formulário está visível */
-  var barra = d.querySelector("[data-barra-fixa]");
-  if (barra && "IntersectionObserver" in w) {
-    var visiveis = new Set();
-    var heroVisivel = true;
-    var atualizar = function () { barra.classList.toggle("barra-fixa--visivel", !heroVisivel && visiveis.size === 0); };
-    var obsForm = new IntersectionObserver(function (en) {
-      en.forEach(function (x) { if (x.isIntersecting) visiveis.add(x.target); else visiveis.delete(x.target); });
-      atualizar();
-    }, { threshold: 0.1 });
-    d.querySelectorAll("main [data-form-lead], .faixa-cta .botao, .rodape__cta").forEach(function (f) { obsForm.observe(f); });
-    var hero = d.querySelector(".hero, .cabeca-pagina, .post__cabeca");
-    if (hero) {
-      new IntersectionObserver(function (en) { heroVisivel = en[0].isIntersecting; atualizar(); }, { threshold: 0 }).observe(hero);
-    } else { heroVisivel = false; atualizar(); }
-  }
-
   /* Formulários */
   var DDDS = "11 12 13 14 15 16 17 18 19 21 22 24 27 28 31 32 33 34 35 37 38 41 42 43 44 45 46 47 48 49 51 53 54 55 61 62 63 64 65 66 67 68 69 71 73 74 75 77 79 81 82 83 84 85 86 87 88 89 91 92 93 94 95 96 97 98 99".split(" ");
   function digitos(v) {
