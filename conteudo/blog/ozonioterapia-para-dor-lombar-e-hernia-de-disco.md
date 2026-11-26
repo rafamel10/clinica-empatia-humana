@@ -7,6 +7,10 @@ tratamento: ozonioterapia
 data: 2026-11-25
 tempo_leitura: 7
 resumo: A ozonioterapia pode ser usada como terapia complementar na dor lombar, inclusive em quem tem hérnia de disco, com o objetivo de ajudar no controle da dor e da inflamação. Ela não desfaz a hérnia, não substitui o tratamento médico e não tem resultado garantido. Perda de força na perna, dormência que aumenta ou alteração para urinar ou evacuar são urgência médica.
+imagem: blog/ozonioterapia-para-dor-lombar-e-hernia-de-disco
+imagem_alt: Mulher com a mão na parte de baixo das costas
+foto_autor: Sasun Bughdaryan
+foto_link: https://unsplash.com/photos/bNdiJ1FEbV4
 ---
 
 Você acorda e a lombar já avisa que o dia vai ser longo. Abaixar para calçar o sapato virou um cuidado. Talvez o exame tenha mostrado uma hérnia de disco, e alguém comentou sobre o ozônio. Antes de decidir, vale entender o que a ozonioterapia pode e o que ela não pode fazer por você.

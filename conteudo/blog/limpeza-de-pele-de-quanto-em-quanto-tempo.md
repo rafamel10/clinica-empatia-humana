@@ -7,6 +7,10 @@ tratamento: limpeza-de-pele
 data: 2026-11-25
 tempo_leitura: 6
 resumo: Na prática da estética, a limpeza de pele profissional costuma ser repetida a cada um ou dois meses, com intervalos mais curtos para pele oleosa e com cravos e mais longos para pele seca ou sensível. A sessão remove cravos, impurezas e células mortas, e o intervalo certo depende da avaliação da sua pele. Depois, é normal a pele ficar um pouco vermelha por algumas horas.
+imagem: blog/limpeza-de-pele-de-quanto-em-quanto-tempo
+imagem_alt: Rosto com espuma de limpeza durante uma limpeza de pele
+foto_autor: kimia kazemi
+foto_link: https://unsplash.com/photos/J6Hg_YH2tFk
 ---
 
 Cravos no nariz, poros entupidos, pele brilhando no meio da tarde. Uma boa limpeza de pele deixa o rosto mais leve, com aquela sensação de pele limpa de verdade. Mas qual é a frequência certa? E o que acontece durante a sessão? Vamos por partes.

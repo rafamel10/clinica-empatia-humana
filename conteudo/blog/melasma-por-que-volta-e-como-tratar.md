@@ -6,6 +6,10 @@ tratamento: limpeza-de-pele
 data: 2026-11-25
 tempo_leitura: 7
 resumo: O melasma volta porque é uma condição crônica. As células que produzem o pigmento da pele ficam mais sensíveis ao sol, à luz visível, ao calor e aos hormônios, e reagem de novo a cada estímulo. Ele não tem cura definitiva, mas tem controle: o tratamento combina proteção solar diária, que é a base, com procedimentos e cuidados em casa escolhidos na avaliação da pele.
+imagem: blog/melasma-por-que-volta-e-como-tratar
+imagem_alt: Pincel aplicando máscara no rosto durante um cuidado de pele
+foto_autor: kimia kazemi
+foto_link: https://unsplash.com/photos/Xxs9WvkUPLo
 ---
 
 Você trata, a mancha clareia, e basta um fim de semana de sol para ela voltar. Às vezes, volta mais escura. Se você convive com melasma no sudeste do Pará, onde o sol não dá trégua, conhece bem essa história. Entender por que ele volta muda a forma de cuidar.

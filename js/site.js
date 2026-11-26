@@ -58,6 +58,17 @@
     return "https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(texto);
   }
 
+  /* Põe o nome da pessoa na mensagem do WhatsApp ("Olá! Meu nome é Ana. ...") */
+  function comNome(url, nome) {
+    if (!nome || url.indexOf("https://wa.me/") !== 0 || url.indexOf("?text=") < 0) return url;
+    var partes = url.split("?text=");
+    var texto;
+    try { texto = decodeURIComponent(partes[1].replace(/\+/g, " ")); } catch (e) { return url; }
+    if (texto.indexOf("Meu nome é") > -1) return url;
+    texto = /^Olá!?\s*/i.test(texto) ? texto.replace(/^Olá!?\s*/i, "Olá! Meu nome é " + nome + ". ") : "Meu nome é " + nome + ". " + texto;
+    return partes[0] + "?text=" + encodeURIComponent(texto);
+  }
+
   /* Menu do celular: Esc fecha e o resto da página fica fora da tabulação enquanto ele está aberto */
   var menuBotao = d.querySelector(".menu-botao");
   var menu = d.getElementById("menu");
@@ -262,10 +273,38 @@
       }
 
       var primeiroNome = vNome.split(" ")[0];
-      var msg = "Olá! Meu nome é " + primeiroNome + ". Vim pelo site da Empatia Humana e quero saber valores e horários" + (interesse ? " para " + interesse : " dos tratamentos") + ".";
-      if (interesse === "cursos para profissionais") msg = "Olá! Meu nome é " + primeiroNome + ". Vim pelo site da Empatia Humana e quero saber das próximas turmas dos cursos.";
-      var destino = linkWhats(msg);
-      sinal("clique_whatsapp", { origem: "formulario" });
+      var destino;
+      var destinoBotao = form.getAttribute("data-destino");
+      if (destinoBotao) {
+        // Veio de um botão de agendar: abre o mesmo destino do botão, com o nome na mensagem
+        destino = comNome(destinoBotao, primeiroNome);
+        gravarJ(localStorage, "eh_contato", { nome: primeiroNome, em: new Date().toISOString().slice(0, 10) });
+      } else {
+        var msg = "Olá! Meu nome é " + primeiroNome + ". Vim pelo site da Empatia Humana e quero saber valores e horários" + (interesse ? " para " + interesse : " dos tratamentos") + ".";
+        if (interesse === "cursos para profissionais") msg = "Olá! Meu nome é " + primeiroNome + ". Vim pelo site da Empatia Humana e quero saber das próximas turmas dos cursos.";
+        destino = linkWhats(msg);
+      }
+      sinal("clique_whatsapp", { origem: form.getAttribute("data-origem-clique") || "formulario" });
+      if (typeof w.fbq === "function") w.fbq("track", "Contact");
+
+      if (destinoBotao) {
+        // Abre em outra aba no mesmo toque (o navegador não bloqueia); se bloquear, abre nesta aba
+        var janela = null;
+        try { janela = w.open(destino, "_blank"); } catch (err) {}
+        if (janela) { try { janela.opener = null; } catch (err) {} }
+        var okb = form.querySelector(".form-lead__ok");
+        if (okb) {
+          var ab = okb.querySelector("[data-wa-link]");
+          if (ab) ab.href = destino;
+          okb.hidden = false;
+          form.classList.add("form-lead--enviado");
+        }
+        enviando = false;
+        botao.disabled = false;
+        botao.innerHTML = textoBotao;
+        if (!janela) setTimeout(function () { location.href = destino; }, 450);
+        return;
+      }
 
       // Tela de "abrindo o WhatsApp" com o link, caso o aplicativo não abra sozinho (computador, navegador interno)
       var ok = form.querySelector(".form-lead__ok");
@@ -286,19 +325,32 @@
     });
   });
 
-  /* Links diretos de WhatsApp (se houver) */
+  /* Botões de agendar e links de WhatsApp: antes de abrir, a janela pede nome, WhatsApp e e-mail.
+     Quem já preencheu neste aparelho vai direto, com o nome na mensagem. */
   d.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest('a[href^="https://wa.me/"], a[data-agendar]');
-    if (!a) return;
+    if (!a || a.hasAttribute("data-wa-link")) return;
     var ehWhats = a.href.indexOf("https://wa.me/") === 0;
-    if (ehWhats && !a.hasAttribute("data-ref")) {
-      /* leva a origem do anúncio (utm) para dentro da mensagem, como o formulário já fazia */
-      var o = origem().ultimo;
-      var ref = [o.utm_source, o.utm_campaign, o.utm_content].filter(Boolean).join("-");
-      if (ref && a.href.indexOf("text=") > -1) a.href += encodeURIComponent("\n\n(ref: " + ref.slice(0, 60) + ")");
-      a.setAttribute("data-ref", "1");
+    var o = origem().ultimo;
+    var ref = [o.utm_source, o.utm_campaign, o.utm_content].filter(Boolean).join("-");
+    var destino = a.href;
+    if (ehWhats && ref && destino.indexOf("text=") > -1 && destino.indexOf("ref%3A") < 0) destino += encodeURIComponent("\n\n(ref: " + ref.slice(0, 60) + ")");
+    var origemClique = a.getAttribute("data-origem") || "link";
+    var salvo = lerJ(localStorage, "eh_contato");
+    if (formModal && !(salvo && salvo.nome)) {
+      e.preventDefault();
+      formModal.setAttribute("data-destino", destino);
+      formModal.setAttribute("data-origem-clique", origemClique);
+      formModal.classList.remove("form-lead--enviado");
+      var okm = formModal.querySelector(".form-lead__ok");
+      if (okm) okm.hidden = true;
+      abrirForm(origemClique);
+      return;
     }
-    sinal(ehWhats ? "clique_whatsapp" : "clique_agendamento", { origem: a.getAttribute("data-origem") || "link" });
+    if (salvo && salvo.nome) a.href = comNome(destino, salvo.nome);
+    else a.href = destino;
+    a.setAttribute("data-ref", "1");
+    sinal(ehWhats ? "clique_whatsapp" : "clique_agendamento", { origem: origemClique });
     if (typeof w.fbq === "function") w.fbq("track", "Contact");
   });
 

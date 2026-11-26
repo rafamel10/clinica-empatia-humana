@@ -6,6 +6,10 @@ tratamento: saude-intestinal
 data: 2026-11-25
 tempo_leitura: 6
 resumo: Disbiose intestinal é um desequilíbrio na microbiota, o conjunto de bactérias e outros microrganismos que vivem no intestino. Ela costuma estar ligada a sinais como gases, barriga estufada e intestino preso ou solto, e a fatores como alimentação pobre em fibras, uso de antibióticos, estresse e sono ruim. O cuidado começa pelos hábitos, e sintomas que não passam ou sinais de alerta pedem avaliação médica.
+imagem: blog/disbiose-intestinal-sinais-e-cuidados
+imagem_alt: Prato com salada de folhas, legumes, grão-de-bico e abacate
+foto_autor: Anna Pelzer
+foto_link: https://unsplash.com/photos/IGfIGP5ONV0
 ---
 
 Barriga estufada no fim do dia, gases que incomodam, intestino que não funciona direito. Muita gente convive com isso por anos achando que é normal. Não precisa ser assim, e o primeiro passo é entender o que pode estar acontecendo com o seu intestino.

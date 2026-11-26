@@ -7,6 +7,10 @@ tratamento: vasinhos-e-varizes
 data: 2026-11-25
 tempo_leitura: 7
 resumo: Não existe um número fixo de sessões de PEIM. Ele depende da quantidade e da espessura dos vasinhos e de como o seu corpo responde, e é definido na avaliação. A aplicação é feita na clínica, com agulha bem fina, direto no vasinho, e o vaso tratado vai sendo reabsorvido ao longo das semanas. Depois, os cuidados principais são proteger as pernas do sol, evitar exercício intenso nos primeiros dias e seguir as orientações recebidas.
+imagem: blog/peim-quantas-sessoes-e-cuidados
+imagem_alt: Pernas em foto preto e branco
+foto_autor: Felicia Varzari
+foto_link: https://unsplash.com/photos/U1TouD7KExs
 ---
 
 Você decidiu cuidar dos vasinhos e agora quer saber o que vem pela frente. Quantas vezes vai precisar ir à clínica? Como é a aplicação? Dá para trabalhar no dia seguinte? Este guia mostra, passo a passo, o que acontece antes, durante e depois do PEIM.

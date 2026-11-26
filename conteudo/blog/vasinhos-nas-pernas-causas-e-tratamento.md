@@ -6,6 +6,10 @@ tratamento: vasinhos-e-varizes
 data: 2026-11-25
 tempo_leitura: 7
 resumo: Vasinhos são pequenos vasos dilatados, vermelhos ou arroxeados, que aparecem perto da superfície da pele das pernas. Eles surgem por uma soma de fatores, como herança familiar, hormônios e muito tempo em pé ou sentado, e podem ser tratados com o PEIM e com o ozônio para microvasos, após avaliação. Varizes grossas, dor ou inchaço importante nas pernas pedem avaliação de um angiologista.
+imagem: blog/vasinhos-nas-pernas-causas-e-tratamento
+imagem_alt: Mulher passando creme hidratante na perna
+foto_autor: Mina Rad
+foto_link: https://unsplash.com/photos/EM9VdLxwqPs
 ---
 
 Você olha as pernas no espelho e vê aqueles risquinhos vermelhos ou roxos, como uma teia. Aos poucos, a vontade de usar short, saia ou vestido curto vai embora. Se isso acontece com você, saiba que é muito comum, tem explicação e tem tratamento.

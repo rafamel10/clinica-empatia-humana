@@ -25,10 +25,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Josefin+Sans:wght@400;600&family=Jost:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="/css/site.css?v=10">
+  <link rel="stylesheet" href="/css/site.css?v=11">
   <script>document.documentElement.classList.add("js");window.EMPATIA_BASE="/";</script>
-  <script src="/js/config.js?v=10"></script>
-  <script src="/js/medicao.js?v=10"></script>
+  <script src="/js/config.js?v=11"></script>
+  <script src="/js/medicao.js?v=11"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://empatiahumana.com.br/#site","url":"https://empatiahumana.com.br/","name":"Empatia Humana","inLanguage":"pt-BR","publisher":{"@id":"https://empatiahumana.com.br/#clinica"}}]}</script>
 </head>
 <body data-pagina="404" data-tratamento="">
@@ -51,6 +51,7 @@
         <li><a href="/spa/">Spa</a></li>
         <li><a href="/equipe/">Equipe</a></li>
         <li><a href="/loja/">Loja</a></li>
+        <li><a href="/blog/">Blog</a></li>
         <li><a href="/contato/">Contato</a></li>
       </ul>
       <a class="botao botao--escuro menu__cta" href="https://wa.me/5594991182268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20gratuita.%20Queria%20conversar%20sobre%20o%20meu%20caso." data-agendar data-origem="menu" target="_blank" rel="noopener"><span>Agendar avaliação</span><span class="botao__seta" aria-hidden="true"><svg class="icone icone--seta" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
@@ -110,9 +111,39 @@
     </div>
   </div>
 </footer>
+<dialog class="modal" id="modal-agendar" aria-label="Seus dados para falar com a clínica">
+  <div class="modal__caixa">
+    <button class="modal__fechar" type="button" data-fechar-form aria-label="Fechar">&times;</button>
+    <div class="modal__topo"><img src="/assets/img/adelaine-avatar.webp" width="56" height="56" alt="" loading="lazy"><p>Atendimento da equipe da Dra. Adelaine Montel, no Centro de Canaã dos Carajás.</p></div>
+    <form class="form-lead" data-form-lead data-origem="janela" data-interesse="" novalidate>
+  <h2 class="form-lead__titulo">Falta pouco para abrir o WhatsApp</h2>
+  <p class="form-lead__texto">Deixe seu contato para a equipe da clínica saber com quem vai falar. Ao enviar, a conversa abre com a mensagem pronta.</p>
+  <div class="campo">
+    <label for="janela-nome">Seu nome</label>
+    <input id="janela-nome" name="nome" type="text" autocomplete="name" autocapitalize="words" enterkeyhint="next" maxlength="80" required aria-describedby="janela-nome-erro" data-clarity-mask="true">
+    <p class="campo__erro" id="janela-nome-erro" aria-live="polite" hidden></p>
+  </div>
+  <div class="campo">
+    <label for="janela-whatsapp">WhatsApp com DDD</label>
+    <input id="janela-whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" enterkeyhint="next" placeholder="(94) 99999-9999" maxlength="16" required aria-describedby="janela-whatsapp-erro" data-clarity-mask="true">
+    <p class="campo__erro" id="janela-whatsapp-erro" aria-live="polite" hidden></p>
+  </div>
+  <div class="campo">
+    <label for="janela-email">E-mail <span class="campo__opcional" data-email-opcional hidden>(opcional)</span></label>
+    <input id="janela-email" name="email" type="email" inputmode="email" autocomplete="email" enterkeyhint="send" placeholder="voce@email.com" maxlength="120" aria-describedby="janela-email-erro" data-clarity-mask="true">
+    <p class="campo__erro" id="janela-email-erro" aria-live="polite" hidden></p>
+  </div>
+  <div class="campo-isca" aria-hidden="true"><label for="janela-site">Não preencha</label><input id="janela-site" name="site" type="text" tabindex="-1" autocomplete="off"></div>
+  <button class="botao botao--escuro botao--cheio form-lead__enviar" type="submit"><svg class="icone-whats" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.6-.4Z"/></svg><span>Abrir o WhatsApp</span></button>
+  <p class="form-lead__prova"><span class="estrelas" aria-hidden="true">★★★★★</span> <strong>5,0 no Google</strong> · 27 avaliações</p>
+  <p class="form-lead__nota">Leva 20 segundos e não tem compromisso. Seus dados ficam só com a clínica. <a href="/politica-de-privacidade.html">Privacidade</a>.</p>
+  <div class="form-lead__ok" role="status" hidden><p class="form-lead__ok-titulo">Falta um toque: envie a mensagem que já está escrita.</p><p>Não abriu? <a href="#" data-wa-link target="_blank" rel="noopener">Abrir a conversa com a clínica</a></p></div>
+</form>
+  </div>
+</dialog>
 <div class="barra-fixa barra-fixa--visivel" data-barra-fixa>
   <a class="botao botao--escuro botao--cheio" href="https://wa.me/5594991182268?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20gratuita.%20Queria%20conversar%20sobre%20o%20meu%20caso." data-agendar data-origem="barra_fixa" target="_blank" rel="noopener"><svg class="icone-whats" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.6-.4Z"/></svg><span>Agendar pelo WhatsApp</span></a>
 </div>
-<script src="/js/site.js?v=10" defer></script>
+<script src="/js/site.js?v=11" defer></script>
 </body>
 </html>

@@ -6,6 +6,10 @@ tratamento: soroterapia
 data: 2026-11-25
 tempo_leitura: 6
 resumo: A soroterapia é a aplicação de vitaminas e minerais diluídos em soro, direto na veia, e serve para repor nutrientes que os exames mostram estar em falta. Pode fazer quem tem indicação confirmada em avaliação, com exames e histórico de saúde em mãos. Ela não substitui alimentação nem tratamento médico, e vitamina em excesso também faz mal.
+imagem: blog/soroterapia-para-que-serve
+imagem_alt: Bolsa de soro pendurada no suporte
+foto_autor: Marcelo Leal
+foto_link: https://unsplash.com/photos/6pcGTJDuf6M
 ---
 
 O cansaço não passa nem depois de uma noite inteira de sono. O cabelo cai mais do que antes, as unhas quebram. Aí você vê alguém nas redes sociais tomando um soro de vitaminas e pensa: será que é disso que eu preciso? Pode ser que sim, pode ser que não. Quem responde são os seus exames.

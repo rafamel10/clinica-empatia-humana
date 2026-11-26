@@ -6,6 +6,10 @@ tratamento: lipo-ozonizada
 data: 2026-11-25
 tempo_leitura: 6
 resumo: A lipo ozonizada é um procedimento estético não cirúrgico em que uma mistura de oxigênio e ozônio medicinal é aplicada na gordura localizada com agulhas finas. Ela é indicada para quem está perto do peso e quer tratar áreas específicas, como barriga, flancos e culote, e não é um tratamento para emagrecer. O número de sessões e o resultado variam de pessoa para pessoa e dependem de avaliação.
+imagem: blog/lipo-ozonizada-como-funciona
+imagem_alt: Mulher medindo a cintura com fita métrica
+foto_autor: Sasun Bughdaryan
+foto_link: https://unsplash.com/photos/KswNFGi1s44
 ---
 
 Você cuida da alimentação, se mexe, e mesmo assim aquela gordurinha da barriga, dos flancos ou do culote não vai embora. Ela aparece na calça, no biquíni, na foto. A lipo ozonizada é uma das opções para tratar a gordura localizada sem cirurgia, e vale entender bem como ela funciona antes de decidir.

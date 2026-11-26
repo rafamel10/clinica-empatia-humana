@@ -6,6 +6,10 @@ tratamento: ozonioterapia
 data: 2026-11-25
 tempo_leitura: 7
 resumo: A ozonioterapia é uma terapia complementar que usa uma mistura de oxigênio e ozônio medicinal, aplicada por vias como a local, a auricular, a retal ou em soro. No Brasil, ela é autorizada pela Lei nº 14.648/2023, desde que feita por profissional de saúde de nível superior com registro no conselho e com equipamento regularizado pela Anvisa. Ela não substitui o tratamento médico, e a indicação depende de avaliação individual.
+imagem: blog/ozonioterapia-o-que-e-para-que-serve
+imagem_alt: Profissional de saúde conversando com um paciente no consultório
+foto_autor: Vitaly Gariev
+foto_link: https://unsplash.com/photos/MJmsLpeHPfg
 ---
 
 Talvez você tenha ouvido falar de ozonioterapia por uma amiga que tratou uma dor, por alguém que cuidou dos vasinhos ou num vídeo da internet. E ficou a dúvida: o que é isso, afinal, e serve para o meu caso? Aqui você encontra uma explicação simples, do jeito que a gente conversa no consultório.

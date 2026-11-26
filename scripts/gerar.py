@@ -26,7 +26,7 @@ S = dados.SITE
 DRA = dados.DRA
 BASE = S["base"]
 URL = S["url"].rstrip("/")
-VERSAO = "10"  # aumente a cada publicação que mudar CSS ou JS
+VERSAO = "11"  # aumente a cada publicação que mudar CSS ou JS
 HOJE = S["data_atualizacao"]
 TRAT = {t["slug"]: t for t in dados.TRATAMENTOS}
 SEM_CUSTO = bool(getattr(dados, "AVALIACAO_SEM_CUSTO", False))
@@ -497,13 +497,14 @@ def cabecalho(atual=""):
         <li><a href="{spa}"{a_s}>Spa</a></li>
         <li><a href="{equipe}"{a_e}>Equipe</a></li>
         <li><a href="{loja}"{a_l}>Loja</a></li>
+        <li><a href="{blog}"{a_b}>Blog</a></li>
         <li><a href="{contato}"{a_c}>Contato</a></li>
       </ul>
       {cta}
     </nav>
   </div>
 </header>""".format(faixa=faixa_campanha(), home=link(), base=BASE, lw=lw, lh=lh, trats=link("tratamentos/"), prog=link("programas-e-desafios/"), spa=link("spa/"),
-                    equipe=link("equipe/"), loja=link("loja/"), contato=link("contato/"), itens=itens_trat,
+                    equipe=link("equipe/"), loja=link("loja/"), contato=link("contato/"), itens=itens_trat, blog=link("blog/"), a_b=ativo("blog"),
                     a_t=ativo("tratamentos"), a_p=ativo("programas"), a_s=ativo("spa"), a_e=ativo("equipe"), a_l=ativo("loja"), a_c=ativo("contato"),
                     cta=botao("Agendar avaliação", "menu", classe="botao--escuro menu__cta"))
 
@@ -603,8 +604,22 @@ def mensagem_whats(interesse=""):
     return dados.HERO["whatsapp_msg"]
 
 
+def janela_contato():
+    """Janela que pede nome, WhatsApp e e-mail antes de abrir o WhatsApp (o site.js abre ao clicar em qualquer botão de agendar)."""
+    form = formulario("janela", titulo="Falta pouco para abrir o WhatsApp",
+                      texto="Deixe seu contato para a equipe da clínica saber com quem vai falar. Ao enviar, a conversa abre com a mensagem pronta.",
+                      texto_botao="Abrir o WhatsApp", origem="janela")
+    return """<dialog class="modal" id="modal-agendar" aria-label="Seus dados para falar com a clínica">
+  <div class="modal__caixa">
+    <button class="modal__fechar" type="button" data-fechar-form aria-label="Fechar">&times;</button>
+    <div class="modal__topo"><img src="{base}assets/img/adelaine-avatar.webp" width="56" height="56" alt="" loading="lazy"><p>Atendimento da equipe da Dra. Adelaine Montel, no Centro de Canaã dos Carajás.</p></div>
+    {form}
+  </div>
+</dialog>""".format(base=BASE, form=form)
+
+
 def modal_e_barra(interesse=""):
-    return """<div class="barra-fixa barra-fixa--visivel" data-barra-fixa>
+    return janela_contato() + "\n" + """<div class="barra-fixa barra-fixa--visivel" data-barra-fixa>
   <a class="botao botao--escuro botao--cheio" href="{href}" data-agendar data-origem="barra_fixa" target="_blank" rel="noopener">{svg}<span>Agendar pelo WhatsApp</span></a>
 </div>
 <script src="{base}js/site.js?v={v}" defer></script>""".format(base=BASE, v=VERSAO, svg=SVG_WHATS, href=esc(link_agendar(mensagem_whats(interesse))))
@@ -719,17 +734,30 @@ def secao_duvidas(faq, titulo_html, ident="duvidas", classe="secao--creme", abri
                      inter=(' data-interesse="%s"' % esc(interesse)) if interesse else "")
 
 
+def foto_post(p, classe, sizes, capa=False):
+    img = p.get("imagem")
+    if not img:
+        return ""
+    base = link("assets/img/%s" % img)
+    return '<img class="%s" src="%s%s.webp" srcset="%s-640.webp 640w, %s.webp 1200w" sizes="%s" width="%s" height="%s" alt="%s" %s>' % (
+        classe, base, "" if capa else "-640", base, base, sizes, 1200 if capa else 640, 800 if capa else 427,
+        esc(p.get("imagem_alt", "")) if capa else "", 'fetchpriority="high" decoding="async"' if capa else 'loading="lazy" decoding="async"')
+
+
 def card_post(p, tag="h3", destaque=False):
     resumo = p.get("resumo", "")
     limite = 230 if destaque else 150
-    return """<li class="card-post{d}" data-categoria="{cat}">
+    return """<li class="card-post{d}{cf}" data-categoria="{cat}">
   <a href="{h}">
+    {foto}
     <span class="card-post__cat">{c}</span>
     <{tg} class="card-post__titulo">{t}</{tg}>
     <span class="card-post__resumo">{r}</span>
     <span class="card-post__meta">{dt} · {tl} min de leitura</span>
   </a>
-</li>""".format(d=" card-post--destaque" if destaque else "", cat=esc(p.get("categoria", "Blog")), h=link("blog/%s/" % p["slug"]), c=esc(p.get("categoria", "Blog")),
+</li>""".format(d=" card-post--destaque" if destaque else "", cf=" card-post--foto" if p.get("imagem") else "",
+                foto=foto_post(p, "card-post__foto", "(min-width: 64em) 50vw, 100vw" if destaque else "(min-width: 64em) 33vw, (min-width: 40em) 50vw, 100vw"),
+                cat=esc(p.get("categoria", "Blog")), h=link("blog/%s/" % p["slug"]), c=esc(p.get("categoria", "Blog")),
                 t=esc(p["titulo"]), r=esc(resumo[:limite]) + ("…" if len(resumo) > limite else ""), dt=data_br(p.get("data", "")), tl=p["tempo_leitura"], tg=tag)
 
 
@@ -1674,6 +1702,14 @@ def pagina_post(p):
         faq = '<section class="post__faq" aria-labelledby="faq-post"><h2 id="faq-post">Perguntas frequentes</h2>%s</section>' % faq_html(p["faq"])
     lateral_trats = "".join('<li><a href="%s">%s %s</a></li>' % (link("tratamentos/%s/" % o["slug"]), icone(o["icone"], "icone icone--menu"), esc(o["nome"])) for o in dados.TRATAMENTOS)
 
+    capa = ""
+    if p.get("imagem"):
+        credito = esc(p.get("foto_autor", ""))
+        if p.get("foto_link"):
+            credito = '<a href="%s" target="_blank" rel="noopener">%s</a>' % (esc(p["foto_link"]), credito)
+        capa = '<figure class="post__capa">%s<figcaption>Foto ilustrativa: %s / Unsplash</figcaption></figure>' % (
+            foto_post(p, "post__capa-img", "(min-width: 48rem) 46rem, 100vw", capa=True), credito)
+
     # o botão do tratamento entra depois do 2º subtítulo
     corpo_post = p["html"]
     partes = corpo_post.split("<h2 ")
@@ -1694,6 +1730,7 @@ def pagina_post(p):
         <img src="{base}assets/img/adelaine-avatar.webp" width="48" height="48" alt="" loading="lazy">
         <p>Por <a href="{sobre}">Dra. Adelaine Montel</a>, biomédica esteta e ozonioterapeuta (CRBM 1437)<br><span>{data} · {tl} min de leitura</span></p>
       </div>
+      {capa}
     </div>
   </header>
   <div class="largura post__grade">
@@ -1729,14 +1766,14 @@ def pagina_post(p):
 """.format(mig=migalhas_html([("Início", ""), ("Blog", "blog/"), (p["titulo"], caminho)]), cat=esc(p.get("categoria", "Blog")), titulo=esc(p["titulo"]),
            base=BASE, sobre=link("dra-adelaine-montel/"), data=data_br(p.get("data", "")), tl=p["tempo_leitura"], resumo=inline(p.get("resumo", "")),
            toc_html=('<nav class="indice-post" aria-label="Neste post"><p class="indice-post__titulo">Neste post</p><ol>%s</ol></nav>' % toc) if len(p["toc"]) > 2 else "",
-           html=corpo_post, cta_fim=cta_fim, faq=faq, b_lateral=botao("Quero saber", "post_lateral", interesse, "botao--rosa"), lateral_trats=lateral_trats, rel=rel,
+           html=corpo_post, cta_fim=cta_fim, faq=faq, capa=capa, b_lateral=botao("Quero saber", "post_lateral", interesse, "botao--rosa"), lateral_trats=lateral_trats, rel=rel,
            faixa=cta_faixa("Quer conversar sobre o seu caso?", "A equipe passa valores e horários pelo WhatsApp.", interesse, "faixa_post"))
     grafo = [
         {"@type": "BlogPosting", "@id": absoluto(caminho + "#post"), "headline": p["titulo"], "description": p.get("descricao", ""), "abstract": p.get("resumo", ""),
          "url": absoluto(caminho), "mainEntityOfPage": absoluto(caminho),
          "datePublished": p.get("data", HOJE) + "T08:00:00-03:00", "dateModified": p.get("atualizado", p.get("data", HOJE)) + "T08:00:00-03:00",
          "inLanguage": "pt-BR", "articleSection": p.get("categoria", "Blog"), "wordCount": p["palavras"],
-         "image": absoluto("assets/img/og-empatia.jpg"), "author": {"@id": absoluto("dra-adelaine-montel/#pessoa")}, "publisher": {"@id": absoluto("#clinica")},
+         "image": absoluto(("assets/img/%s-og.jpg" % p["imagem"]) if p.get("imagem") else "assets/img/og-empatia.jpg"), "author": {"@id": absoluto("dra-adelaine-montel/#pessoa")}, "publisher": {"@id": absoluto("#clinica")},
          "isPartOf": {"@id": absoluto("blog/#blog")}},
         schema_pessoa(), schema_clinica(), schema_site(),
         schema_migalhas([("Início", ""), ("Blog", "blog/"), (p["titulo"], caminho)]),
@@ -1747,6 +1784,7 @@ def pagina_post(p):
         grafo.append(schema_faq(p["faq"]))
     titulo_seo = p.get("seo_title") or (p["titulo"] + " | Empatia Humana" if len(p["titulo"]) <= 43 else p["titulo"])
     h = head(titulo_seo, p.get("descricao", p.get("resumo", "")), caminho, grafo, tipo="article",
+             imagem=(("assets/img/%s-og.jpg" % p["imagem"]) if p.get("imagem") else "assets/img/og-empatia.jpg"),
              extra='\n  <meta property="article:published_time" content="%sT08:00:00-03:00">\n  <meta property="article:author" content="Dra. Adelaine Montel">' % p.get("data", HOJE))
     return pagina(h, corpo, atual="blog", interesse=interesse, data_pagina="post", data_trat=(t["slug"] if t else ""))
 
@@ -1756,7 +1794,7 @@ def pagina_privacidade():
 <section class="cabeca-pagina"><div class="largura estreita"><h1>Política de privacidade</h1><p class="cabeca-pagina__texto">Atualizada em novembro de 2026.</p></div></section>
 <section class="secao secao--branca"><div class="largura estreita texto-longo">
 <h2>Quem cuida dos seus dados</h2><p>{razao} (Empatia Humana), CNPJ {cnpj}, {end}, {bairro}, {cidade} ({uf}).</p>
-<h2>Quais dados coletamos</h2><p>Pelos formulários do site: nome, WhatsApp e e-mail. Junto com eles, registramos a página em que você estava e de onde chegou ao site (por exemplo, o nome do anúncio ou da campanha), para saber quais divulgações funcionam.</p>
+<h2>Quais dados coletamos</h2><p>Pelos formulários do site: nome, WhatsApp e e-mail. Junto com eles, registramos a página em que você estava e de onde chegou ao site (por exemplo, o nome do anúncio ou da campanha), para saber quais divulgações funcionam. Depois que você preenche, o seu navegador guarda só o seu primeiro nome, para não pedir os dados de novo a cada botão de WhatsApp.</p>
 <h2>Para que usamos</h2><p>Para falar com você pelo WhatsApp, tirar suas dúvidas, marcar sua avaliação e mandar novidades da clínica. Você pode pedir para não receber mais mensagens a qualquer momento. Não vendemos nem emprestamos seus dados.</p>
 <h2>Onde ficam guardados</h2><p>Em uma planilha privada da clínica no Google, acessada só pela equipe. O site é hospedado no GitHub Pages.</p>
 <h2 id="cookies">Cookies e anúncios</h2><p>O site pode usar ferramentas de medição do Meta (Facebook e Instagram) e do Google para entender quantas pessoas chegam pelos anúncios e quantas pedem uma avaliação. Elas podem usar cookies. Você pode recusar no aviso de cookies ou em "Preferências de cookies", no rodapé.</p>

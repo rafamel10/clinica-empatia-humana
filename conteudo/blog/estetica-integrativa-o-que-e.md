@@ -7,6 +7,10 @@ tratamento: consulta-integrativa
 data: 2026-11-25
 tempo_leitura: 6
 resumo: Estética integrativa é uma forma de cuidar da aparência que também olha para o que acontece dentro do corpo, como intestino, alimentação, sono, estresse e exames laboratoriais. Em vez de tratar só a queixa visível, ela busca entender o que contribui para ela e monta um plano que une procedimentos e hábitos. Ela não substitui o acompanhamento médico.
+imagem: blog/estetica-integrativa-o-que-e
+imagem_alt: Toalhas, vela e mel em um ambiente de spa
+foto_autor: Anna Keibalo
+foto_link: https://unsplash.com/photos/kdAvS3_rNkY
 ---
 
 Você já fez um tratamento para a pele, para a gordura ou para o inchaço, gostou no começo e depois sentiu que tudo voltou? Muitas vezes, o que aparece no espelho tem parte da origem lá dentro: no intestino, no sono, na alimentação, no estresse. É dessa ideia que nasce a estética integrativa.

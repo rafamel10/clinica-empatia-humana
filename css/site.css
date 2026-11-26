@@ -1030,3 +1030,20 @@ a.faixa-campanha, a.faixa-campanha:visited, a.faixa-campanha:hover { color: var(
 .curso { margin-bottom: 1.5rem; }
 .curso__preco { font-weight: 600; font-size: 1.25rem; }
 .curso h3 { margin-top: 1.25rem; }
+
+/* Fotos do blog (banco de imagens) */
+.card-post__foto { display: block; width: calc(100% + 3.2rem); max-width: none; height: auto; aspect-ratio: 3 / 2; object-fit: cover; margin: -1.6rem -1.6rem 0.5rem; border-radius: var(--raio) var(--raio) 0 0; background: var(--rosa-claro); }
+.card-post--foto a { overflow: hidden; }
+@media (min-width: 64em) {
+  .card-post--destaque.card-post--foto a { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); grid-auto-rows: min-content; column-gap: 2.5rem; row-gap: 0.7rem; }
+  .card-post--destaque.card-post--foto a > :not(.card-post__foto) { grid-column: 2; }
+  .card-post--destaque.card-post--foto .card-post__cat { justify-self: start; }
+  .card-post--destaque .card-post__foto { grid-column: 1; grid-row: 1 / span 5; width: calc(100% + 2.5rem); height: calc(100% + 5rem); min-height: 20rem; aspect-ratio: auto; margin: -2.5rem 0 -2.5rem -2.5rem; border-radius: var(--raio) 0 0 var(--raio); }
+}
+.post__capa { margin-top: 1.6rem; }
+.post__capa-img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--raio-g); background: var(--rosa-claro); }
+.post__capa figcaption { margin-top: 0.5rem; font-size: 0.78rem; color: var(--grafite); opacity: 0.8; }
+.post__capa figcaption a { color: inherit; }
+@media (min-width: 48em) { .post__capa-img { aspect-ratio: 16 / 9; } }
+/* Janela de contato antes do WhatsApp */
+.modal .form-lead__texto { margin-top: 0.4rem; font-size: 0.95rem; }
