@@ -1,0 +1,17 @@
+# Fontes do gerador e material de trabalho: não fazem parte do site publicado
+/scripts
+/conteudo
+/dados
+/docs
+/google-apps-script
+/assets/marca
+/README.md
+/CNAME
+/.nojekyll
+
+# Rede de segurança por extensão
+*.py
+*.pyc
+*.gs
+*.md
+__pycache__
