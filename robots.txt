@@ -15,4 +15,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://rafamel10.github.io/clinica-empatia-humana/sitemap.xml
+Sitemap: https://empatiahumana.com.br/sitemap.xml

@@ -7,8 +7,8 @@ Depois de editar, rode:  python scripts/gerar.py
 
 SITE = {
     # Endereço público. Se ligar um domínio próprio (ex.: https://empatiahumana.com.br), troque as duas linhas:
-    "url": "https://rafamel10.github.io/clinica-empatia-humana",
-    "base": "/clinica-empatia-humana/",
+    "url": "https://empatiahumana.com.br",
+    "base": "/",
     "nome": "Empatia Humana",
     "nome_completo": "Empatia Humana - Conceito em Estética Integrativa",
     "cidade": "Canaã dos Carajás",

@@ -2,7 +2,7 @@
 
 Site institucional com captação da **Clínica Empatia Humana, conceito em estética integrativa**, em Canaã dos Carajás (PA). Responsável técnica: Dra. Adelaine Barros Montel, biomédica, inscrição nº 1437 no CRBM 4ª Região.
 
-Publicado pelo GitHub Pages: https://rafamel10.github.io/clinica-empatia-humana/
+Publicado pela Vercel: https://empatiahumana.com.br
 
 Estrutura: **home focada em vendas**, páginas institucionais (A clínica, Dra. Adelaine, Depoimentos, Contato, Cursos), **uma página por tratamento** (para anúncio e para busca local) e **blog** para SEO local e para buscadores com IA (Google AI Overviews, ChatGPT, Perplexity).
 
