@@ -1,12 +1,12 @@
 {
  "equipe": {
   "seo": {
-   "title": "Equipe: biomédicas em Canaã dos Carajás | Empatia Humana",
-   "description": "Conheça a Dra. Adelaine Montel (CRBM 4ª Região nº 1437) e a Dra. Adriana Montel, biomédicas estetas e ozonioterapeutas da Empatia Humana, em Canaã dos Carajás."
+   "title": "Equipe: biomédica em Canaã dos Carajás | Empatia Humana",
+   "description": "Conheça a Dra. Adelaine Montel (CRBM 4ª Região nº 1437), biomédica esteta e ozonioterapeuta, responsável técnica da Empatia Humana, em Canaã dos Carajás."
   },
   "h1": "Quem cuida de você na Empatia Humana",
-  "sub": "Duas biomédicas estetas e ozonioterapeutas atendem você em Canaã dos Carajás. Todo tratamento começa por uma avaliação.",
-  "intro": "Quem atende na Clínica Empatia Humana são a Dra. Adelaine Montel e a Dra. Adriana Montel. O lema da clínica é tratar de dentro para fora: antes de indicar um procedimento, a biomédica ouve a sua história, entende a sua rotina e, quando faz sentido, olha os seus exames.",
+  "sub": "A Dra. Adelaine Montel, biomédica esteta e ozonioterapeuta, atende você em Canaã dos Carajás. Todo tratamento começa por uma avaliação.",
+  "intro": "Quem atende na Clínica Empatia Humana é a Dra. Adelaine Montel, responsável técnica. O lema da clínica é tratar de dentro para fora: antes de indicar um procedimento, a biomédica ouve a sua história, entende a sua rotina e, quando faz sentido, olha os seus exames.",
   "pessoas": [
    {
     "nome": "Dra. Adelaine Montel",
@@ -26,17 +26,6 @@
      "saude-integrativa"
     ],
     "foto": "adelaine-vertical.webp"
-   },
-   {
-    "nome": "Dra. Adriana Montel",
-    "cargo": "Biomédica esteta e ozonioterapeuta",
-    "registro": "",
-    "bio": [
-     "A Dra. Adriana Montel é biomédica esteta e ozonioterapeuta e atende na Clínica Empatia Humana ao lado da Dra. Adelaine."
-    ],
-    "frase": "",
-    "atende": [],
-    "foto": ""
    }
   ],
   "como_atendemos": [
@@ -56,7 +45,7 @@
   "faq": [
    {
     "p": "Quem atende na Clínica Empatia Humana?",
-    "r": "Quem atende são duas biomédicas estetas e ozonioterapeutas: a Dra. Adelaine Montel, responsável técnica da clínica, e a Dra. Adriana Montel. Os atendimentos acontecem na clínica, em Canaã dos Carajás, com horário marcado."
+    "r": "Quem atende é a Dra. Adelaine Montel, biomédica esteta e ozonioterapeuta e responsável técnica da clínica. Os atendimentos acontecem na clínica, em Canaã dos Carajás, com horário marcado."
    },
    {
     "p": "Como eu confiro o registro profissional da biomédica?",
@@ -66,7 +55,7 @@
    },
    {
     "p": "A avaliação é feita pela própria biomédica?",
-    "r": "Sim. A avaliação gratuita, de cerca de 30 minutos, é feita por uma das biomédicas da clínica. É nela que você conta o que incomoda e fica sabendo qual procedimento é indicado para o seu caso. Se tiver preferência por uma das doutoras, diga isso ao agendar pelo WhatsApp."
+    "r": "Sim. A avaliação gratuita, de cerca de 30 minutos, é feita pela Dra. Adelaine Montel. É nela que você conta o que incomoda e fica sabendo qual procedimento é indicado para o seu caso."
    }
   ],
   "whatsapp_msg": "Olá! Vim pelo site, conheci a equipe e quero agendar minha avaliação"

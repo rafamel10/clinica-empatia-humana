@@ -1,18 +1,18 @@
 {
  "seo": {
   "title": "Estética integrativa em Canaã dos Carajás | Empatia Humana",
-  "description": "Clínica de estética integrativa e ozonioterapia em Canaã dos Carajás. Pele, medidas, vasinhos e saúde integrativa com biomédicas. Avaliação gratuita."
+  "description": "Clínica de estética integrativa e ozonioterapia em Canaã dos Carajás. Pele, medidas, vasinhos e saúde integrativa com biomédica. Avaliação gratuita."
  },
  "hero": {
   "rotulo": "Estética integrativa e ozonioterapia",
   "headline": "Estética e saúde que começam ouvindo você.",
   "destaque": "ouvindo você",
-  "sub": "Pele, medidas, vasinhos e saúde integrativa com ozonioterapia, em Canaã dos Carajás. Nossas biomédicas avaliam você antes de indicar o tratamento.",
+  "sub": "Pele, medidas, vasinhos e saúde integrativa com ozonioterapia, em Canaã dos Carajás. Nossa biomédica avalia você antes de indicar o tratamento.",
   "cta": "Agendar minha avaliação",
   "cta2": "Conhecer os tratamentos",
   "microprova": [
    "Avaliação gratuita",
-   "Biomédicas ozonioterapeutas",
+   "Biomédica ozonioterapeuta",
    "+400 pacientes atendidas"
   ],
   "nota": "A avaliação gratuita leva cerca de 30 minutos e serve para indicar o procedimento. A Consulta Estética Integrativa, de 2 horas, tem valor à parte.",
@@ -21,12 +21,12 @@
    {
     "headline": "Estética que cuida de você por inteiro.",
     "destaque": "por inteiro",
-    "sub": "Pele, medidas, vasinhos e saúde integrativa com ozonioterapia, no mesmo lugar. Com biomédicas que ouvem você, em Canaã dos Carajás."
+    "sub": "Pele, medidas, vasinhos e saúde integrativa com ozonioterapia, no mesmo lugar. Com uma biomédica que ouve você, em Canaã dos Carajás."
    },
    {
     "headline": "Pele e corpo cuidados de dentro para fora.",
     "destaque": "de dentro para fora",
-    "sub": "Por fora, pele, medidas e vasinhos; por dentro, saúde integrativa com ozonioterapia. Estética com biomédicas que ouvem você, em Canaã dos Carajás."
+    "sub": "Por fora, pele, medidas e vasinhos; por dentro, saúde integrativa com ozonioterapia. Estética com uma biomédica que ouve você, em Canaã dos Carajás."
    }
   ]
  },
@@ -92,7 +92,7 @@
  },
  "equipe": {
   "titulo": "Quem cuida de você",
-  "texto": "A Dra. Adelaine Montel (CRBM 4ª Região nº 1437) e a Dra. Adriana Montel são biomédicas estetas e ozonioterapeutas. O atendimento é com horário marcado, sem pressa e com explicação de cada etapa. Se um tratamento não for para você, elas dizem.",
+  "texto": "A Dra. Adelaine Montel (CRBM 4ª Região nº 1437) é biomédica esteta e ozonioterapeuta. O atendimento é com horário marcado, sem pressa e com explicação de cada etapa. Se um tratamento não for para você, ela diz.",
   "link_texto": "Conhecer a equipe",
   "link": "/equipe/"
  },
@@ -106,7 +106,7 @@
  },
  "programas": {
   "titulo": "Programas e Desafios: um plano com começo, meio e fim",
-  "texto": "Para quem prefere um cuidado acompanhado a sessões soltas. O Programa Reduzindo Medidas e Elevando a Saúde, o Disbiose Zero e os Desafios Detox reúnem as sessões em um plano só, com acompanhamento das biomédicas. O que entra no seu plano e o valor são definidos na avaliação. Eles não substituem o acompanhamento médico.",
+  "texto": "Para quem prefere um cuidado acompanhado a sessões soltas. O Programa Reduzindo Medidas e Elevando a Saúde, o Disbiose Zero e os Desafios Detox reúnem as sessões em um plano só, com acompanhamento da biomédica. O que entra no seu plano e o valor são definidos na avaliação. Eles não substituem o acompanhamento médico.",
   "link_texto": "Ver programas e desafios",
   "link": "/programas-e-desafios/"
  },
@@ -136,7 +136,7 @@
   },
   {
    "p": "Quem vai me atender?",
-   "r": "Quem atende são a Dra. Adelaine Montel e a Dra. Adriana Montel, biomédicas estetas e ozonioterapeutas. A Dra. Adelaine tem inscrição no CRBM 4ª Região, nº 1437, que pode ser conferida na consulta pública do Conselho Federal de Biomedicina. São elas que avaliam você antes de indicar qualquer tratamento."
+   "r": "Quem atende é a Dra. Adelaine Montel, biomédica esteta e ozonioterapeuta. Ela tem inscrição no CRBM 4ª Região, nº 1437, que pode ser conferida na consulta pública do Conselho Federal de Biomedicina. É ela quem avalia você antes de indicar qualquer tratamento."
   },
   {
    "p": "Qual é o horário de atendimento?",
@@ -148,7 +148,7 @@
   },
   {
    "p": "A ozonioterapia é segura?",
-   "r": "A ozonioterapia é um procedimento complementar autorizado no Brasil pela Lei nº 14.648/2023, e a segurança depende da indicação correta e de quem aplica. Na Empatia Humana, ela é feita por biomédicas ozonioterapeutas, depois de uma avaliação que confere o seu histórico de saúde e as contraindicações. Como todo procedimento, pode causar reações, que são explicadas antes de você decidir. Ela não substitui o acompanhamento médico."
+   "r": "A ozonioterapia é um procedimento complementar autorizado no Brasil pela Lei nº 14.648/2023, e a segurança depende da indicação correta e de quem aplica. Na Empatia Humana, ela é feita pela biomédica ozonioterapeutas, depois de uma avaliação que confere o seu histórico de saúde e as contraindicações. Como todo procedimento, pode causar reações, que são explicadas antes de você decidir. Ela não substitui o acompanhamento médico."
   },
   {
    "p": "Vocês atendem quem é de Parauapebas?",
